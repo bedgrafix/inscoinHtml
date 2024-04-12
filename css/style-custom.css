@@ -13,3 +13,6 @@
 .js-submit{
 	cursor:pointer;
 }
+.disabled-submit {
+	display: none;
+}
