@@ -79,7 +79,10 @@
                         СМС-код введен неверно. Попробуйте еще раз
                     </div>
                 </form>
-                <div class="custom-offcanvas-form-apply-text">Вход подтвержден</div>
+                <form class="js-auth-form js-resend-form" action="http://inscoin.xxx/login" method="POST" data-after_success="showCode">
+					<input type="hidden" name="email" value="">
+					<div class="custom-offcanvas-form-apply-text js-submit">Выслать код повторно</div>
+				</form>
             </div>
         </div>
     </div>
