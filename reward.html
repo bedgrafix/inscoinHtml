@@ -1,0 +1,1153 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reward</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/fancybox.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body class="bg-F3F4F6">
+
+    <header class="sticky-heading header sticky-top">
+        <nav class="navbar navbar-expand-xxl bg-white shadow">
+            <div class="container">
+                <a class="navbar-brand d-none d-xxl-flex hover-opacity" href="#">
+                    <img src="img/logo.svg" alt="Logo">
+                </a>
+                <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="bi bi-grid"></i>
+                </button>
+                <div class="offcanvas offcanvas-end offcanvas-navbar" tabindex="-1" id="navbarNav">
+                    <div class="offcanvas-header">
+                        <button type="button" class="btn btn-icon btn-sm border-0" data-bs-dismiss="offcanvas" aria-label="Close">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="9" height="15" viewBox="0 0 9 15" fill="none">
+                                <path d="M7.78265 0.75C7.96865 0.75 8.14431 0.822332 8.27864 0.966998C8.52664 1.246 8.50598 1.66966 8.23731 1.91766L1.65592 7.84926L8.27867 13.5842C8.55767 13.8322 8.568 14.2559 8.32 14.5349C8.07201 14.8036 7.64834 14.8242 7.36934 14.5762L0.24026 8.38659C-0.0800708 8.09726 -0.0800708 7.60126 0.24026 7.31193L7.32798 0.925664C7.46232 0.801664 7.61732 0.75 7.78265 0.75Z" fill="#747782"/>
+                            </svg>
+                        </button>
+                        <a class="navbar-brand" href="#">
+                            <img src="img/logo.svg" alt="Logo">
+                        </a>
+                        <div style="width: 2rem;"></div>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav ms-xxl-4 me-xxl-auto">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span>Договоры</span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#"><span>Договоры</span></a></li>
+                                    <li><a class="dropdown-item" href="#"><span>Генеральные договора</span></a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="#"><span>Цифра</span></a></li>
+                            <li class="nav-item"><a class="nav-link" href="#"><span>Пользователи</span></a></li>
+                            <li class="nav-item"><a class="nav-link" href="#"><span>Настройки</span></a></li>
+                            <li class="nav-item"><a class="nav-link" href="#"><span>Финансы</span></a></li>
+                            <li class="nav-item"><a class="nav-link" href="#"><span>Аналитика</span></a></li>
+                        </ul>
+
+                    </div>
+                </div>
+
+                <div class="d-flex gap-2 gap-xxl-4 align-items-center">
+                    <div class="d-flex gap-2 align-items-center">
+                        <button type="button" class="btn btn-primary btn-sm px-2 px-lg-3" data-bs-toggle="offcanvas"
+                            data-bs-target="#drawUpPolis-offcanvas"><i class="bi bi-plus-circle-fill"></i><span
+                                class="d-none d-md-inline ms-2"> Оформить
+                                полис</span></button>
+                        <div class="d-flex gap-2 align-items-center">
+                            <button type="button" class="btn btn-icon btn-sm border-0 position-relative"
+                                data-bs-toggle="offcanvas" data-bs-target="#offcanvasChat"
+                                aria-controls="offcanvasChat">
+                                <i class="bi bi-chat-left-dots"></i>
+                                <span class="badge badge-chat rounded-circle bg-red">4</span>
+                            </button>
+                            <button type="button" class="btn btn-icon btn-sm border-0 position-relative">
+                                <i class="bi bi-bell"></i>
+                            </button>
+                        </div>
+                        <div class="bg-F0EEFF rounded-3 fs-12 p-2">
+                            <span class="text-black">3 578, 00</span>
+                            <span class="text-primary">INS</span>
+                        </div>
+                    </div>
+
+                    <div class="d-flex gap-2 gap-xxl-4 align-items-center">
+                        <a href="#">
+                            <div class="avatar-container">
+                                <img src="img/avatar.jpg" class="avatar img-fluid" alt="avatar">
+                            </div>
+                        </a>
+                        <button type="button" class="btn btn-icon border-0 d-none d-xxl-inline-block" style="--btn-icon-size: 1.5rem;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="25" viewBox="0 0 22 25" fill="none">
+                                <path d="M9.44902 12.25H16.621M16.621 12.25L14.3798 10.0278M16.621 12.25L14.3798 14.4722M16.621 7.36111V5.25C16.621 4.69772 16.2196 4.25 15.7245 4.25H6.75953C6.26442 4.25 5.86304 4.69772 5.86304 5.25V19.25C5.86304 19.8023 6.26442 20.25 6.75953 20.25H15.7245C16.2196 20.25 16.621 19.8023 16.621 19.25V17.1389" stroke="#747782" stroke-width="1.21105" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+
+        <section class="section section-reward-nav">
+            <div class="container">
+                <div class="reward-nav fs-12 fs-lg-14">
+                    <a href="#">КАСКО</a>
+                    <a href="#">ОСАГО</a>
+                    <a href="#">Гражданская отвественность</a>
+                    <a href="#" class="active">Страхование дома</a>
+                    <a href="#">Страхование квартиры</a>
+                    <a href="#">Страхование ипотеки</a>
+                    <a href="#">Страхование от несчастного случая</a>
+                    <a href="#">Страхование выезжающих за рубеж</a>
+                    <a href="#">Страхование от критических и онкологических заболеваний</a>
+                    <a href="#">Добровольное медицинское трахование</a>
+                    <a href="#">Иное</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-reward py-3">
+            <div class="container">
+                <div class="position-relative">
+                    <div class="d-flex gap-3 flex-column">
+
+                        <!-- item -->
+                        <div class="reward-item">
+
+                            <div class="reward-item__header">
+                                <div class="row">
+                                    <div class="col-auto">
+                                        <div class="reward-item__btn">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 33 33" fill="none">
+                                                <rect width="32" height="32" rx="8" transform="matrix(1 0 0 -1 0.546875 32.3159)" fill="black" fill-opacity="0.05"></rect>
+                                                <path d="M10.8134 13.4824C10.8134 13.3324 10.8717 13.1908 10.9884 13.0824C11.2134 12.8824 11.555 12.8991 11.755 13.1158L16.5386 18.4234L21.1636 13.0824C21.3636 12.8574 21.7053 12.8491 21.9303 13.0491C22.1469 13.2491 22.1636 13.5907 21.9636 13.8157L16.9719 19.565C16.7386 19.8234 16.3386 19.8234 16.1053 19.565L10.955 13.8491C10.855 13.7408 10.8134 13.6158 10.8134 13.4824Z" fill="#74777F"></path>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="row gy-3">
+                                            <div class="col-lg-4">
+                                                <div class="reward-item__title fs-14 fw-600">Страхование от несчастного случая</div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <div class="d-flex" style="max-width: 200px; gap: 12px;">
+                                                    <img class="flex-shrink-0" src="img/square-logo-sber.png" alt="Райффайзен Лайф Страхование">
+                                                    <div class="fs-14 fw-600">Райффайзен Лайф Страхование</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <div>
+                                                    <span class="fs-14 fw-600">ИП Климентовский</span>
+                                                    <div class="d-inline-block ms-3" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Подсказка сверху">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="23" height="22" viewBox="0 0 23 22" fill="none">
+                                                            <path d="M12.8546 9.27126L10.1399 9.61146L10.0427 10.0628L10.5773 10.16C10.9244 10.2433 10.9939 10.3682 10.9175 10.7154L10.0427 14.8256C9.81357 15.8879 10.1677 16.3878 11.0008 16.3878C11.6465 16.3878 12.3964 16.0893 12.7366 15.6796L12.8407 15.1867C12.6046 15.395 12.2575 15.4783 12.0284 15.4783C11.7021 15.4783 11.584 15.2492 11.6673 14.8465L12.8546 9.27126Z" fill="#5C43FC"></path>
+                                                            <path d="M12.9367 6.79724C12.9367 7.45166 12.4062 7.98218 11.7518 7.98218C11.0973 7.98218 10.5668 7.45166 10.5668 6.79724C10.5668 6.14282 11.0973 5.6123 11.7518 5.6123C12.4062 5.6123 12.9367 6.14282 12.9367 6.79724Z" fill="#5C43FC"></path>
+                                                            <circle cx="11.4556" cy="11" r="11" fill="#5C43FC"></circle>
+                                                            <path d="M13.1631 9.07474L10.1399 9.45361L10.0316 9.95619L10.627 10.0644C11.0136 10.1572 11.0909 10.2964 11.0059 10.683L10.0316 15.2603C9.77649 16.4433 10.1708 17 11.0987 17C11.8177 17 12.6528 16.6675 13.0316 16.2113L13.1476 15.6624C12.8847 15.8943 12.4981 15.9871 12.243 15.9871C11.8796 15.9871 11.7481 15.732 11.8409 15.2835L13.1631 9.07474Z" fill="white"></path>
+                                                            <path d="M13.2545 6.31959C13.2545 7.04838 12.6637 7.63918 11.9349 7.63918C11.2062 7.63918 10.6154 7.04838 10.6154 6.31959C10.6154 5.5908 11.2062 5 11.9349 5C12.6637 5 13.2545 5.5908 13.2545 6.31959Z" fill="white"></path>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <div class="text-muted fs-12">Организация</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="reward-item__content">
+                                <div class="reward-item__content-body">
+                                    <div class="row-group d-flex gap-2 flex-column">
+                                        <div class="row">
+                                            <div class="col-auto">
+                                                <div style="width: 33px;">
+                                                    <div class="d-lg-none fs-12 py-1">20%</div>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="row gy-3">
+                                                    <div class="col-lg-4 d-none d-lg-block">
+                                                        <div class="comission-item fs-12 fw-600">
+                                                            <div class="comission-item__title">Комиссия</div>
+                                                            <div class="comission-item__number">20%</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-8">
+                                                        <div class="fs-14">ОСАГО / Е-ОСАГО (Новый бизнес, Пролонгация)</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-auto">
+                                                <div style="width: 33px;">
+                                                    <div class="d-lg-none">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="14" viewBox="0 0 17 14" fill="none">
+                                                            <path d="M1.5 2.32763C2.38498 1.95786 3.6539 1.55951 4.88768 1.43506C6.21799 1.30088 7.3464 1.49815 8 2.18677V11.9326C7.06511 11.4026 5.88065 11.3298 4.78732 11.4401C3.60693 11.5592 2.41771 11.9012 1.5 12.2511V2.32763ZM9 2.18677C9.6536 1.49815 10.782 1.30088 12.1123 1.43506C13.3461 1.55951 14.615 1.95786 15.5 2.32763V12.2511C14.5823 11.9012 13.3931 11.5592 12.2127 11.4401C11.1194 11.3298 9.93489 11.4026 9 11.9326V2.18677ZM8.5 1.28312C7.51509 0.436527 6.08683 0.309035 4.78732 0.44011C3.27322 0.592829 1.74459 1.11241 0.793099 1.5449C0.614601 1.62604 0.5 1.80401 0.5 2.00009V13.0001C0.5 13.1701 0.586376 13.3284 0.729307 13.4205C0.872238 13.5125 1.05214 13.5256 1.2069 13.4553C2.08875 13.0544 3.51012 12.574 4.88768 12.4351C6.29565 12.293 7.47747 12.5223 8.10957 13.3124C8.20445 13.431 8.34811 13.5001 8.5 13.5001C8.65189 13.5001 8.79555 13.431 8.89043 13.3124C9.52253 12.5223 10.7043 12.293 12.1123 12.4351C13.4899 12.574 14.9113 13.0544 15.7931 13.4553C15.9479 13.5256 16.1278 13.5125 16.2707 13.4205C16.4136 13.3284 16.5 13.1701 16.5 13.0001V2.00009C16.5 1.80401 16.3854 1.62604 16.2069 1.5449C15.2554 1.11241 13.7268 0.592829 12.2127 0.44011C10.9132 0.309035 9.48491 0.436527 8.5 1.28312Z" fill="#444444"></path>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="row gy-3">
+                                                    <div class="col-lg-4 d-none d-lg-block">
+                                                        <div class="fs-14 fw-600">Дополнительные условия</div>
+                                                    </div>
+                                                    <div class="col-lg-8">
+                                                        <div class="fs-14">Полный комплект документов по бумажным полисам или отказ от предоставления документов.</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row-group d-flex gap-2 flex-column">
+                                        <div class="row">
+                                            <div class="col-auto">
+                                                <div style="width: 33px;">
+                                                    <div class="d-lg-none fs-12 py-1">20,9%</div>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="row gy-3">
+                                                    <div class="col-lg-4 d-none d-lg-block">
+                                                        <div class="comission-item fs-12 fw-600">
+                                                            <div class="comission-item__title">Комиссия</div>
+                                                            <div class="comission-item__number">20,9%</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-8">
+                                                        <div class="fs-14">ОАГО регион Переход из другой СК в режиме непрерывной пролонгации, а также Дисконтные продукты КАСКО - 10Ка и Дай 5, Дай 3 / КАСКО от бесполисных-</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-auto">
+                                                <div style="width: 33px;">
+                                                    <div class="d-lg-none">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="14" viewBox="0 0 17 14" fill="none">
+                                                            <path d="M1.5 2.32763C2.38498 1.95786 3.6539 1.55951 4.88768 1.43506C6.21799 1.30088 7.3464 1.49815 8 2.18677V11.9326C7.06511 11.4026 5.88065 11.3298 4.78732 11.4401C3.60693 11.5592 2.41771 11.9012 1.5 12.2511V2.32763ZM9 2.18677C9.6536 1.49815 10.782 1.30088 12.1123 1.43506C13.3461 1.55951 14.615 1.95786 15.5 2.32763V12.2511C14.5823 11.9012 13.3931 11.5592 12.2127 11.4401C11.1194 11.3298 9.93489 11.4026 9 11.9326V2.18677ZM8.5 1.28312C7.51509 0.436527 6.08683 0.309035 4.78732 0.44011C3.27322 0.592829 1.74459 1.11241 0.793099 1.5449C0.614601 1.62604 0.5 1.80401 0.5 2.00009V13.0001C0.5 13.1701 0.586376 13.3284 0.729307 13.4205C0.872238 13.5125 1.05214 13.5256 1.2069 13.4553C2.08875 13.0544 3.51012 12.574 4.88768 12.4351C6.29565 12.293 7.47747 12.5223 8.10957 13.3124C8.20445 13.431 8.34811 13.5001 8.5 13.5001C8.65189 13.5001 8.79555 13.431 8.89043 13.3124C9.52253 12.5223 10.7043 12.293 12.1123 12.4351C13.4899 12.574 14.9113 13.0544 15.7931 13.4553C15.9479 13.5256 16.1278 13.5125 16.2707 13.4205C16.4136 13.3284 16.5 13.1701 16.5 13.0001V2.00009C16.5 1.80401 16.3854 1.62604 16.2069 1.5449C15.2554 1.11241 13.7268 0.592829 12.2127 0.44011C10.9132 0.309035 9.48491 0.436527 8.5 1.28312Z" fill="#444444"></path>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="row gy-3">
+                                                    <div class="col-lg-4 d-none d-lg-block">
+                                                        <div class="fs-14 fw-600">Дополнительные условия</div>
+                                                    </div>
+                                                    <div class="col-lg-8">
+                                                        <div class="fs-14">Полный комплект документов по бумажным полисам или отказ от предоставления документов.</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- item -->
+                        <div class="reward-item">
+
+                            <div class="reward-item__header">
+                                <div class="row">
+                                    <div class="col-auto">
+                                        <div class="reward-item__btn">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 33 33" fill="none">
+                                                <rect width="32" height="32" rx="8" transform="matrix(1 0 0 -1 0.546875 32.3159)" fill="black" fill-opacity="0.05"></rect>
+                                                <path d="M10.8134 13.4824C10.8134 13.3324 10.8717 13.1908 10.9884 13.0824C11.2134 12.8824 11.555 12.8991 11.755 13.1158L16.5386 18.4234L21.1636 13.0824C21.3636 12.8574 21.7053 12.8491 21.9303 13.0491C22.1469 13.2491 22.1636 13.5907 21.9636 13.8157L16.9719 19.565C16.7386 19.8234 16.3386 19.8234 16.1053 19.565L10.955 13.8491C10.855 13.7408 10.8134 13.6158 10.8134 13.4824Z" fill="#74777F"></path>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="row gy-3">
+                                            <div class="col-lg-4">
+                                                <div class="reward-item__title fs-14 fw-600">Гражданская ответсвенность</div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <div class="d-flex" style="max-width: 200px; gap: 12px;">
+                                                    <img class="flex-shrink-0" src="img/square-logo-ingosstrah.png" alt="Ингосстрах Страхование">
+                                                    <div class="fs-14 fw-600">Ингосстрах Страхование</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <div>
+                                                    <span class="fs-14 fw-600">ИП Климентовский</span>
+                                                    <div class="d-inline-block ms-3" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Подсказка сверху">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="23" height="22" viewBox="0 0 23 22" fill="none">
+                                                            <path d="M12.8546 9.27126L10.1399 9.61146L10.0427 10.0628L10.5773 10.16C10.9244 10.2433 10.9939 10.3682 10.9175 10.7154L10.0427 14.8256C9.81357 15.8879 10.1677 16.3878 11.0008 16.3878C11.6465 16.3878 12.3964 16.0893 12.7366 15.6796L12.8407 15.1867C12.6046 15.395 12.2575 15.4783 12.0284 15.4783C11.7021 15.4783 11.584 15.2492 11.6673 14.8465L12.8546 9.27126Z" fill="#5C43FC"></path>
+                                                            <path d="M12.9367 6.79724C12.9367 7.45166 12.4062 7.98218 11.7518 7.98218C11.0973 7.98218 10.5668 7.45166 10.5668 6.79724C10.5668 6.14282 11.0973 5.6123 11.7518 5.6123C12.4062 5.6123 12.9367 6.14282 12.9367 6.79724Z" fill="#5C43FC"></path>
+                                                            <circle cx="11.4556" cy="11" r="11" fill="#5C43FC"></circle>
+                                                            <path d="M13.1631 9.07474L10.1399 9.45361L10.0316 9.95619L10.627 10.0644C11.0136 10.1572 11.0909 10.2964 11.0059 10.683L10.0316 15.2603C9.77649 16.4433 10.1708 17 11.0987 17C11.8177 17 12.6528 16.6675 13.0316 16.2113L13.1476 15.6624C12.8847 15.8943 12.4981 15.9871 12.243 15.9871C11.8796 15.9871 11.7481 15.732 11.8409 15.2835L13.1631 9.07474Z" fill="white"></path>
+                                                            <path d="M13.2545 6.31959C13.2545 7.04838 12.6637 7.63918 11.9349 7.63918C11.2062 7.63918 10.6154 7.04838 10.6154 6.31959C10.6154 5.5908 11.2062 5 11.9349 5C12.6637 5 13.2545 5.5908 13.2545 6.31959Z" fill="white"></path>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <div class="text-muted fs-12">Организация</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="reward-item__content">
+                                <div class="reward-item__content-body">
+                                    <div class="row-group d-flex gap-2 flex-column">
+                                        <div class="row">
+                                            <div class="col-auto">
+                                                <div style="width: 33px;">
+                                                    <div class="d-lg-none fs-12 py-1">20%</div>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="row gy-3">
+                                                    <div class="col-lg-4 d-none d-lg-block">
+                                                        <div class="comission-item fs-12 fw-600">
+                                                            <div class="comission-item__title">Комиссия</div>
+                                                            <div class="comission-item__number">20%</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-8">
+                                                        <div class="fs-14">ОСАГО / Е-ОСАГО (Новый бизнес, Пролонгация)</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-auto">
+                                                <div style="width: 33px;">
+                                                    <div class="d-lg-none">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="14" viewBox="0 0 17 14" fill="none">
+                                                            <path d="M1.5 2.32763C2.38498 1.95786 3.6539 1.55951 4.88768 1.43506C6.21799 1.30088 7.3464 1.49815 8 2.18677V11.9326C7.06511 11.4026 5.88065 11.3298 4.78732 11.4401C3.60693 11.5592 2.41771 11.9012 1.5 12.2511V2.32763ZM9 2.18677C9.6536 1.49815 10.782 1.30088 12.1123 1.43506C13.3461 1.55951 14.615 1.95786 15.5 2.32763V12.2511C14.5823 11.9012 13.3931 11.5592 12.2127 11.4401C11.1194 11.3298 9.93489 11.4026 9 11.9326V2.18677ZM8.5 1.28312C7.51509 0.436527 6.08683 0.309035 4.78732 0.44011C3.27322 0.592829 1.74459 1.11241 0.793099 1.5449C0.614601 1.62604 0.5 1.80401 0.5 2.00009V13.0001C0.5 13.1701 0.586376 13.3284 0.729307 13.4205C0.872238 13.5125 1.05214 13.5256 1.2069 13.4553C2.08875 13.0544 3.51012 12.574 4.88768 12.4351C6.29565 12.293 7.47747 12.5223 8.10957 13.3124C8.20445 13.431 8.34811 13.5001 8.5 13.5001C8.65189 13.5001 8.79555 13.431 8.89043 13.3124C9.52253 12.5223 10.7043 12.293 12.1123 12.4351C13.4899 12.574 14.9113 13.0544 15.7931 13.4553C15.9479 13.5256 16.1278 13.5125 16.2707 13.4205C16.4136 13.3284 16.5 13.1701 16.5 13.0001V2.00009C16.5 1.80401 16.3854 1.62604 16.2069 1.5449C15.2554 1.11241 13.7268 0.592829 12.2127 0.44011C10.9132 0.309035 9.48491 0.436527 8.5 1.28312Z" fill="#444444"></path>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="row gy-3">
+                                                    <div class="col-lg-4 d-none d-lg-block">
+                                                        <div class="fs-14 fw-600">Дополнительные условия</div>
+                                                    </div>
+                                                    <div class="col-lg-8">
+                                                        <div class="fs-14">Полный комплект документов по бумажным полисам или отказ от предоставления документов.</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row-group d-flex gap-2 flex-column">
+                                        <div class="row">
+                                            <div class="col-auto">
+                                                <div style="width: 33px;">
+                                                    <div class="d-lg-none fs-12 py-1">20,9%</div>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="row gy-3">
+                                                    <div class="col-lg-4 d-none d-lg-block">
+                                                        <div class="comission-item fs-12 fw-600">
+                                                            <div class="comission-item__title">Комиссия</div>
+                                                            <div class="comission-item__number">20,9%</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-8">
+                                                        <div class="fs-14">ОАГО регион Переход из другой СК в режиме непрерывной пролонгации, а также Дисконтные продукты КАСКО - 10Ка и Дай 5, Дай 3 / КАСКО от бесполисных-</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-auto">
+                                                <div style="width: 33px;">
+                                                    <div class="d-lg-none">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="14" viewBox="0 0 17 14" fill="none">
+                                                            <path d="M1.5 2.32763C2.38498 1.95786 3.6539 1.55951 4.88768 1.43506C6.21799 1.30088 7.3464 1.49815 8 2.18677V11.9326C7.06511 11.4026 5.88065 11.3298 4.78732 11.4401C3.60693 11.5592 2.41771 11.9012 1.5 12.2511V2.32763ZM9 2.18677C9.6536 1.49815 10.782 1.30088 12.1123 1.43506C13.3461 1.55951 14.615 1.95786 15.5 2.32763V12.2511C14.5823 11.9012 13.3931 11.5592 12.2127 11.4401C11.1194 11.3298 9.93489 11.4026 9 11.9326V2.18677ZM8.5 1.28312C7.51509 0.436527 6.08683 0.309035 4.78732 0.44011C3.27322 0.592829 1.74459 1.11241 0.793099 1.5449C0.614601 1.62604 0.5 1.80401 0.5 2.00009V13.0001C0.5 13.1701 0.586376 13.3284 0.729307 13.4205C0.872238 13.5125 1.05214 13.5256 1.2069 13.4553C2.08875 13.0544 3.51012 12.574 4.88768 12.4351C6.29565 12.293 7.47747 12.5223 8.10957 13.3124C8.20445 13.431 8.34811 13.5001 8.5 13.5001C8.65189 13.5001 8.79555 13.431 8.89043 13.3124C9.52253 12.5223 10.7043 12.293 12.1123 12.4351C13.4899 12.574 14.9113 13.0544 15.7931 13.4553C15.9479 13.5256 16.1278 13.5125 16.2707 13.4205C16.4136 13.3284 16.5 13.1701 16.5 13.0001V2.00009C16.5 1.80401 16.3854 1.62604 16.2069 1.5449C15.2554 1.11241 13.7268 0.592829 12.2127 0.44011C10.9132 0.309035 9.48491 0.436527 8.5 1.28312Z" fill="#444444"></path>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="row gy-3">
+                                                    <div class="col-lg-4 d-none d-lg-block">
+                                                        <div class="fs-14 fw-600">Дополнительные условия</div>
+                                                    </div>
+                                                    <div class="col-lg-8">
+                                                        <div class="fs-14">Полный комплект документов по бумажным полисам или отказ от предоставления документов.</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- item -->
+                        <div class="reward-item">
+
+                            <div class="reward-item__header">
+                                <div class="row">
+                                    <div class="col-auto">
+                                        <div class="reward-item__btn">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 33 33" fill="none">
+                                                <rect width="32" height="32" rx="8" transform="matrix(1 0 0 -1 0.546875 32.3159)" fill="black" fill-opacity="0.05"></rect>
+                                                <path d="M10.8134 13.4824C10.8134 13.3324 10.8717 13.1908 10.9884 13.0824C11.2134 12.8824 11.555 12.8991 11.755 13.1158L16.5386 18.4234L21.1636 13.0824C21.3636 12.8574 21.7053 12.8491 21.9303 13.0491C22.1469 13.2491 22.1636 13.5907 21.9636 13.8157L16.9719 19.565C16.7386 19.8234 16.3386 19.8234 16.1053 19.565L10.955 13.8491C10.855 13.7408 10.8134 13.6158 10.8134 13.4824Z" fill="#74777F"></path>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="row gy-3">
+                                            <div class="col-lg-4">
+                                                <div class="reward-item__title fs-14 fw-600">ОСАГО</div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <div class="d-flex" style="max-width: 200px; gap: 12px;">
+                                                    <img class="flex-shrink-0" src="img/square-alfa-logo.png" alt="Альфа Страхование">
+                                                    <div class="fs-14 fw-600">Альфа Страхование</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <div>
+                                                    <span class="fs-14 fw-600">ИП Климентовский</span>
+                                                    <div class="d-inline-block ms-3" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Подсказка сверху">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="23" height="22" viewBox="0 0 23 22" fill="none">
+                                                            <path d="M12.8546 9.27126L10.1399 9.61146L10.0427 10.0628L10.5773 10.16C10.9244 10.2433 10.9939 10.3682 10.9175 10.7154L10.0427 14.8256C9.81357 15.8879 10.1677 16.3878 11.0008 16.3878C11.6465 16.3878 12.3964 16.0893 12.7366 15.6796L12.8407 15.1867C12.6046 15.395 12.2575 15.4783 12.0284 15.4783C11.7021 15.4783 11.584 15.2492 11.6673 14.8465L12.8546 9.27126Z" fill="#5C43FC"></path>
+                                                            <path d="M12.9367 6.79724C12.9367 7.45166 12.4062 7.98218 11.7518 7.98218C11.0973 7.98218 10.5668 7.45166 10.5668 6.79724C10.5668 6.14282 11.0973 5.6123 11.7518 5.6123C12.4062 5.6123 12.9367 6.14282 12.9367 6.79724Z" fill="#5C43FC"></path>
+                                                            <circle cx="11.4556" cy="11" r="11" fill="#5C43FC"></circle>
+                                                            <path d="M13.1631 9.07474L10.1399 9.45361L10.0316 9.95619L10.627 10.0644C11.0136 10.1572 11.0909 10.2964 11.0059 10.683L10.0316 15.2603C9.77649 16.4433 10.1708 17 11.0987 17C11.8177 17 12.6528 16.6675 13.0316 16.2113L13.1476 15.6624C12.8847 15.8943 12.4981 15.9871 12.243 15.9871C11.8796 15.9871 11.7481 15.732 11.8409 15.2835L13.1631 9.07474Z" fill="white"></path>
+                                                            <path d="M13.2545 6.31959C13.2545 7.04838 12.6637 7.63918 11.9349 7.63918C11.2062 7.63918 10.6154 7.04838 10.6154 6.31959C10.6154 5.5908 11.2062 5 11.9349 5C12.6637 5 13.2545 5.5908 13.2545 6.31959Z" fill="white"></path>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <div class="text-muted fs-12">Организация</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="reward-item__content">
+                                <div class="reward-item__content-body">
+                                    <div class="row-group d-flex gap-2 flex-column">
+                                        <div class="row">
+                                            <div class="col-auto">
+                                                <div style="width: 33px;">
+                                                    <div class="d-lg-none fs-12 py-1">20%</div>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="row gy-3">
+                                                    <div class="col-lg-4 d-none d-lg-block">
+                                                        <div class="comission-item fs-12 fw-600">
+                                                            <div class="comission-item__title">Комиссия</div>
+                                                            <div class="comission-item__number">20%</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-8">
+                                                        <div class="fs-14">ОСАГО / Е-ОСАГО (Новый бизнес, Пролонгация)</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-auto">
+                                                <div style="width: 33px;">
+                                                    <div class="d-lg-none">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="14" viewBox="0 0 17 14" fill="none">
+                                                            <path d="M1.5 2.32763C2.38498 1.95786 3.6539 1.55951 4.88768 1.43506C6.21799 1.30088 7.3464 1.49815 8 2.18677V11.9326C7.06511 11.4026 5.88065 11.3298 4.78732 11.4401C3.60693 11.5592 2.41771 11.9012 1.5 12.2511V2.32763ZM9 2.18677C9.6536 1.49815 10.782 1.30088 12.1123 1.43506C13.3461 1.55951 14.615 1.95786 15.5 2.32763V12.2511C14.5823 11.9012 13.3931 11.5592 12.2127 11.4401C11.1194 11.3298 9.93489 11.4026 9 11.9326V2.18677ZM8.5 1.28312C7.51509 0.436527 6.08683 0.309035 4.78732 0.44011C3.27322 0.592829 1.74459 1.11241 0.793099 1.5449C0.614601 1.62604 0.5 1.80401 0.5 2.00009V13.0001C0.5 13.1701 0.586376 13.3284 0.729307 13.4205C0.872238 13.5125 1.05214 13.5256 1.2069 13.4553C2.08875 13.0544 3.51012 12.574 4.88768 12.4351C6.29565 12.293 7.47747 12.5223 8.10957 13.3124C8.20445 13.431 8.34811 13.5001 8.5 13.5001C8.65189 13.5001 8.79555 13.431 8.89043 13.3124C9.52253 12.5223 10.7043 12.293 12.1123 12.4351C13.4899 12.574 14.9113 13.0544 15.7931 13.4553C15.9479 13.5256 16.1278 13.5125 16.2707 13.4205C16.4136 13.3284 16.5 13.1701 16.5 13.0001V2.00009C16.5 1.80401 16.3854 1.62604 16.2069 1.5449C15.2554 1.11241 13.7268 0.592829 12.2127 0.44011C10.9132 0.309035 9.48491 0.436527 8.5 1.28312Z" fill="#444444"></path>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="row gy-3">
+                                                    <div class="col-lg-4 d-none d-lg-block">
+                                                        <div class="fs-14 fw-600">Дополнительные условия</div>
+                                                    </div>
+                                                    <div class="col-lg-8">
+                                                        <div class="fs-14">Полный комплект документов по бумажным полисам или отказ от предоставления документов.</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row-group d-flex gap-2 flex-column">
+                                        <div class="row">
+                                            <div class="col-auto">
+                                                <div style="width: 33px;">
+                                                    <div class="d-lg-none fs-12 py-1">20,9%</div>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="row gy-3">
+                                                    <div class="col-lg-4 d-none d-lg-block">
+                                                        <div class="comission-item fs-12 fw-600">
+                                                            <div class="comission-item__title">Комиссия</div>
+                                                            <div class="comission-item__number">20,9%</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-8">
+                                                        <div class="fs-14">ОАГО регион Переход из другой СК в режиме непрерывной пролонгации, а также Дисконтные продукты КАСКО - 10Ка и Дай 5, Дай 3 / КАСКО от бесполисных-</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-auto">
+                                                <div style="width: 33px;">
+                                                    <div class="d-lg-none">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="14" viewBox="0 0 17 14" fill="none">
+                                                            <path d="M1.5 2.32763C2.38498 1.95786 3.6539 1.55951 4.88768 1.43506C6.21799 1.30088 7.3464 1.49815 8 2.18677V11.9326C7.06511 11.4026 5.88065 11.3298 4.78732 11.4401C3.60693 11.5592 2.41771 11.9012 1.5 12.2511V2.32763ZM9 2.18677C9.6536 1.49815 10.782 1.30088 12.1123 1.43506C13.3461 1.55951 14.615 1.95786 15.5 2.32763V12.2511C14.5823 11.9012 13.3931 11.5592 12.2127 11.4401C11.1194 11.3298 9.93489 11.4026 9 11.9326V2.18677ZM8.5 1.28312C7.51509 0.436527 6.08683 0.309035 4.78732 0.44011C3.27322 0.592829 1.74459 1.11241 0.793099 1.5449C0.614601 1.62604 0.5 1.80401 0.5 2.00009V13.0001C0.5 13.1701 0.586376 13.3284 0.729307 13.4205C0.872238 13.5125 1.05214 13.5256 1.2069 13.4553C2.08875 13.0544 3.51012 12.574 4.88768 12.4351C6.29565 12.293 7.47747 12.5223 8.10957 13.3124C8.20445 13.431 8.34811 13.5001 8.5 13.5001C8.65189 13.5001 8.79555 13.431 8.89043 13.3124C9.52253 12.5223 10.7043 12.293 12.1123 12.4351C13.4899 12.574 14.9113 13.0544 15.7931 13.4553C15.9479 13.5256 16.1278 13.5125 16.2707 13.4205C16.4136 13.3284 16.5 13.1701 16.5 13.0001V2.00009C16.5 1.80401 16.3854 1.62604 16.2069 1.5449C15.2554 1.11241 13.7268 0.592829 12.2127 0.44011C10.9132 0.309035 9.48491 0.436527 8.5 1.28312Z" fill="#444444"></path>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="row gy-3">
+                                                    <div class="col-lg-4 d-none d-lg-block">
+                                                        <div class="fs-14 fw-600">Дополнительные условия</div>
+                                                    </div>
+                                                    <div class="col-lg-8">
+                                                        <div class="fs-14">Полный комплект документов по бумажным полисам или отказ от предоставления документов.</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Чат Темы -->
+    <div class="offcanvas offcanvas-end bg-F3F4F6" tabindex="-1" id="offcanvasChat" aria-labelledby="offcanvasChatLabel">
+        <div class="offcanvas-header">
+            <p class="h5 offcanvas-title fw-600" id="offcanvasChatLabel">Чат</p>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="card-active p-2 mb-2">
+                <div class="row">
+                    <div class="col-10">
+                        <div class="d-flex flex-column">
+                            <p class="one-line fs-16 mb-2" title="Не загружается документ" data-bs-toggle="offcanvas"
+                                data-bs-target="#offcanvasMessages" aria-controls="offcanvasMessages">Не загружается
+                                документ</p>
+                            <span class="text-muted fs-12">от 26.12.23 10:34</span>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="d-flex flex-column align-items-center justify-content-end h-100">
+                            <div class="px-2">
+                                <span class="badge rounded-circle bg-danger">5</span>
+                            </div>
+                            <div>
+                                <button class="btn btn-icon btn-sm" type="button" data-bs-toggle="dropdown"><i
+                                        class="bi bi-three-dots"></i></button>
+                                <ul class="dropdown-menu fs-12">
+                                    <li><a class="dropdown-item" href="#">Действие №1</a></li>
+                                    <li><a class="dropdown-item" href="#">Действие номер №2</a></li>
+                                    <li><a class="dropdown-item" href="#">Ещё одно действие</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-active p-2 mb-2">
+                <div class="row">
+                    <div class="col-10">
+                        <div class="d-flex flex-column">
+                            <p class="one-line fs-16 mb-2" title="Не загружается документ, а ещё текст"
+                                data-bs-toggle="offcanvas" data-bs-target="#offcanvasMessages"
+                                aria-controls="offcanvasMessages">Не загружается
+                                документ, а ещё текст</p>
+                            <span class="text-muted fs-12">от 26.12.23 10:34</span>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="d-flex flex-column align-items-center justify-content-end h-100">
+                            <div>
+                                <button class="btn btn-icon btn-sm" type="button" data-bs-toggle="dropdown"><i
+                                        class="bi bi-three-dots"></i></button>
+                                <ul class="dropdown-menu fs-12">
+                                    <li><a class="dropdown-item" href="#">Действие №1</a></li>
+                                    <li><a class="dropdown-item" href="#">Действие номер №2</a></li>
+                                    <li><a class="dropdown-item" href="#">Ещё одно действие</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-active p-2 mb-2">
+                <div class="row">
+                    <div class="col-10">
+                        <div class="d-flex flex-column">
+                            <p class="one-line fs-16 mb-2" title="Не загружается документ" data-bs-toggle="offcanvas"
+                                data-bs-target="#offcanvasMessages" aria-controls="offcanvasMessages">Не загружается
+                                документ</p>
+                            <span class="text-muted fs-12">от 26.12.23 10:34</span>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="d-flex flex-column align-items-center justify-content-end h-100">
+                            <div class="px-2">
+                                <span class="badge rounded-circle bg-danger">5</span>
+                            </div>
+                            <div>
+                                <button class="btn btn-icon btn-sm" type="button" data-bs-toggle="dropdown"><i
+                                        class="bi bi-three-dots"></i></button>
+                                <ul class="dropdown-menu fs-12">
+                                    <li><a class="dropdown-item" href="#">Действие №1</a></li>
+                                    <li><a class="dropdown-item" href="#">Действие номер №2</a></li>
+                                    <li><a class="dropdown-item" href="#">Ещё одно действие</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Чат Сообщения -->
+    <div class="offcanvas offcanvas-end bg-F3F4F6" tabindex="-1" id="offcanvasMessages"
+        aria-labelledby="offcanvasMessagesLabel">
+        <div class="offcanvas-header">
+            <p class="h5 offcanvas-title fw-600" id="offcanvasMessagesLabel">Чат</p>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+
+            <div class="card card-chat">
+                <div class="card-header">
+                    <a href="#offcanvasChat" data-bs-toggle="offcanvas" aria-controls="offcanvasChat">
+                        <div class="d-flex align-items-center">
+                            <i class="bi bi-arrow-left text-primary me-2"></i> <span class="fs-14">Не загружается
+                                документ</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="card-body">
+                    <div class="d-flex flex-column fs-14 mb-2">
+                        <p class="text-muted fw-700 mb-2">Специалист</p>
+                        <p class="mb-2"><span class="me-2">10.05.2022</span><span>14:00</span></p>
+                        <p class="mb-2">Течение среды облучает термодинамический пульсар. Исследователями из разных
+                            лабораторий неоднократно наблюдалось, как осциллятор пространственно ускоряет векторный
+                            солитон.</p>
+                        <div>
+                            <button class="btn btn-icon btn-sm" type="button" data-bs-toggle="dropdown"><i
+                                    class="bi bi-three-dots"></i></button>
+                            <ul class="dropdown-menu fs-12">
+                                <li><a class="dropdown-item" href="#">Действие №1</a></li>
+                                <li><a class="dropdown-item" href="#">Действие номер №2</a></li>
+                                <li><a class="dropdown-item" href="#">Ещё одно действие</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column fs-14 mb-2">
+                        <p class="text-muted fw-700 mb-2">Специалист</p>
+                        <p class="mb-2"><span class="me-2">10.05.2022</span><span>14:00</span></p>
+                        <p class="mb-2">Течение среды облучает термодинамический пульсар. Исследователями из разных
+                            лабораторий неоднократно наблюдалось, как осциллятор пространственно ускоряет векторный
+                            солитон.</p>
+                        <div>
+                            <button class="btn btn-icon btn-sm" type="button" data-bs-toggle="dropdown"><i
+                                    class="bi bi-three-dots"></i></button>
+                            <ul class="dropdown-menu fs-12">
+                                <li><a class="dropdown-item" href="#">Действие №1</a></li>
+                                <li><a class="dropdown-item" href="#">Действие номер №2</a></li>
+                                <li><a class="dropdown-item" href="#">Ещё одно действие</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column fs-14 mb-2 bg-F0EEFF p-2 rounded-3">
+                        <p class="mb-2"><span class="me-2">10.05.2022</span><span>14:00</span></p>
+                        <p class="mb-2">Течение среды облучает термодинамический пульсар. Исследователями из разных
+                            лабораторий неоднократно наблюдалось, как осциллятор пространственно ускоряет векторный
+                            солитон.</p>
+                        <div>
+                            <button class="btn btn-icon btn-sm" type="button" data-bs-toggle="dropdown"><i
+                                    class="bi bi-three-dots"></i></button>
+                            <ul class="dropdown-menu fs-12">
+                                <li><a class="dropdown-item" href="#">Действие №1</a></li>
+                                <li><a class="dropdown-item" href="#">Действие номер №2</a></li>
+                                <li><a class="dropdown-item" href="#">Ещё одно действие</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="offcanvas-header">
+            <div class="d-flex align-items-center w-100">
+                <textarea class="form-control fs-14" rows="3" data-kt-element="input"
+                    placeholder="Написать сообщение"></textarea>
+                <div class="d-flex flex-column ms-1">
+                    <button class="btn btn-sm btn-icon" type="button">
+                        <i class="bi bi-paperclip"></i>
+                    </button>
+                    <button class="btn btn-sm btn-icon text-primary" type="button">
+                        <i class="bi bi-send-fill"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Оформить полис Оффканвас -->
+    <div class="offcanvas offcanvas-end offcanvas-drawUpPolis" id="drawUpPolis-offcanvas" tabindex="-1">
+        <div class="offcanvas-header justify-content-end">
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="nav flex-column drawUpPolis-nav">
+                <a class="nav-link" href="#">КАСКО</a>
+                <a class="nav-link" href="#">ОСАГО</a>
+                <a class="nav-link" href="#">Гражданская отвественность</a>
+                <a class="nav-link" href="#">Страхование дома</a>
+                <a class="nav-link" href="#">Страхование квартиры</a>
+                <a class="nav-link" href="#">Страхование ипотеки</a>
+                <a class="nav-link" href="#">Страхование от несчастного случая</a>
+                <a class="nav-link" href="#">Страхование выезжающих за рубеж</a>
+                <a class="nav-link" href="#">Страхование от критических и онкологических заболеваний</a>
+                <a class="nav-link" href="#">Добровольное медицинское трахование</a>
+                <a class="nav-link" href="#">Иное</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Бонусы Оффканвас -->
+    <div class="offcanvas offcanvas-end offcanvas-bonuses" id="bonuses-offcanvas" tabindex="-1">
+        <div class="offcanvas-header px-lg-5">
+            <p class="fs-18 fw-600 mb-0">Бонусы</p>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="row g-3 row-cols-2 row-cols-md-2">
+                <div class="col">
+                    <div class="card card-bonus">
+                        <div class="p-3 pb-0">
+                            <img class="card-img" src="img/card-bonus-cover-01.jpg" alt="">
+                        </div>
+                        <div class="card-body">
+                            <p class="card-title">Страхование выезжающих за рубеж</p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="#" class="btn btn-primary btn-sm w-100 stretched-link mb-2">Оформить</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card card-bonus">
+                        <div class="p-3 pb-0">
+                            <img class="card-img" src="img/card-bonus-cover-02.jpg" alt="">
+                        </div>
+                        <div class="card-body">
+                            <p class="card-title">Страхование от критических заболеваний</p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="#" class="btn btn-primary btn-sm w-100 stretched-link mb-2">Оформить</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card card-bonus">
+                        <div class="p-3 pb-0">
+                            <img class="card-img" src="img/card-bonus-cover-03.jpg" alt="">
+                        </div>
+                        <div class="card-body">
+                            <p class="card-title">Страхование квартиры</p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="#" class="btn btn-primary btn-sm w-100 stretched-link mb-2">Оформить</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card card-bonus">
+                        <div class="p-3 pb-0">
+                            <img class="card-img" src="img/card-bonus-cover-04.jpg" alt="">
+                        </div>
+                        <div class="card-body">
+                            <p class="card-title">Добровольное медицинское страхование</p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="#" class="btn btn-primary btn-sm w-100 stretched-link mb-2">Оформить</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card card-bonus">
+                        <div class="p-3 pb-0">
+                            <img class="card-img" src="img/card-bonus-cover-01.jpg" alt="">
+                        </div>
+                        <div class="card-body">
+                            <p class="card-title">Страхование выезжающих за рубеж</p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="#" class="btn btn-primary btn-sm w-100 stretched-link mb-2">Оформить</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card card-bonus">
+                        <div class="p-3 pb-0">
+                            <img class="card-img" src="img/card-bonus-cover-02.jpg" alt="">
+                        </div>
+                        <div class="card-body">
+                            <p class="card-title">Страхование от критических заболеваний</p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="#" class="btn btn-primary btn-sm w-100 stretched-link mb-2">Оформить</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card card-bonus">
+                        <div class="p-3 pb-0">
+                            <img class="card-img" src="img/card-bonus-cover-03.jpg" alt="">
+                        </div>
+                        <div class="card-body">
+                            <p class="card-title">Страхование квартиры</p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="#" class="btn btn-primary btn-sm w-100 stretched-link mb-2">Оформить</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card card-bonus">
+                        <div class="p-3 pb-0">
+                            <img class="card-img" src="img/card-bonus-cover-04.jpg" alt="">
+                        </div>
+                        <div class="card-body">
+                            <p class="card-title">Добровольное медицинское страхование</p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="#" class="btn btn-primary btn-sm w-100 stretched-link mb-2">Оформить</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Документ Паспорт Оффканвас -->
+    <div class="offcanvas offcanvas-end offcanvas-doc offcanvas-doc-passport" id="doc-passport-offcanvas" tabindex="-1">
+        <div class="offcanvas-header">
+            <div class="d-flex align-items-center justify-content-between w-100 px-lg-4">
+                <p class="fs-18 fw-600 mb-0">Паспорт</p>
+                <div class="d-flex gap-2 align-items-center">
+                    <div>
+                        <button type="button" class="btn btn-primary btn-icon btn-sm rounded-circle" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></button>
+                        <ul class="dropdown-menu fs-12">
+                            <li><a class="dropdown-item" href="#">Редактировать</a></li>
+                            <li><a class="dropdown-item text-danger" href="#">Удалить</a></li>
+                        </ul>
+                    </div>
+                    <button type="button" class="btn-close btn-icon btn-sm" data-bs-dismiss="offcanvas" aria-label="Close" style="background-size: contain;"></button>
+                </div>
+            </div>
+        </div>
+        <div class="offcanvas-body">
+            <div class="mb-5 px-lg-4">
+                <div class="row gy-3">
+                    <div class="col-12 border-bottom pb-3">
+                        <div class="fs-14 fw-600">Петров-Водкин Кузьма Сергеевич</div>
+                        <div class="text-muted fs-12">Фамилия Имя Отчество</div>
+                    </div>
+                    <div class="col-12 border-bottom pb-3">
+                        <div class="fs-14 fw-600">24 октября 1878</div>
+                        <div class="text-muted fs-12">Дата рождения</div>
+                    </div>
+                    <div class="col-4 border-bottom pb-3">
+                        <div class="fs-14 fw-600">0123 456789</div>
+                        <div class="text-muted fs-12">Серия и номер</div>
+                    </div>
+                    <div class="col-4 border-bottom pb-3">
+                        <div class="fs-14 fw-600">987-654</div>
+                        <div class="text-muted fs-12">Код подразделения</div>
+                    </div>
+                    <div class="col-4 border-bottom pb-3">
+                        <div class="fs-14 fw-600">01.01.1900</div>
+                        <div class="text-muted fs-12">Дата выдачи</div>
+                    </div>
+                    <div class="col-12 border-bottom pb-3">
+                        <div class="fs-14 fw-600">Отделом УФМС города Хвалынска, Саратовской губернии, Российской империи</div>
+                        <div class="text-muted fs-12">Кем выдан</div>
+                    </div>
+                    <div class="col-12 border-bottom pb-3">
+                        <div class="fs-14 fw-600">Саратовская губерния, город Хвалынск, ул. Пришвина, д. 100, кв. 200</div>
+                        <div class="text-muted fs-12">Адрес регистрации</div>
+                    </div>
+                </div>
+            </div>
+            <div class="px-lg-4">
+                <div class="d-flex gap-2 flex-column">
+                    <!-- убрать "d-none" чтобы увидеть поле -->
+                    <div class="my-dropzone d-none">
+                        <div class="d-flex flex-column gap-2 align-items-center fs-12 fs-lg-14">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="23" viewBox="0 0 22 23" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M11.9167 15.4343V5.73061L14.9352 8.7491L16.2315 7.45274L11 2.22122L5.76849 7.45274L7.06485 8.7491L10.0833 5.73061V15.4343H11.9167ZM19.25 19.1009V10.8509H17.4167V19.1009H4.58333V10.8509H2.75V19.1009C2.75 20.1134 3.57081 20.9342 4.58333 20.9342H17.4167C18.4292 20.9342 19.25 20.1134 19.25 19.1009Z" fill="black"></path>
+                            </svg>
+                            <div class="text-center fw-600">Перетащите файлы сюда или<br> <span class="text-primary">нажмите, чтобы загрузить</span></div>
+                            <div class="text-center text-muted">Загрузите файлы в формате pdf, jpeg, tiff, png<br> до 10 Мб каждый</div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-6">
+                                    <img class="card-img" src="img/offcanvas-doc-img.jpg" alt="">
+                                </div>
+                                <div class="col-6">
+                                    <ul class="d-flex gap-2 flex-column list-unstyled mb-0 fs-14 fw-600">
+                                        <li>
+                                            <a href="#" class="d-flex gap-2 align-items-center">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 22 21" fill="none">
+                                                    <path d="M10.3408 7.57829C10.6828 7.50405 10.9717 7.77223 10.9717 8.0944V8.92773C10.9717 9.52604 11.5008 10.0111 12.1535 10.0111H13.0626C13.414 10.0111 13.7066 10.2759 13.6256 10.5894C13.3409 11.6912 12.2607 12.5111 10.9717 12.5111C9.46543 12.5111 8.24439 11.3918 8.24439 10.0111C8.24439 8.82941 9.13874 7.83923 10.3408 7.57829Z" fill="#694FFF"/>
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10.9717 4.17773C6.53465 4.17773 3.57732 7.22327 2.27789 8.91318C1.76609 9.57877 1.76609 10.4434 2.27789 11.109C3.57732 12.7989 6.53465 15.8444 10.9717 15.8444C15.4087 15.8444 18.366 12.7989 19.6655 11.109C20.1773 10.4434 20.1773 9.57877 19.6655 8.91318C18.366 7.22327 15.4087 4.17773 10.9717 4.17773ZM5.25231 7.45047C4.3915 8.15913 3.71808 8.92059 3.24386 9.53732C3.01986 9.82863 3.01986 10.1935 3.24386 10.4848C3.71808 11.1015 4.3915 11.863 5.2523 12.5717C4.83967 11.7987 4.60804 10.9297 4.60804 10.0111C4.60804 9.09248 4.83967 8.22348 5.25231 7.45047ZM10.9717 14.7611C8.10983 14.7611 5.78986 12.6344 5.78986 10.0111C5.78986 7.38772 8.10983 5.26107 10.9717 5.26107C13.8335 5.26107 16.1535 7.38772 16.1535 10.0111C16.1535 12.6344 13.8335 14.7611 10.9717 14.7611ZM16.691 7.45047C17.5519 8.15913 18.2253 8.92059 18.6995 9.53732C18.9235 9.82863 18.9235 10.1935 18.6995 10.4848C18.2253 11.1015 17.5518 11.863 16.691 12.5717C17.1037 11.7987 17.3353 10.9297 17.3353 10.0111C17.3353 9.09248 17.1037 8.22347 16.691 7.45047Z" fill="#694FFF"/>
+                                                </svg>
+                                                <span>Посмотреть</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="d-flex gap-2 align-items-center">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19" fill="none">
+                                                    <path d="M1.15604 4.10352C1.15604 3.17154 1.91156 2.41602 2.84354 2.41602H5.95297C7.03046 2.41602 7.93387 3.04597 8.55338 3.74799C9.01445 4.27045 9.56959 4.66602 10.156 4.66602H15.2193C16.1518 4.66602 16.906 5.42204 16.906 6.35352V7.07276C17.5468 7.37127 17.9628 8.05913 17.8686 8.81282L17.1481 14.5774C16.9721 15.9848 15.7757 17.041 14.3573 17.041H3.7048C2.2864 17.041 1.08995 15.9848 0.914023 14.5774L0.193455 8.81282C0.0992433 8.05913 0.515306 7.37127 1.15604 7.07276V4.10352ZM2.28104 6.91602H15.781V6.35352C15.781 6.04235 15.5295 5.79102 15.2193 5.79102H10.156C9.07166 5.79102 8.2317 5.08369 7.70987 4.49237C7.20158 3.91639 6.57995 3.54102 5.95297 3.54102H2.84354C2.53288 3.54102 2.28104 3.79286 2.28104 4.10352V6.91602ZM1.86792 8.04102C1.52958 8.04102 1.2678 8.33755 1.30977 8.67329L2.03034 14.4378C2.13589 15.2823 2.85376 15.916 3.7048 15.916H14.3573C15.2083 15.916 15.9262 15.2823 16.0318 14.4378L16.7523 8.67328C16.7943 8.33756 16.5325 8.04102 16.1942 8.04102H1.86792Z" fill="#5C43FC"/>
+                                                </svg>
+                                                <span>Открыть</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="d-flex gap-2 align-items-center">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19" fill="none">
+                                                    <path d="M9.89746 5.90039C10.2081 5.90039 10.46 6.15223 10.46 6.46289V10.7299L11.7497 9.44014C11.9694 9.22047 12.3255 9.22047 12.5452 9.44014C12.7649 9.65981 12.7649 10.016 12.5452 10.2356L10.2952 12.4856C10.0755 12.7053 9.71938 12.7053 9.49971 12.4856L7.24971 10.2356C7.03004 10.016 7.03004 9.65981 7.24971 9.44014C7.46938 9.22047 7.82554 9.22047 8.04521 9.44014L9.33496 10.7299V6.46289C9.33496 6.15223 9.5868 5.90039 9.89746 5.90039Z" fill="#5C43FC"/>
+                                                    <path d="M5.39746 0.275391C4.15482 0.275391 3.14746 1.28275 3.14746 2.52539V16.0254C3.14746 17.268 4.15482 18.2754 5.39746 18.2754H14.3975C15.6401 18.2754 16.6475 17.268 16.6475 16.0254V2.52539C16.6475 1.28275 15.6401 0.275391 14.3975 0.275391H5.39746ZM5.39746 1.40039H14.3975C15.0188 1.40039 15.5225 1.90407 15.5225 2.52539V16.0254C15.5225 16.6467 15.0188 17.1504 14.3975 17.1504H5.39746C4.77614 17.1504 4.27246 16.6467 4.27246 16.0254V2.52539C4.27246 1.90407 4.77614 1.40039 5.39746 1.40039Z" fill="#5C43FC"/>
+                                                </svg>
+                                                <span>Скачать</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="d-flex gap-2 align-items-center text-danger" style="--bs-danger-rgb: 228,31,37;">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19" fill="none">
+                                                    <path d="M7.77275 8.52803C7.55308 8.30836 7.19692 8.30836 6.97725 8.52803C6.75758 8.7477 6.75758 9.10386 6.97725 9.32353L8.267 10.6133L6.97725 11.903C6.75758 12.1227 6.75758 12.4789 6.97725 12.6985C7.19692 12.9182 7.55308 12.9182 7.77275 12.6985L9.0625 11.4088L10.3523 12.6985C10.5719 12.9182 10.9281 12.9182 11.1477 12.6985C11.3674 12.4789 11.3674 12.1227 11.1477 11.903L9.858 10.6133L11.1477 9.32353C11.3674 9.10386 11.3674 8.7477 11.1477 8.52803C10.9281 8.30836 10.5719 8.30836 10.3523 8.52803L9.0625 9.81779L7.77275 8.52803Z" fill="#5C43FC"/>
+                                                    <path d="M15.8125 16.2383V5.55078L10.75 0.488281H4.5625C3.31986 0.488281 2.3125 1.49564 2.3125 2.73828V16.2383C2.3125 17.4809 3.31986 18.4883 4.5625 18.4883H13.5625C14.8051 18.4883 15.8125 17.4809 15.8125 16.2383ZM10.75 3.86328C10.75 4.79526 11.5055 5.55078 12.4375 5.55078H14.6875V16.2383C14.6875 16.8596 14.1838 17.3633 13.5625 17.3633H4.5625C3.94118 17.3633 3.4375 16.8596 3.4375 16.2383V2.73828C3.4375 2.11696 3.94118 1.61328 4.5625 1.61328H10.75V3.86328Z" fill="#5C43FC"/>
+                                                </svg>
+                                                <span>Удалить</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="my-dropzone">
+                        <div class="d-flex flex-row gap-2 align-items-center justify-content-center fs-12 fs-lg-14">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="23" viewBox="0 0 22 23" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M11.9167 15.4343V5.73061L14.9352 8.7491L16.2315 7.45274L11 2.22122L5.76849 7.45274L7.06485 8.7491L10.0833 5.73061V15.4343H11.9167ZM19.25 19.1009V10.8509H17.4167V19.1009H4.58333V10.8509H2.75V19.1009C2.75 20.1134 3.57081 20.9342 4.58333 20.9342H17.4167C18.4292 20.9342 19.25 20.1134 19.25 19.1009Z" fill="black"></path>
+                            </svg>
+                            <div class="text-center fw-600">Перетащите файлы сюда или<br> <span class="text-primary">нажмите, чтобы загрузить</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Документ Водительское удостоверение Оффканвас -->
+    <div class="offcanvas offcanvas-end offcanvas-doc offcanvas-doc-vu" id="doc-vu-offcanvas" tabindex="-1">
+        <div class="offcanvas-header">
+            <div class="d-flex align-items-center justify-content-between w-100 px-lg-4">
+                <p class="fs-18 fw-600 mb-0">Водительское удостоверение</p>
+                <div class="d-flex gap-2 align-items-center">
+                    <div>
+                        <button type="button" class="btn btn-primary btn-icon btn-sm rounded-circle" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></button>
+                        <ul class="dropdown-menu fs-12">
+                            <li><a class="dropdown-item" href="#">Редактировать</a></li>
+                            <li><a class="dropdown-item text-danger" href="#">Удалить</a></li>
+                        </ul>
+                    </div>
+                    <button type="button" class="btn-close btn-icon btn-sm" data-bs-dismiss="offcanvas" aria-label="Close" style="background-size: contain;"></button>
+                </div>
+            </div>
+        </div>
+        <div class="offcanvas-body">
+            <div class="mb-5 px-lg-4">
+                <div class="row gy-3">
+                    <div class="col-12 border-bottom pb-3">
+                        <div class="fs-14 fw-600">Петров-Водкин Кузьма Сергеевич</div>
+                        <div class="text-muted fs-12">Фамилия Имя Отчество</div>
+                    </div>
+                    <div class="col-12 border-bottom pb-3">
+                        <div class="fs-14 fw-600">24 октября 1878</div>
+                        <div class="text-muted fs-12">Дата рождения</div>
+                    </div>
+                    <div class="col-4 border-bottom pb-3">
+                        <div class="fs-14 fw-600">0123 456789</div>
+                        <div class="text-muted fs-12">ВУ серия и номер</div>
+                    </div>
+                    <div class="col-4 border-bottom pb-3">
+                        <div class="fs-14 fw-600">01.01.1900</div>
+                        <div class="text-muted fs-12">Дата выдачи</div>
+                    </div>
+                    <div class="col-4 border-bottom pb-3">
+                        <div class="fs-14 fw-600">1896</div>
+                        <div class="text-muted fs-12">Начало стажа</div>
+                    </div>
+                </div>
+            </div>
+            <div class="px-lg-4">
+                <div class="d-flex gap-2 flex-column">
+                    <!-- убрать "d-none" чтобы увидеть поле -->
+                    <div class="my-dropzone d-none">
+                        <div class="d-flex flex-column gap-2 align-items-center fs-12 fs-lg-14">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="23" viewBox="0 0 22 23" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M11.9167 15.4343V5.73061L14.9352 8.7491L16.2315 7.45274L11 2.22122L5.76849 7.45274L7.06485 8.7491L10.0833 5.73061V15.4343H11.9167ZM19.25 19.1009V10.8509H17.4167V19.1009H4.58333V10.8509H2.75V19.1009C2.75 20.1134 3.57081 20.9342 4.58333 20.9342H17.4167C18.4292 20.9342 19.25 20.1134 19.25 19.1009Z" fill="black"></path>
+                            </svg>
+                            <div class="text-center fw-600">Перетащите файлы сюда или<br> <span class="text-primary">нажмите, чтобы загрузить</span></div>
+                            <div class="text-center text-muted">Загрузите файлы в формате pdf, jpeg, tiff, png<br> до 10 Мб каждый</div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-6">
+                                    <img class="card-img" src="img/offcanvas-doc-img.jpg" alt="">
+                                </div>
+                                <div class="col-6">
+                                    <ul class="d-flex gap-2 flex-column list-unstyled mb-0 fs-14 fw-600">
+                                        <li>
+                                            <a href="#" class="d-flex gap-2 align-items-center">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 22 21" fill="none">
+                                                    <path d="M10.3408 7.57829C10.6828 7.50405 10.9717 7.77223 10.9717 8.0944V8.92773C10.9717 9.52604 11.5008 10.0111 12.1535 10.0111H13.0626C13.414 10.0111 13.7066 10.2759 13.6256 10.5894C13.3409 11.6912 12.2607 12.5111 10.9717 12.5111C9.46543 12.5111 8.24439 11.3918 8.24439 10.0111C8.24439 8.82941 9.13874 7.83923 10.3408 7.57829Z" fill="#694FFF"/>
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10.9717 4.17773C6.53465 4.17773 3.57732 7.22327 2.27789 8.91318C1.76609 9.57877 1.76609 10.4434 2.27789 11.109C3.57732 12.7989 6.53465 15.8444 10.9717 15.8444C15.4087 15.8444 18.366 12.7989 19.6655 11.109C20.1773 10.4434 20.1773 9.57877 19.6655 8.91318C18.366 7.22327 15.4087 4.17773 10.9717 4.17773ZM5.25231 7.45047C4.3915 8.15913 3.71808 8.92059 3.24386 9.53732C3.01986 9.82863 3.01986 10.1935 3.24386 10.4848C3.71808 11.1015 4.3915 11.863 5.2523 12.5717C4.83967 11.7987 4.60804 10.9297 4.60804 10.0111C4.60804 9.09248 4.83967 8.22348 5.25231 7.45047ZM10.9717 14.7611C8.10983 14.7611 5.78986 12.6344 5.78986 10.0111C5.78986 7.38772 8.10983 5.26107 10.9717 5.26107C13.8335 5.26107 16.1535 7.38772 16.1535 10.0111C16.1535 12.6344 13.8335 14.7611 10.9717 14.7611ZM16.691 7.45047C17.5519 8.15913 18.2253 8.92059 18.6995 9.53732C18.9235 9.82863 18.9235 10.1935 18.6995 10.4848C18.2253 11.1015 17.5518 11.863 16.691 12.5717C17.1037 11.7987 17.3353 10.9297 17.3353 10.0111C17.3353 9.09248 17.1037 8.22347 16.691 7.45047Z" fill="#694FFF"/>
+                                                </svg>
+                                                <span>Посмотреть</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="d-flex gap-2 align-items-center">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19" fill="none">
+                                                    <path d="M1.15604 4.10352C1.15604 3.17154 1.91156 2.41602 2.84354 2.41602H5.95297C7.03046 2.41602 7.93387 3.04597 8.55338 3.74799C9.01445 4.27045 9.56959 4.66602 10.156 4.66602H15.2193C16.1518 4.66602 16.906 5.42204 16.906 6.35352V7.07276C17.5468 7.37127 17.9628 8.05913 17.8686 8.81282L17.1481 14.5774C16.9721 15.9848 15.7757 17.041 14.3573 17.041H3.7048C2.2864 17.041 1.08995 15.9848 0.914023 14.5774L0.193455 8.81282C0.0992433 8.05913 0.515306 7.37127 1.15604 7.07276V4.10352ZM2.28104 6.91602H15.781V6.35352C15.781 6.04235 15.5295 5.79102 15.2193 5.79102H10.156C9.07166 5.79102 8.2317 5.08369 7.70987 4.49237C7.20158 3.91639 6.57995 3.54102 5.95297 3.54102H2.84354C2.53288 3.54102 2.28104 3.79286 2.28104 4.10352V6.91602ZM1.86792 8.04102C1.52958 8.04102 1.2678 8.33755 1.30977 8.67329L2.03034 14.4378C2.13589 15.2823 2.85376 15.916 3.7048 15.916H14.3573C15.2083 15.916 15.9262 15.2823 16.0318 14.4378L16.7523 8.67328C16.7943 8.33756 16.5325 8.04102 16.1942 8.04102H1.86792Z" fill="#5C43FC"/>
+                                                </svg>
+                                                <span>Открыть</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="d-flex gap-2 align-items-center">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19" fill="none">
+                                                    <path d="M9.89746 5.90039C10.2081 5.90039 10.46 6.15223 10.46 6.46289V10.7299L11.7497 9.44014C11.9694 9.22047 12.3255 9.22047 12.5452 9.44014C12.7649 9.65981 12.7649 10.016 12.5452 10.2356L10.2952 12.4856C10.0755 12.7053 9.71938 12.7053 9.49971 12.4856L7.24971 10.2356C7.03004 10.016 7.03004 9.65981 7.24971 9.44014C7.46938 9.22047 7.82554 9.22047 8.04521 9.44014L9.33496 10.7299V6.46289C9.33496 6.15223 9.5868 5.90039 9.89746 5.90039Z" fill="#5C43FC"/>
+                                                    <path d="M5.39746 0.275391C4.15482 0.275391 3.14746 1.28275 3.14746 2.52539V16.0254C3.14746 17.268 4.15482 18.2754 5.39746 18.2754H14.3975C15.6401 18.2754 16.6475 17.268 16.6475 16.0254V2.52539C16.6475 1.28275 15.6401 0.275391 14.3975 0.275391H5.39746ZM5.39746 1.40039H14.3975C15.0188 1.40039 15.5225 1.90407 15.5225 2.52539V16.0254C15.5225 16.6467 15.0188 17.1504 14.3975 17.1504H5.39746C4.77614 17.1504 4.27246 16.6467 4.27246 16.0254V2.52539C4.27246 1.90407 4.77614 1.40039 5.39746 1.40039Z" fill="#5C43FC"/>
+                                                </svg>
+                                                <span>Скачать</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="d-flex gap-2 align-items-center text-danger" style="--bs-danger-rgb: 228,31,37;">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19" fill="none">
+                                                    <path d="M7.77275 8.52803C7.55308 8.30836 7.19692 8.30836 6.97725 8.52803C6.75758 8.7477 6.75758 9.10386 6.97725 9.32353L8.267 10.6133L6.97725 11.903C6.75758 12.1227 6.75758 12.4789 6.97725 12.6985C7.19692 12.9182 7.55308 12.9182 7.77275 12.6985L9.0625 11.4088L10.3523 12.6985C10.5719 12.9182 10.9281 12.9182 11.1477 12.6985C11.3674 12.4789 11.3674 12.1227 11.1477 11.903L9.858 10.6133L11.1477 9.32353C11.3674 9.10386 11.3674 8.7477 11.1477 8.52803C10.9281 8.30836 10.5719 8.30836 10.3523 8.52803L9.0625 9.81779L7.77275 8.52803Z" fill="#5C43FC"/>
+                                                    <path d="M15.8125 16.2383V5.55078L10.75 0.488281H4.5625C3.31986 0.488281 2.3125 1.49564 2.3125 2.73828V16.2383C2.3125 17.4809 3.31986 18.4883 4.5625 18.4883H13.5625C14.8051 18.4883 15.8125 17.4809 15.8125 16.2383ZM10.75 3.86328C10.75 4.79526 11.5055 5.55078 12.4375 5.55078H14.6875V16.2383C14.6875 16.8596 14.1838 17.3633 13.5625 17.3633H4.5625C3.94118 17.3633 3.4375 16.8596 3.4375 16.2383V2.73828C3.4375 2.11696 3.94118 1.61328 4.5625 1.61328H10.75V3.86328Z" fill="#5C43FC"/>
+                                                </svg>
+                                                <span>Удалить</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-6">
+                                    <img class="card-img" src="img/offcanvas-doc-img.jpg" alt="">
+                                </div>
+                                <div class="col-6">
+                                    <ul class="d-flex gap-2 flex-column list-unstyled mb-0 fs-14 fw-600">
+                                        <li>
+                                            <a href="#" class="d-flex gap-2 align-items-center">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 22 21" fill="none">
+                                                    <path d="M10.3408 7.57829C10.6828 7.50405 10.9717 7.77223 10.9717 8.0944V8.92773C10.9717 9.52604 11.5008 10.0111 12.1535 10.0111H13.0626C13.414 10.0111 13.7066 10.2759 13.6256 10.5894C13.3409 11.6912 12.2607 12.5111 10.9717 12.5111C9.46543 12.5111 8.24439 11.3918 8.24439 10.0111C8.24439 8.82941 9.13874 7.83923 10.3408 7.57829Z" fill="#694FFF"/>
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10.9717 4.17773C6.53465 4.17773 3.57732 7.22327 2.27789 8.91318C1.76609 9.57877 1.76609 10.4434 2.27789 11.109C3.57732 12.7989 6.53465 15.8444 10.9717 15.8444C15.4087 15.8444 18.366 12.7989 19.6655 11.109C20.1773 10.4434 20.1773 9.57877 19.6655 8.91318C18.366 7.22327 15.4087 4.17773 10.9717 4.17773ZM5.25231 7.45047C4.3915 8.15913 3.71808 8.92059 3.24386 9.53732C3.01986 9.82863 3.01986 10.1935 3.24386 10.4848C3.71808 11.1015 4.3915 11.863 5.2523 12.5717C4.83967 11.7987 4.60804 10.9297 4.60804 10.0111C4.60804 9.09248 4.83967 8.22348 5.25231 7.45047ZM10.9717 14.7611C8.10983 14.7611 5.78986 12.6344 5.78986 10.0111C5.78986 7.38772 8.10983 5.26107 10.9717 5.26107C13.8335 5.26107 16.1535 7.38772 16.1535 10.0111C16.1535 12.6344 13.8335 14.7611 10.9717 14.7611ZM16.691 7.45047C17.5519 8.15913 18.2253 8.92059 18.6995 9.53732C18.9235 9.82863 18.9235 10.1935 18.6995 10.4848C18.2253 11.1015 17.5518 11.863 16.691 12.5717C17.1037 11.7987 17.3353 10.9297 17.3353 10.0111C17.3353 9.09248 17.1037 8.22347 16.691 7.45047Z" fill="#694FFF"/>
+                                                </svg>
+                                                <span>Посмотреть</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="d-flex gap-2 align-items-center">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19" fill="none">
+                                                    <path d="M1.15604 4.10352C1.15604 3.17154 1.91156 2.41602 2.84354 2.41602H5.95297C7.03046 2.41602 7.93387 3.04597 8.55338 3.74799C9.01445 4.27045 9.56959 4.66602 10.156 4.66602H15.2193C16.1518 4.66602 16.906 5.42204 16.906 6.35352V7.07276C17.5468 7.37127 17.9628 8.05913 17.8686 8.81282L17.1481 14.5774C16.9721 15.9848 15.7757 17.041 14.3573 17.041H3.7048C2.2864 17.041 1.08995 15.9848 0.914023 14.5774L0.193455 8.81282C0.0992433 8.05913 0.515306 7.37127 1.15604 7.07276V4.10352ZM2.28104 6.91602H15.781V6.35352C15.781 6.04235 15.5295 5.79102 15.2193 5.79102H10.156C9.07166 5.79102 8.2317 5.08369 7.70987 4.49237C7.20158 3.91639 6.57995 3.54102 5.95297 3.54102H2.84354C2.53288 3.54102 2.28104 3.79286 2.28104 4.10352V6.91602ZM1.86792 8.04102C1.52958 8.04102 1.2678 8.33755 1.30977 8.67329L2.03034 14.4378C2.13589 15.2823 2.85376 15.916 3.7048 15.916H14.3573C15.2083 15.916 15.9262 15.2823 16.0318 14.4378L16.7523 8.67328C16.7943 8.33756 16.5325 8.04102 16.1942 8.04102H1.86792Z" fill="#5C43FC"/>
+                                                </svg>
+                                                <span>Открыть</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="d-flex gap-2 align-items-center">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19" fill="none">
+                                                    <path d="M9.89746 5.90039C10.2081 5.90039 10.46 6.15223 10.46 6.46289V10.7299L11.7497 9.44014C11.9694 9.22047 12.3255 9.22047 12.5452 9.44014C12.7649 9.65981 12.7649 10.016 12.5452 10.2356L10.2952 12.4856C10.0755 12.7053 9.71938 12.7053 9.49971 12.4856L7.24971 10.2356C7.03004 10.016 7.03004 9.65981 7.24971 9.44014C7.46938 9.22047 7.82554 9.22047 8.04521 9.44014L9.33496 10.7299V6.46289C9.33496 6.15223 9.5868 5.90039 9.89746 5.90039Z" fill="#5C43FC"/>
+                                                    <path d="M5.39746 0.275391C4.15482 0.275391 3.14746 1.28275 3.14746 2.52539V16.0254C3.14746 17.268 4.15482 18.2754 5.39746 18.2754H14.3975C15.6401 18.2754 16.6475 17.268 16.6475 16.0254V2.52539C16.6475 1.28275 15.6401 0.275391 14.3975 0.275391H5.39746ZM5.39746 1.40039H14.3975C15.0188 1.40039 15.5225 1.90407 15.5225 2.52539V16.0254C15.5225 16.6467 15.0188 17.1504 14.3975 17.1504H5.39746C4.77614 17.1504 4.27246 16.6467 4.27246 16.0254V2.52539C4.27246 1.90407 4.77614 1.40039 5.39746 1.40039Z" fill="#5C43FC"/>
+                                                </svg>
+                                                <span>Скачать</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="d-flex gap-2 align-items-center text-danger" style="--bs-danger-rgb: 228,31,37;">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19" fill="none">
+                                                    <path d="M7.77275 8.52803C7.55308 8.30836 7.19692 8.30836 6.97725 8.52803C6.75758 8.7477 6.75758 9.10386 6.97725 9.32353L8.267 10.6133L6.97725 11.903C6.75758 12.1227 6.75758 12.4789 6.97725 12.6985C7.19692 12.9182 7.55308 12.9182 7.77275 12.6985L9.0625 11.4088L10.3523 12.6985C10.5719 12.9182 10.9281 12.9182 11.1477 12.6985C11.3674 12.4789 11.3674 12.1227 11.1477 11.903L9.858 10.6133L11.1477 9.32353C11.3674 9.10386 11.3674 8.7477 11.1477 8.52803C10.9281 8.30836 10.5719 8.30836 10.3523 8.52803L9.0625 9.81779L7.77275 8.52803Z" fill="#5C43FC"/>
+                                                    <path d="M15.8125 16.2383V5.55078L10.75 0.488281H4.5625C3.31986 0.488281 2.3125 1.49564 2.3125 2.73828V16.2383C2.3125 17.4809 3.31986 18.4883 4.5625 18.4883H13.5625C14.8051 18.4883 15.8125 17.4809 15.8125 16.2383ZM10.75 3.86328C10.75 4.79526 11.5055 5.55078 12.4375 5.55078H14.6875V16.2383C14.6875 16.8596 14.1838 17.3633 13.5625 17.3633H4.5625C3.94118 17.3633 3.4375 16.8596 3.4375 16.2383V2.73828C3.4375 2.11696 3.94118 1.61328 4.5625 1.61328H10.75V3.86328Z" fill="#5C43FC"/>
+                                                </svg>
+                                                <span>Удалить</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="my-dropzone">
+                        <div class="d-flex flex-row gap-2 align-items-center justify-content-center fs-12 fs-lg-14">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="23" viewBox="0 0 22 23" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M11.9167 15.4343V5.73061L14.9352 8.7491L16.2315 7.45274L11 2.22122L5.76849 7.45274L7.06485 8.7491L10.0833 5.73061V15.4343H11.9167ZM19.25 19.1009V10.8509H17.4167V19.1009H4.58333V10.8509H2.75V19.1009C2.75 20.1134 3.57081 20.9342 4.58333 20.9342H17.4167C18.4292 20.9342 19.25 20.1134 19.25 19.1009Z" fill="black"></path>
+                            </svg>
+                            <div class="text-center fw-600">Перетащите файлы сюда или<br> <span class="text-primary">нажмите, чтобы загрузить</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/fancybox.umd.js"></script>
+    <script src="js/imask.js"></script>
+    <script src="js/choices.min.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,553 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oformlenie-osago-03</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/fancybox.css">
+    <link rel="stylesheet" href="css/choices.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body class="bg-F3F4F6">
+
+    <header class="sticky-heading header sticky-top">
+        <nav class="navbar navbar-expand-xxl bg-white shadow">
+            <div class="container">
+                <a class="navbar-brand d-none d-xxl-flex hover-opacity" href="#">
+                    <img src="img/logo.svg" alt="Logo">
+                </a>
+                <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="bi bi-grid"></i>
+                </button>
+                <div class="offcanvas offcanvas-end offcanvas-navbar" tabindex="-1" id="navbarNav">
+                    <div class="offcanvas-header">
+                        <button type="button" class="btn btn-icon btn-sm border-0" data-bs-dismiss="offcanvas" aria-label="Close">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="9" height="15" viewBox="0 0 9 15" fill="none">
+                                <path d="M7.78265 0.75C7.96865 0.75 8.14431 0.822332 8.27864 0.966998C8.52664 1.246 8.50598 1.66966 8.23731 1.91766L1.65592 7.84926L8.27867 13.5842C8.55767 13.8322 8.568 14.2559 8.32 14.5349C8.07201 14.8036 7.64834 14.8242 7.36934 14.5762L0.24026 8.38659C-0.0800708 8.09726 -0.0800708 7.60126 0.24026 7.31193L7.32798 0.925664C7.46232 0.801664 7.61732 0.75 7.78265 0.75Z" fill="#747782"/>
+                            </svg>
+                        </button>
+                        <a class="navbar-brand" href="#">
+                            <img src="img/logo.svg" alt="Logo">
+                        </a>
+                        <div style="width: 2rem;"></div>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav ms-xxl-4 me-xxl-auto">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span>Договоры</span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#"><span>Договоры</span></a></li>
+                                    <li><a class="dropdown-item" href="#"><span>Генеральные договора</span></a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="#"><span>Цифра</span></a></li>
+                            <li class="nav-item"><a class="nav-link" href="#"><span>Пользователи</span></a></li>
+                            <li class="nav-item"><a class="nav-link" href="#"><span>Настройки</span></a></li>
+                            <li class="nav-item"><a class="nav-link" href="#"><span>Финансы</span></a></li>
+                            <li class="nav-item"><a class="nav-link" href="#"><span>Аналитика</span></a></li>
+                        </ul>
+
+                    </div>
+                </div>
+
+                <div class="d-flex gap-2 gap-xxl-4 align-items-center">
+                    <div class="d-flex gap-2 align-items-center">
+                        <button type="button" class="btn btn-primary btn-sm px-2 px-lg-3" data-bs-toggle="offcanvas"
+                            data-bs-target="#drawUpPolis-offcanvas"><i class="bi bi-plus-circle-fill"></i><span
+                                class="d-none d-md-inline ms-2"> Оформить
+                                полис</span></button>
+                        <div class="d-flex gap-2 align-items-center">
+                            <button type="button" class="btn btn-icon btn-sm border-0 position-relative"
+                                data-bs-toggle="offcanvas" data-bs-target="#offcanvasChat"
+                                aria-controls="offcanvasChat">
+                                <i class="bi bi-chat-left-dots"></i>
+                                <span class="badge badge-chat rounded-circle bg-red">4</span>
+                            </button>
+                            <button type="button" class="btn btn-icon btn-sm border-0 position-relative">
+                                <i class="bi bi-bell"></i>
+                            </button>
+                        </div>
+                        <div class="bg-F0EEFF rounded-3 fs-12 p-2">
+                            <span class="text-black">3 578, 00</span>
+                            <span class="text-primary">INS</span>
+                        </div>
+                    </div>
+
+                    <div class="d-flex gap-2 gap-xxl-4 align-items-center">
+                        <a href="#">
+                            <div class="avatar-container">
+                                <img src="img/avatar.jpg" class="avatar img-fluid" alt="avatar">
+                            </div>
+                        </a>
+                        <button type="button" class="btn btn-icon border-0 d-none d-xxl-inline-block" style="--btn-icon-size: 1.5rem;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="25" viewBox="0 0 22 25" fill="none">
+                                <path d="M9.44902 12.25H16.621M16.621 12.25L14.3798 10.0278M16.621 12.25L14.3798 14.4722M16.621 7.36111V5.25C16.621 4.69772 16.2196 4.25 15.7245 4.25H6.75953C6.26442 4.25 5.86304 4.69772 5.86304 5.25V19.25C5.86304 19.8023 6.26442 20.25 6.75953 20.25H15.7245C16.2196 20.25 16.621 19.8023 16.621 19.25V17.1389" stroke="#747782" stroke-width="1.21105" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+
+        <!-- table -->
+        <section class="section py-3">
+            <div class="container">
+                <div class="row g-3">
+                    <div class="col-lg-8">
+
+                        <!-- item -->
+                        <div class="bg-white rounded-4 p-3 p-lg-4 mb-3">
+
+                            <div>
+                                <div class="row g-3">
+                                    <div class="col-10">
+                                        <div class="d-flex gap-3 align-items-center mb-3">
+                                            <img src="img/square-logo-ingosstrah.png" alt="" width="48" height="48">
+                                            <div class="fs-14 fw-600" style="max-width: 140px;">Ингосстрах Страхование</div>
+                                        </div>
+                                        <div>
+                                            <span class="fs-14 fw-600">Дата начала действия полиса - 11.05.2023 (1 год)</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-2 text-end">
+                                        <button type="button" class="btn btn-icon btn-secondary btn-sm">
+                                            <i class="bi bi-pencil"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <hr>
+                            
+                            <div>
+                                <div class="row g-3">
+                                    <div class="col-10">
+                                        <div class="d-flex flex-column">
+                                            <div class="mb-2">
+                                                <span class="fs-14 fw-600">Иванов Иван Иванович</span>
+                                            </div>
+                                            <div class="d-flex gap-2 flex-column fs-14 fw-600">
+                                                <div class="d-flex gap-3">
+                                                    <span class="bg-E5E7EB rounded-3 fs-14 py-1 px-2">Собственник</span>
+                                                    <span class="bg-E5E7EB rounded-3 fs-14 py-1 px-2">Страхователь</span>
+                                                </div>
+                                                <div class="d-flex gap-2">
+                                                    <span class="color-717681">Дата рождения:</span>
+                                                    <span>01.05.1987</span>
+                                                </div>
+                                                <div class="d-flex gap-2">
+                                                    <span class="color-717681">Паспорт:</span>
+                                                    <span>45 46 388793</span>
+                                                </div>
+                                                <div class="d-flex gap-2">
+                                                    <span class="color-717681">Дата выдачи:</span>
+                                                    <span>28.02.2006</span>
+                                                </div>
+                                                <div class="d-flex gap-2">
+                                                    <span class="color-717681">Адрес:</span>
+                                                    <span>г. Москва, ул. Октябрьякая д.36</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-2 text-end">
+                                        <button type="button" class="btn btn-icon btn-secondary btn-sm">
+                                            <i class="bi bi-pencil"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <hr>
+                            
+                            <div>
+                                <div class="row g-3">
+                                    <div class="col-10">
+                                        <div class="d-flex flex-column">
+                                            <div class="mb-2">
+                                                <span class="fs-14 fw-600">Иванов Иван Иванович</span>
+                                            </div>
+                                            <div class="d-flex gap-2 flex-column fs-14 fw-600">
+                                                <div class="d-flex gap-3">
+                                                    <span class="bg-E5E7EB rounded-3 fs-14 py-1 px-2">Водитель 1</span>
+                                                </div>
+                                                <div class="d-flex gap-2">
+                                                    <span class="color-717681">Дата рождения:</span>
+                                                    <span>01.05.1987</span>
+                                                </div>
+                                                <div class="d-flex gap-2">
+                                                    <span class="color-717681">Водит. удостоверение:</span>
+                                                    <span>45 46 388793</span>
+                                                </div>
+                                                <div class="d-flex gap-2">
+                                                    <span class="color-717681">Стаж:</span>
+                                                    <span>с 18.02.2000</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-2 text-end">
+                                        <button type="button" class="btn btn-icon btn-secondary btn-sm">
+                                            <i class="bi bi-pencil"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <hr>
+                            
+                            <div>
+                                <div class="row g-3">
+                                    <div class="col-10">
+                                        <div class="d-flex flex-column">
+                                            <div class="mb-2">
+                                                <span class="fs-14 fw-600">Иванов Иван Иванович</span>
+                                            </div>
+                                            <div class="d-flex gap-2 flex-column fs-14 fw-600">
+                                                <div class="d-flex gap-3">
+                                                    <span class="bg-E5E7EB rounded-3 fs-14 py-1 px-2">Водитель 2</span>
+                                                </div>
+                                                <div class="d-flex gap-2">
+                                                    <span class="color-717681">Дата рождения:</span>
+                                                    <span>01.05.1987</span>
+                                                </div>
+                                                <div class="d-flex gap-2">
+                                                    <span class="color-717681">Водит. удостоверение:</span>
+                                                    <span>45 46 388793</span>
+                                                </div>
+                                                <div class="d-flex gap-2">
+                                                    <span class="color-717681">Стаж:</span>
+                                                    <span>с 18.02.2000</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-2 text-end">
+                                        <button type="button" class="btn btn-icon btn-secondary btn-sm">
+                                            <i class="bi bi-pencil"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-3">
+                                <button type="button" class="btn btn-secondary btn-sm px-2 px-lg-3"><i class="bi bi-plus me-2"></i> Добавить водителя</button>
+                            </div>
+
+                            <hr>
+                            
+                            <div>
+                                <div class="row g-3">
+                                    <div class="col-10">
+                                        <div class="d-flex flex-column">
+                                            <div class="mb-2">
+                                                <span class="fs-14 fw-600">Ауди А4 - 2022 г. в</span>
+                                            </div>
+                                            <div class="d-flex gap-2 flex-column fs-14 fw-600">
+                                                <div class="d-flex gap-3">
+                                                    <span class="bg-E5E7EB rounded-3 fs-14 py-1 px-2">Транспортное средство</span>
+                                                </div>
+                                                <div class="d-flex gap-2">
+                                                    <span class="color-717681">Гос. номер: А777АС799</span>
+                                                </div>
+                                                <div class="d-flex gap-2">
+                                                    <span class="color-717681">Мощность:</span>
+                                                    <span>106 л.с.</span>
+                                                </div>
+                                                <div class="d-flex gap-2">
+                                                    <span class="color-717681">СТС:</span>
+                                                    <span>45 46 388793</span>
+                                                </div>
+                                                <div class="d-flex gap-2">
+                                                    <span class="color-717681">Дата выдачи:</span>
+                                                    <span>15.06.2006</span>
+                                                </div>
+                                                <div class="d-flex gap-2">
+                                                    <span class="color-717681">VIN:</span>
+                                                    <span>642837е4832732387</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-2 text-end">
+                                        <button type="button" class="btn btn-icon btn-secondary btn-sm">
+                                            <i class="bi bi-pencil"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="d-flex gap-4 flex-column">
+                            <div class="bg-white rounded-4 p-3 p-lg-4 order-lg-2">
+                                <a href="img/blank-01x2.png" data-fancybox="polis" class="btn border-0 text-primary btn-sm fw-600 px-2 px-lg-3 w-100">Проект полиса <i class="bi bi-eye ms-2"></i></a>
+                            </div>
+                            <div class="bg-white rounded-4 p-3 p-lg-4 order-lg-1">
+                                <div class="text-center">
+                                    <div class="d-flex gap-3 flex-column">
+                                        <button type="button" class="btn btn-primary btn-sm px-2 px-lg-3 w-100">Да, оплатить</button>
+                                        <button type="button" class="btn btn-primary btn-sm px-2 px-lg-3 w-100">Копировать данные</button>
+                                        <button type="button" class="btn btn-primary btn-sm px-2 px-lg-3 w-100">Написать в чат</button>
+                                        <button type="button" class="btn btn-outline btn-sm px-2 px-lg-3 w-100"><i class="bi bi-arrow-left-short"></i> Назад к расчету</button>
+                                    </div>
+                                </div>
+                            </div> 
+                        </div>                       
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Чат Темы -->
+    <div class="offcanvas offcanvas-end bg-F3F4F6" tabindex="-1" id="offcanvasChat"
+        aria-labelledby="offcanvasChatLabel">
+        <div class="offcanvas-header">
+            <p class="h5 offcanvas-title fw-600" id="offcanvasChatLabel">Чат</p>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="card-active p-2 mb-2">
+                <div class="row">
+                    <div class="col-10">
+                        <div class="d-flex flex-column">
+                            <p class="one-line fs-16 mb-2" title="Не загружается документ" data-bs-toggle="offcanvas"
+                                data-bs-target="#offcanvasMessages" aria-controls="offcanvasMessages">Не загружается
+                                документ</p>
+                            <span class="text-muted fs-12">от 26.12.23 10:34</span>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="d-flex flex-column align-items-center justify-content-end h-100">
+                            <div class="px-2">
+                                <span class="badge rounded-circle bg-danger">5</span>
+                            </div>
+                            <div>
+                                <button class="btn btn-icon btn-sm" type="button" data-bs-toggle="dropdown"><i
+                                        class="bi bi-three-dots"></i></button>
+                                <ul class="dropdown-menu fs-12">
+                                    <li><a class="dropdown-item" href="#">Действие №1</a></li>
+                                    <li><a class="dropdown-item" href="#">Действие номер №2</a></li>
+                                    <li><a class="dropdown-item" href="#">Ещё одно действие</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-active p-2 mb-2">
+                <div class="row">
+                    <div class="col-10">
+                        <div class="d-flex flex-column">
+                            <p class="one-line fs-16 mb-2" title="Не загружается документ, а ещё текст"
+                                data-bs-toggle="offcanvas" data-bs-target="#offcanvasMessages"
+                                aria-controls="offcanvasMessages">Не загружается
+                                документ, а ещё текст</p>
+                            <span class="text-muted fs-12">от 26.12.23 10:34</span>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="d-flex flex-column align-items-center justify-content-end h-100">
+                            <div>
+                                <button class="btn btn-icon btn-sm" type="button" data-bs-toggle="dropdown"><i
+                                        class="bi bi-three-dots"></i></button>
+                                <ul class="dropdown-menu fs-12">
+                                    <li><a class="dropdown-item" href="#">Действие №1</a></li>
+                                    <li><a class="dropdown-item" href="#">Действие номер №2</a></li>
+                                    <li><a class="dropdown-item" href="#">Ещё одно действие</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-active p-2 mb-2">
+                <div class="row">
+                    <div class="col-10">
+                        <div class="d-flex flex-column">
+                            <p class="one-line fs-16 mb-2" title="Не загружается документ" data-bs-toggle="offcanvas"
+                                data-bs-target="#offcanvasMessages" aria-controls="offcanvasMessages">Не загружается
+                                документ</p>
+                            <span class="text-muted fs-12">от 26.12.23 10:34</span>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="d-flex flex-column align-items-center justify-content-end h-100">
+                            <div class="px-2">
+                                <span class="badge rounded-circle bg-danger">5</span>
+                            </div>
+                            <div>
+                                <button class="btn btn-icon btn-sm" type="button" data-bs-toggle="dropdown"><i
+                                        class="bi bi-three-dots"></i></button>
+                                <ul class="dropdown-menu fs-12">
+                                    <li><a class="dropdown-item" href="#">Действие №1</a></li>
+                                    <li><a class="dropdown-item" href="#">Действие номер №2</a></li>
+                                    <li><a class="dropdown-item" href="#">Ещё одно действие</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Чат Сообщения -->
+    <div class="offcanvas offcanvas-end bg-F3F4F6" tabindex="-1" id="offcanvasMessages"
+        aria-labelledby="offcanvasMessagesLabel">
+        <div class="offcanvas-header">
+            <p class="h5 offcanvas-title fw-600" id="offcanvasMessagesLabel">Чат</p>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+
+            <div class="card card-chat">
+                <div class="card-header">
+                    <a href="#offcanvasChat" data-bs-toggle="offcanvas" aria-controls="offcanvasChat">
+                        <div class="d-flex align-items-center">
+                            <i class="bi bi-arrow-left text-primary me-2"></i> <span class="fs-14">Не загружается
+                                документ</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="card-body">
+                    <div class="d-flex flex-column fs-14 mb-2">
+                        <p class="text-muted fw-700 mb-2">Специалист</p>
+                        <p class="mb-2"><span class="me-2">10.05.2022</span><span>14:00</span></p>
+                        <p class="mb-2">Течение среды облучает термодинамический пульсар. Исследователями из разных
+                            лабораторий неоднократно наблюдалось, как осциллятор пространственно ускоряет векторный
+                            солитон.</p>
+                        <div>
+                            <button class="btn btn-icon btn-sm" type="button" data-bs-toggle="dropdown"><i
+                                    class="bi bi-three-dots"></i></button>
+                            <ul class="dropdown-menu fs-12">
+                                <li><a class="dropdown-item" href="#">Действие №1</a></li>
+                                <li><a class="dropdown-item" href="#">Действие номер №2</a></li>
+                                <li><a class="dropdown-item" href="#">Ещё одно действие</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column fs-14 mb-2">
+                        <p class="text-muted fw-700 mb-2">Специалист</p>
+                        <p class="mb-2"><span class="me-2">10.05.2022</span><span>14:00</span></p>
+                        <p class="mb-2">Течение среды облучает термодинамический пульсар. Исследователями из разных
+                            лабораторий неоднократно наблюдалось, как осциллятор пространственно ускоряет векторный
+                            солитон.</p>
+                        <div>
+                            <button class="btn btn-icon btn-sm" type="button" data-bs-toggle="dropdown"><i
+                                    class="bi bi-three-dots"></i></button>
+                            <ul class="dropdown-menu fs-12">
+                                <li><a class="dropdown-item" href="#">Действие №1</a></li>
+                                <li><a class="dropdown-item" href="#">Действие номер №2</a></li>
+                                <li><a class="dropdown-item" href="#">Ещё одно действие</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column fs-14 mb-2 bg-F0EEFF p-2 rounded-3">
+                        <p class="mb-2"><span class="me-2">10.05.2022</span><span>14:00</span></p>
+                        <p class="mb-2">Течение среды облучает термодинамический пульсар. Исследователями из разных
+                            лабораторий неоднократно наблюдалось, как осциллятор пространственно ускоряет векторный
+                            солитон.</p>
+                        <div>
+                            <button class="btn btn-icon btn-sm" type="button" data-bs-toggle="dropdown"><i
+                                    class="bi bi-three-dots"></i></button>
+                            <ul class="dropdown-menu fs-12">
+                                <li><a class="dropdown-item" href="#">Действие №1</a></li>
+                                <li><a class="dropdown-item" href="#">Действие номер №2</a></li>
+                                <li><a class="dropdown-item" href="#">Ещё одно действие</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="offcanvas-header">
+            <div class="d-flex align-items-center w-100">
+                <textarea class="form-control fs-14" rows="3" data-kt-element="input"
+                    placeholder="Написать сообщение"></textarea>
+                <div class="d-flex flex-column ms-1">
+                    <button class="btn btn-sm btn-icon" type="button">
+                        <i class="bi bi-paperclip"></i>
+                    </button>
+                    <button class="btn btn-sm btn-icon text-primary" type="button">
+                        <i class="bi bi-send-fill"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Оформить полис Модалка -->
+    <div class="modal fade modal-drawUpPolis" id="drawUpPolis-modal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="nav flex-column drawUpPolis-nav">
+                        <a class="nav-link" href="#">КАСКО</a>
+                        <a class="nav-link" href="#">ОСАГО</a>
+                        <a class="nav-link" href="#">Гражданская отвественность</a>
+                        <a class="nav-link" href="#">Страхование дома</a>
+                        <a class="nav-link" href="#">Страхование квартиры</a>
+                        <a class="nav-link" href="#">Страхование ипотеки</a>
+                        <a class="nav-link" href="#">Страхование от несчастного случая</a>
+                        <a class="nav-link" href="#">Страхование выезжающих за рубеж</a>
+                        <a class="nav-link" href="#">Страхование от критических и онкологических заболеваний</a>
+                        <a class="nav-link" href="#">Добровольное медицинское трахование</a>
+                        <a class="nav-link" href="#">Иное</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Оформить полис Оффканвас -->
+    <div class="offcanvas offcanvas-end offcanvas-drawUpPolis" id="drawUpPolis-offcanvas" tabindex="-1">
+        <div class="offcanvas-header justify-content-end">
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="nav flex-column drawUpPolis-nav">
+                <a class="nav-link" href="#">КАСКО</a>
+                <a class="nav-link" href="#">ОСАГО</a>
+                <a class="nav-link" href="#">Гражданская отвественность</a>
+                <a class="nav-link" href="#">Страхование дома</a>
+                <a class="nav-link" href="#">Страхование квартиры</a>
+                <a class="nav-link" href="#">Страхование ипотеки</a>
+                <a class="nav-link" href="#">Страхование от несчастного случая</a>
+                <a class="nav-link" href="#">Страхование выезжающих за рубеж</a>
+                <a class="nav-link" href="#">Страхование от критических и онкологических заболеваний</a>
+                <a class="nav-link" href="#">Добровольное медицинское трахование</a>
+                <a class="nav-link" href="#">Иное</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/fancybox.umd.js"></script>
+    <script src="js/imask.js"></script>
+    <script src="js/choices.min.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

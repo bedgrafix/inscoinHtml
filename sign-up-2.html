@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-up 2</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/fancybox.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body class="bg-F3F4F6">
+
+    <main class="main">
+
+        <section class="section section-auth">
+
+            <!-- Форма слева -->
+            <div class="section-col section-col-left">
+                <!-- лого -->
+                <div class="col-header">
+                    <a href="#">
+                        <img class="img-fluid" src="img/sign-in-logo.svg" alt="">
+                    </a>
+                </div>
+                <div class="col-body" style="padding: 70px 0;">
+                    <div class="section-auth__form-wrap">
+                        <h1 class="section-auth__title">Регистрация</h1>
+                        <form action="#" class="form-auth" id="form-auth">
+                            <div class="mb-2">
+                                <label for="input-sign-in-2" class="fs-14 fw-600 mb-2">Email</label>
+                                <input type="email" class="form-control fs-14 form-control-invalid" id="input-sign-up-email">
+                                <div class="invalid-msg fs-14 show">
+                                    Данный e-mail уже зарегистрирован
+                                </div>
+                            </div>
+                            <div class="mb-2">
+                                <label for="input-sign-up-fio" class="fs-14 fw-600 mb-2">ФИО</label>
+                                <input type="text" class="form-control fs-14" id="input-sign-up-fio">
+                            </div>
+                            <div class="mb-2">
+                                <label for="input-sign-up-birth-date" class="fs-14 fw-600 mb-2">Дата рождения</label>
+                                <input type="text" class="form-control fs-14" id="input-sign-up-birth-date">
+                            </div>
+                            <div class="mb-2">
+                                <label for="input-sign-up-promo" class="fs-14 fw-600 mb-2">Промокод</label>
+                                <input type="text" class="form-control fs-14 form-control-invalid" id="input-sign-up-promo">
+                                <div class="invalid-msg fs-14 show">
+                                    Такого промокода не существует
+                                </div>
+                            </div>
+                            <div class="mt-3 mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                <label class="form-check-label fs-14" for="exampleCheck1">Создавая учетную запись, я соглашаюсь с Условиями использования InsCoin и <a href="#" class="text-primary">Политикой конфиденциальности</a>.</label>
+                            </div>
+                            <button type="submit" class="btn btn-primary fs-14 fw-600 w-100">Далее</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Логотип справа -->
+            <div class="section-col section-col-right bg-img" style="background-image: url(img/bg-sign-in-2.png);">
+                <div class="col-body">
+                    <div class="d-flex align-items-center justify-content-center h-100">
+                        <img class="img-fluid" src="img/sign-in-logo-2.svg" alt="logo">
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Ввод цифр справа -->
+    <div class="custom-offcanvas offcanvas-right-form bg-img" id="offcanvas-sms-auth" style="background-image: url(img/bg-sign-in-2.png);">
+        <div class="custom-offcanvas-body">
+            <div class="d-flex flex-column align-items-center justify-content-lg-center h-100">
+                <div class="custom-offcanvas-form-title">Введите код</div>
+                <div class="custom-offcanvas-form-desc">На <span>name@yandex.ru</span> выслан код подтверждения</div>
+                <form action="#" class="form-pin-code form-invalid">
+                    <div class="pin-code-wrap fs-14">
+                        <input type="number" maxlength="1">
+                        <input type="number" maxlength="1">
+                        <input type="number" maxlength="1">
+                        <input type="number" maxlength="1">
+                    </div>
+                    <div class="invalid-msg bg-white p-2 px-3 border border-danger rounded-3 fs-14 show" style="margin-top: 28px;">
+                        СМС-код введен неверно. Попробуйте еще раз
+                    </div>
+                </form>
+                <div class="custom-offcanvas-form-apply-text">Повторно запросить код через 00:59</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Логотип во весь экран -->
+    <div class="custom-offcanvas offcanvas-fullscreen-logo bg-img" style="background-image: url(img/bg-sign-in-2.png);">
+        <div class="custom-offcanvas-body">
+            <div class="d-flex flex-column align-items-center justify-content-center h-100">
+                <img class="img-fluid" src="img/sign-in-logo-2.svg" alt="logo">
+                <div class="text-white fs-14" style="margin-top: 60px;">Код подтверждения принят</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/fancybox.umd.js"></script>
+    <script src="js/imask.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

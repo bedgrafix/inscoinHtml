@@ -1,0 +1,2501 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contracts</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/fancybox.css">
+    <link rel="stylesheet" href="css/choices.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body class="bg-F3F4F6">
+
+    <header class="sticky-heading header sticky-top">
+        <nav class="navbar navbar-expand-xxl bg-white shadow">
+            <div class="container">
+                <a class="navbar-brand d-none d-xxl-flex hover-opacity" href="#">
+                    <img src="img/logo.svg" alt="Logo">
+                </a>
+                <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="bi bi-grid"></i>
+                </button>
+                <div class="offcanvas offcanvas-end offcanvas-navbar" tabindex="-1" id="navbarNav">
+                    <div class="offcanvas-header">
+                        <button type="button" class="btn btn-icon btn-sm border-0" data-bs-dismiss="offcanvas" aria-label="Close">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="9" height="15" viewBox="0 0 9 15" fill="none">
+                                <path d="M7.78265 0.75C7.96865 0.75 8.14431 0.822332 8.27864 0.966998C8.52664 1.246 8.50598 1.66966 8.23731 1.91766L1.65592 7.84926L8.27867 13.5842C8.55767 13.8322 8.568 14.2559 8.32 14.5349C8.07201 14.8036 7.64834 14.8242 7.36934 14.5762L0.24026 8.38659C-0.0800708 8.09726 -0.0800708 7.60126 0.24026 7.31193L7.32798 0.925664C7.46232 0.801664 7.61732 0.75 7.78265 0.75Z" fill="#747782"/>
+                            </svg>
+                        </button>
+                        <a class="navbar-brand" href="#">
+                            <img src="img/logo.svg" alt="Logo">
+                        </a>
+                        <div style="width: 2rem;"></div>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav ms-xxl-4 me-xxl-auto">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span>Договоры</span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#"><span>Договоры</span></a></li>
+                                    <li><a class="dropdown-item" href="#"><span>Генеральные договора</span></a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="#"><span>Цифра</span></a></li>
+                            <li class="nav-item"><a class="nav-link" href="#"><span>Пользователи</span></a></li>
+                            <li class="nav-item"><a class="nav-link" href="#"><span>Настройки</span></a></li>
+                            <li class="nav-item"><a class="nav-link" href="#"><span>Финансы</span></a></li>
+                            <li class="nav-item"><a class="nav-link" href="#"><span>Аналитика</span></a></li>
+                        </ul>
+
+                    </div>
+                </div>
+
+                <div class="d-flex gap-2 gap-xxl-4 align-items-center">
+                    <div class="d-flex gap-2 align-items-center">
+                        <button type="button" class="btn btn-primary btn-sm px-2 px-lg-3" data-bs-toggle="offcanvas"
+                            data-bs-target="#drawUpPolis-offcanvas"><i class="bi bi-plus-circle-fill"></i><span
+                                class="d-none d-md-inline ms-2"> Оформить
+                                полис</span></button>
+                        <div class="d-flex gap-2 align-items-center">
+                            <button type="button" class="btn btn-icon btn-sm border-0 position-relative"
+                                data-bs-toggle="offcanvas" data-bs-target="#offcanvasChat"
+                                aria-controls="offcanvasChat">
+                                <i class="bi bi-chat-left-dots"></i>
+                                <span class="badge badge-chat rounded-circle bg-red">4</span>
+                            </button>
+                            <button type="button" class="btn btn-icon btn-sm border-0 position-relative">
+                                <i class="bi bi-bell"></i>
+                            </button>
+                        </div>
+                        <div class="bg-F0EEFF rounded-3 fs-12 p-2">
+                            <span class="text-black">3 578, 00</span>
+                            <span class="text-primary">INS</span>
+                        </div>
+                    </div>
+
+                    <div class="d-flex gap-2 gap-xxl-4 align-items-center">
+                        <a href="#">
+                            <div class="avatar-container">
+                                <img src="img/avatar.jpg" class="avatar img-fluid" alt="avatar">
+                            </div>
+                        </a>
+                        <button type="button" class="btn btn-icon border-0 d-none d-xxl-inline-block" style="--btn-icon-size: 1.5rem;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="25" viewBox="0 0 22 25" fill="none">
+                                <path d="M9.44902 12.25H16.621M16.621 12.25L14.3798 10.0278M16.621 12.25L14.3798 14.4722M16.621 7.36111V5.25C16.621 4.69772 16.2196 4.25 15.7245 4.25H6.75953C6.26442 4.25 5.86304 4.69772 5.86304 5.25V19.25C5.86304 19.8023 6.26442 20.25 6.75953 20.25H15.7245C16.2196 20.25 16.621 19.8023 16.621 19.25V17.1389" stroke="#747782" stroke-width="1.21105" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+
+        <!-- breadcrums -->
+        <section class="section py-3">
+            <div class="">
+                <div class="container">
+                    <nav class="d-flex justify-content-start" aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#">Главная</a></li>
+                            <li class="breadcrumb-item"><a href="#">Раздел</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Подраздел</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </section>
+
+        <!-- global tabs -->
+        <section class="section py-3">
+            <div class="container">
+                <div class="overflow-x-auto hide-scrollbar">
+                    <div class="nav nav-tabs global-tabs" role="tablist">
+                        <button class="nav-link fs-14 active" data-bs-toggle="tab" data-bs-target="#nav-my-contracts" type="button" role="tab" aria-controls="nav-my-contracts" aria-selected="true">Мои договоры</button>
+                        <button class="nav-link fs-14" data-bs-toggle="tab" data-bs-target="#nav-contracts-of-my-network" type="button" role="tab" aria-controls="nav-contracts-of-my-network" aria-selected="false">Договоры моей сети</button>
+                        <button class="nav-link fs-14" data-bs-toggle="tab" data-bs-target="#nav-archive" type="button" role="tab" aria-controls="nav-archive" aria-selected="false">Архив</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- global tab content -->
+        <div class="tab-content">
+            <!-- TAB 1 -->
+            <div class="tab-pane fade show active" id="nav-my-contracts" role="tabpanel" tabindex="0">
+                <!-- filters -->
+                <section class="section py-3">
+                    <div class="">
+                        <div class="container">
+                            <div class="bg-white rounded-3 p-2 p-lg-4">
+                                <div class="row gx-2 gy-3 align-items-center">
+                                    <div class="col">
+                                        <form class="position-relative w-100" action="#">
+                                            <input type="text" class="form-control fs-14"
+                                                placeholder="Поиск по номеру договора, страхователю" aria-label="Search">
+                                            <button type="submit"
+                                                class="btn bg-white p-1 mx-2 d-inline-flex position-absolute top-50 end-0 translate-middle-y">
+                                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                        d="M0.333252 6.16536C0.333252 2.94036 2.94159 0.332031 6.16659 0.332031C9.39159 0.332031 11.9999 2.94036 11.9999 6.16536C11.9999 7.63379 11.4592 8.97438 10.5656 9.99909L13.4834 12.9245C13.6947 13.1363 13.6942 13.4793 13.4824 13.6905C13.2706 13.9018 12.9277 13.9014 12.7164 13.6895L9.78098 10.7465C8.78765 11.5309 7.53242 11.9987 6.16659 11.9987C2.94159 11.9987 0.333252 9.39036 0.333252 6.16536ZM10.9166 6.16536C10.9166 3.5487 8.78325 1.41536 6.16659 1.41536C3.54992 1.41536 1.41659 3.5487 1.41659 6.16536C1.41659 8.78203 3.54992 10.9154 6.16659 10.9154C8.78325 10.9154 10.9166 8.78203 10.9166 6.16536Z"
+                                                        fill="#626F84" />
+                                                </svg>
+                                            </button>
+                                        </form>
+                                    </div>
+                                    <!-- Шестеренка -->
+                                    <!-- <div class="col-auto">
+                                        <button type="button" class="btn btn-icon btn-sm border-0" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+                                            <i class="bi bi-gear"></i>
+                                        </button>
+                                        <form class="contracts-option-wrap dropdown-menu dropdown-menu-lg-end p-2 p-lg-3">
+                                            <div class="contracts-option-item">
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="contracts-check1">
+                                                    <label class="form-check-label" for="contracts-check1">Продукт</label>
+                                                </div>
+                                            </div>
+                                            <div class="contracts-option-item">
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="contracts-check2">
+                                                    <label class="form-check-label" for="contracts-check2">Стоимость</label>
+                                                </div>
+                                            </div>
+                                            <div class="contracts-option-item">
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="contracts-check3">
+                                                    <label class="form-check-label" for="contracts-check3">Компания</label>
+                                                </div>
+                                            </div>
+                                            <div class="contracts-option-item">
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="contracts-check4">
+                                                    <label class="form-check-label" for="contracts-check4">Статус</label>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div> -->
+                                    <div class="col-auto">
+                                        <button type="button" class="btn btn-with-arrow border-0 fs-14 p-1 collapsed" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseFilters1" aria-expanded="false"
+                                            aria-controls="collapseFilters1"><span class="position-relative">Фильтры <div class="filter-notice active"></div></span></button>
+                                    </div>
+                                </div>
+                                <div class="collapse" id="collapseFilters1">
+                                    <form class="d-flex flex-wrap gap-2 mt-3" action="#">
+                                        <div class="filter-badge fs-12 bg-F3F4F6 rounded-pill">
+                                            <span>Продукт:</span>
+                                            <div class="apply-filters">
+                                                <span>КАСКО</span>
+                                                <span>ОСАГО</span>
+                                            </div>
+                                            <button type="button" class="btn-close"></button>
+                                        </div>
+                                        <div class="filter-badge fs-12 bg-F3F4F6 rounded-pill">
+                                            <span>СК:</span>
+                                            <div class="apply-filters">
+                                                <span>Ингосстрах</span>
+                                                <span>Альфастрахование</span>
+                                            </div>
+                                            <button type="button" class="btn-close"></button>
+                                        </div>
+                                        <div class="filter-badge fs-12 bg-F3F4F6 rounded-pill">
+                                            <span>Период:</span>
+                                            <div class="apply-filters">
+                                                <span>18.02.2021 - 20.03.2022</span>
+                                            </div>
+                                            <button type="button" class="btn-close"></button>
+                                        </div>
+                                        <button type="button" class="btn border-0 p-1 fs-14 text-primary">Сбросить фильтры</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- table -->
+                <section class="section py-3">
+                    <div class="container">
+                        <div class="card-contracts-wrap">
+                            <!-- item -->
+                            <div class="card card-contracts b-green">
+                                <div class="card-body">
+                                    <div class="row gy-3 align-items-center">
+                                        <div class="col-auto d-none d-lg-block">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-3">
+                                            <div class="d-flex gap-0 flex-column align-items-start">
+                                                <div class="fs-14 fw-600">Иванов Юрий Иванович</div>
+                                                <div class="d-flex gap-1 flex-wrap text-muted fs-12 fw-600">
+                                                <div class="bg-F3F4F6 rounded-3 py-1 px-2">Mitsubishi Outlander III 2.0</div>
+                                                <div class="bg-F3F4F6 rounded-3 py-1 px-2">P906MC799</div>
+                                                <div class="bg-F3F4F6 rounded-3 py-1 px-2">2018</div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="fs-14 fw-600">КАСКО</span>
+                                                <span class="text-muted fs-14">XXX0276045751</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="fs-14 fw-600">35 000,00 ₽</span>
+                                                <span class="text-muted fs-14">Оплачен</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <div class="d-flex align-items-center" style="height: 24px;">
+                                                    <img src="img/ingosstrah.png" alt="">
+                                                </div>
+                                                <span class="text-muted fs-14">Создан 01.01.2023</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="fs-14 fw-600">Иванов И. И.</span>
+                                                <span class="text-muted fs-14">Создатель</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="fs-14 fw-600">с 25.01.2023</span>
+                                                <span class="fs-14 fw-600">по 25.01.2024</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <a class="fs-14 fw-600 text-primary" href="#">Продлить</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- item -->
+                            <div class="card card-contracts b-green">
+                                <div class="card-body">
+                                    <div class="row gy-3 align-items-center">
+                                        <div class="col-auto d-none d-lg-block">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-3">
+                                            <div class="d-flex gap-0 flex-column align-items-start">
+                                                <div class="fs-14 fw-600">Иванов Юрий Иванович</div>
+                                                <div class="d-flex gap-1 flex-wrap text-muted fs-12 fw-600">
+                                                <div class="bg-F3F4F6 rounded-3 py-1 px-2">Mitsubishi Outlander III 2.0</div>
+                                                <div class="bg-F3F4F6 rounded-3 py-1 px-2">P906MC799</div>
+                                                <div class="bg-F3F4F6 rounded-3 py-1 px-2">2018</div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="fs-14 fw-600">КАСКО</span>
+                                                <span class="text-muted fs-14">XXX0276045751</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="fs-14 fw-600">35 000,00 ₽</span>
+                                                <span class="text-muted fs-14">Оплачен</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <div class="d-flex align-items-center" style="height: 24px;">
+                                                    <img src="img/ingosstrah.png" alt="">
+                                                </div>
+                                                <span class="text-muted fs-14">Создан 01.01.2023</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="fs-14 fw-600">Иванов И. И.</span>
+                                                <span class="text-muted fs-14">Создатель</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="fs-14 fw-600">с 25.01.2023</span>
+                                                <span class="fs-14 fw-600">по 25.01.2024</span>                                
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <a class="fs-14 fw-600 text-primary" href="#">Продлить</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- item -->
+                            <div class="card card-contracts b-green">
+                                <div class="card-body">
+                                    <div class="row gy-3 align-items-center">
+                                        <div class="col-auto d-none d-lg-block">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-3">
+                                            <div class="d-flex gap-0 flex-column align-items-start">
+                                                <div class="fs-14 fw-600">Иванов Юрий Иванович</div>
+                                                <div class="d-flex gap-1 flex-wrap text-muted fs-12 fw-600">
+                                                <div class="bg-F3F4F6 rounded-3 py-1 px-2">Mitsubishi Outlander III 2.0</div>
+                                                <div class="bg-F3F4F6 rounded-3 py-1 px-2">P906MC799</div>
+                                                <div class="bg-F3F4F6 rounded-3 py-1 px-2">2018</div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="fs-14 fw-600">КАСКО</span>
+                                                <span class="text-muted fs-14">XXX0276045751</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="fs-14 fw-600">35 000,00 ₽</span>
+                                                <span class="text-muted fs-14">Оплачен</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <div class="d-flex align-items-center" style="height: 24px;">
+                                                    <img src="img/ingosstrah.png" alt="">
+                                                </div>
+                                                <span class="text-muted fs-14">Создан 01.01.2023</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="fs-14 fw-600">Иванов И. И.</span>
+                                                <span class="text-muted fs-14">Создатель</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="fs-14 fw-600">с 25.01.2023</span>
+                                                <span class="fs-14 fw-600">по 25.01.2024</span>                                
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <a class="fs-14 fw-600 text-primary" href="#">Продлить</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- item -->
+                            <div class="card card-contracts b-green">
+                                <div class="card-body">
+                                    <div class="row gy-3 align-items-center">
+                                        <div class="col-auto d-none d-lg-block">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-3">
+                                            <div class="d-flex gap-0 flex-column align-items-start">
+                                                <div class="fs-14 fw-600">Иванов Юрий Иванович</div>
+                                                <div class="d-flex gap-1 flex-wrap text-muted fs-12 fw-600">
+                                                <div class="bg-F3F4F6 rounded-3 py-1 px-2">Mitsubishi Outlander III 2.0</div>
+                                                <div class="bg-F3F4F6 rounded-3 py-1 px-2">P906MC799</div>
+                                                <div class="bg-F3F4F6 rounded-3 py-1 px-2">2018</div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="fs-14 fw-600">КАСКО</span>
+                                                <span class="text-muted fs-14">XXX0276045751</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="fs-14 fw-600">35 000,00 ₽</span>
+                                                <span class="text-muted fs-14">Оплачен</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <div class="d-flex align-items-center" style="height: 24px;">
+                                                    <img src="img/ingosstrah.png" alt="">
+                                                </div>
+                                                <span class="text-muted fs-14">Создан 01.01.2023</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="fs-14 fw-600">Иванов И. И.</span>
+                                                <span class="text-muted fs-14">Создатель</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="fs-14 fw-600">с 25.01.2023</span>
+                                                <span class="fs-14 fw-600">по 25.01.2024</span>                                
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <a class="fs-14 fw-600 text-primary" href="#">Продлить</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- item -->
+                            <div class="card card-contracts b-yellow">
+                                <div class="card-body">
+                                    <div class="row gy-3 align-items-center">
+                                        <div class="col-auto d-none d-lg-block">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-3">
+                                            <div class="d-flex gap-0 flex-column align-items-start">
+                                                <div class="fs-14 fw-600">Иванов Юрий Иванович</div>
+                                                <div class="d-flex gap-1 flex-wrap text-muted fs-12 fw-600">
+                                                <div class="bg-F3F4F6 rounded-3 py-1 px-2">Mitsubishi Outlander III 2.0</div>
+                                                <div class="bg-F3F4F6 rounded-3 py-1 px-2">P906MC799</div>
+                                                <div class="bg-F3F4F6 rounded-3 py-1 px-2">2018</div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="fs-14 fw-600">КАСКО</span>
+                                                <span class="text-muted fs-14">XXX0276045751</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="fs-14 fw-600">35 000,00 ₽</span>
+                                                <span class="text-muted fs-14">Оплачен</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <div class="d-flex align-items-center" style="height: 24px;">
+                                                    <img src="img/ingosstrah.png" alt="">
+                                                </div>
+                                                <span class="text-muted fs-14">Создан 01.01.2023</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="fs-14 fw-600">Иванов И. И.</span>
+                                                <span class="text-muted fs-14">Создатель</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="fs-14 fw-600">с 25.01.2023</span>
+                                                <span class="fs-14 fw-600">по 25.01.2024</span>                                
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <a class="fs-14 fw-600 text-primary" href="#">Продлить</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- item -->
+                            <div class="card card-contracts b-yellow">
+                                <div class="card-body">
+                                    <div class="row gy-3 align-items-center">
+                                        <div class="col-auto d-none d-lg-block">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-3">
+                                            <div class="d-flex gap-0 flex-column align-items-start">
+                                                <div class="fs-14 fw-600">Иванов Юрий Иванович</div>
+                                                <div class="d-flex gap-1 flex-wrap text-muted fs-12 fw-600">
+                                                <div class="bg-F3F4F6 rounded-3 py-1 px-2">Mitsubishi Outlander III 2.0</div>
+                                                <div class="bg-F3F4F6 rounded-3 py-1 px-2">P906MC799</div>
+                                                <div class="bg-F3F4F6 rounded-3 py-1 px-2">2018</div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="fs-14 fw-600">КАСКО</span>
+                                                <span class="text-muted fs-14">XXX0276045751</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="fs-14 fw-600">35 000,00 ₽</span>
+                                                <span class="text-muted fs-14">Оплачен</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <div class="d-flex align-items-center" style="height: 24px;">
+                                                    <img src="img/ingosstrah.png" alt="">
+                                                </div>
+                                                <span class="text-muted fs-14">Создан 01.01.2023</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="fs-14 fw-600">Иванов И. И.</span>
+                                                <span class="text-muted fs-14">Создатель</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="fs-14 fw-600">с 25.01.2023</span>
+                                                <span class="fs-14 fw-600">по 25.01.2024</span>                                
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <a class="fs-14 fw-600 text-primary" href="#">Продлить</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- item -->
+                            <div class="card card-contracts b-red">
+                                <div class="card-body">
+                                    <div class="row gy-3 align-items-center">
+                                        <div class="col-auto d-none d-lg-block">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-3">
+                                            <div class="d-flex gap-0 flex-column align-items-start">
+                                                <div class="fs-14 fw-600">Иванов Юрий Иванович</div>
+                                                <div class="d-flex gap-1 flex-wrap text-muted fs-12 fw-600">
+                                                <div class="bg-F3F4F6 rounded-3 py-1 px-2">Mitsubishi Outlander III 2.0</div>
+                                                <div class="bg-F3F4F6 rounded-3 py-1 px-2">P906MC799</div>
+                                                <div class="bg-F3F4F6 rounded-3 py-1 px-2">2018</div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="fs-14 fw-600">КАСКО</span>
+                                                <span class="text-muted fs-14">XXX0276045751</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="fs-14 fw-600">35 000,00 ₽</span>
+                                                <span class="text-muted fs-14">Оплачен</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <div class="d-flex align-items-center" style="height: 24px;">
+                                                    <img src="img/ingosstrah.png" alt="">
+                                                </div>
+                                                <span class="text-muted fs-14">Создан 01.01.2023</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="fs-14 fw-600">Иванов И. И.</span>
+                                                <span class="text-muted fs-14">Создатель</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="fs-14 fw-600">с 25.01.2023</span>
+                                                <span class="fs-14 fw-600">по 25.01.2024</span>                                
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <a class="fs-14 fw-600 text-primary" href="#">Продлить</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- item -->
+                            <div class="card card-contracts b-red">
+                                <div class="card-body">
+                                    <div class="row gy-3 align-items-center">
+                                        <div class="col-auto d-none d-lg-block">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-3">
+                                            <div class="d-flex gap-0 flex-column align-items-start">
+                                                <div class="fs-14 fw-600">Иванов Юрий Иванович</div>
+                                                <div class="d-flex gap-1 flex-wrap text-muted fs-12 fw-600">
+                                                <div class="bg-F3F4F6 rounded-3 py-1 px-2">Mitsubishi Outlander III 2.0</div>
+                                                <div class="bg-F3F4F6 rounded-3 py-1 px-2">P906MC799</div>
+                                                <div class="bg-F3F4F6 rounded-3 py-1 px-2">2018</div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="fs-14 fw-600">КАСКО</span>
+                                                <span class="text-muted fs-14">XXX0276045751</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="fs-14 fw-600">35 000,00 ₽</span>
+                                                <span class="text-muted fs-14">Оплачен</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <div class="d-flex align-items-center" style="height: 24px;">
+                                                    <img src="img/ingosstrah.png" alt="">
+                                                </div>
+                                                <span class="text-muted fs-14">Создан 01.01.2023</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="fs-14 fw-600">Иванов И. И.</span>
+                                                <span class="text-muted fs-14">Создатель</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="fs-14 fw-600">с 25.01.2023</span>
+                                                <span class="fs-14 fw-600">по 25.01.2024</span>                                
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <a class="fs-14 fw-600 text-primary" href="#">Продлить</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- item -->
+                            <div class="card card-contracts b-red">
+                                <div class="card-body">
+                                    <div class="row gy-3 align-items-center">
+                                        <div class="col-auto d-none d-lg-block">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-3">
+                                            <div class="d-flex gap-0 flex-column align-items-start">
+                                                <div class="fs-14 fw-600">Иванов Юрий Иванович</div>
+                                                <div class="d-flex gap-1 flex-wrap text-muted fs-12 fw-600">
+                                                <div class="bg-F3F4F6 rounded-3 py-1 px-2">Mitsubishi Outlander III 2.0</div>
+                                                <div class="bg-F3F4F6 rounded-3 py-1 px-2">P906MC799</div>
+                                                <div class="bg-F3F4F6 rounded-3 py-1 px-2">2018</div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="fs-14 fw-600">КАСКО</span>
+                                                <span class="text-muted fs-14">XXX0276045751</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="fs-14 fw-600">35 000,00 ₽</span>
+                                                <span class="text-muted fs-14">Оплачен</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <div class="d-flex align-items-center" style="height: 24px;">
+                                                    <img src="img/ingosstrah.png" alt="">
+                                                </div>
+                                                <span class="text-muted fs-14">Создан 01.01.2023</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="fs-14 fw-600">Иванов И. И.</span>
+                                                <span class="text-muted fs-14">Создатель</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="fs-14 fw-600">с 25.01.2023</span>
+                                                <span class="fs-14 fw-600">по 25.01.2024</span>                                
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <a class="fs-14 fw-600 text-primary" href="#">Продлить</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- TAB 2 -->
+            <div class="tab-pane fade" id="nav-contracts-of-my-network" role="tabpanel" tabindex="0">
+                <!-- filters -->
+                <section class="section py-3">
+                    <div class="">
+                        <div class="container">
+                            <div class="bg-white rounded-3 p-2 p-lg-4">
+                                <div class="row gx-2 gy-3 align-items-center">
+                                    <div class="col">
+                                        <form class="position-relative w-100" action="#">
+                                            <input type="text" class="form-control fs-14"
+                                                placeholder="Поиск по номеру договора, страхователю" aria-label="Search">
+                                            <button type="submit"
+                                                class="btn bg-white p-1 mx-2 d-inline-flex position-absolute top-50 end-0 translate-middle-y">
+                                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                        d="M0.333252 6.16536C0.333252 2.94036 2.94159 0.332031 6.16659 0.332031C9.39159 0.332031 11.9999 2.94036 11.9999 6.16536C11.9999 7.63379 11.4592 8.97438 10.5656 9.99909L13.4834 12.9245C13.6947 13.1363 13.6942 13.4793 13.4824 13.6905C13.2706 13.9018 12.9277 13.9014 12.7164 13.6895L9.78098 10.7465C8.78765 11.5309 7.53242 11.9987 6.16659 11.9987C2.94159 11.9987 0.333252 9.39036 0.333252 6.16536ZM10.9166 6.16536C10.9166 3.5487 8.78325 1.41536 6.16659 1.41536C3.54992 1.41536 1.41659 3.5487 1.41659 6.16536C1.41659 8.78203 3.54992 10.9154 6.16659 10.9154C8.78325 10.9154 10.9166 8.78203 10.9166 6.16536Z"
+                                                        fill="#626F84" />
+                                                </svg>
+                                            </button>
+                                        </form>
+                                    </div>
+                                    <!-- Шестеренка -->
+                                    <!-- <div class="col-auto">
+                                        <button type="button" class="btn btn-icon btn-sm border-0" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+                                            <i class="bi bi-gear"></i>
+                                        </button>
+                                        <form class="contracts-option-wrap dropdown-menu dropdown-menu-lg-end p-2 p-lg-3">
+                                            <div class="contracts-option-item">
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="contracts-check1">
+                                                    <label class="form-check-label" for="contracts-check1">Продукт</label>
+                                                </div>
+                                            </div>
+                                            <div class="contracts-option-item">
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="contracts-check2">
+                                                    <label class="form-check-label" for="contracts-check2">Стоимость</label>
+                                                </div>
+                                            </div>
+                                            <div class="contracts-option-item">
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="contracts-check3">
+                                                    <label class="form-check-label" for="contracts-check3">Компания</label>
+                                                </div>
+                                            </div>
+                                            <div class="contracts-option-item">
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="contracts-check4">
+                                                    <label class="form-check-label" for="contracts-check4">Статус</label>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div> -->
+                                    <div class="col-auto">
+                                        <button type="button" class="btn btn-with-arrow border-0 fs-14 p-1 collapsed" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseFilters2" aria-expanded="false"
+                                            aria-controls="collapseFilters2"><span class="position-relative">Фильтры <div class="filter-notice active"></div></span></button>
+                                    </div>
+                                </div>
+                                <div class="collapse" id="collapseFilters2">
+                                    <form class="d-flex flex-wrap gap-2 mt-3" action="#">
+                                        <div class="filter-badge fs-12 bg-F3F4F6 rounded-pill">
+                                            <span>Продукт:</span>
+                                            <div class="apply-filters">
+                                                <span>КАСКО</span>
+                                                <span>ОСАГО</span>
+                                            </div>
+                                            <button type="button" class="btn-close"></button>
+                                        </div>
+                                        <div class="filter-badge fs-12 bg-F3F4F6 rounded-pill">
+                                            <span>СК:</span>
+                                            <div class="apply-filters">
+                                                <span>Ингосстрах</span>
+                                                <span>Альфастрахование</span>
+                                            </div>
+                                            <button type="button" class="btn-close"></button>
+                                        </div>
+                                        <div class="filter-badge fs-12 bg-F3F4F6 rounded-pill">
+                                            <span>Период:</span>
+                                            <div class="apply-filters">
+                                                <span>18.02.2021 - 20.03.2022</span>
+                                            </div>
+                                            <button type="button" class="btn-close"></button>
+                                        </div>
+                                        <button type="button" class="btn border-0 p-1 fs-14 text-primary">Сбросить фильтры</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- table -->
+                <section class="section py-3">
+                    <div class="container">
+                        <div class="card-contracts-wrap">
+                            <!-- item -->
+                            <div class="card card-contracts b-green">
+                                <div class="card-body">
+                                    <div class="row gy-3 align-items-center">
+                                        <div class="col-auto d-none d-lg-block">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-3">
+                                            <div class="d-flex gap-0 flex-column align-items-start">
+                                                <div class="fs-14 fw-600">Иванов Юрий Иванович</div>
+                                                <div class="d-flex gap-1 flex-wrap text-muted fs-12 fw-600">
+                                                <div class="bg-F3F4F6 rounded-3 py-1 px-2">Mitsubishi Outlander III 2.0</div>
+                                                <div class="bg-F3F4F6 rounded-3 py-1 px-2">P906MC799</div>
+                                                <div class="bg-F3F4F6 rounded-3 py-1 px-2">2018</div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="fs-14 fw-600">КАСКО</span>
+                                                <span class="text-muted fs-14">XXX0276045751</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="fs-14 fw-600">35 000,00 ₽</span>
+                                                <span class="text-muted fs-14">Оплачен</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <div class="d-flex align-items-center" style="height: 24px;">
+                                                    <img src="img/ingosstrah.png" alt="">
+                                                </div>
+                                                <span class="text-muted fs-14">Создан 01.01.2023</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="fs-14 fw-600">Иванов И. И.</span>
+                                                <span class="text-muted fs-14">Создатель</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="fs-14 fw-600">с 25.01.2023</span>
+                                                <span class="fs-14 fw-600">по 25.01.2024</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <a class="fs-14 fw-600 text-primary" href="#">Продлить</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- item -->
+                            <div class="card card-contracts b-green">
+                                <div class="card-body">
+                                    <div class="row gy-3 align-items-center">
+                                        <div class="col-auto d-none d-lg-block">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-3">
+                                            <div class="d-flex gap-0 flex-column align-items-start">
+                                                <div class="fs-14 fw-600">Иванов Юрий Иванович</div>
+                                                <div class="d-flex gap-1 flex-wrap text-muted fs-12 fw-600">
+                                                <div class="bg-F3F4F6 rounded-3 py-1 px-2">Mitsubishi Outlander III 2.0</div>
+                                                <div class="bg-F3F4F6 rounded-3 py-1 px-2">P906MC799</div>
+                                                <div class="bg-F3F4F6 rounded-3 py-1 px-2">2018</div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="fs-14 fw-600">КАСКО</span>
+                                                <span class="text-muted fs-14">XXX0276045751</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="fs-14 fw-600">35 000,00 ₽</span>
+                                                <span class="text-muted fs-14">Оплачен</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <div class="d-flex align-items-center" style="height: 24px;">
+                                                    <img src="img/ingosstrah.png" alt="">
+                                                </div>
+                                                <span class="text-muted fs-14">Создан 01.01.2023</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="fs-14 fw-600">Иванов И. И.</span>
+                                                <span class="text-muted fs-14">Создатель</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="fs-14 fw-600">с 25.01.2023</span>
+                                                <span class="fs-14 fw-600">по 25.01.2024</span>                                
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <a class="fs-14 fw-600 text-primary" href="#">Продлить</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- item -->
+                            <div class="card card-contracts b-green">
+                                <div class="card-body">
+                                    <div class="row gy-3 align-items-center">
+                                        <div class="col-auto d-none d-lg-block">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-3">
+                                            <div class="d-flex gap-0 flex-column align-items-start">
+                                                <div class="fs-14 fw-600">Иванов Юрий Иванович</div>
+                                                <div class="d-flex gap-1 flex-wrap text-muted fs-12 fw-600">
+                                                <div class="bg-F3F4F6 rounded-3 py-1 px-2">Mitsubishi Outlander III 2.0</div>
+                                                <div class="bg-F3F4F6 rounded-3 py-1 px-2">P906MC799</div>
+                                                <div class="bg-F3F4F6 rounded-3 py-1 px-2">2018</div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="fs-14 fw-600">КАСКО</span>
+                                                <span class="text-muted fs-14">XXX0276045751</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="fs-14 fw-600">35 000,00 ₽</span>
+                                                <span class="text-muted fs-14">Оплачен</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <div class="d-flex align-items-center" style="height: 24px;">
+                                                    <img src="img/ingosstrah.png" alt="">
+                                                </div>
+                                                <span class="text-muted fs-14">Создан 01.01.2023</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="fs-14 fw-600">Иванов И. И.</span>
+                                                <span class="text-muted fs-14">Создатель</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="fs-14 fw-600">с 25.01.2023</span>
+                                                <span class="fs-14 fw-600">по 25.01.2024</span>                                
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <a class="fs-14 fw-600 text-primary" href="#">Продлить</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- item -->
+                            <div class="card card-contracts b-green">
+                                <div class="card-body">
+                                    <div class="row gy-3 align-items-center">
+                                        <div class="col-auto d-none d-lg-block">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-3">
+                                            <div class="d-flex gap-0 flex-column align-items-start">
+                                                <div class="fs-14 fw-600">Иванов Юрий Иванович</div>
+                                                <div class="d-flex gap-1 flex-wrap text-muted fs-12 fw-600">
+                                                <div class="bg-F3F4F6 rounded-3 py-1 px-2">Mitsubishi Outlander III 2.0</div>
+                                                <div class="bg-F3F4F6 rounded-3 py-1 px-2">P906MC799</div>
+                                                <div class="bg-F3F4F6 rounded-3 py-1 px-2">2018</div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="fs-14 fw-600">КАСКО</span>
+                                                <span class="text-muted fs-14">XXX0276045751</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="fs-14 fw-600">35 000,00 ₽</span>
+                                                <span class="text-muted fs-14">Оплачен</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <div class="d-flex align-items-center" style="height: 24px;">
+                                                    <img src="img/ingosstrah.png" alt="">
+                                                </div>
+                                                <span class="text-muted fs-14">Создан 01.01.2023</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="fs-14 fw-600">Иванов И. И.</span>
+                                                <span class="text-muted fs-14">Создатель</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="fs-14 fw-600">с 25.01.2023</span>
+                                                <span class="fs-14 fw-600">по 25.01.2024</span>                                
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <a class="fs-14 fw-600 text-primary" href="#">Продлить</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- item -->
+                            <div class="card card-contracts b-yellow">
+                                <div class="card-body">
+                                    <div class="row gy-3 align-items-center">
+                                        <div class="col-auto d-none d-lg-block">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-3">
+                                            <div class="d-flex gap-0 flex-column align-items-start">
+                                                <div class="fs-14 fw-600">Иванов Юрий Иванович</div>
+                                                <div class="d-flex gap-1 flex-wrap text-muted fs-12 fw-600">
+                                                <div class="bg-F3F4F6 rounded-3 py-1 px-2">Mitsubishi Outlander III 2.0</div>
+                                                <div class="bg-F3F4F6 rounded-3 py-1 px-2">P906MC799</div>
+                                                <div class="bg-F3F4F6 rounded-3 py-1 px-2">2018</div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="fs-14 fw-600">КАСКО</span>
+                                                <span class="text-muted fs-14">XXX0276045751</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="fs-14 fw-600">35 000,00 ₽</span>
+                                                <span class="text-muted fs-14">Оплачен</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <div class="d-flex align-items-center" style="height: 24px;">
+                                                    <img src="img/ingosstrah.png" alt="">
+                                                </div>
+                                                <span class="text-muted fs-14">Создан 01.01.2023</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="fs-14 fw-600">Иванов И. И.</span>
+                                                <span class="text-muted fs-14">Создатель</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="fs-14 fw-600">с 25.01.2023</span>
+                                                <span class="fs-14 fw-600">по 25.01.2024</span>                                
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <a class="fs-14 fw-600 text-primary" href="#">Продлить</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- item -->
+                            <div class="card card-contracts b-yellow">
+                                <div class="card-body">
+                                    <div class="row gy-3 align-items-center">
+                                        <div class="col-auto d-none d-lg-block">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-3">
+                                            <div class="d-flex gap-0 flex-column align-items-start">
+                                                <div class="fs-14 fw-600">Иванов Юрий Иванович</div>
+                                                <div class="d-flex gap-1 flex-wrap text-muted fs-12 fw-600">
+                                                <div class="bg-F3F4F6 rounded-3 py-1 px-2">Mitsubishi Outlander III 2.0</div>
+                                                <div class="bg-F3F4F6 rounded-3 py-1 px-2">P906MC799</div>
+                                                <div class="bg-F3F4F6 rounded-3 py-1 px-2">2018</div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="fs-14 fw-600">КАСКО</span>
+                                                <span class="text-muted fs-14">XXX0276045751</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="fs-14 fw-600">35 000,00 ₽</span>
+                                                <span class="text-muted fs-14">Оплачен</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <div class="d-flex align-items-center" style="height: 24px;">
+                                                    <img src="img/ingosstrah.png" alt="">
+                                                </div>
+                                                <span class="text-muted fs-14">Создан 01.01.2023</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="fs-14 fw-600">Иванов И. И.</span>
+                                                <span class="text-muted fs-14">Создатель</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="fs-14 fw-600">с 25.01.2023</span>
+                                                <span class="fs-14 fw-600">по 25.01.2024</span>                                
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <a class="fs-14 fw-600 text-primary" href="#">Продлить</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- item -->
+                            <div class="card card-contracts b-red">
+                                <div class="card-body">
+                                    <div class="row gy-3 align-items-center">
+                                        <div class="col-auto d-none d-lg-block">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-3">
+                                            <div class="d-flex gap-0 flex-column align-items-start">
+                                                <div class="fs-14 fw-600">Иванов Юрий Иванович</div>
+                                                <div class="d-flex gap-1 flex-wrap text-muted fs-12 fw-600">
+                                                <div class="bg-F3F4F6 rounded-3 py-1 px-2">Mitsubishi Outlander III 2.0</div>
+                                                <div class="bg-F3F4F6 rounded-3 py-1 px-2">P906MC799</div>
+                                                <div class="bg-F3F4F6 rounded-3 py-1 px-2">2018</div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="fs-14 fw-600">КАСКО</span>
+                                                <span class="text-muted fs-14">XXX0276045751</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="fs-14 fw-600">35 000,00 ₽</span>
+                                                <span class="text-muted fs-14">Оплачен</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <div class="d-flex align-items-center" style="height: 24px;">
+                                                    <img src="img/ingosstrah.png" alt="">
+                                                </div>
+                                                <span class="text-muted fs-14">Создан 01.01.2023</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="fs-14 fw-600">Иванов И. И.</span>
+                                                <span class="text-muted fs-14">Создатель</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="fs-14 fw-600">с 25.01.2023</span>
+                                                <span class="fs-14 fw-600">по 25.01.2024</span>                                
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <a class="fs-14 fw-600 text-primary" href="#">Продлить</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- item -->
+                            <div class="card card-contracts b-red">
+                                <div class="card-body">
+                                    <div class="row gy-3 align-items-center">
+                                        <div class="col-auto d-none d-lg-block">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-3">
+                                            <div class="d-flex gap-0 flex-column align-items-start">
+                                                <div class="fs-14 fw-600">Иванов Юрий Иванович</div>
+                                                <div class="d-flex gap-1 flex-wrap text-muted fs-12 fw-600">
+                                                <div class="bg-F3F4F6 rounded-3 py-1 px-2">Mitsubishi Outlander III 2.0</div>
+                                                <div class="bg-F3F4F6 rounded-3 py-1 px-2">P906MC799</div>
+                                                <div class="bg-F3F4F6 rounded-3 py-1 px-2">2018</div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="fs-14 fw-600">КАСКО</span>
+                                                <span class="text-muted fs-14">XXX0276045751</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="fs-14 fw-600">35 000,00 ₽</span>
+                                                <span class="text-muted fs-14">Оплачен</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <div class="d-flex align-items-center" style="height: 24px;">
+                                                    <img src="img/ingosstrah.png" alt="">
+                                                </div>
+                                                <span class="text-muted fs-14">Создан 01.01.2023</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="fs-14 fw-600">Иванов И. И.</span>
+                                                <span class="text-muted fs-14">Создатель</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="fs-14 fw-600">с 25.01.2023</span>
+                                                <span class="fs-14 fw-600">по 25.01.2024</span>                                
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <a class="fs-14 fw-600 text-primary" href="#">Продлить</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- item -->
+                            <div class="card card-contracts b-red">
+                                <div class="card-body">
+                                    <div class="row gy-3 align-items-center">
+                                        <div class="col-auto d-none d-lg-block">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-3">
+                                            <div class="d-flex gap-0 flex-column align-items-start">
+                                                <div class="fs-14 fw-600">Иванов Юрий Иванович</div>
+                                                <div class="d-flex gap-1 flex-wrap text-muted fs-12 fw-600">
+                                                <div class="bg-F3F4F6 rounded-3 py-1 px-2">Mitsubishi Outlander III 2.0</div>
+                                                <div class="bg-F3F4F6 rounded-3 py-1 px-2">P906MC799</div>
+                                                <div class="bg-F3F4F6 rounded-3 py-1 px-2">2018</div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="fs-14 fw-600">КАСКО</span>
+                                                <span class="text-muted fs-14">XXX0276045751</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="fs-14 fw-600">35 000,00 ₽</span>
+                                                <span class="text-muted fs-14">Оплачен</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <div class="d-flex align-items-center" style="height: 24px;">
+                                                    <img src="img/ingosstrah.png" alt="">
+                                                </div>
+                                                <span class="text-muted fs-14">Создан 01.01.2023</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="fs-14 fw-600">Иванов И. И.</span>
+                                                <span class="text-muted fs-14">Создатель</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="fs-14 fw-600">с 25.01.2023</span>
+                                                <span class="fs-14 fw-600">по 25.01.2024</span>                                
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <a class="fs-14 fw-600 text-primary" href="#">Продлить</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- TAB 3 -->
+            <div class="tab-pane fade" id="nav-archive" role="tabpanel" tabindex="0">
+                <!-- filters -->
+                <section class="section py-3">
+                    <div class="">
+                        <div class="container">
+                            <div class="bg-white rounded-3 p-2 p-lg-4">
+                                <div class="row gx-2 gy-3 align-items-center">
+                                    <div class="col">
+                                        <form class="position-relative w-100" action="#">
+                                            <input type="text" class="form-control fs-14"
+                                                placeholder="Поиск по номеру договора, страхователю" aria-label="Search">
+                                            <button type="submit"
+                                                class="btn bg-white p-1 mx-2 d-inline-flex position-absolute top-50 end-0 translate-middle-y">
+                                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                        d="M0.333252 6.16536C0.333252 2.94036 2.94159 0.332031 6.16659 0.332031C9.39159 0.332031 11.9999 2.94036 11.9999 6.16536C11.9999 7.63379 11.4592 8.97438 10.5656 9.99909L13.4834 12.9245C13.6947 13.1363 13.6942 13.4793 13.4824 13.6905C13.2706 13.9018 12.9277 13.9014 12.7164 13.6895L9.78098 10.7465C8.78765 11.5309 7.53242 11.9987 6.16659 11.9987C2.94159 11.9987 0.333252 9.39036 0.333252 6.16536ZM10.9166 6.16536C10.9166 3.5487 8.78325 1.41536 6.16659 1.41536C3.54992 1.41536 1.41659 3.5487 1.41659 6.16536C1.41659 8.78203 3.54992 10.9154 6.16659 10.9154C8.78325 10.9154 10.9166 8.78203 10.9166 6.16536Z"
+                                                        fill="#626F84" />
+                                                </svg>
+                                            </button>
+                                        </form>
+                                    </div>
+                                    <!-- Шестеренка -->
+                                    <!-- <div class="col-auto">
+                                        <button type="button" class="btn btn-icon btn-sm border-0" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+                                            <i class="bi bi-gear"></i>
+                                        </button>
+                                        <form class="contracts-option-wrap dropdown-menu dropdown-menu-lg-end p-2 p-lg-3">
+                                            <div class="contracts-option-item">
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="contracts-check1">
+                                                    <label class="form-check-label" for="contracts-check1">Продукт</label>
+                                                </div>
+                                            </div>
+                                            <div class="contracts-option-item">
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="contracts-check2">
+                                                    <label class="form-check-label" for="contracts-check2">Стоимость</label>
+                                                </div>
+                                            </div>
+                                            <div class="contracts-option-item">
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="contracts-check3">
+                                                    <label class="form-check-label" for="contracts-check3">Компания</label>
+                                                </div>
+                                            </div>
+                                            <div class="contracts-option-item">
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="contracts-check4">
+                                                    <label class="form-check-label" for="contracts-check4">Статус</label>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div> -->
+                                    <div class="col-auto">
+                                        <button type="button" class="btn btn-with-arrow border-0 fs-14 p-1 collapsed" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseFilters3" aria-expanded="false"
+                                            aria-controls="collapseFilters3"><span class="position-relative">Фильтры <div class="filter-notice active"></div></span></button>
+                                    </div>
+                                </div>
+                                <div class="collapse" id="collapseFilters3">
+                                    <form class="d-flex flex-wrap gap-2 mt-3" action="#">
+                                        <div class="filter-badge fs-12 bg-F3F4F6 rounded-pill">
+                                            <span>Продукт:</span>
+                                            <div class="apply-filters">
+                                                <span>КАСКО</span>
+                                                <span>ОСАГО</span>
+                                            </div>
+                                            <button type="button" class="btn-close"></button>
+                                        </div>
+                                        <div class="filter-badge fs-12 bg-F3F4F6 rounded-pill">
+                                            <span>СК:</span>
+                                            <div class="apply-filters">
+                                                <span>Ингосстрах</span>
+                                                <span>Альфастрахование</span>
+                                            </div>
+                                            <button type="button" class="btn-close"></button>
+                                        </div>
+                                        <div class="filter-badge fs-12 bg-F3F4F6 rounded-pill">
+                                            <span>Период:</span>
+                                            <div class="apply-filters">
+                                                <span>18.02.2021 - 20.03.2022</span>
+                                            </div>
+                                            <button type="button" class="btn-close"></button>
+                                        </div>
+                                        <button type="button" class="btn border-0 p-1 fs-14 text-primary">Сбросить фильтры</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- table -->
+                <section class="section py-3">
+                    <div class="container">
+                        <div class="card-contracts-wrap">
+                            <!-- item -->
+                            <div class="card card-contracts b-green">
+                                <div class="card-body">
+                                    <div class="row gy-3 align-items-center">
+                                        <div class="col-auto d-none d-lg-block">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-3">
+                                            <div class="d-flex gap-0 flex-column align-items-start">
+                                                <div class="fs-14 fw-600">Иванов Юрий Иванович</div>
+                                                <div class="d-flex gap-1 flex-wrap text-muted fs-12 fw-600">
+                                                <div class="bg-F3F4F6 rounded-3 py-1 px-2">Mitsubishi Outlander III 2.0</div>
+                                                <div class="bg-F3F4F6 rounded-3 py-1 px-2">P906MC799</div>
+                                                <div class="bg-F3F4F6 rounded-3 py-1 px-2">2018</div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="fs-14 fw-600">КАСКО</span>
+                                                <span class="text-muted fs-14">XXX0276045751</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="fs-14 fw-600">35 000,00 ₽</span>
+                                                <span class="text-muted fs-14">Оплачен</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <div class="d-flex align-items-center" style="height: 24px;">
+                                                    <img src="img/ingosstrah.png" alt="">
+                                                </div>
+                                                <span class="text-muted fs-14">Создан 01.01.2023</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="fs-14 fw-600">Иванов И. И.</span>
+                                                <span class="text-muted fs-14">Создатель</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="fs-14 fw-600">с 25.01.2023</span>
+                                                <span class="fs-14 fw-600">по 25.01.2024</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <a class="fs-14 fw-600 text-primary" href="#">Продлить</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- item -->
+                            <div class="card card-contracts b-green">
+                                <div class="card-body">
+                                    <div class="row gy-3 align-items-center">
+                                        <div class="col-auto d-none d-lg-block">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-3">
+                                            <div class="d-flex gap-0 flex-column align-items-start">
+                                                <div class="fs-14 fw-600">Иванов Юрий Иванович</div>
+                                                <div class="d-flex gap-1 flex-wrap text-muted fs-12 fw-600">
+                                                <div class="bg-F3F4F6 rounded-3 py-1 px-2">Mitsubishi Outlander III 2.0</div>
+                                                <div class="bg-F3F4F6 rounded-3 py-1 px-2">P906MC799</div>
+                                                <div class="bg-F3F4F6 rounded-3 py-1 px-2">2018</div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="fs-14 fw-600">КАСКО</span>
+                                                <span class="text-muted fs-14">XXX0276045751</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="fs-14 fw-600">35 000,00 ₽</span>
+                                                <span class="text-muted fs-14">Оплачен</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <div class="d-flex align-items-center" style="height: 24px;">
+                                                    <img src="img/ingosstrah.png" alt="">
+                                                </div>
+                                                <span class="text-muted fs-14">Создан 01.01.2023</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="fs-14 fw-600">Иванов И. И.</span>
+                                                <span class="text-muted fs-14">Создатель</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="fs-14 fw-600">с 25.01.2023</span>
+                                                <span class="fs-14 fw-600">по 25.01.2024</span>                                
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <a class="fs-14 fw-600 text-primary" href="#">Продлить</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- item -->
+                            <div class="card card-contracts b-green">
+                                <div class="card-body">
+                                    <div class="row gy-3 align-items-center">
+                                        <div class="col-auto d-none d-lg-block">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-3">
+                                            <div class="d-flex gap-0 flex-column align-items-start">
+                                                <div class="fs-14 fw-600">Иванов Юрий Иванович</div>
+                                                <div class="d-flex gap-1 flex-wrap text-muted fs-12 fw-600">
+                                                <div class="bg-F3F4F6 rounded-3 py-1 px-2">Mitsubishi Outlander III 2.0</div>
+                                                <div class="bg-F3F4F6 rounded-3 py-1 px-2">P906MC799</div>
+                                                <div class="bg-F3F4F6 rounded-3 py-1 px-2">2018</div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="fs-14 fw-600">КАСКО</span>
+                                                <span class="text-muted fs-14">XXX0276045751</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="fs-14 fw-600">35 000,00 ₽</span>
+                                                <span class="text-muted fs-14">Оплачен</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <div class="d-flex align-items-center" style="height: 24px;">
+                                                    <img src="img/ingosstrah.png" alt="">
+                                                </div>
+                                                <span class="text-muted fs-14">Создан 01.01.2023</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="fs-14 fw-600">Иванов И. И.</span>
+                                                <span class="text-muted fs-14">Создатель</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="fs-14 fw-600">с 25.01.2023</span>
+                                                <span class="fs-14 fw-600">по 25.01.2024</span>                                
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <a class="fs-14 fw-600 text-primary" href="#">Продлить</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- item -->
+                            <div class="card card-contracts b-green">
+                                <div class="card-body">
+                                    <div class="row gy-3 align-items-center">
+                                        <div class="col-auto d-none d-lg-block">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-3">
+                                            <div class="d-flex gap-0 flex-column align-items-start">
+                                                <div class="fs-14 fw-600">Иванов Юрий Иванович</div>
+                                                <div class="d-flex gap-1 flex-wrap text-muted fs-12 fw-600">
+                                                <div class="bg-F3F4F6 rounded-3 py-1 px-2">Mitsubishi Outlander III 2.0</div>
+                                                <div class="bg-F3F4F6 rounded-3 py-1 px-2">P906MC799</div>
+                                                <div class="bg-F3F4F6 rounded-3 py-1 px-2">2018</div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="fs-14 fw-600">КАСКО</span>
+                                                <span class="text-muted fs-14">XXX0276045751</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="fs-14 fw-600">35 000,00 ₽</span>
+                                                <span class="text-muted fs-14">Оплачен</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <div class="d-flex align-items-center" style="height: 24px;">
+                                                    <img src="img/ingosstrah.png" alt="">
+                                                </div>
+                                                <span class="text-muted fs-14">Создан 01.01.2023</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="fs-14 fw-600">Иванов И. И.</span>
+                                                <span class="text-muted fs-14">Создатель</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="fs-14 fw-600">с 25.01.2023</span>
+                                                <span class="fs-14 fw-600">по 25.01.2024</span>                                
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <a class="fs-14 fw-600 text-primary" href="#">Продлить</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- item -->
+                            <div class="card card-contracts b-yellow">
+                                <div class="card-body">
+                                    <div class="row gy-3 align-items-center">
+                                        <div class="col-auto d-none d-lg-block">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-3">
+                                            <div class="d-flex gap-0 flex-column align-items-start">
+                                                <div class="fs-14 fw-600">Иванов Юрий Иванович</div>
+                                                <div class="d-flex gap-1 flex-wrap text-muted fs-12 fw-600">
+                                                <div class="bg-F3F4F6 rounded-3 py-1 px-2">Mitsubishi Outlander III 2.0</div>
+                                                <div class="bg-F3F4F6 rounded-3 py-1 px-2">P906MC799</div>
+                                                <div class="bg-F3F4F6 rounded-3 py-1 px-2">2018</div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="fs-14 fw-600">КАСКО</span>
+                                                <span class="text-muted fs-14">XXX0276045751</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="fs-14 fw-600">35 000,00 ₽</span>
+                                                <span class="text-muted fs-14">Оплачен</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <div class="d-flex align-items-center" style="height: 24px;">
+                                                    <img src="img/ingosstrah.png" alt="">
+                                                </div>
+                                                <span class="text-muted fs-14">Создан 01.01.2023</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="fs-14 fw-600">Иванов И. И.</span>
+                                                <span class="text-muted fs-14">Создатель</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="fs-14 fw-600">с 25.01.2023</span>
+                                                <span class="fs-14 fw-600">по 25.01.2024</span>                                
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <a class="fs-14 fw-600 text-primary" href="#">Продлить</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- item -->
+                            <div class="card card-contracts b-yellow">
+                                <div class="card-body">
+                                    <div class="row gy-3 align-items-center">
+                                        <div class="col-auto d-none d-lg-block">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-3">
+                                            <div class="d-flex gap-0 flex-column align-items-start">
+                                                <div class="fs-14 fw-600">Иванов Юрий Иванович</div>
+                                                <div class="d-flex gap-1 flex-wrap text-muted fs-12 fw-600">
+                                                <div class="bg-F3F4F6 rounded-3 py-1 px-2">Mitsubishi Outlander III 2.0</div>
+                                                <div class="bg-F3F4F6 rounded-3 py-1 px-2">P906MC799</div>
+                                                <div class="bg-F3F4F6 rounded-3 py-1 px-2">2018</div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="fs-14 fw-600">КАСКО</span>
+                                                <span class="text-muted fs-14">XXX0276045751</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="fs-14 fw-600">35 000,00 ₽</span>
+                                                <span class="text-muted fs-14">Оплачен</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <div class="d-flex align-items-center" style="height: 24px;">
+                                                    <img src="img/ingosstrah.png" alt="">
+                                                </div>
+                                                <span class="text-muted fs-14">Создан 01.01.2023</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="fs-14 fw-600">Иванов И. И.</span>
+                                                <span class="text-muted fs-14">Создатель</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="fs-14 fw-600">с 25.01.2023</span>
+                                                <span class="fs-14 fw-600">по 25.01.2024</span>                                
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <a class="fs-14 fw-600 text-primary" href="#">Продлить</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- item -->
+                            <div class="card card-contracts b-red">
+                                <div class="card-body">
+                                    <div class="row gy-3 align-items-center">
+                                        <div class="col-auto d-none d-lg-block">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-3">
+                                            <div class="d-flex gap-0 flex-column align-items-start">
+                                                <div class="fs-14 fw-600">Иванов Юрий Иванович</div>
+                                                <div class="d-flex gap-1 flex-wrap text-muted fs-12 fw-600">
+                                                <div class="bg-F3F4F6 rounded-3 py-1 px-2">Mitsubishi Outlander III 2.0</div>
+                                                <div class="bg-F3F4F6 rounded-3 py-1 px-2">P906MC799</div>
+                                                <div class="bg-F3F4F6 rounded-3 py-1 px-2">2018</div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="fs-14 fw-600">КАСКО</span>
+                                                <span class="text-muted fs-14">XXX0276045751</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="fs-14 fw-600">35 000,00 ₽</span>
+                                                <span class="text-muted fs-14">Оплачен</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <div class="d-flex align-items-center" style="height: 24px;">
+                                                    <img src="img/ingosstrah.png" alt="">
+                                                </div>
+                                                <span class="text-muted fs-14">Создан 01.01.2023</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="fs-14 fw-600">Иванов И. И.</span>
+                                                <span class="text-muted fs-14">Создатель</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="fs-14 fw-600">с 25.01.2023</span>
+                                                <span class="fs-14 fw-600">по 25.01.2024</span>                                
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <a class="fs-14 fw-600 text-primary" href="#">Продлить</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- item -->
+                            <div class="card card-contracts b-red">
+                                <div class="card-body">
+                                    <div class="row gy-3 align-items-center">
+                                        <div class="col-auto d-none d-lg-block">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-3">
+                                            <div class="d-flex gap-0 flex-column align-items-start">
+                                                <div class="fs-14 fw-600">Иванов Юрий Иванович</div>
+                                                <div class="d-flex gap-1 flex-wrap text-muted fs-12 fw-600">
+                                                <div class="bg-F3F4F6 rounded-3 py-1 px-2">Mitsubishi Outlander III 2.0</div>
+                                                <div class="bg-F3F4F6 rounded-3 py-1 px-2">P906MC799</div>
+                                                <div class="bg-F3F4F6 rounded-3 py-1 px-2">2018</div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="fs-14 fw-600">КАСКО</span>
+                                                <span class="text-muted fs-14">XXX0276045751</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="fs-14 fw-600">35 000,00 ₽</span>
+                                                <span class="text-muted fs-14">Оплачен</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <div class="d-flex align-items-center" style="height: 24px;">
+                                                    <img src="img/ingosstrah.png" alt="">
+                                                </div>
+                                                <span class="text-muted fs-14">Создан 01.01.2023</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="fs-14 fw-600">Иванов И. И.</span>
+                                                <span class="text-muted fs-14">Создатель</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="fs-14 fw-600">с 25.01.2023</span>
+                                                <span class="fs-14 fw-600">по 25.01.2024</span>                                
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <a class="fs-14 fw-600 text-primary" href="#">Продлить</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- item -->
+                            <div class="card card-contracts b-red">
+                                <div class="card-body">
+                                    <div class="row gy-3 align-items-center">
+                                        <div class="col-auto d-none d-lg-block">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-3">
+                                            <div class="d-flex gap-0 flex-column align-items-start">
+                                                <div class="fs-14 fw-600">Иванов Юрий Иванович</div>
+                                                <div class="d-flex gap-1 flex-wrap text-muted fs-12 fw-600">
+                                                <div class="bg-F3F4F6 rounded-3 py-1 px-2">Mitsubishi Outlander III 2.0</div>
+                                                <div class="bg-F3F4F6 rounded-3 py-1 px-2">P906MC799</div>
+                                                <div class="bg-F3F4F6 rounded-3 py-1 px-2">2018</div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="fs-14 fw-600">КАСКО</span>
+                                                <span class="text-muted fs-14">XXX0276045751</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="fs-14 fw-600">35 000,00 ₽</span>
+                                                <span class="text-muted fs-14">Оплачен</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <div class="d-flex align-items-center" style="height: 24px;">
+                                                    <img src="img/ingosstrah.png" alt="">
+                                                </div>
+                                                <span class="text-muted fs-14">Создан 01.01.2023</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="fs-14 fw-600">Иванов И. И.</span>
+                                                <span class="text-muted fs-14">Создатель</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="fs-14 fw-600">с 25.01.2023</span>
+                                                <span class="fs-14 fw-600">по 25.01.2024</span>                                
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm">
+                                            <a class="fs-14 fw-600 text-primary" href="#">Продлить</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="footer bg-F3F4F6">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <button type="button" class="btn btn-outline btn-sm"><i class="bi bi-trash3 me-2"></i> Удалить
+                        выбранные</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Чат Темы -->
+    <div class="offcanvas offcanvas-end bg-F3F4F6" tabindex="-1" id="offcanvasChat"
+        aria-labelledby="offcanvasChatLabel">
+        <div class="offcanvas-header">
+            <p class="h5 offcanvas-title fw-600" id="offcanvasChatLabel">Чат</p>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="card-active p-2 mb-2">
+                <div class="row">
+                    <div class="col-10">
+                        <div class="d-flex flex-column">
+                            <p class="one-line fs-16 mb-2" title="Не загружается документ" data-bs-toggle="offcanvas"
+                                data-bs-target="#offcanvasMessages" aria-controls="offcanvasMessages">Не загружается
+                                документ</p>
+                            <span class="text-muted fs-12">от 26.12.23 10:34</span>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="d-flex flex-column align-items-center justify-content-end h-100">
+                            <div class="px-2">
+                                <span class="badge rounded-circle bg-danger">5</span>
+                            </div>
+                            <div>
+                                <button class="btn btn-icon btn-sm" type="button" data-bs-toggle="dropdown"><i
+                                        class="bi bi-three-dots"></i></button>
+                                <ul class="dropdown-menu fs-12">
+                                    <li><a class="dropdown-item" href="#">Действие №1</a></li>
+                                    <li><a class="dropdown-item" href="#">Действие номер №2</a></li>
+                                    <li><a class="dropdown-item" href="#">Ещё одно действие</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-active p-2 mb-2">
+                <div class="row">
+                    <div class="col-10">
+                        <div class="d-flex flex-column">
+                            <p class="one-line fs-16 mb-2" title="Не загружается документ, а ещё текст"
+                                data-bs-toggle="offcanvas" data-bs-target="#offcanvasMessages"
+                                aria-controls="offcanvasMessages">Не загружается
+                                документ, а ещё текст</p>
+                            <span class="text-muted fs-12">от 26.12.23 10:34</span>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="d-flex flex-column align-items-center justify-content-end h-100">
+                            <div>
+                                <button class="btn btn-icon btn-sm" type="button" data-bs-toggle="dropdown"><i
+                                        class="bi bi-three-dots"></i></button>
+                                <ul class="dropdown-menu fs-12">
+                                    <li><a class="dropdown-item" href="#">Действие №1</a></li>
+                                    <li><a class="dropdown-item" href="#">Действие номер №2</a></li>
+                                    <li><a class="dropdown-item" href="#">Ещё одно действие</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-active p-2 mb-2">
+                <div class="row">
+                    <div class="col-10">
+                        <div class="d-flex flex-column">
+                            <p class="one-line fs-16 mb-2" title="Не загружается документ" data-bs-toggle="offcanvas"
+                                data-bs-target="#offcanvasMessages" aria-controls="offcanvasMessages">Не загружается
+                                документ</p>
+                            <span class="text-muted fs-12">от 26.12.23 10:34</span>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="d-flex flex-column align-items-center justify-content-end h-100">
+                            <div class="px-2">
+                                <span class="badge rounded-circle bg-danger">5</span>
+                            </div>
+                            <div>
+                                <button class="btn btn-icon btn-sm" type="button" data-bs-toggle="dropdown"><i
+                                        class="bi bi-three-dots"></i></button>
+                                <ul class="dropdown-menu fs-12">
+                                    <li><a class="dropdown-item" href="#">Действие №1</a></li>
+                                    <li><a class="dropdown-item" href="#">Действие номер №2</a></li>
+                                    <li><a class="dropdown-item" href="#">Ещё одно действие</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Чат Сообщения -->
+    <div class="offcanvas offcanvas-end bg-F3F4F6" tabindex="-1" id="offcanvasMessages"
+        aria-labelledby="offcanvasMessagesLabel">
+        <div class="offcanvas-header">
+            <p class="h5 offcanvas-title fw-600" id="offcanvasMessagesLabel">Чат</p>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+
+            <div class="card card-chat">
+                <div class="card-header">
+                    <a href="#offcanvasChat" data-bs-toggle="offcanvas" aria-controls="offcanvasChat">
+                        <div class="d-flex align-items-center">
+                            <i class="bi bi-arrow-left text-primary me-2"></i> <span class="fs-14">Не загружается
+                                документ</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="card-body">
+                    <div class="d-flex flex-column fs-14 mb-2">
+                        <p class="text-muted fw-700 mb-2">Специалист</p>
+                        <p class="mb-2"><span class="me-2">10.05.2022</span><span>14:00</span></p>
+                        <p class="mb-2">Течение среды облучает термодинамический пульсар. Исследователями из разных
+                            лабораторий неоднократно наблюдалось, как осциллятор пространственно ускоряет векторный
+                            солитон.</p>
+                        <div>
+                            <button class="btn btn-icon btn-sm" type="button" data-bs-toggle="dropdown"><i
+                                    class="bi bi-three-dots"></i></button>
+                            <ul class="dropdown-menu fs-12">
+                                <li><a class="dropdown-item" href="#">Действие №1</a></li>
+                                <li><a class="dropdown-item" href="#">Действие номер №2</a></li>
+                                <li><a class="dropdown-item" href="#">Ещё одно действие</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column fs-14 mb-2">
+                        <p class="text-muted fw-700 mb-2">Специалист</p>
+                        <p class="mb-2"><span class="me-2">10.05.2022</span><span>14:00</span></p>
+                        <p class="mb-2">Течение среды облучает термодинамический пульсар. Исследователями из разных
+                            лабораторий неоднократно наблюдалось, как осциллятор пространственно ускоряет векторный
+                            солитон.</p>
+                        <div>
+                            <button class="btn btn-icon btn-sm" type="button" data-bs-toggle="dropdown"><i
+                                    class="bi bi-three-dots"></i></button>
+                            <ul class="dropdown-menu fs-12">
+                                <li><a class="dropdown-item" href="#">Действие №1</a></li>
+                                <li><a class="dropdown-item" href="#">Действие номер №2</a></li>
+                                <li><a class="dropdown-item" href="#">Ещё одно действие</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column fs-14 mb-2 bg-F0EEFF p-2 rounded-3">
+                        <p class="mb-2"><span class="me-2">10.05.2022</span><span>14:00</span></p>
+                        <p class="mb-2">Течение среды облучает термодинамический пульсар. Исследователями из разных
+                            лабораторий неоднократно наблюдалось, как осциллятор пространственно ускоряет векторный
+                            солитон.</p>
+                        <div>
+                            <button class="btn btn-icon btn-sm" type="button" data-bs-toggle="dropdown"><i
+                                    class="bi bi-three-dots"></i></button>
+                            <ul class="dropdown-menu fs-12">
+                                <li><a class="dropdown-item" href="#">Действие №1</a></li>
+                                <li><a class="dropdown-item" href="#">Действие номер №2</a></li>
+                                <li><a class="dropdown-item" href="#">Ещё одно действие</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="offcanvas-header">
+            <div class="d-flex align-items-center w-100">
+                <textarea class="form-control fs-14" rows="3" data-kt-element="input"
+                    placeholder="Написать сообщение"></textarea>
+                <div class="d-flex flex-column ms-1">
+                    <button class="btn btn-sm btn-icon" type="button">
+                        <i class="bi bi-paperclip"></i>
+                    </button>
+                    <button class="btn btn-sm btn-icon text-primary" type="button">
+                        <i class="bi bi-send-fill"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Карточка документа -->
+    <div class="offcanvas offcanvas-documents offcanvas-end bg-F3F4F6" tabindex="-1" id="offcanvasInsurance"
+        aria-labelledby="offcanvasInsuranceLabel">
+        <div class="offcanvas-header">
+            <div class="d-flex align-items-center">
+                <p class="fs-20 fw-600 mb-0" id="offcanvasInsuranceLabel">КАСКО</p>
+                <span class="fs-12 bg-light-success border border-success rounded-2 p-1 px-2 ms-4">Действует</span>
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+
+            <div class="mb-4">
+                <div class="row gy-2">
+                    <div class="col-6">
+                        <span class="fs-14 text-muted">Организация</span>
+                    </div>
+                    <div class="col-6">
+                        <span class="fs-16">РЕСО</span>
+                    </div>
+                    <div class="col-6">
+                        <span class="fs-14 text-muted">Номер договора</span>
+                    </div>
+                    <div class="col-6">
+                        <span class="fs-16">XXX0276045751</span>
+                    </div>
+                    <div class="col-6">
+                        <span class="fs-14 text-muted">Дата окончания</span>
+                    </div>
+                    <div class="col-6">
+                        <span class="fs-16">25.01.2023</span>
+                    </div>
+                    <div class="col-6">
+                        <span class="fs-14 text-muted">Сумма полиса</span>
+                    </div>
+                    <div class="col-6">
+                        <span class="fs-16">68 245,16 ₽</span>
+                    </div>
+                </div>
+            </div>
+
+            <ul class="row nav nav-pills mb-3" role="tablist">
+                <li class="col-6 nav-item" role="presentation">
+                    <button class="nav-link fs-14 w-100 active" id="pill-blank" data-bs-toggle="pill"
+                        data-bs-target="#pills-blank" type="button" role="tab" aria-controls="pills-blank"
+                        aria-selected="true">Полис</button>
+                </li>
+                <li class="col-6 nav-item" role="presentation">
+                    <button class="nav-link fs-14 w-100" id="pill-document" data-bs-toggle="pill"
+                        data-bs-target="#pills-document" type="button" role="tab" aria-controls="pills-document"
+                        aria-selected="false">Документы</button>
+                </li>
+            </ul>
+
+            <div class="tab-content">
+                <div class="tab-pane fade show active" id="pills-blank" role="tabpanel" aria-labelledby="pill-blank"
+                    tabindex="0">
+                    <div class="card p-3">
+                        <div class="position-relative">
+                            <img class="w-100" src="img/blank-01.png" alt="">
+                            <a class="btn btn-icon btn-primary btn-sm position-absolute top-0 end-0 m-2"
+                                href="img/blank-01x2.png" data-fancybox="docs-gallery-01"><i class="bi bi-eye"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="pills-document" role="tabpanel" aria-labelledby="pill-document"
+                    tabindex="0">
+                    <div class="card p-4">
+                        <p class="text-center fs-14 mb-1">Загрузите файлы в формате pdf, jpeg, tiff, png до 10 Мб каждый
+                        </p>
+                        <button type="button" class="btn text-primary w-100"><i class="bi bi-paperclip"></i> Загрузить
+                            документы</button>
+
+                        <!-- item -->
+                        <div class="mt-3">
+                            <div class="row g-0 align-items-center">
+                                <div class="col-auto">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox">
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card-active border rounded-3 p-3">
+                                        <div class="row g-2">
+                                            <div class="col-3">
+                                                <div class="p-2">
+                                                    <img class="w-100" src="img/docs-01.png" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <p class="fs-12 fs-lg-14">СТС</p>
+                                            </div>
+                                            <div class="col-auto">
+                                                <div class="d-flex">
+                                                    <div class="p-0">
+                                                        <button type="button"
+                                                            class="btn btn-icon btn-sm text-primary"><i
+                                                                class="bi bi-eye"></i></button>
+                                                    </div>
+                                                    <div class="p-0">
+                                                        <button type="button" class="btn btn-icon btn-sm"
+                                                            data-bs-toggle="dropdown"><i
+                                                                class="bi bi-three-dots-vertical"></i></button>
+                                                        <ul class="dropdown-menu fs-12">
+                                                            <li><a class="dropdown-item" href="#">Действие №1</a>
+                                                            </li>
+                                                            <li><a class="dropdown-item" href="#">Действие номер
+                                                                    №2</a></li>
+                                                            <li><a class="dropdown-item" href="#">Ещё одно
+                                                                    действие</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- item -->
+                        <div class="mt-3">
+                            <div class="row g-0 align-items-center">
+                                <div class="col-auto">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox">
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card-active border rounded-3 p-3">
+                                        <div class="row g-2">
+                                            <div class="col-3">
+                                                <div class="p-2">
+                                                    <img class="w-100" src="img/docs-01.png" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <p class="fs-12 fs-lg-14">Водительское удостоверение Иванов Иван
+                                                    Иванович</p>
+                                            </div>
+                                            <div class="col-auto">
+                                                <div class="d-flex">
+                                                    <div class="p-0">
+                                                        <button type="button"
+                                                            class="btn btn-icon btn-sm text-primary"><i
+                                                                class="bi bi-eye"></i></button>
+                                                    </div>
+                                                    <div class="p-0">
+                                                        <button type="button" class="btn btn-icon btn-sm"
+                                                            data-bs-toggle="dropdown"><i
+                                                                class="bi bi-three-dots-vertical"></i></button>
+                                                        <ul class="dropdown-menu fs-12">
+                                                            <li><a class="dropdown-item" href="#">Действие №1</a>
+                                                            </li>
+                                                            <li><a class="dropdown-item" href="#">Действие номер
+                                                                    №2</a></li>
+                                                            <li><a class="dropdown-item" href="#">Ещё одно
+                                                                    действие</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- item -->
+                        <div class="mt-3">
+                            <div class="row g-0 align-items-center">
+                                <div class="col-auto">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox">
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card-active border rounded-3 p-3">
+                                        <div class="row g-2">
+                                            <div class="col-3">
+                                                <div class="p-2">
+                                                    <img class="w-100" src="img/docs-01.png" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <p class="fs-12 fs-lg-14">Соглашение</p>
+                                            </div>
+                                            <div class="col-auto">
+                                                <div class="d-flex">
+                                                    <div class="p-0">
+                                                        <button type="button"
+                                                            class="btn btn-icon btn-sm text-primary"><i
+                                                                class="bi bi-eye"></i></button>
+                                                    </div>
+                                                    <div class="p-0">
+                                                        <button type="button" class="btn btn-icon btn-sm"
+                                                            data-bs-toggle="dropdown"><i
+                                                                class="bi bi-three-dots-vertical"></i></button>
+                                                        <ul class="dropdown-menu fs-12">
+                                                            <li><a class="dropdown-item" href="#">Действие №1</a>
+                                                            </li>
+                                                            <li><a class="dropdown-item" href="#">Действие номер
+                                                                    №2</a></li>
+                                                            <li><a class="dropdown-item" href="#">Ещё одно
+                                                                    действие</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- item -->
+                        <div class="mt-3">
+                            <div class="row g-0 align-items-center">
+                                <div class="col-auto">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox">
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card-active border rounded-3 p-3">
+                                        <div class="row g-2">
+                                            <div class="col-3">
+                                                <div class="p-2">
+                                                    <img class="w-100" src="img/docs-01.png" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <p class="fs-12 fs-lg-14">Приложение к договору 3838 от 30.01.2023</p>
+                                            </div>
+                                            <div class="col-auto">
+                                                <div class="d-flex">
+                                                    <div class="p-0">
+                                                        <button type="button"
+                                                            class="btn btn-icon btn-sm text-primary"><i
+                                                                class="bi bi-eye"></i></button>
+                                                    </div>
+                                                    <div class="p-0">
+                                                        <button type="button" class="btn btn-icon btn-sm"
+                                                            data-bs-toggle="dropdown"><i
+                                                                class="bi bi-three-dots-vertical"></i></button>
+                                                        <ul class="dropdown-menu fs-12">
+                                                            <li><a class="dropdown-item" href="#">Действие №1</a>
+                                                            </li>
+                                                            <li><a class="dropdown-item" href="#">Действие номер
+                                                                    №2</a></li>
+                                                            <li><a class="dropdown-item" href="#">Ещё одно
+                                                                    действие</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="offcanvas-header">
+            <div class="d-flex align-items-center">
+                <button type="button" class="btn btn-primary btn-sm px-2 px-lg-3 me-3"><i
+                        class="bi bi-envelope me-2"></i>Отправить <span>(4)</span></button>
+                <button type="button" class="btn btn-outline btn-sm" data-bs-dismiss="offcanvas"
+                    aria-label="Close">Закрыть</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Оформить полис Модалка -->
+    <div class="modal fade modal-drawUpPolis" id="drawUpPolis-modal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="nav flex-column drawUpPolis-nav">
+                        <a class="nav-link" href="#">КАСКО</a>
+                        <a class="nav-link" href="#">ОСАГО</a>
+                        <a class="nav-link" href="#">Гражданская отвественность</a>
+                        <a class="nav-link" href="#">Страхование дома</a>
+                        <a class="nav-link" href="#">Страхование квартиры</a>
+                        <a class="nav-link" href="#">Страхование ипотеки</a>
+                        <a class="nav-link" href="#">Страхование от несчастного случая</a>
+                        <a class="nav-link" href="#">Страхование выезжающих за рубеж</a>
+                        <a class="nav-link" href="#">Страхование от критических и онкологических заболеваний</a>
+                        <a class="nav-link" href="#">Добровольное медицинское трахование</a>
+                        <a class="nav-link" href="#">Иное</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Оформить полис Оффканвас -->
+    <div class="offcanvas offcanvas-end offcanvas-drawUpPolis" id="drawUpPolis-offcanvas" tabindex="-1">
+        <div class="offcanvas-header justify-content-end">
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="nav flex-column drawUpPolis-nav">
+                <a class="nav-link" href="#">КАСКО</a>
+                <a class="nav-link" href="#">ОСАГО</a>
+                <a class="nav-link" href="#">Гражданская отвественность</a>
+                <a class="nav-link" href="#">Страхование дома</a>
+                <a class="nav-link" href="#">Страхование квартиры</a>
+                <a class="nav-link" href="#">Страхование ипотеки</a>
+                <a class="nav-link" href="#">Страхование от несчастного случая</a>
+                <a class="nav-link" href="#">Страхование выезжающих за рубеж</a>
+                <a class="nav-link" href="#">Страхование от критических и онкологических заболеваний</a>
+                <a class="nav-link" href="#">Добровольное медицинское трахование</a>
+                <a class="nav-link" href="#">Иное</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/fancybox.umd.js"></script>
+    <script src="js/imask.js"></script>
+    <script src="js/choices.min.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

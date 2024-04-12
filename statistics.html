@@ -1,0 +1,1437 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Статистика</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/fancybox.css">
+    <link rel="stylesheet" href="css/choices.min.css">
+
+    <link rel="stylesheet" href="css/datepicker.min.css">
+    <link rel="stylesheet" href="css/datepicker-bs5.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body class="bg-F3F4F6">
+
+    <header class="sticky-heading header sticky-top">
+        <nav class="navbar navbar-expand-xxl bg-white shadow">
+            <div class="container">
+                <a class="navbar-brand d-none d-xxl-flex hover-opacity" href="#">
+                    <img src="img/logo.svg" alt="Logo">
+                </a>
+                <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="bi bi-grid"></i>
+                </button>
+                <div class="offcanvas offcanvas-end offcanvas-navbar" tabindex="-1" id="navbarNav">
+                    <div class="offcanvas-header">
+                        <button type="button" class="btn btn-icon btn-sm border-0" data-bs-dismiss="offcanvas" aria-label="Close">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="9" height="15" viewBox="0 0 9 15" fill="none">
+                                <path d="M7.78265 0.75C7.96865 0.75 8.14431 0.822332 8.27864 0.966998C8.52664 1.246 8.50598 1.66966 8.23731 1.91766L1.65592 7.84926L8.27867 13.5842C8.55767 13.8322 8.568 14.2559 8.32 14.5349C8.07201 14.8036 7.64834 14.8242 7.36934 14.5762L0.24026 8.38659C-0.0800708 8.09726 -0.0800708 7.60126 0.24026 7.31193L7.32798 0.925664C7.46232 0.801664 7.61732 0.75 7.78265 0.75Z" fill="#747782"/>
+                            </svg>
+                        </button>
+                        <a class="navbar-brand" href="#">
+                            <img src="img/logo.svg" alt="Logo">
+                        </a>
+                        <div style="width: 2rem;"></div>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav ms-xxl-4 me-xxl-auto">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span>Договоры</span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#"><span>Договоры</span></a></li>
+                                    <li><a class="dropdown-item" href="#"><span>Генеральные договора</span></a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="#"><span>Цифра</span></a></li>
+                            <li class="nav-item"><a class="nav-link" href="#"><span>Пользователи</span></a></li>
+                            <li class="nav-item"><a class="nav-link" href="#"><span>Настройки</span></a></li>
+                            <li class="nav-item"><a class="nav-link" href="#"><span>Финансы</span></a></li>
+                            <li class="nav-item"><a class="nav-link" href="#"><span>Аналитика</span></a></li>
+                        </ul>
+
+                    </div>
+                </div>
+
+                <div class="d-flex gap-2 gap-xxl-4 align-items-center">
+                    <div class="d-flex gap-2 align-items-center">
+                        <button type="button" class="btn btn-primary btn-sm px-2 px-lg-3" data-bs-toggle="offcanvas"
+                            data-bs-target="#drawUpPolis-offcanvas"><i class="bi bi-plus-circle-fill"></i><span
+                                class="d-none d-md-inline ms-2"> Оформить
+                                полис</span></button>
+                        <div class="d-flex gap-2 align-items-center">
+                            <button type="button" class="btn btn-icon btn-sm border-0 position-relative"
+                                data-bs-toggle="offcanvas" data-bs-target="#offcanvasChat"
+                                aria-controls="offcanvasChat">
+                                <i class="bi bi-chat-left-dots"></i>
+                                <span class="badge badge-chat rounded-circle bg-red">4</span>
+                            </button>
+                            <button type="button" class="btn btn-icon btn-sm border-0 position-relative">
+                                <i class="bi bi-bell"></i>
+                            </button>
+                        </div>
+                        <div class="bg-F0EEFF rounded-3 fs-12 p-2">
+                            <span class="text-black">3 578, 00</span>
+                            <span class="text-primary">INS</span>
+                        </div>
+                    </div>
+
+                    <div class="d-flex gap-2 gap-xxl-4 align-items-center">
+                        <a href="#">
+                            <div class="avatar-container">
+                                <img src="img/avatar.jpg" class="avatar img-fluid" alt="avatar">
+                            </div>
+                        </a>
+                        <button type="button" class="btn btn-icon border-0 d-none d-xxl-inline-block" style="--btn-icon-size: 1.5rem;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="25" viewBox="0 0 22 25" fill="none">
+                                <path d="M9.44902 12.25H16.621M16.621 12.25L14.3798 10.0278M16.621 12.25L14.3798 14.4722M16.621 7.36111V5.25C16.621 4.69772 16.2196 4.25 15.7245 4.25H6.75953C6.26442 4.25 5.86304 4.69772 5.86304 5.25V19.25C5.86304 19.8023 6.26442 20.25 6.75953 20.25H15.7245C16.2196 20.25 16.621 19.8023 16.621 19.25V17.1389" stroke="#747782" stroke-width="1.21105" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+
+        <!-- Карточки -->
+        <section class="section section-statistics-content py-3 mt-3">
+            <div class="container">
+
+                <div class="row gy-3">
+                    
+                    <div class="col-lg-3">
+                        <div class="statistics-summary">
+                            <div class="statistics-summary__top" style="--bg-image: url('../img/backdrop-statistics.jpg');"></div>
+                            <div class="statistics-summary__body">
+                                <div class="d-flex flex-column align-items-center">
+                                    <div class="d-flex flex-column align-items-center">
+                                        <div class="rounded-circle border border-white p-2">
+                                            <div class="d-flex align-items-center justify-content-center bg-white rounded-circle border border-primary flex-shrink-0" style="width: 80px; height: 80px;">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="37" height="41" viewBox="0 0 37 41" fill="none">
+                                                    <path d="M12.0259 17.7435C5.61913 17.7435 0.407837 22.8656 0.407837 29.1626C0.407837 35.4596 5.61913 40.5816 12.0259 40.5816C17.0924 40.5816 21.4071 37.378 22.9901 32.9261C23.7746 32.9582 24.4937 32.9674 25.0774 32.9674C28.645 32.9674 36.9429 32.5956 36.9429 29.158C36.9429 29.1488 36.9429 29.135 36.9429 29.1258C36.9429 29.1167 36.9429 29.1075 36.9429 29.0983V24.7152V24.5132C36.9663 24.4123 36.9756 24.3067 36.9756 24.1966C36.9756 24.0956 36.9616 23.9946 36.9429 23.8982V20.1255C36.9663 20.0246 36.9756 19.919 36.9756 19.8089C36.9756 19.7079 36.9616 19.6069 36.9429 19.5105V15.311C36.9663 15.21 36.9756 15.1045 36.9756 14.9943C36.9756 14.8153 36.9383 14.6455 36.8776 14.4849C36.9149 14.3334 36.9383 14.1774 36.9383 14.0121C36.9383 14.003 36.9383 13.9938 36.9383 13.98C36.9383 13.9708 36.9383 13.9616 36.9383 13.9525V9.36741C36.9616 9.26644 36.971 9.16087 36.971 9.05072C36.971 8.94975 36.957 8.84878 36.9383 8.75698V4.56205C36.9616 4.46107 36.971 4.35551 36.971 4.24536C36.971 4.05718 36.9336 3.88278 36.8682 3.71755C36.7655 3.36415 36.5414 3.07041 36.2425 2.88682C33.8236 0.86279 26.1048 0.793945 25.0774 0.793945C24.0548 0.793945 16.3312 0.86279 13.9077 2.88224C13.6089 3.06582 13.3847 3.35956 13.282 3.71296C13.2166 3.88278 13.1792 4.05718 13.1792 4.24536C13.1792 4.35551 13.1933 4.45648 13.2119 4.56205V8.76157C13.1933 8.85796 13.1792 8.95434 13.1792 9.0599C13.1792 9.17005 13.1933 9.27103 13.2119 9.37659V13.9616C13.2119 13.9708 13.2119 13.98 13.2119 13.9938C13.2119 14.003 13.2119 14.0121 13.2119 14.0213C13.2119 14.1865 13.2353 14.3426 13.2726 14.494C13.2119 14.6547 13.1792 14.8245 13.1792 15.0035C13.1792 15.1136 13.1933 15.2146 13.2119 15.3202V17.8078C12.8244 17.7665 12.4274 17.7435 12.0259 17.7435ZM35.5888 29.0662C35.5888 29.0937 35.5841 29.1258 35.5841 29.1488C35.5841 29.158 35.5841 29.1717 35.5841 29.1855C35.5187 30.466 30.8304 31.5033 25.0774 31.5033C24.5077 31.5033 23.9474 31.4895 23.401 31.4712C23.5598 30.723 23.6392 29.952 23.6392 29.1626C23.6392 28.9606 23.6345 28.7587 23.6205 28.5613C24.1575 28.5751 24.6525 28.5843 25.0728 28.5843C27.7485 28.5843 33.0812 28.3731 35.5841 26.8218V29.0662H35.5888ZM35.5888 24.6831C35.5888 24.7106 35.5841 24.7427 35.5841 24.7657C35.5841 24.7749 35.5841 24.7886 35.5841 24.8024C35.5187 26.0829 30.8304 27.1202 25.0774 27.1202C24.5218 27.1202 23.9801 27.1064 23.4431 27.088C23.2143 25.8764 22.7987 24.7335 22.215 23.6871C23.303 23.7514 24.3023 23.7697 25.0774 23.7697C27.7531 23.7697 33.0858 23.5586 35.5888 22.0073V24.6831ZM35.5888 13.9249C35.5888 13.9525 35.5841 13.9846 35.5841 14.0075C35.5841 14.0167 35.5841 14.0305 35.5841 14.0443C35.5187 15.3248 30.8304 16.362 25.0774 16.362C19.3245 16.362 14.6362 15.3248 14.5708 14.0443C14.5708 14.0167 14.5755 13.9938 14.5708 13.9708C14.5708 13.9571 14.5708 13.9387 14.5708 13.9249L14.5661 11.2492C17.069 12.8051 22.4017 13.0116 25.0774 13.0116C27.7531 13.0116 33.0858 12.8051 35.5888 11.2492V13.9249ZM25.0774 2.47835C31.0452 2.47835 34.7389 3.56609 35.3646 4.24536C34.7389 4.92463 31.0452 6.01237 25.0774 6.01237C19.1143 6.01696 15.416 4.92463 14.7903 4.24536C15.416 3.56609 19.1143 2.47835 25.0774 2.47835ZM25.0774 7.70137C26.0207 7.70137 32.6562 7.6417 35.5888 6.04909V9.11498C35.5888 9.14251 35.5841 9.17464 35.5841 9.19759C35.5841 9.21136 35.5841 9.22054 35.5841 9.23431C35.5187 10.5148 30.8304 11.5521 25.0774 11.5521C19.3245 11.5521 14.6362 10.5148 14.5708 9.23431C14.5708 9.20677 14.5755 9.18382 14.5708 9.16087C14.5708 9.1471 14.5708 9.12875 14.5708 9.11039L14.5661 6.0445C17.4986 7.6417 24.1342 7.70137 25.0774 7.70137ZM25.0774 18.4549C26.0207 18.4549 32.6562 18.3952 35.5888 16.8026V19.8685C35.5888 19.8961 35.5841 19.9282 35.5841 19.9511C35.5841 19.9603 35.5841 19.9741 35.5841 19.9879C35.5187 21.2684 30.8304 22.3056 25.0774 22.3056C23.6952 22.3056 22.3784 22.246 21.169 22.1358C19.5439 20.0934 17.2231 18.611 14.5661 18.0235V16.8026C17.4986 18.3952 24.1342 18.4549 25.0774 18.4549ZM22.1543 29.1626C22.1543 34.6518 17.6107 39.1175 12.0259 39.1175C6.44099 39.1175 1.89745 34.6518 1.89745 29.1626C1.89745 23.6733 6.44099 19.2076 12.0259 19.2076C17.6107 19.2076 22.1543 23.6733 22.1543 29.1626Z" fill="#5C43FC"/>
+                                                    <path d="M4.19861 29.1625C4.19861 33.4033 7.71016 36.8547 12.0249 36.8547C16.3396 36.8547 19.8512 33.4033 19.8512 29.1625C19.8512 24.9216 16.3396 21.4702 12.0249 21.4702C7.70549 21.4702 4.19861 24.9216 4.19861 29.1625ZM18.8612 29.1625C18.8612 32.8663 15.7933 35.8817 12.0249 35.8817C8.25651 35.8817 5.18857 32.8663 5.18857 29.1625C5.18857 25.4586 8.25651 22.4432 12.0249 22.4432C15.7933 22.4432 18.8612 25.4586 18.8612 29.1625Z" fill="#5C43FC"/>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="statistics-amount fs-16 fw-700">2 125 768,27 ₽</div>
+                                    </div>
+                                    <div class="fs-14 fw-600 mt-2">Всего заработано за период</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="statistics-btn-group">
+                            <div class="row gy-2 gx-2">
+                                <div class="col-6 col-lg-12">
+                                    <a href="#" class="btn btn-primary btn-sm px-2 px-lg-3 w-100">
+                                        <div class="flex-shrink-0 d-lg-none">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M2.53067 2.57324H17.8337C18.6705 2.57324 19.3489 3.31943 19.3489 4.23991V14.2399C19.3489 15.1604 18.6705 15.9066 17.8337 15.9066H5.52767L4.93809 16.4962L4.34851 15.9066H2.53067L2.52185 15.9065H4.34848L3.75958 15.3176L4.83699 14.2402H1.0155V12.5736H4.83699L3.75958 11.4962L4.93809 10.3176L8.02735 13.4069L5.5277 15.9065H9.34886V14.2395H17.6822V8.40654H2.68217V10.0732H1.01552V4.23991C1.01552 3.31943 1.69388 2.57324 2.53067 2.57324ZM17.6822 4.23954V6.73987H2.68217V4.23954H17.6822Z" fill="white"/>
+                                            </svg>
+                                        </div>
+                                        <span>Перевод<br class="d-lg-none"> пользователю</span>
+                                    </a>
+                                </div>
+                                <div class="col-6 col-lg-12">
+                                    <a href="#" class="btn btn-primary btn-sm px-2 px-lg-3 w-100">
+                                        <div class="flex-shrink-0 d-lg-none">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M2.70399 2.57324H18.007C18.8438 2.57324 19.5222 3.31943 19.5222 4.23991V10.0732H17.8555V8.40654H2.85549V14.2395H10.3555V15.9065H15.3552L14.7663 15.3176L15.8437 14.2402H12.0222V12.5736H15.8437L14.7663 11.4962L15.9448 10.3176L19.034 13.4069L16.5344 15.9065H18.0158L18.007 15.9066H16.5344L15.9448 16.4962L15.3552 15.9066H2.70399C1.8672 15.9066 1.18884 15.1604 1.18884 14.2399V4.23991C1.18884 3.31943 1.8672 2.57324 2.70399 2.57324ZM17.8555 4.23954V6.73987H2.85549V4.23954H17.8555Z" fill="white"/>
+                                            </svg>
+                                        </div>
+                                        <span>Заявка<br class="d-lg-none"> на вывод денег</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-9">
+
+                        <!-- Табы навигация -->
+                        <div class="scrollable-container mb-4">
+                            <div class="nav nav-pills scrollable-wrapper" role="tablist">
+                                <div class="nav-item scrollable-item" role="presentation">
+                                    <button class="nav-link fs-12 fs-lg-14 fw-600 w-100 pt-lg-0 active" data-bs-toggle="pill" data-bs-target="#tab-statistics-history" type="button" role="tab" aria-selected="true">История</button>
+                                </div>
+                                <div class="nav-item scrollable-item" role="presentation">
+                                    <button class="nav-link fs-12 fs-lg-14 fw-600 w-100 pt-lg-0" data-bs-toggle="pill" data-bs-target="#tab-statistics-main" type="button" role="tab" aria-selected="false" tabindex="-1">Статистика</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-content position-relative">
+
+                            <!-- Вкладка "История" -->
+                            <div class="tab-pane fade show active" id="tab-statistics-history" role="tabpanel" tabindex="0">
+
+                                <!-- Фильтры Мобилка -->
+                                <div class="d-flex align-items-center justify-content-between d-lg-none mb-4-none mb-3">
+                                    <button type="button" class="btn-mobile-statistics-filters btn text-primary border-0 fs-14 fw-600 p-2 py-1 collapsed" data-bs-toggle="collapse" data-bs-target="#collapse-mobile-statistics-history-filters" aria-expanded="false">Фильтры <i class="bi bi-sliders ms-2"></i><i class="bi bi-x-lg ms-2"></i></button>
+                                    <button type="button" class="btn btn-outline btn-icon" style="--btn-icon-size: 28px;"><i class="bi bi-download"></i></button>
+                                </div>
+
+                                <!-- Фильтры ПК -->
+                                <div class="collapse d-lg-block" id="collapse-mobile-statistics-history-filters">
+                                    <div class="mb-4">
+                                        <div class="row gy-2 gx-2">
+                                            <!-- За период -->
+                                            <div class="col-lg">
+                                                <div class="select-filter fs-14 fw-600 bg-white color-74777F cursor-pointer w-100 border border-1 rounded-3 text-start py-2 px-3" data-bs-toggle="dropdown">
+                                                    <span>За период</span>
+                                                </div>
+                                                <ul class="dropdown-menu shadow fs-14 ms-3 ms-lg-0 mt-2">
+                                                    <li><a class="dropdown-item" href="#">Текущая неделя</a></li>
+                                                    <li><a class="dropdown-item" href="#">Сентябрь</a></li>
+                                                    <li><a class="dropdown-item" href="#">3 месяца</a></li>
+                                                    <li><a class="dropdown-item" href="#">2023 год</a></li>
+                                                    <li><a class="dropdown-item" href="#">За все время</a></li>
+                                                    <li><a class="dropdown-item" href="#">Выбрать период</a></li>
+                                                </ul>
+                                            </div>
+                                            <!-- Все операции -->
+                                            <div class="col-lg">
+                                                <div class="select-filter fs-14 fw-600 bg-white color-74777F cursor-pointer w-100 border border-1 rounded-3 text-start py-2 px-3" data-bs-toggle="dropdown">
+                                                    <span>Все операции</span>
+                                                </div>
+                                                <ul class="dropdown-menu shadow fs-14 ms-3 ms-lg-0 mt-2">
+                                                    <li><a class="dropdown-item" href="#">Начисления</a></li>
+                                                    <li><a class="dropdown-item" href="#">Списания</a></li>
+                                                </ul>
+                                            </div>
+                                            <!-- Применить фильтр -->
+                                            <!-- Очистить фильтр -->
+                                            <div class="col-lg-auto">
+                                                <div class="d-flex gap-2 align-items-center">
+                                                    <button type="button" class="btn btn-primary btn-sm text-nowrap fw-600 w-100 py-2 px-3">Применить фильтр</button>
+                                                    <button type="button" class="btn btn-sm text-primary text-nowrap fw-600 w-100 py-2 px-3">Очистить фильтр</button>
+                                                    <button type="button" class="btn btn-outline btn-icon d-none d-lg-inline-block" style="--btn-icon-size: 2rem;"><i class="bi bi-download"></i></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+            
+                                <!-- Контейнер для карточек -->
+                                <div class="card-statistics-history-column d-flex gap-2 flex-column">
+            
+                                    <!-- Карточка 1 -->
+                                    <div class="card card-statistics-history">
+                                        <div class="card-body">
+                                            <div class="row gy-3 align-items-center">
+                                                <div class="col-12 col-lg-4">
+                                                    <div class="d-flex gap-4 align-items-center justify-content-between justify-content-lg-start">
+                                                        <div class="d-flex gap-2 gap-lg-3 align-items-center">
+                                                            <div class="flex-shrink-0">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
+                                                                    <path d="M6.31836 7.58154C6.04222 7.58154 5.81836 7.8054 5.81836 8.08154C5.81836 8.35769 6.04222 8.58154 6.31836 8.58154H11.3184C11.5945 8.58154 11.8184 8.35769 11.8184 8.08154C11.8184 7.8054 11.5945 7.58154 11.3184 7.58154H6.31836Z" fill="black"/>
+                                                                    <path d="M5.81836 10.0815C5.81836 9.8054 6.04222 9.58154 6.31836 9.58154H11.3184C11.5945 9.58154 11.8184 9.8054 11.8184 10.0815C11.8184 10.3577 11.5945 10.5815 11.3184 10.5815H6.31836C6.04222 10.5815 5.81836 10.3577 5.81836 10.0815Z" fill="black"/>
+                                                                    <path d="M5.81836 12.0815C5.81836 11.8054 6.04222 11.5815 6.31836 11.5815H8.31836C8.5945 11.5815 8.81836 11.8054 8.81836 12.0815C8.81836 12.3577 8.5945 12.5815 8.31836 12.5815H6.31836C6.04222 12.5815 5.81836 12.3577 5.81836 12.0815Z" fill="black"/>
+                                                                    <path d="M10.3184 0.581543H4.81836C3.71379 0.581543 2.81836 1.47697 2.81836 2.58154V14.5815C2.81836 15.6861 3.71379 16.5815 4.81836 16.5815H12.8184C13.9229 16.5815 14.8184 15.6861 14.8184 14.5815V5.08154L10.3184 0.581543ZM10.3184 1.58154V3.58154C10.3184 4.40997 10.9899 5.08154 11.8184 5.08154H13.8184V14.5815C13.8184 15.1338 13.3706 15.5815 12.8184 15.5815H4.81836C4.26607 15.5815 3.81836 15.1338 3.81836 14.5815V2.58154C3.81836 2.02926 4.26607 1.58154 4.81836 1.58154H10.3184Z" fill="black"/>
+                                                                </svg>
+                                                            </div>
+                                                            <div class="fs-14 fw-600">Договор</div>
+                                                        </div>
+                                                        
+                                                        <div class="text-muted fs-12 fs-lg-14">XXX0355081464</div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-lg-5">
+                                                    <div class="fs-14 fw-600">Безбородов Антон Дмитриевич</div>
+                                                </div>
+                                                <div class="col-12 col-lg-3">
+                                                    <div class="d-flex gap-4 align-items-center justify-content-between">
+                                                        <div class="text-muted fs-14">16 января 2024</div>
+                                                        <div class="badge border border-success text-success fs-12">+5000,00 ₽</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Карточка 2 -->
+                                    <div class="card card-statistics-history">
+                                        <div class="card-body">
+                                            <div class="row gy-3 align-items-center">
+                                                <div class="col-12 col-lg-4">
+                                                    <div class="d-flex gap-4 align-items-center justify-content-between justify-content-lg-start">
+                                                        <div class="d-flex gap-2 gap-lg-3 align-items-center">
+                                                            <div class="flex-shrink-0">
+                                                                <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <g id="arrow-down-up">
+                                                                    <g id="arrow">
+                                                                    <path id="arrow_2" fill-rule="evenodd" clip-rule="evenodd" d="M11.5 15.6553C11.7761 15.6553 12 15.4314 12 15.1553V3.36238L15.1464 6.50883C15.3417 6.70409 15.6583 6.70409 15.8536 6.50883C16.0488 6.31357 16.0488 5.99698 15.8536 5.80172L11.8536 1.80172C11.6583 1.60646 11.3417 1.60646 11.1464 1.80172L7.14645 5.80172C6.95118 5.99698 6.95118 6.31357 7.14645 6.50883C7.34171 6.70409 7.65829 6.70409 7.85355 6.50883L11 3.36238V15.1553C11 15.4314 11.2239 15.6553 11.5 15.6553Z" fill="black"/>
+                                                                    </g>
+                                                                    <g id="arrow_3">
+                                                                    <path id="arrow_4" fill-rule="evenodd" clip-rule="evenodd" d="M4.5 1.65527C4.77614 1.65527 5 1.87913 5 2.15527V13.9482L8.14645 10.8017C8.34171 10.6065 8.65829 10.6065 8.85355 10.8017C9.04882 10.997 9.04882 11.3136 8.85355 11.5088L4.85355 15.5088C4.65829 15.7041 4.34171 15.7041 4.14645 15.5088L0.146447 11.5088C-0.0488155 11.3136 -0.0488155 10.997 0.146447 10.8017C0.341709 10.6065 0.658292 10.6065 0.853554 10.8017L4 13.9482V2.15527C4 1.87913 4.22386 1.65527 4.5 1.65527Z" fill="black"/>
+                                                                    </g>
+                                                                    </g>
+                                                                </svg>
+                                                            </div>
+                                                            <div class="fs-14 fw-600">Перевод</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-lg-5">
+                                                    <div class="fs-14 fw-600">Романовский Михаил Александрович</div>
+                                                </div>
+                                                <div class="col-12 col-lg-3">
+                                                    <div class="d-flex gap-4 align-items-center justify-content-between">
+                                                        <div class="text-muted fs-14">15 января 2024</div>
+                                                        <div class="badge border border-danger text-danger fs-12">-11 585,37 ₽</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Карточка 3 -->
+                                    <div class="card card-statistics-history">
+                                        <div class="card-body">
+                                            <div class="row gy-3 align-items-center">
+                                                <div class="col-12 col-lg-4">
+                                                    <div class="d-flex gap-4 align-items-center justify-content-between justify-content-lg-start">
+                                                        <div class="d-flex gap-2 gap-lg-3 align-items-center">
+                                                            <div class="flex-shrink-0">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
+                                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M15 2.96191C15 2.40963 14.5523 1.96191 14 1.96191H2C1.44772 1.96191 1 2.40963 1 2.96191V14.9619C1 15.5142 1.44772 15.9619 2 15.9619H14C14.5523 15.9619 15 15.5142 15 14.9619V2.96191ZM0 2.96191C0 1.85734 0.895431 0.961914 2 0.961914H14C15.1046 0.961914 16 1.85734 16 2.96191V14.9619C16 16.0665 15.1046 16.9619 14 16.9619H2C0.895431 16.9619 0 16.0665 0 14.9619V2.96191ZM5.85354 6.10836C5.65828 5.9131 5.3417 5.9131 5.14644 6.10836C4.95117 6.30362 4.95117 6.62021 5.14644 6.81547L9.24263 10.9117L6.4749 10.9117C6.19876 10.9117 5.9749 11.1355 5.9749 11.4117C5.9749 11.6878 6.19876 11.9117 6.4749 11.9117L10.4497 11.9117C10.7259 11.9117 10.9497 11.6878 10.9497 11.4117V7.43678C10.9497 7.16064 10.7259 6.93678 10.4497 6.93678C10.1736 6.93678 9.94974 7.16064 9.94974 7.43678L9.94974 10.2046L5.85354 6.10836Z" fill="black"/>
+                                                                </svg>
+                                                            </div>
+                                                            <div class="fs-14 fw-600">Долг</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-lg-5">
+                                                    <div class="fs-14 fw-600">Муравьев Никита Сергеевич</div>
+                                                </div>
+                                                <div class="col-12 col-lg-3">
+                                                    <div class="d-flex gap-4 align-items-center justify-content-between">
+                                                        <div class="text-muted fs-14">16 января 2024</div>
+                                                        <div class="badge border border-danger text-danger fs-12">-1 784,30 ₽</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Карточка 4 -->
+                                    <div class="card card-statistics-history">
+                                        <div class="card-body">
+                                            <div class="row gy-3 align-items-center">
+                                                <div class="col-12 col-lg-4">
+                                                    <div class="d-flex gap-4 align-items-center justify-content-between justify-content-lg-start">
+                                                        <div class="d-flex gap-2 gap-lg-3 align-items-center">
+                                                            <div class="flex-shrink-0">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="15" viewBox="0 0 14 15" fill="none">
+                                                                    <g clip-path="url(#clip0_1802_44414)">
+                                                                      <path d="M7 6.48047C10.5899 6.48047 13.5 5.36118 13.5 3.98047C13.5 2.59976 10.5899 1.48047 7 1.48047C3.41015 1.48047 0.5 2.59976 0.5 3.98047C0.5 5.36118 3.41015 6.48047 7 6.48047Z" stroke="#000001" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                      <path d="M0.5 3.98047V11.9805C0.5 13.3605 3.41 14.4805 7 14.4805C10.59 14.4805 13.5 13.3605 13.5 11.9805V3.98047" stroke="#000001" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                      <path d="M13.5 7.98047C13.5 9.36047 10.59 10.4805 7 10.4805C3.41 10.4805 0.5 9.36047 0.5 7.98047" stroke="#000001" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                    </g>
+                                                                    <defs>
+                                                                      <clipPath id="clip0_1802_44414">
+                                                                        <rect width="14" height="14" fill="white" transform="translate(0 0.980469)"/>
+                                                                      </clipPath>
+                                                                    </defs>
+                                                                </svg>
+                                                            </div>
+                                                            <div class="fs-14 fw-600">Поступления</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-lg-5">
+                                                    <div class="fs-14 fw-600">Климентовский Алексей Андреевич</div>
+                                                </div>
+                                                <div class="col-12 col-lg-3">
+                                                    <div class="d-flex gap-4 align-items-center justify-content-between">
+                                                        <div class="text-muted fs-14">16 января 2024</div>
+                                                        <div class="badge border border-success text-success fs-12">+192 723,00 ₽</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Карточка 5 -->
+                                    <div class="card card-statistics-history">
+                                        <div class="card-body">
+                                            <div class="row gy-3 align-items-center">
+                                                <div class="col-12 col-lg-4">
+                                                    <div class="d-flex gap-4 align-items-center justify-content-between justify-content-lg-start">
+                                                        <div class="d-flex gap-2 gap-lg-3 align-items-center">
+                                                            <div class="flex-shrink-0">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
+                                                                    <path d="M6.31836 7.58154C6.04222 7.58154 5.81836 7.8054 5.81836 8.08154C5.81836 8.35769 6.04222 8.58154 6.31836 8.58154H11.3184C11.5945 8.58154 11.8184 8.35769 11.8184 8.08154C11.8184 7.8054 11.5945 7.58154 11.3184 7.58154H6.31836Z" fill="black"/>
+                                                                    <path d="M5.81836 10.0815C5.81836 9.8054 6.04222 9.58154 6.31836 9.58154H11.3184C11.5945 9.58154 11.8184 9.8054 11.8184 10.0815C11.8184 10.3577 11.5945 10.5815 11.3184 10.5815H6.31836C6.04222 10.5815 5.81836 10.3577 5.81836 10.0815Z" fill="black"/>
+                                                                    <path d="M5.81836 12.0815C5.81836 11.8054 6.04222 11.5815 6.31836 11.5815H8.31836C8.5945 11.5815 8.81836 11.8054 8.81836 12.0815C8.81836 12.3577 8.5945 12.5815 8.31836 12.5815H6.31836C6.04222 12.5815 5.81836 12.3577 5.81836 12.0815Z" fill="black"/>
+                                                                    <path d="M10.3184 0.581543H4.81836C3.71379 0.581543 2.81836 1.47697 2.81836 2.58154V14.5815C2.81836 15.6861 3.71379 16.5815 4.81836 16.5815H12.8184C13.9229 16.5815 14.8184 15.6861 14.8184 14.5815V5.08154L10.3184 0.581543ZM10.3184 1.58154V3.58154C10.3184 4.40997 10.9899 5.08154 11.8184 5.08154H13.8184V14.5815C13.8184 15.1338 13.3706 15.5815 12.8184 15.5815H4.81836C4.26607 15.5815 3.81836 15.1338 3.81836 14.5815V2.58154C3.81836 2.02926 4.26607 1.58154 4.81836 1.58154H10.3184Z" fill="black"/>
+                                                                </svg>
+                                                            </div>
+                                                            <div class="fs-14 fw-600">Договор</div>
+                                                        </div>
+                                                        
+                                                        <div class="text-muted fs-12 fs-lg-14">XXX0355081464</div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-lg-5">
+                                                    <div class="fs-14 fw-600">Безбородов Антон Дмитриевич</div>
+                                                </div>
+                                                <div class="col-12 col-lg-3">
+                                                    <div class="d-flex gap-4 align-items-center justify-content-between">
+                                                        <div class="text-muted fs-14">16 января 2024</div>
+                                                        <div class="badge border border-success text-success fs-12">+5000,00 ₽</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Карточка 6 -->
+                                    <div class="card card-statistics-history">
+                                        <div class="card-body">
+                                            <div class="row gy-3 align-items-center">
+                                                <div class="col-12 col-lg-4">
+                                                    <div class="d-flex gap-4 align-items-center justify-content-between justify-content-lg-start">
+                                                        <div class="d-flex gap-2 gap-lg-3 align-items-center">
+                                                            <div class="flex-shrink-0">
+                                                                <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <g id="arrow-down-up">
+                                                                    <g id="arrow">
+                                                                    <path id="arrow_2" fill-rule="evenodd" clip-rule="evenodd" d="M11.5 15.6553C11.7761 15.6553 12 15.4314 12 15.1553V3.36238L15.1464 6.50883C15.3417 6.70409 15.6583 6.70409 15.8536 6.50883C16.0488 6.31357 16.0488 5.99698 15.8536 5.80172L11.8536 1.80172C11.6583 1.60646 11.3417 1.60646 11.1464 1.80172L7.14645 5.80172C6.95118 5.99698 6.95118 6.31357 7.14645 6.50883C7.34171 6.70409 7.65829 6.70409 7.85355 6.50883L11 3.36238V15.1553C11 15.4314 11.2239 15.6553 11.5 15.6553Z" fill="black"/>
+                                                                    </g>
+                                                                    <g id="arrow_3">
+                                                                    <path id="arrow_4" fill-rule="evenodd" clip-rule="evenodd" d="M4.5 1.65527C4.77614 1.65527 5 1.87913 5 2.15527V13.9482L8.14645 10.8017C8.34171 10.6065 8.65829 10.6065 8.85355 10.8017C9.04882 10.997 9.04882 11.3136 8.85355 11.5088L4.85355 15.5088C4.65829 15.7041 4.34171 15.7041 4.14645 15.5088L0.146447 11.5088C-0.0488155 11.3136 -0.0488155 10.997 0.146447 10.8017C0.341709 10.6065 0.658292 10.6065 0.853554 10.8017L4 13.9482V2.15527C4 1.87913 4.22386 1.65527 4.5 1.65527Z" fill="black"/>
+                                                                    </g>
+                                                                    </g>
+                                                                </svg>
+                                                            </div>
+                                                            <div class="fs-14 fw-600">Перевод</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-lg-5">
+                                                    <div class="fs-14 fw-600">Романовский Михаил Александрович</div>
+                                                </div>
+                                                <div class="col-12 col-lg-3">
+                                                    <div class="d-flex gap-4 align-items-center justify-content-between">
+                                                        <div class="text-muted fs-14">15 января 2024</div>
+                                                        <div class="badge border border-danger text-danger fs-12">-11 585,37 ₽</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Карточка 7 -->
+                                    <div class="card card-statistics-history">
+                                        <div class="card-body">
+                                            <div class="row gy-3 align-items-center">
+                                                <div class="col-12 col-lg-4">
+                                                    <div class="d-flex gap-4 align-items-center justify-content-between justify-content-lg-start">
+                                                        <div class="d-flex gap-2 gap-lg-3 align-items-center">
+                                                            <div class="flex-shrink-0">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
+                                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M15 2.96191C15 2.40963 14.5523 1.96191 14 1.96191H2C1.44772 1.96191 1 2.40963 1 2.96191V14.9619C1 15.5142 1.44772 15.9619 2 15.9619H14C14.5523 15.9619 15 15.5142 15 14.9619V2.96191ZM0 2.96191C0 1.85734 0.895431 0.961914 2 0.961914H14C15.1046 0.961914 16 1.85734 16 2.96191V14.9619C16 16.0665 15.1046 16.9619 14 16.9619H2C0.895431 16.9619 0 16.0665 0 14.9619V2.96191ZM5.85354 6.10836C5.65828 5.9131 5.3417 5.9131 5.14644 6.10836C4.95117 6.30362 4.95117 6.62021 5.14644 6.81547L9.24263 10.9117L6.4749 10.9117C6.19876 10.9117 5.9749 11.1355 5.9749 11.4117C5.9749 11.6878 6.19876 11.9117 6.4749 11.9117L10.4497 11.9117C10.7259 11.9117 10.9497 11.6878 10.9497 11.4117V7.43678C10.9497 7.16064 10.7259 6.93678 10.4497 6.93678C10.1736 6.93678 9.94974 7.16064 9.94974 7.43678L9.94974 10.2046L5.85354 6.10836Z" fill="black"/>
+                                                                </svg>
+                                                            </div>
+                                                            <div class="fs-14 fw-600">Долг</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-lg-5">
+                                                    <div class="fs-14 fw-600">Муравьев Никита Сергеевич</div>
+                                                </div>
+                                                <div class="col-12 col-lg-3">
+                                                    <div class="d-flex gap-4 align-items-center justify-content-between">
+                                                        <div class="text-muted fs-14">16 января 2024</div>
+                                                        <div class="badge border border-danger text-danger fs-12">-1 784,30 ₽</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Карточка 8 -->
+                                    <div class="card card-statistics-history">
+                                        <div class="card-body">
+                                            <div class="row gy-3 align-items-center">
+                                                <div class="col-12 col-lg-4">
+                                                    <div class="d-flex gap-4 align-items-center justify-content-between justify-content-lg-start">
+                                                        <div class="d-flex gap-2 gap-lg-3 align-items-center">
+                                                            <div class="flex-shrink-0">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="15" viewBox="0 0 14 15" fill="none">
+                                                                    <g clip-path="url(#clip0_1802_44414)">
+                                                                      <path d="M7 6.48047C10.5899 6.48047 13.5 5.36118 13.5 3.98047C13.5 2.59976 10.5899 1.48047 7 1.48047C3.41015 1.48047 0.5 2.59976 0.5 3.98047C0.5 5.36118 3.41015 6.48047 7 6.48047Z" stroke="#000001" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                      <path d="M0.5 3.98047V11.9805C0.5 13.3605 3.41 14.4805 7 14.4805C10.59 14.4805 13.5 13.3605 13.5 11.9805V3.98047" stroke="#000001" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                      <path d="M13.5 7.98047C13.5 9.36047 10.59 10.4805 7 10.4805C3.41 10.4805 0.5 9.36047 0.5 7.98047" stroke="#000001" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                    </g>
+                                                                    <defs>
+                                                                      <clipPath id="clip0_1802_44414">
+                                                                        <rect width="14" height="14" fill="white" transform="translate(0 0.980469)"/>
+                                                                      </clipPath>
+                                                                    </defs>
+                                                                </svg>
+                                                            </div>
+                                                            <div class="fs-14 fw-600">Поступления</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-lg-5">
+                                                    <div class="fs-14 fw-600">Климентовский Алексей Андреевич</div>
+                                                </div>
+                                                <div class="col-12 col-lg-3">
+                                                    <div class="d-flex gap-4 align-items-center justify-content-between">
+                                                        <div class="text-muted fs-14">16 января 2024</div>
+                                                        <div class="badge border border-success text-success fs-12">+192 723,00 ₽</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+            
+                                </div>
+            
+                            </div>
+
+                            <!-- Вкладка "Статистика" -->
+                            <div class="tab-pane fade" id="tab-statistics-main" role="tabpanel" tabindex="0">
+
+                                <!-- Фильтры Мобилка -->
+                                <div class="d-flex align-items-center justify-content-between d-lg-none mb-3">
+                                    <button type="button" class="btn-mobile-statistics-filters btn text-primary border-0 fs-14 fw-600 p-2 py-1 collapsed" data-bs-toggle="collapse" data-bs-target="#collapse-mobile-statistics-main-filters" aria-expanded="false">Фильтры <i class="bi bi-sliders ms-2"></i><i class="bi bi-x-lg ms-2"></i></button>
+                                    <button type="button" class="btn btn-outline btn-icon" style="--btn-icon-size: 28px;"><i class="bi bi-download"></i></button>
+                                </div>
+
+                                <!-- Фильтры ПК -->
+                                <div class="collapse d-lg-block" id="collapse-mobile-statistics-main-filters">
+                                    <div class="mb-4">
+                                        <div class="row gy-2 gx-2">
+                                            <!-- За период -->
+                                            <div class="col-lg">
+                                                <div class="select-filter fs-14 fw-600 bg-white color-74777F cursor-pointer w-100 border border-1 rounded-3 text-start py-2 px-3" data-bs-toggle="dropdown">
+                                                    <span>За период</span>
+                                                </div>
+                                                <ul class="dropdown-menu shadow fs-14 ms-3 ms-lg-0 mt-2">
+                                                    <li><a class="dropdown-item" href="#">Текущая неделя</a></li>
+                                                    <li><a class="dropdown-item" href="#">Сентябрь</a></li>
+                                                    <li><a class="dropdown-item" href="#">3 месяца</a></li>
+                                                    <li><a class="dropdown-item" href="#">2023 год</a></li>
+                                                    <li><a class="dropdown-item" href="#">За все время</a></li>
+                                                    <li><a class="dropdown-item" href="#">Выбрать период</a></li>
+                                                </ul>
+                                            </div>
+                                            <!-- ФИО -->
+                                            <div class="col-lg">
+                                                <input type="text" class="form-control select-filter border fs-14 fw-placeholder-600 py-2 px-3 show" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" placeholder="ФИО">
+                                                <div class="dropdown-menu shadow fs-14 ms-3 ms-lg-0 mt-2">
+                                                    <div class="dropdown-item">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" value="" id="fio-01">
+                                                            <label class="form-check-label" for="fio-01">Муравьев Н.С.</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="dropdown-item">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" value="" id="fio-02">
+                                                            <label class="form-check-label" for="fio-02">Безбородов А.Д.</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="dropdown-item">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" value="" id="fio-03">
+                                                            <label class="form-check-label" for="fio-03">Смирнова А.А.</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="dropdown-item">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" value="" id="fio-04">
+                                                            <label class="form-check-label" for="fio-04">Муравьев Н.С.</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="dropdown-item">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" value="" id="fio-05">
+                                                            <label class="form-check-label" for="fio-05">Безбородов А.Д.</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- № полиса -->
+                                            <div class="col-lg">
+                                                <input type="text" class="form-control select-filter border fs-14 fw-placeholder-600 py-2 px-3 show" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" placeholder="№ полиса">
+                                                <ul class="dropdown-menu shadow fs-14 ms-3 ms-lg-0 mt-2">
+                                                    <li><a class="dropdown-item" href="#">№ 123027444577</a></li>
+                                                    <li><a class="dropdown-item" href="#">№ 321027444785</a></li>
+                                                    <li><a class="dropdown-item" href="#">№ 456124585988</a></li>
+                                                </ul>
+                                            </div>
+                                            <!-- Применить фильтр -->
+                                            <!-- Очистить фильтр -->
+                                            <div class="col-lg-auto">
+                                                <div class="d-flex gap-2 align-items-center">
+                                                    <button type="button" class="btn btn-primary btn-sm text-nowrap fw-600 w-100 py-2 px-3">Применить фильтр</button>
+                                                    <button type="button" class="btn btn-sm text-primary text-nowrap fw-600 w-100 py-2 px-3">Очистить фильтр</button>
+                                                    <button type="button" class="btn btn-outline btn-icon d-none d-lg-inline-block" style="--btn-icon-size: 2rem;"><i class="bi bi-download"></i></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Контейнер для карточек -->
+                                <div class="card-statistics-main-column d-flex gap-3 flex-column">
+
+                                    <!-- Карточка 1 -->
+                                    <div class="card card-statistics-main">
+                                        <div class="card-body">
+                                            <div class="row gy-3 align-items-center">
+                                                <div class="col-12 col-lg-3">
+                                                    <div class="d-flex gap-2 align-items-center" style="max-width: 200px;">
+                                                        <div class="flex-shrink-0">
+                                                            <img class="img-fluid" src="img/tinkoff.png" alt="" style="max-width: 48px;">
+                                                        </div>
+                                                        <div class="fs-14 fw-600">Энергогарант Страхование</div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-lg-4">
+                                                    <div class="fs-14 fw-600">Страхование от несчастного случая</div>
+                                                    <div class="d-inline-block bg-F3F4F6 rounded-3 fs-12 py-1 px-2">XXX027444577</div>
+                                                </div>
+                                                <div class="col-12 col-lg-3">
+                                                    <div class="fs-14 fw-600">Безбородов Антон Дмитриевич</div>
+                                                    <div class="text-muted fs-14">14 января 2024</div>
+                                                </div>
+                                                <div class="col-12 col-lg-2">
+                                                    <div class="d-none d-lg-flex flex-column align-items-end">
+                                                        <div>
+                                                            <span class="fs-14 fw-600">987 128,99</span> <span class="fs-14">₽</span>
+                                                        </div>
+                                                        <div class="d-inline-block border rounded-3 text-muted fs-12 py-1 px-2">2,8%</div>
+                                                    </div>
+                                                    <div class="d-lg-none">
+                                                        <div class="card-analytics-data fs-12 fw-600 ms-auto">
+                                                            <div class="data-1">987 128,99 <span class="fw-400">₽</span></div>
+                                                            <div class="data-2">2,8%</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Карточка 2 -->
+                                    <div class="card card-statistics-main">
+                                        <div class="card-body">
+                                            <div class="row gy-3 align-items-center">
+                                                <div class="col-12 col-lg-3">
+                                                    <div class="d-flex gap-2 align-items-center" style="max-width: 200px;">
+                                                        <div class="flex-shrink-0">
+                                                            <img class="img-fluid" src="img/tinkoff.png" alt="" style="max-width: 48px;">
+                                                        </div>
+                                                        <div class="fs-14 fw-600">Энергогарант Страхование</div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-lg-4">
+                                                    <div class="fs-14 fw-600">Страхование от несчастного случая</div>
+                                                    <div class="d-inline-block bg-F3F4F6 rounded-3 fs-12 py-1 px-2">XXX027444577</div>
+                                                </div>
+                                                <div class="col-12 col-lg-3">
+                                                    <div class="fs-14 fw-600">Безбородов Антон Дмитриевич</div>
+                                                    <div class="text-muted fs-14">14 января 2024</div>
+                                                </div>
+                                                <div class="col-12 col-lg-2">
+                                                    <div class="d-none d-lg-flex flex-column align-items-end">
+                                                        <div>
+                                                            <span class="fs-14 fw-600">987 128,99</span> <span class="fs-14">₽</span>
+                                                        </div>
+                                                        <div class="d-inline-block border rounded-3 text-muted fs-12 py-1 px-2">2,8%</div>
+                                                    </div>
+                                                    <div class="d-lg-none">
+                                                        <div class="card-analytics-data fs-12 fw-600 ms-auto">
+                                                            <div class="data-1">987 128,99 <span class="fw-400">₽</span></div>
+                                                            <div class="data-2">2,8%</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Карточка 3 -->
+                                    <div class="card card-statistics-main">
+                                        <div class="card-body">
+                                            <div class="row gy-3 align-items-center">
+                                                <div class="col-12 col-lg-3">
+                                                    <div class="d-flex gap-2 align-items-center" style="max-width: 200px;">
+                                                        <div class="flex-shrink-0">
+                                                            <img class="img-fluid" src="img/tinkoff.png" alt="" style="max-width: 48px;">
+                                                        </div>
+                                                        <div class="fs-14 fw-600">Энергогарант Страхование</div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-lg-4">
+                                                    <div class="fs-14 fw-600">Страхование от несчастного случая</div>
+                                                    <div class="d-inline-block bg-F3F4F6 rounded-3 fs-12 py-1 px-2">XXX027444577</div>
+                                                </div>
+                                                <div class="col-12 col-lg-3">
+                                                    <div class="fs-14 fw-600">Безбородов Антон Дмитриевич</div>
+                                                    <div class="text-muted fs-14">14 января 2024</div>
+                                                </div>
+                                                <div class="col-12 col-lg-2">
+                                                    <div class="d-none d-lg-flex flex-column align-items-end">
+                                                        <div>
+                                                            <span class="fs-14 fw-600">987 128,99</span> <span class="fs-14">₽</span>
+                                                        </div>
+                                                        <div class="d-inline-block border rounded-3 text-muted fs-12 py-1 px-2">2,8%</div>
+                                                    </div>
+                                                    <div class="d-lg-none">
+                                                        <div class="card-analytics-data fs-12 fw-600 ms-auto">
+                                                            <div class="data-1">987 128,99 <span class="fw-400">₽</span></div>
+                                                            <div class="data-2">2,8%</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Карточка 4 -->
+                                    <div class="card card-statistics-main">
+                                        <div class="card-body">
+                                            <div class="row gy-3 align-items-center">
+                                                <div class="col-12 col-lg-3">
+                                                    <div class="d-flex gap-2 align-items-center" style="max-width: 200px;">
+                                                        <div class="flex-shrink-0">
+                                                            <img class="img-fluid" src="img/tinkoff.png" alt="" style="max-width: 48px;">
+                                                        </div>
+                                                        <div class="fs-14 fw-600">Энергогарант Страхование</div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-lg-4">
+                                                    <div class="fs-14 fw-600">Страхование от несчастного случая</div>
+                                                    <div class="d-inline-block bg-F3F4F6 rounded-3 fs-12 py-1 px-2">XXX027444577</div>
+                                                </div>
+                                                <div class="col-12 col-lg-3">
+                                                    <div class="fs-14 fw-600">Безбородов Антон Дмитриевич</div>
+                                                    <div class="text-muted fs-14">14 января 2024</div>
+                                                </div>
+                                                <div class="col-12 col-lg-2">
+                                                    <div class="d-none d-lg-flex flex-column align-items-end">
+                                                        <div>
+                                                            <span class="fs-14 fw-600">987 128,99</span> <span class="fs-14">₽</span>
+                                                        </div>
+                                                        <div class="d-inline-block border rounded-3 text-muted fs-12 py-1 px-2">2,8%</div>
+                                                    </div>
+                                                    <div class="d-lg-none">
+                                                        <div class="card-analytics-data fs-12 fw-600 ms-auto">
+                                                            <div class="data-1">987 128,99 <span class="fw-400">₽</span></div>
+                                                            <div class="data-2">2,8%</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Карточка 5 -->
+                                    <div class="card card-statistics-main">
+                                        <div class="card-body">
+                                            <div class="row gy-3 align-items-center">
+                                                <div class="col-12 col-lg-3">
+                                                    <div class="d-flex gap-2 align-items-center" style="max-width: 200px;">
+                                                        <div class="flex-shrink-0">
+                                                            <img class="img-fluid" src="img/tinkoff.png" alt="" style="max-width: 48px;">
+                                                        </div>
+                                                        <div class="fs-14 fw-600">Энергогарант Страхование</div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-lg-4">
+                                                    <div class="fs-14 fw-600">Страхование от несчастного случая</div>
+                                                    <div class="d-inline-block bg-F3F4F6 rounded-3 fs-12 py-1 px-2">XXX027444577</div>
+                                                </div>
+                                                <div class="col-12 col-lg-3">
+                                                    <div class="fs-14 fw-600">Безбородов Антон Дмитриевич</div>
+                                                    <div class="text-muted fs-14">14 января 2024</div>
+                                                </div>
+                                                <div class="col-12 col-lg-2">
+                                                    <div class="d-none d-lg-flex flex-column align-items-end">
+                                                        <div>
+                                                            <span class="fs-14 fw-600">987 128,99</span> <span class="fs-14">₽</span>
+                                                        </div>
+                                                        <div class="d-inline-block border rounded-3 text-muted fs-12 py-1 px-2">2,8%</div>
+                                                    </div>
+                                                    <div class="d-lg-none">
+                                                        <div class="card-analytics-data fs-12 fw-600 ms-auto">
+                                                            <div class="data-1">987 128,99 <span class="fw-400">₽</span></div>
+                                                            <div class="data-2">2,8%</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Чат Темы -->
+    <div class="offcanvas offcanvas-end bg-F3F4F6" tabindex="-1" id="offcanvasChat"
+        aria-labelledby="offcanvasChatLabel">
+        <div class="offcanvas-header">
+            <p class="h5 offcanvas-title fw-600" id="offcanvasChatLabel">Чат</p>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="card-active p-2 mb-2">
+                <div class="row">
+                    <div class="col-10">
+                        <div class="d-flex flex-column">
+                            <p class="one-line fs-16 mb-2" title="Не загружается документ" data-bs-toggle="offcanvas"
+                                data-bs-target="#offcanvasMessages" aria-controls="offcanvasMessages">Не загружается
+                                документ</p>
+                            <span class="text-muted fs-12">от 26.12.23 10:34</span>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="d-flex flex-column align-items-center justify-content-end h-100">
+                            <div class="px-2">
+                                <span class="badge rounded-circle bg-danger">5</span>
+                            </div>
+                            <div>
+                                <button class="btn btn-icon btn-sm" type="button" data-bs-toggle="dropdown"><i
+                                        class="bi bi-three-dots"></i></button>
+                                <ul class="dropdown-menu fs-12">
+                                    <li><a class="dropdown-item" href="#">Действие №1</a></li>
+                                    <li><a class="dropdown-item" href="#">Действие номер №2</a></li>
+                                    <li><a class="dropdown-item" href="#">Ещё одно действие</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-active p-2 mb-2">
+                <div class="row">
+                    <div class="col-10">
+                        <div class="d-flex flex-column">
+                            <p class="one-line fs-16 mb-2" title="Не загружается документ, а ещё текст"
+                                data-bs-toggle="offcanvas" data-bs-target="#offcanvasMessages"
+                                aria-controls="offcanvasMessages">Не загружается
+                                документ, а ещё текст</p>
+                            <span class="text-muted fs-12">от 26.12.23 10:34</span>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="d-flex flex-column align-items-center justify-content-end h-100">
+                            <div>
+                                <button class="btn btn-icon btn-sm" type="button" data-bs-toggle="dropdown"><i
+                                        class="bi bi-three-dots"></i></button>
+                                <ul class="dropdown-menu fs-12">
+                                    <li><a class="dropdown-item" href="#">Действие №1</a></li>
+                                    <li><a class="dropdown-item" href="#">Действие номер №2</a></li>
+                                    <li><a class="dropdown-item" href="#">Ещё одно действие</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-active p-2 mb-2">
+                <div class="row">
+                    <div class="col-10">
+                        <div class="d-flex flex-column">
+                            <p class="one-line fs-16 mb-2" title="Не загружается документ" data-bs-toggle="offcanvas"
+                                data-bs-target="#offcanvasMessages" aria-controls="offcanvasMessages">Не загружается
+                                документ</p>
+                            <span class="text-muted fs-12">от 26.12.23 10:34</span>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="d-flex flex-column align-items-center justify-content-end h-100">
+                            <div class="px-2">
+                                <span class="badge rounded-circle bg-danger">5</span>
+                            </div>
+                            <div>
+                                <button class="btn btn-icon btn-sm" type="button" data-bs-toggle="dropdown"><i
+                                        class="bi bi-three-dots"></i></button>
+                                <ul class="dropdown-menu fs-12">
+                                    <li><a class="dropdown-item" href="#">Действие №1</a></li>
+                                    <li><a class="dropdown-item" href="#">Действие номер №2</a></li>
+                                    <li><a class="dropdown-item" href="#">Ещё одно действие</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Чат Сообщения -->
+    <div class="offcanvas offcanvas-end bg-F3F4F6" tabindex="-1" id="offcanvasMessages"
+        aria-labelledby="offcanvasMessagesLabel">
+        <div class="offcanvas-header">
+            <p class="h5 offcanvas-title fw-600" id="offcanvasMessagesLabel">Чат</p>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+
+            <div class="card card-chat">
+                <div class="card-header">
+                    <a href="#offcanvasChat" data-bs-toggle="offcanvas" aria-controls="offcanvasChat">
+                        <div class="d-flex align-items-center">
+                            <i class="bi bi-arrow-left text-primary me-2"></i> <span class="fs-14">Не загружается
+                                документ</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="card-body">
+                    <div class="d-flex flex-column fs-14 mb-2">
+                        <p class="text-muted fw-700 mb-2">Специалист</p>
+                        <p class="mb-2"><span class="me-2">10.05.2022</span><span>14:00</span></p>
+                        <p class="mb-2">Течение среды облучает термодинамический пульсар. Исследователями из разных
+                            лабораторий неоднократно наблюдалось, как осциллятор пространственно ускоряет векторный
+                            солитон.</p>
+                        <div>
+                            <button class="btn btn-icon btn-sm" type="button" data-bs-toggle="dropdown"><i
+                                    class="bi bi-three-dots"></i></button>
+                            <ul class="dropdown-menu fs-12">
+                                <li><a class="dropdown-item" href="#">Действие №1</a></li>
+                                <li><a class="dropdown-item" href="#">Действие номер №2</a></li>
+                                <li><a class="dropdown-item" href="#">Ещё одно действие</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column fs-14 mb-2">
+                        <p class="text-muted fw-700 mb-2">Специалист</p>
+                        <p class="mb-2"><span class="me-2">10.05.2022</span><span>14:00</span></p>
+                        <p class="mb-2">Течение среды облучает термодинамический пульсар. Исследователями из разных
+                            лабораторий неоднократно наблюдалось, как осциллятор пространственно ускоряет векторный
+                            солитон.</p>
+                        <div>
+                            <button class="btn btn-icon btn-sm" type="button" data-bs-toggle="dropdown"><i
+                                    class="bi bi-three-dots"></i></button>
+                            <ul class="dropdown-menu fs-12">
+                                <li><a class="dropdown-item" href="#">Действие №1</a></li>
+                                <li><a class="dropdown-item" href="#">Действие номер №2</a></li>
+                                <li><a class="dropdown-item" href="#">Ещё одно действие</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column fs-14 mb-2 bg-F0EEFF p-2 rounded-3">
+                        <p class="mb-2"><span class="me-2">10.05.2022</span><span>14:00</span></p>
+                        <p class="mb-2">Течение среды облучает термодинамический пульсар. Исследователями из разных
+                            лабораторий неоднократно наблюдалось, как осциллятор пространственно ускоряет векторный
+                            солитон.</p>
+                        <div>
+                            <button class="btn btn-icon btn-sm" type="button" data-bs-toggle="dropdown"><i
+                                    class="bi bi-three-dots"></i></button>
+                            <ul class="dropdown-menu fs-12">
+                                <li><a class="dropdown-item" href="#">Действие №1</a></li>
+                                <li><a class="dropdown-item" href="#">Действие номер №2</a></li>
+                                <li><a class="dropdown-item" href="#">Ещё одно действие</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="offcanvas-header">
+            <div class="d-flex align-items-center w-100">
+                <textarea class="form-control fs-14" rows="3" data-kt-element="input"
+                    placeholder="Написать сообщение"></textarea>
+                <div class="d-flex flex-column ms-1">
+                    <button class="btn btn-sm btn-icon" type="button">
+                        <i class="bi bi-paperclip"></i>
+                    </button>
+                    <button class="btn btn-sm btn-icon text-primary" type="button">
+                        <i class="bi bi-send-fill"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Карточка документа -->
+    <div class="offcanvas offcanvas-documents offcanvas-end bg-F3F4F6" tabindex="-1" id="offcanvasInsurance"
+        aria-labelledby="offcanvasInsuranceLabel">
+        <div class="offcanvas-header">
+            <div class="d-flex align-items-center">
+                <p class="fs-20 fw-600 mb-0" id="offcanvasInsuranceLabel">КАСКО</p>
+                <span class="fs-12 bg-light-success border border-success rounded-2 p-1 px-2 ms-4">Действует</span>
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+
+            <div class="mb-4">
+                <div class="row gy-2">
+                    <div class="col-6">
+                        <span class="fs-14 text-muted">Организация</span>
+                    </div>
+                    <div class="col-6">
+                        <span class="fs-16">РЕСО</span>
+                    </div>
+                    <div class="col-6">
+                        <span class="fs-14 text-muted">Номер договора</span>
+                    </div>
+                    <div class="col-6">
+                        <span class="fs-16">XXX0276045751</span>
+                    </div>
+                    <div class="col-6">
+                        <span class="fs-14 text-muted">Дата окончания</span>
+                    </div>
+                    <div class="col-6">
+                        <span class="fs-16">25.01.2023</span>
+                    </div>
+                    <div class="col-6">
+                        <span class="fs-14 text-muted">Сумма полиса</span>
+                    </div>
+                    <div class="col-6">
+                        <span class="fs-16">68 245,16 ₽</span>
+                    </div>
+                </div>
+            </div>
+
+            <ul class="row nav nav-pills mb-3" role="tablist">
+                <li class="col-6 nav-item" role="presentation">
+                    <button class="nav-link fs-14 w-100 active" id="pill-blank" data-bs-toggle="pill"
+                        data-bs-target="#pills-blank" type="button" role="tab" aria-controls="pills-blank"
+                        aria-selected="true">Полис</button>
+                </li>
+                <li class="col-6 nav-item" role="presentation">
+                    <button class="nav-link fs-14 w-100" id="pill-document" data-bs-toggle="pill"
+                        data-bs-target="#pills-document" type="button" role="tab" aria-controls="pills-document"
+                        aria-selected="false">Документы</button>
+                </li>
+            </ul>
+
+            <div class="tab-content">
+                <div class="tab-pane fade show active" id="pills-blank" role="tabpanel" aria-labelledby="pill-blank"
+                    tabindex="0">
+                    <div class="card p-3">
+                        <div class="position-relative">
+                            <img class="w-100" src="img/blank-01.png" alt="">
+                            <a class="btn btn-icon btn-primary btn-sm position-absolute top-0 end-0 m-2"
+                                href="img/blank-01x2.png" data-fancybox="docs-gallery-01"><i class="bi bi-eye"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="pills-document" role="tabpanel" aria-labelledby="pill-document"
+                    tabindex="0">
+                    <div class="card p-4">
+                        <p class="text-center fs-14 mb-1">Загрузите файлы в формате pdf, jpeg, tiff, png до 10 Мб каждый
+                        </p>
+                        <button type="button" class="btn text-primary w-100"><i class="bi bi-paperclip"></i> Загрузить
+                            документы</button>
+
+                        <!-- item -->
+                        <div class="mt-3">
+                            <div class="row g-0 align-items-center">
+                                <div class="col-auto">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox">
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card-active border rounded-3 p-3">
+                                        <div class="row g-2">
+                                            <div class="col-3">
+                                                <div class="p-2">
+                                                    <img class="w-100" src="img/docs-01.png" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <p class="fs-12 fs-lg-14">СТС</p>
+                                            </div>
+                                            <div class="col-auto">
+                                                <div class="d-flex">
+                                                    <div class="p-0">
+                                                        <button type="button"
+                                                            class="btn btn-icon btn-sm text-primary"><i
+                                                                class="bi bi-eye"></i></button>
+                                                    </div>
+                                                    <div class="p-0">
+                                                        <button type="button" class="btn btn-icon btn-sm"
+                                                            data-bs-toggle="dropdown"><i
+                                                                class="bi bi-three-dots-vertical"></i></button>
+                                                        <ul class="dropdown-menu fs-12">
+                                                            <li><a class="dropdown-item" href="#">Действие №1</a>
+                                                            </li>
+                                                            <li><a class="dropdown-item" href="#">Действие номер
+                                                                    №2</a></li>
+                                                            <li><a class="dropdown-item" href="#">Ещё одно
+                                                                    действие</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- item -->
+                        <div class="mt-3">
+                            <div class="row g-0 align-items-center">
+                                <div class="col-auto">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox">
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card-active border rounded-3 p-3">
+                                        <div class="row g-2">
+                                            <div class="col-3">
+                                                <div class="p-2">
+                                                    <img class="w-100" src="img/docs-01.png" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <p class="fs-12 fs-lg-14">Водительское удостоверение Иванов Иван
+                                                    Иванович</p>
+                                            </div>
+                                            <div class="col-auto">
+                                                <div class="d-flex">
+                                                    <div class="p-0">
+                                                        <button type="button"
+                                                            class="btn btn-icon btn-sm text-primary"><i
+                                                                class="bi bi-eye"></i></button>
+                                                    </div>
+                                                    <div class="p-0">
+                                                        <button type="button" class="btn btn-icon btn-sm"
+                                                            data-bs-toggle="dropdown"><i
+                                                                class="bi bi-three-dots-vertical"></i></button>
+                                                        <ul class="dropdown-menu fs-12">
+                                                            <li><a class="dropdown-item" href="#">Действие №1</a>
+                                                            </li>
+                                                            <li><a class="dropdown-item" href="#">Действие номер
+                                                                    №2</a></li>
+                                                            <li><a class="dropdown-item" href="#">Ещё одно
+                                                                    действие</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- item -->
+                        <div class="mt-3">
+                            <div class="row g-0 align-items-center">
+                                <div class="col-auto">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox">
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card-active border rounded-3 p-3">
+                                        <div class="row g-2">
+                                            <div class="col-3">
+                                                <div class="p-2">
+                                                    <img class="w-100" src="img/docs-01.png" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <p class="fs-12 fs-lg-14">Соглашение</p>
+                                            </div>
+                                            <div class="col-auto">
+                                                <div class="d-flex">
+                                                    <div class="p-0">
+                                                        <button type="button"
+                                                            class="btn btn-icon btn-sm text-primary"><i
+                                                                class="bi bi-eye"></i></button>
+                                                    </div>
+                                                    <div class="p-0">
+                                                        <button type="button" class="btn btn-icon btn-sm"
+                                                            data-bs-toggle="dropdown"><i
+                                                                class="bi bi-three-dots-vertical"></i></button>
+                                                        <ul class="dropdown-menu fs-12">
+                                                            <li><a class="dropdown-item" href="#">Действие №1</a>
+                                                            </li>
+                                                            <li><a class="dropdown-item" href="#">Действие номер
+                                                                    №2</a></li>
+                                                            <li><a class="dropdown-item" href="#">Ещё одно
+                                                                    действие</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- item -->
+                        <div class="mt-3">
+                            <div class="row g-0 align-items-center">
+                                <div class="col-auto">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox">
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card-active border rounded-3 p-3">
+                                        <div class="row g-2">
+                                            <div class="col-3">
+                                                <div class="p-2">
+                                                    <img class="w-100" src="img/docs-01.png" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <p class="fs-12 fs-lg-14">Приложение к договору 3838 от 30.01.2023</p>
+                                            </div>
+                                            <div class="col-auto">
+                                                <div class="d-flex">
+                                                    <div class="p-0">
+                                                        <button type="button"
+                                                            class="btn btn-icon btn-sm text-primary"><i
+                                                                class="bi bi-eye"></i></button>
+                                                    </div>
+                                                    <div class="p-0">
+                                                        <button type="button" class="btn btn-icon btn-sm"
+                                                            data-bs-toggle="dropdown"><i
+                                                                class="bi bi-three-dots-vertical"></i></button>
+                                                        <ul class="dropdown-menu fs-12">
+                                                            <li><a class="dropdown-item" href="#">Действие №1</a>
+                                                            </li>
+                                                            <li><a class="dropdown-item" href="#">Действие номер
+                                                                    №2</a></li>
+                                                            <li><a class="dropdown-item" href="#">Ещё одно
+                                                                    действие</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="offcanvas-header">
+            <div class="d-flex align-items-center">
+                <button type="button" class="btn btn-primary btn-sm px-2 px-lg-3 me-3"><i
+                        class="bi bi-envelope me-2"></i>Отправить <span>(4)</span></button>
+                <button type="button" class="btn btn-outline btn-sm" data-bs-dismiss="offcanvas"
+                    aria-label="Close">Закрыть</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Оформить полис Модалка -->
+    <div class="modal fade modal-drawUpPolis" id="drawUpPolis-modal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="nav flex-column drawUpPolis-nav">
+                        <a class="nav-link" href="#">КАСКО</a>
+                        <a class="nav-link" href="#">ОСАГО</a>
+                        <a class="nav-link" href="#">Гражданская отвественность</a>
+                        <a class="nav-link" href="#">Страхование дома</a>
+                        <a class="nav-link" href="#">Страхование квартиры</a>
+                        <a class="nav-link" href="#">Страхование ипотеки</a>
+                        <a class="nav-link" href="#">Страхование от несчастного случая</a>
+                        <a class="nav-link" href="#">Страхование выезжающих за рубеж</a>
+                        <a class="nav-link" href="#">Страхование от критических и онкологических заболеваний</a>
+                        <a class="nav-link" href="#">Добровольное медицинское трахование</a>
+                        <a class="nav-link" href="#">Иное</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Оформить полис Оффканвас -->
+    <div class="offcanvas offcanvas-end offcanvas-drawUpPolis" id="drawUpPolis-offcanvas" tabindex="-1">
+        <div class="offcanvas-header justify-content-end">
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="nav flex-column drawUpPolis-nav">
+                <a class="nav-link" href="#">КАСКО</a>
+                <a class="nav-link" href="#">ОСАГО</a>
+                <a class="nav-link" href="#">Гражданская отвественность</a>
+                <a class="nav-link" href="#">Страхование дома</a>
+                <a class="nav-link" href="#">Страхование квартиры</a>
+                <a class="nav-link" href="#">Страхование ипотеки</a>
+                <a class="nav-link" href="#">Страхование от несчастного случая</a>
+                <a class="nav-link" href="#">Страхование выезжающих за рубеж</a>
+                <a class="nav-link" href="#">Страхование от критических и онкологических заболеваний</a>
+                <a class="nav-link" href="#">Добровольное медицинское трахование</a>
+                <a class="nav-link" href="#">Иное</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Карточка полиса -->
+    <div class="offcanvas offcanvas-polis offcanvas-end" tabindex="-1" id="offcanvasPolis">
+        <div class="offcanvas-header">
+            <p class="fs-16 fs-lg-18 fw-600 mb-0">Страхование банковских счетов</p>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+
+            <div class="mb-4">
+                <div class="d-flex flex-column gap-2 rounded-3 text-white py-3 px-4"
+                    style="background: linear-gradient(105deg, #664FFC 1.96%, #9281FD 100%);">
+                    <div class="d-flex justify-content-between gap-2">
+                        <div style="max-width: 350px;">
+                            <p class="fs-14 fs-lg-16 fw-600 mb-2">Климентовский Алексей Андреевич</p>
+                            <p class="fs-12 fs-lg-14 mb-0">г. Москва, поселение Сосенское, поселок Коммунарка, ул
+                                Липовый парк, д 7, кв 405</p>
+                        </div>
+                        <div class="flex-shrink-0">
+                            <button class="btn btn-icon btn-sm border-0" type="button" data-bs-toggle="dropdown"><i
+                                    class="bi bi-three-dots"></i></button>
+                            <ul class="dropdown-menu fs-14">
+                                <li><a class="dropdown-item" href="#">Копировать</a></li>
+                                <li><a class="dropdown-item" href="#">Редактировать</a></li>
+                                <li><a class="dropdown-item" href="#">Заявить о расторжении</a></li>
+                                <li><a class="dropdown-item" href="#">Заявить о страховом случае</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <p class="fs-12 fs-lg-14 fw-600 mb-0">Номер договора</p>
+                        <p class="fs-12 fs-lg-14 mb-0">XXX0123456789</p>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <p class="fs-12 fs-lg-14 fw-600 mb-0">Сумма полиса</p>
+                        <p class="fs-12 fs-lg-14 mb-0">111 000,00 ₽</p>
+                    </div>
+                    <div class="d-flex justify-content-end">
+                        <p class="fs-12 fs-lg-14 mb-0">с 05.08.2023 по 05.08.2024</p>
+                    </div>
+                    <div class="d-flex justify-content-between gap-2">
+                        <div class="d-flex gap-3 align-items-center" style="max-width: 220px;">
+                            <div class="flex-shrink-0">
+                                <img class="img-fluid" src="img/tinkoff.png" alt="" style="max-width: 48px;">
+                            </div>
+                            <div>
+                                <p class="fs-12 fs-lg-14 fw-600 mb-0">Совкомбанк Страхование</p>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-wrap gap-1" style="max-width: 200px;">
+                            <div
+                                class="badge bg-white border border-success text-success flex-grow-1 fs-10 fs-lg-12 w-100">
+                                +1111,00 ₽ <i class="bi bi-caret-up-fill"></i> 10%</div>
+                            <div class="badge bg-white border border-warning text-warning flex-grow-1 fs-10 fs-lg-12">
+                                171,00 ₽ <i class="bi bi-caret-up-fill"></i> 2%</div>
+                            <!-- <div class="badge bg-white border border-danger text-danger flex-grow-1 fs-10 fs-lg-12">
+                                -117,00 ₽</div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scrollable-container mb-4">
+                <div class="nav nav-pills scrollable-wrapper justify-content-between" role="tablist">
+                    <div class="nav-item scrollable-item" role="presentation">
+                        <button class="nav-link fs-12 fs-lg-14 w-100 active" data-bs-toggle="pill"
+                            data-bs-target="#polis-blank" type="button" role="tab" aria-controls="pills-blank"
+                            aria-selected="true">Полис</button>
+                    </div>
+                    <div class="nav-item scrollable-item" role="presentation">
+                        <button class="nav-link fs-12 fs-lg-14 w-100" data-bs-toggle="pill"
+                            data-bs-target="#polis-document" type="button" role="tab" aria-controls="pills-document"
+                            aria-selected="false">Документы</button>
+                    </div>
+                    <div class="nav-item scrollable-item" role="presentation">
+                        <button class="nav-link fs-12 fs-lg-14 w-100" data-bs-toggle="pill"
+                            data-bs-target="#polis-blank" type="button" role="tab" aria-controls="pills-document"
+                            aria-selected="false">Осмотр</button>
+                    </div>
+                    <div class="nav-item scrollable-item" role="presentation">
+                        <button class="nav-link fs-12 fs-lg-14 w-100" data-bs-toggle="pill"
+                            data-bs-target="#polis-document" type="button" role="tab" aria-controls="pills-document"
+                            aria-selected="false">События</button>
+                    </div>
+                    <div class="nav-item scrollable-item" role="presentation">
+                        <button class="nav-link fs-12 fs-lg-14 w-100" data-bs-toggle="pill"
+                            data-bs-target="#polis-blank" type="button" role="tab" aria-controls="pills-document"
+                            aria-selected="false">Чат</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content">
+                <div class="tab-pane fade show active" id="polis-blank" role="tabpanel" aria-labelledby="pill-blank"
+                    tabindex="0">
+                    <div class="position-relative">
+                        <div class="position-absolute top-0 end-0 m-3">
+                            <button type="button" class="btn btn-primary btn-icon btn-sm rounded-circle" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></button>
+                            <ul class="dropdown-menu fs-12 fs-lg-14">
+                                <li><a class="dropdown-item" href="#">Открыть</a></li>
+                                <li><a class="dropdown-item" href="#">Скачать</a></li>
+                                <li><a class="dropdown-item" href="#">Изменить</a></li>
+                                <li><a class="dropdown-item" href="#">Удалить</a></li>
+                            </ul>
+                        </div>
+                        <img class="img-fluid w-100" src="img/polis-0002.png" alt="">
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="polis-document" role="tabpanel" aria-labelledby="pill-document"
+                    tabindex="0">
+                    <div class="d-flex flex-column gap-2">
+                        <div class="d-flex align-items-center justify-content-between bg-F3F4F6 rounded-3 py-2 px-4">
+                            <div class="fs-12 fs-lg-14 fw-600">Расторжение</div>
+                            <div class="fs-12 fs-lg-14">17.05.2022</div>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between bg-F3F4F6 rounded-3 py-2 px-4">
+                            <div class="fs-12 fs-lg-14 fw-600">Расторжение</div>
+                            <div class="fs-12 fs-lg-14">17.05.2022</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/fancybox.umd.js"></script>
+    <script src="js/imask.js"></script>
+    <script src="js/choices.min.js"></script>
+
+    <script src="js/echarts.min.js"></script>
+    <script src="js/datepicker-full.min.js"></script>
+    <script src="js/datepicker-ru.js"></script>
+
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

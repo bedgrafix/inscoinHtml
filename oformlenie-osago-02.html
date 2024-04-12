@@ -1,0 +1,1062 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oformlenie-osago-02</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/fancybox.css">
+    <link rel="stylesheet" href="css/choices.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body class="bg-F3F4F6">
+
+    <header class="sticky-heading header sticky-top">
+        <nav class="navbar navbar-expand-xxl bg-white shadow">
+            <div class="container">
+                <a class="navbar-brand d-none d-xxl-flex hover-opacity" href="#">
+                    <img src="img/logo.svg" alt="Logo">
+                </a>
+                <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="bi bi-grid"></i>
+                </button>
+                <div class="offcanvas offcanvas-end offcanvas-navbar" tabindex="-1" id="navbarNav">
+                    <div class="offcanvas-header">
+                        <button type="button" class="btn btn-icon btn-sm border-0" data-bs-dismiss="offcanvas" aria-label="Close">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="9" height="15" viewBox="0 0 9 15" fill="none">
+                                <path d="M7.78265 0.75C7.96865 0.75 8.14431 0.822332 8.27864 0.966998C8.52664 1.246 8.50598 1.66966 8.23731 1.91766L1.65592 7.84926L8.27867 13.5842C8.55767 13.8322 8.568 14.2559 8.32 14.5349C8.07201 14.8036 7.64834 14.8242 7.36934 14.5762L0.24026 8.38659C-0.0800708 8.09726 -0.0800708 7.60126 0.24026 7.31193L7.32798 0.925664C7.46232 0.801664 7.61732 0.75 7.78265 0.75Z" fill="#747782"/>
+                            </svg>
+                        </button>
+                        <a class="navbar-brand" href="#">
+                            <img src="img/logo.svg" alt="Logo">
+                        </a>
+                        <div style="width: 2rem;"></div>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav ms-xxl-4 me-xxl-auto">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span>Договоры</span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#"><span>Договоры</span></a></li>
+                                    <li><a class="dropdown-item" href="#"><span>Генеральные договора</span></a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="#"><span>Цифра</span></a></li>
+                            <li class="nav-item"><a class="nav-link" href="#"><span>Пользователи</span></a></li>
+                            <li class="nav-item"><a class="nav-link" href="#"><span>Настройки</span></a></li>
+                            <li class="nav-item"><a class="nav-link" href="#"><span>Финансы</span></a></li>
+                            <li class="nav-item"><a class="nav-link" href="#"><span>Аналитика</span></a></li>
+                        </ul>
+
+                    </div>
+                </div>
+
+                <div class="d-flex gap-2 gap-xxl-4 align-items-center">
+                    <div class="d-flex gap-2 align-items-center">
+                        <button type="button" class="btn btn-primary btn-sm px-2 px-lg-3" data-bs-toggle="offcanvas"
+                            data-bs-target="#drawUpPolis-offcanvas"><i class="bi bi-plus-circle-fill"></i><span
+                                class="d-none d-md-inline ms-2"> Оформить
+                                полис</span></button>
+                        <div class="d-flex gap-2 align-items-center">
+                            <button type="button" class="btn btn-icon btn-sm border-0 position-relative"
+                                data-bs-toggle="offcanvas" data-bs-target="#offcanvasChat"
+                                aria-controls="offcanvasChat">
+                                <i class="bi bi-chat-left-dots"></i>
+                                <span class="badge badge-chat rounded-circle bg-red">4</span>
+                            </button>
+                            <button type="button" class="btn btn-icon btn-sm border-0 position-relative">
+                                <i class="bi bi-bell"></i>
+                            </button>
+                        </div>
+                        <div class="bg-F0EEFF rounded-3 fs-12 p-2">
+                            <span class="text-black">3 578, 00</span>
+                            <span class="text-primary">INS</span>
+                        </div>
+                    </div>
+
+                    <div class="d-flex gap-2 gap-xxl-4 align-items-center">
+                        <a href="#">
+                            <div class="avatar-container">
+                                <img src="img/avatar.jpg" class="avatar img-fluid" alt="avatar">
+                            </div>
+                        </a>
+                        <button type="button" class="btn btn-icon border-0 d-none d-xxl-inline-block" style="--btn-icon-size: 1.5rem;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="25" viewBox="0 0 22 25" fill="none">
+                                <path d="M9.44902 12.25H16.621M16.621 12.25L14.3798 10.0278M16.621 12.25L14.3798 14.4722M16.621 7.36111V5.25C16.621 4.69772 16.2196 4.25 15.7245 4.25H6.75953C6.26442 4.25 5.86304 4.69772 5.86304 5.25V19.25C5.86304 19.8023 6.26442 20.25 6.75953 20.25H15.7245C16.2196 20.25 16.621 19.8023 16.621 19.25V17.1389" stroke="#747782" stroke-width="1.21105" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+
+        <!-- table -->
+        <section class="section py-3">
+            <div class="container">
+                <div class="row g-3">
+
+                    <div class="col-lg-4 order-lg-2">
+                        <div class="bg-white rounded-4 p-3 p-lg-4">
+
+                            <!-- item -->
+                            <div class="mb-4">
+                                <div class="row g-2 align-items-center">
+                                    <div class="col-10">
+                                        <span class="fw-600">Ауди А4</span>
+                                    </div>
+                                    <div class="col-2 text-end">
+                                        <button type="button" class="btn btn-icon btn-sm" data-bs-toggle="modal" data-bs-target="#modalTransportnoeSredstvo"><i class="bi bi-pencil"></i></button>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="fs-14">
+                                            <span>А777АС799</span>
+                                            <span class="mx-1">•</span>
+                                            <span>106 л.с</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- item -->
+                            <div class="mb-4">
+                                <div class="row g-2 align-items-center">
+                                    <div class="col-10">
+                                        <span class="fw-600">Иванов Иван Иванович</span>
+                                    </div>
+                                    <div class="col-2 text-end">
+                                        <button type="button" class="btn btn-icon btn-sm"><i class="bi bi-pencil"></i></button>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="fs-14">
+                                            <span class="bg-E5E7EB rounded-3 fs-12 py-1 px-2" data-bs-toggle="modal" data-bs-target="#modalSobstvennikStrahovatel1">Собственник</span>
+                                            <span class="mx-1">•</span>
+                                            <span class="bg-E5E7EB rounded-3 fs-12 py-1 px-2" data-bs-toggle="modal" data-bs-target="#modalSobstvennikStrahovatel2">Страхователь</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- item -->
+                            <div class="mb-4">
+                                
+                                <div class="mb-3">
+                                    <div class="row g-2 align-items-center">
+                                        <div class="col-10">
+                                            <span class="fw-600">Петров Петр Иванович</span>
+                                        </div>
+                                        <div class="col-2 text-end">
+                                            <button type="button" class="btn btn-icon btn-sm" data-bs-toggle="modal" data-bs-target="#modalVoditel"><i class="bi bi-pencil"></i></button>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="fs-14">
+                                                <span class="bg-E5E7EB rounded-3 fs-12 py-1 px-2">Водитель 1</span>
+                                                <span class="mx-1">•</span>
+                                                <span>35 лет</span>
+                                                <span class="mx-1">•</span>
+                                                <span>стаж 10 лет</span>
+                                                <span class="fs-12 bg-light-info border border-info rounded-2 p-1 px-2 ms-3">КБМ-1,6</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <div class="row g-2 align-items-center">
+                                        <div class="col-10">
+                                            <span class="fw-600">Петров Петр Иванович</span>
+                                        </div>
+                                        <div class="col-2 text-end">
+                                            <button type="button" class="btn btn-icon btn-sm" data-bs-toggle="modal" data-bs-target="#modalVoditel"><i class="bi bi-pencil"></i></button>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="fs-14">
+                                                <span class="bg-E5E7EB rounded-3 fs-12 py-1 px-2">Водитель 2</span>
+                                                <span class="mx-1">•</span>
+                                                <span>55 лет</span>
+                                                <span class="mx-1">•</span>
+                                                <span>стаж 30 лет</span>
+                                                <span class="fs-12 bg-light-info border border-info rounded-2 p-1 px-2 ms-3">КБМ-1,8</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <button type="button" class="btn border-0 text-primary btn-sm px-0"><i class="bi bi-plus me-2"></i> Добавить водителя</button>
+                                </div>
+
+                            </div>
+
+                            <!-- item -->
+                            <div class="mb-4">
+                                <div class="row g-2 align-items-center">
+                                    <div class="col-10">
+                                        <span class="fw-600">Дата начала действия</span>
+                                    </div>
+                                    <div class="col-2 text-end">
+                                        <button type="button" class="btn btn-icon btn-sm"><i class="bi bi-pencil"></i></button>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="fs-14">
+                                            <span>11.05.2023</span>
+                                            <span class="mx-1">•</span>
+                                            <span>на 1 год</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-lg-8 order-lg-1">
+                        
+                        <!-- item -->
+                        <div class="bg-white rounded-4 p-3 p-lg-4 mb-2">
+                            <div class="row g-3 align-items-center">
+                                <div class="col-12 col-lg-2">
+                                    <img src="img/oformlenie-03.png" alt="" style="max-width: 117px; max-height: 27px;">
+                                </div>
+                                <div class="col-12 col-lg-6">
+                                    <div class="fs-12"><span class="color-717681">Базовый тариф</span> - 6,659 ₽</div>
+                                    <div class="fs-12">
+                                        <div class="d-inline-block me-2"><span class="color-717681">БТ:</span> 1</div>
+                                        <div class="d-inline-block me-2"><span class="color-717681">Кт:</span> 2,2</div>
+                                        <div class="d-inline-block me-2"><span class="color-717681">Кбм:</span> 1,6</div>
+                                        <div class="d-inline-block me-2"><span class="color-717681">Квс:</span> 1,8</div>
+                                        <div class="d-inline-block me-2"><span class="color-717681">Кс:</span> 1,4</div>
+                                        <div class="d-inline-block me-2"><span class="color-717681">Ко:</span> 3</div>
+                                        <div class="d-inline-block me-2"><span class="color-717681">Кп:</span> 3,3</div>
+                                        <div class="d-inline-block me-2"><span class="color-717681">Км:</span> 3</div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-lg-2 text-lg-end">
+                                    <span class="fs-20 fw-600">15 788 ₽</span>
+                                </div>
+                                <div class="col-6 col-lg-2 text-end">
+                                    <button type="button" class="btn btn-secondary btn-sm px-2 px-lg-3">Выбрать</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- item -->
+                        <div class="bg-white rounded-4 p-3 p-lg-4 mb-2">
+                            <div class="row g-3 align-items-center">
+                                <div class="col-12 col-lg-2">
+                                    <img src="img/oformlenie-02.png" alt="" style="max-width: 117px; max-height: 27px;">
+                                </div>
+                                <div class="col-12 col-lg-6">
+                                    <div class="fs-12"><span class="color-717681">Базовый тариф</span> - 6,659 ₽</div>
+                                    <div class="fs-12">
+                                        <div class="d-inline-block me-2"><span class="color-717681">БТ:</span> 1</div>
+                                        <div class="d-inline-block me-2"><span class="color-717681">Кт:</span> 2,2</div>
+                                        <div class="d-inline-block me-2"><span class="color-717681">Кбм:</span> 1,6</div>
+                                        <div class="d-inline-block me-2"><span class="color-717681">Квс:</span> 1,8</div>
+                                        <div class="d-inline-block me-2"><span class="color-717681">Кс:</span> 1,4</div>
+                                        <div class="d-inline-block me-2"><span class="color-717681">Ко:</span> 3</div>
+                                        <div class="d-inline-block me-2"><span class="color-717681">Кп:</span> 3,3</div>
+                                        <div class="d-inline-block me-2"><span class="color-717681">Км:</span> 3</div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-lg-2 text-lg-end">
+                                    <span class="fs-20 fw-600">15 788 ₽</span>
+                                </div>
+                                <div class="col-6 col-lg-2 text-end">
+                                    <button type="button" class="btn btn-secondary btn-sm px-2 px-lg-3">Выбрать</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- item -->
+                        <div class="bg-white rounded-4 p-3 p-lg-4 mb-2">
+                            <div class="row g-3 align-items-center">
+                                <div class="col-12 col-lg-2">
+                                    <img src="img/oformlenie-01.png" alt="" style="max-width: 117px; max-height: 27px;">
+                                </div>
+                                <div class="col-12 col-lg-6">
+                                    <div class="fs-12"><span class="color-717681">Базовый тариф</span> - 6,659 ₽</div>
+                                    <div class="fs-12">
+                                        <div class="d-inline-block me-2"><span class="color-717681">Кт:</span> 2,2</div>
+                                        <div class="d-inline-block me-2"><span class="color-717681">Кбм:</span> 1,6</div>
+                                        <div class="d-inline-block me-2"><span class="color-717681">Квс:</span> 1,8</div>
+                                        <div class="d-inline-block me-2"><span class="color-717681">Кс:</span> 1,4</div>
+                                        <div class="d-inline-block me-2"><span class="color-717681">Ко:</span> 3</div>
+                                        <div class="d-inline-block me-2"><span class="color-717681">Кп:</span> 3,3</div>
+                                        <div class="d-inline-block me-2"><span class="color-717681">Км:</span> 3</div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-lg-2 text-lg-end">
+                                    <span class="fs-20 fw-600">15 788 ₽</span>
+                                </div>
+                                <div class="col-6 col-lg-2 text-end">
+                                    <button type="button" class="btn btn-secondary btn-sm px-2 px-lg-3">Выбрать</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- item -->
+                        <div class="bg-white rounded-4 p-3 p-lg-4 mb-2">
+                            <div class="row g-3 align-items-center">
+                                <div class="col-12 col-lg-2">
+                                    <img src="img/oformlenie-01.png" alt="" style="max-width: 117px; max-height: 27px;">
+                                </div>
+                                <div class="col-12 col-lg-6">
+                                    <div class="fs-12"><span class="color-717681">Базовый тариф</span> - 6,659 ₽</div>
+                                    <div class="fs-12">
+                                        <div class="d-inline-block me-2"><span class="color-717681">БТ:</span> 1</div>
+                                        <div class="d-inline-block me-2"><span class="color-717681">Кт:</span> 2,2</div>
+                                        <div class="d-inline-block me-2"><span class="color-717681">Кбм:</span> 1,6</div>
+                                        <div class="d-inline-block me-2"><span class="color-717681">Квс:</span> 1,8</div>
+                                        <div class="d-inline-block me-2"><span class="color-717681">Кс:</span> 1,4</div>
+                                        <div class="d-inline-block me-2"><span class="color-717681">Ко:</span> 3</div>
+                                        <div class="d-inline-block me-2"><span class="color-717681">Кп:</span> 3,3</div>
+                                        <div class="d-inline-block me-2"><span class="color-717681">Км:</span> 3</div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-lg-2 text-lg-end">
+                                    <span class="fs-20 fw-600">15 788 ₽</span>
+                                </div>
+                                <div class="col-6 col-lg-2 text-end">
+                                    <button type="button" class="btn btn-secondary btn-sm px-2 px-lg-3">Выбрать</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- item -->
+                        <div class="bg-white rounded-4 p-3 p-lg-4 mb-2">
+                            <div class="row g-3 align-items-center">
+                                <div class="col-12 col-lg-2">
+                                    <img src="img/oformlenie-01.png" alt="" style="max-width: 117px; max-height: 27px;">
+                                </div>
+                                <div class="col-12 col-lg-6">
+                                    <div class="fs-12"><span class="color-717681">Базовый тариф</span> - 6,659 ₽</div>
+                                    <div class="fs-12">
+                                        <div class="d-inline-block me-2"><span class="color-717681">БТ:</span> 1</div>
+                                        <div class="d-inline-block me-2"><span class="color-717681">Кт:</span> 2,2</div>
+                                        <div class="d-inline-block me-2"><span class="color-717681">Кбм:</span> 1,6</div>
+                                        <div class="d-inline-block me-2"><span class="color-717681">Квс:</span> 1,8</div>
+                                        <div class="d-inline-block me-2"><span class="color-717681">Кс:</span> 1,4</div>
+                                        <div class="d-inline-block me-2"><span class="color-717681">Ко:</span> 3</div>
+                                        <div class="d-inline-block me-2"><span class="color-717681">Кп:</span> 3,3</div>
+                                        <div class="d-inline-block me-2"><span class="color-717681">Км:</span> 3</div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-lg-2 text-lg-end">
+                                    <span class="fs-20 fw-600">15 788 ₽</span>
+                                </div>
+                                <div class="col-6 col-lg-2 text-end">
+                                    <button type="button" class="btn btn-secondary btn-sm px-2 px-lg-3">Выбрать</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- item -->
+                        <div class="bg-white rounded-4 p-3 p-lg-4 mb-2">
+                            <div class="row g-3 align-items-center">
+                                <div class="col-12 col-lg-2">
+                                    <img src="img/oformlenie-01.png" alt="" style="max-width: 117px; max-height: 27px;">
+                                </div>
+                                <div class="col-12 col-lg-6">
+                                    <div class="fs-12"><span class="color-717681">Базовый тариф</span> - 6,659 ₽</div>
+                                    <div class="fs-12">
+                                        <div class="d-inline-block me-2"><span class="color-717681">БТ:</span> 1</div>
+                                        <div class="d-inline-block me-2"><span class="color-717681">Кт:</span> 2,2</div>
+                                        <div class="d-inline-block me-2"><span class="color-717681">Кбм:</span> 1,6</div>
+                                        <div class="d-inline-block me-2"><span class="color-717681">Квс:</span> 1,8</div>
+                                        <div class="d-inline-block me-2"><span class="color-717681">Кс:</span> 1,4</div>
+                                        <div class="d-inline-block me-2"><span class="color-717681">Ко:</span> 3</div>
+                                        <div class="d-inline-block me-2"><span class="color-717681">Кп:</span> 3,3</div>
+                                        <div class="d-inline-block me-2"><span class="color-717681">Км:</span> 3</div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-lg-2 text-lg-end">
+                                    <span class="fs-20 fw-600">15 788 ₽</span>
+                                </div>
+                                <div class="col-6 col-lg-2 text-end">
+                                    <button type="button" class="btn btn-secondary btn-sm px-2 px-lg-3">Выбрать</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- item -->
+                        <div class="bg-white rounded-4 p-3 p-lg-4 mb-2">
+                            <div class="row g-3 align-items-center">
+                                <div class="col-12 col-lg-2">
+                                    <img src="img/oformlenie-01.png" alt="" style="max-width: 117px; max-height: 27px;">
+                                </div>
+                                <div class="col-12 col-lg-6">
+                                    <div class="fs-12"><span class="color-717681">Базовый тариф</span> - 6,659 ₽</div>
+                                    <div class="fs-12">
+                                        <div class="d-inline-block me-2"><span class="color-717681">БТ:</span> 1</div>
+                                        <div class="d-inline-block me-2"><span class="color-717681">Кт:</span> 2,2</div>
+                                        <div class="d-inline-block me-2"><span class="color-717681">Кбм:</span> 1,6</div>
+                                        <div class="d-inline-block me-2"><span class="color-717681">Квс:</span> 1,8</div>
+                                        <div class="d-inline-block me-2"><span class="color-717681">Кс:</span> 1,4</div>
+                                        <div class="d-inline-block me-2"><span class="color-717681">Ко:</span> 3</div>
+                                        <div class="d-inline-block me-2"><span class="color-717681">Кп:</span> 3,3</div>
+                                        <div class="d-inline-block me-2"><span class="color-717681">Км:</span> 3</div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-lg-2 text-lg-end">
+                                    <span class="fs-20 fw-600">15 788 ₽</span>
+                                </div>
+                                <div class="col-6 col-lg-2 text-end">
+                                    <button type="button" class="btn btn-secondary btn-sm px-2 px-lg-3">Выбрать</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Модалка Транспортное средство -->
+    <div class="modal fade" id="modalTransportnoeSredstvo" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <p class="h5 mb-0">Транспортное средство</p>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row g-3">
+                        <div class="col-lg-4">
+                            <label class="form-label fs-14">Гос. номер</label>
+                            <input type="text" class="form-control fs-14">
+                        </div>
+                        <div class="col-lg-4">
+                            <label class="form-label fs-14">VIN *</label>
+                            <input type="text" class="form-control fs-14" required>
+                        </div>
+                        <div class="col-lg-4">
+                            <label class="form-label fs-14">Год выпуска *</label>
+                            <input type="text" class="form-control fs-14" required>
+                        </div>
+                        <div class="col-lg-4">
+                            <label class="form-label fs-14">Категория *</label>
+                            <select class="form-select fs-14">
+                                <option selected="">Легковой автомобиль</option>
+                                <option value="1">Легковой автомобиль 1</option>
+                                <option value="2">Легковой автомобиль 2</option>
+                                <option value="3">Легковой автомобиль 3</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-4">
+                            <label class="form-label fs-14">Марка по ПТС *</label>
+                            <select class="form-select fs-14">
+                                <option selected="">Опция</option>
+                                <option value="1">Опция 1</option>
+                                <option value="2">Опция 2</option>
+                                <option value="3">Опция 3</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-4">
+                            <label class="form-label fs-14">Модель по ПТС *</label>
+                            <select class="form-select fs-14">
+                                <option selected="">Опция</option>
+                                <option value="1">Опция 1</option>
+                                <option value="2">Опция 2</option>
+                                <option value="3">Опция 3</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-4">
+                            <label class="form-label fs-14">Документ *</label>
+                            <select class="form-select fs-14">
+                                <option selected="">СТС</option>
+                                <option value="1">Опция 1</option>
+                                <option value="2">Опция 2</option>
+                                <option value="3">Опция 3</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-4">
+                            <label class="form-label fs-14">Серия номер *</label>
+                            <input type="text" class="form-control fs-14" required>
+                        </div>
+                        <div class="col-lg-4">
+                            <label class="form-label fs-14">Дата выдачи *</label>
+                            <input type="text" class="form-control fs-14" required>
+                        </div>
+                        <div class="col-lg-4">
+                            <label class="form-label fs-14">Мощность (л.с.) *</label>
+                            <input type="text" class="form-control fs-14" required>
+                        </div>
+                        <div class="col-lg-5">
+                            <label class="form-label fs-14">Цель использования *</label>
+                            <select class="form-select fs-14">
+                                <option selected="">Личная</option>
+                                <option value="1">Опция 1</option>
+                                <option value="2">Опция 2</option>
+                                <option value="3">Опция 3</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox">
+                                <label class="form-check-label fs-14">
+                                    Автомобиль используется с прицепом
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary btn-sm px-2 px-lg-3">Сохранить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модалка Собственник - Страхователь -->
+    <div class="modal fade" id="modalSobstvennikStrahovatel1" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <p class="h5 mb-0">Собственник - Страхователь</p>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" checked>
+                        <label class="form-check-label fs-14">
+                            Является собственником
+                        </label>
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" checked>
+                        <label class="form-check-label fs-14">
+                            Является водителем
+                        </label>
+                    </div>
+
+                    <!-- ТАБЫ -->
+                    <div class="tab-personal my-4" role="tablist">
+                        <button type="button" class="tab-link active" data-bs-toggle="pill" data-bs-target="#tab1" role="tab" aria-controls="tab1" aria-selected="true">Физическое лицо</button>
+                        <button type="button" class="tab-link" data-bs-toggle="pill" data-bs-target="#tab2" role="tab" aria-controls="tab2" aria-selected="false">Юридическое лицо</button>
+                    </div>
+                    <div class="tab-content">
+                        <div class="tab-pane fade show active" id="tab1" role="tabpanel" tabindex="0">
+                            <div class="row g-3">
+                                <div class="col-lg-12">
+                                    <label class="form-label fs-14">ФИО</label>
+                                    <input type="text" class="form-control fs-14">
+                                </div>
+                                <div class="col-lg-3">
+                                    <label class="form-label fs-14">Дата рождения *</label>
+                                    <input type="text" class="form-control fs-14" required>
+                                </div>
+                                <div class="col-lg-3">
+                                    <label class="form-label fs-14">Паспорт серия номер *</label>
+                                    <input type="text" class="form-control fs-14" required>
+                                </div>
+                                <div class="col-lg-3">
+                                    <label class="form-label fs-14">Код подразделения *</label>
+                                    <input type="text" class="form-control fs-14" required>
+                                </div>
+                                <div class="col-lg-3">
+                                    <label class="form-label fs-14">Дата выдачи *</label>
+                                    <input type="text" class="form-control fs-14" required>
+                                </div>
+                                <div class="col-lg-12">
+                                    <label class="form-label fs-14">Кем выдан *</label>
+                                    <input type="text" class="form-control fs-14" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="tab2" role="tabpanel" tabindex="0">
+                            <div class="row g-3">
+                                <div class="col-lg-12">
+                                    <label class="form-label fs-14">ФИО</label>
+                                    <input type="text" class="form-control fs-14">
+                                </div>
+                                <div class="col-lg-3">
+                                    <label class="form-label fs-14">Дата рождения *</label>
+                                    <input type="text" class="form-control fs-14" required>
+                                </div>
+                                <div class="col-lg-3">
+                                    <label class="form-label fs-14">Паспорт серия номер *</label>
+                                    <input type="text" class="form-control fs-14" required>
+                                </div>
+                                <div class="col-lg-3">
+                                    <label class="form-label fs-14">Код подразделения *</label>
+                                    <input type="text" class="form-control fs-14" required>
+                                </div>
+                                <div class="col-lg-3">
+                                    <label class="form-label fs-14">Дата выдачи *</label>
+                                    <input type="text" class="form-control fs-14" required>
+                                </div>
+                                <div class="col-lg-12">
+                                    <label class="form-label fs-14">Кем выдан *</label>
+                                    <input type="text" class="form-control fs-14" required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary btn-sm px-2 px-lg-3">Сохранить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модалка Собственник - Страхователь -->
+    <div class="modal fade" id="modalSobstvennikStrahovatel2" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <p class="h5 mb-0">Собственник - Страхователь</p>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" checked>
+                        <label class="form-check-label fs-14">
+                            Является собственником
+                        </label>
+                    </div>
+
+                    <!-- ТАБЫ -->
+                    <div class="tab-personal my-4" role="tablist">
+                        <button type="button" class="tab-link active" data-bs-toggle="pill" data-bs-target="#tab01" role="tab" aria-controls="tab01" aria-selected="true">Физическое лицо</button>
+                        <button type="button" class="tab-link" data-bs-toggle="pill" data-bs-target="#tab02" role="tab" aria-controls="tab02" aria-selected="false">Юридическое лицо</button>
+                    </div>
+                    <div class="tab-content">
+                        <div class="tab-pane fade show active" id="tab01" role="tabpanel" tabindex="0">
+                            <div class="row g-3">
+                                <div class="col-lg-12">
+                                    <label class="form-label fs-14">ФИО</label>
+                                    <input type="text" class="form-control fs-14">
+                                </div>
+                                <div class="col-lg-3">
+                                    <label class="form-label fs-14">Дата рождения *</label>
+                                    <input type="text" class="form-control fs-14" required>
+                                </div>
+                                <div class="col-lg-3">
+                                    <label class="form-label fs-14">Паспорт серия номер *</label>
+                                    <input type="text" class="form-control fs-14" required>
+                                </div>
+                                <div class="col-lg-3">
+                                    <label class="form-label fs-14">Код подразделения *</label>
+                                    <input type="text" class="form-control fs-14" required>
+                                </div>
+                                <div class="col-lg-3">
+                                    <label class="form-label fs-14">Дата выдачи *</label>
+                                    <input type="text" class="form-control fs-14" required>
+                                </div>
+                                <div class="col-lg-12">
+                                    <label class="form-label fs-14">Кем выдан *</label>
+                                    <input type="text" class="form-control fs-14" required>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="mb-2">
+                                        <label class="form-label fs-14">Адрес регистрации *</label>
+                                        <input type="text" class="form-control fs-14" required>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" checked>
+                                        <label class="form-check-label fs-14">
+                                            Совпадает с фактическим адресом
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <label class="form-label fs-14">Телефон *</label>
+                                    <input type="text" class="form-control fs-14" required>
+                                </div>
+                                <div class="col-lg-4">
+                                    <label class="form-label fs-14">E-mail *</label>
+                                    <input type="text" class="form-control fs-14" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="tab02" role="tabpanel" tabindex="0">
+                            <div class="row g-3">
+                                <div class="col-lg-12">
+                                    <label class="form-label fs-14">ФИО</label>
+                                    <input type="text" class="form-control fs-14">
+                                </div>
+                                <div class="col-lg-3">
+                                    <label class="form-label fs-14">Дата рождения *</label>
+                                    <input type="text" class="form-control fs-14" required>
+                                </div>
+                                <div class="col-lg-3">
+                                    <label class="form-label fs-14">Паспорт серия номер *</label>
+                                    <input type="text" class="form-control fs-14" required>
+                                </div>
+                                <div class="col-lg-3">
+                                    <label class="form-label fs-14">Код подразделения *</label>
+                                    <input type="text" class="form-control fs-14" required>
+                                </div>
+                                <div class="col-lg-3">
+                                    <label class="form-label fs-14">Дата выдачи *</label>
+                                    <input type="text" class="form-control fs-14" required>
+                                </div>
+                                <div class="col-lg-12">
+                                    <label class="form-label fs-14">Кем выдан *</label>
+                                    <input type="text" class="form-control fs-14" required>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="mb-2">
+                                        <label class="form-label fs-14">Адрес регистрации *</label>
+                                        <input type="text" class="form-control fs-14" required>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" checked>
+                                        <label class="form-check-label fs-14">
+                                            Совпадает с фактическим адресом
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <label class="form-label fs-14">Телефон *</label>
+                                    <input type="text" class="form-control fs-14" required>
+                                </div>
+                                <div class="col-lg-4">
+                                    <label class="form-label fs-14">E-mail *</label>
+                                    <input type="text" class="form-control fs-14" required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary btn-sm px-2 px-lg-3">Сохранить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модалка Водитель 1 -->
+    <div class="modal fade" id="modalVoditel" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <p class="h5 mb-0">Водитель 1</p>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row g-3">
+                        <div class="col-lg-9">
+                            <label class="form-label fs-14">ФИО *</label>
+                            <input type="text" class="form-control fs-14" required>
+                        </div>
+                        <div class="col-lg-3">
+                            <label class="form-label fs-14">Дата рождения *</label>
+                            <input type="text" class="form-control fs-14" required>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox">
+                                <label class="form-check-label fs-14">
+                                    Иностранные ВУ
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <label class="form-label fs-14">Серия и номер ВУ *</label>
+                            <input type="text" class="form-control fs-14" required>
+                        </div>
+                        <div class="col-lg-4">
+                            <label class="form-label fs-14">Дата выдачи *</label>
+                            <input type="text" class="form-control fs-14" required>
+                        </div>
+                        <div class="col-lg-4">
+                            <label class="form-label fs-14">Начало стажа *</label>
+                            <input type="text" class="form-control fs-14" required>
+                        </div>
+                        <div class="col-lg-12">
+                            <label class="form-label fs-14">Кем выдан *</label>
+                            <input type="text" class="form-control fs-14" required>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="mb-2">
+                                <label class="form-label fs-14">Адрес регистрации *</label>
+                                <input type="text" class="form-control fs-14" required>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" checked>
+                                <label class="form-check-label fs-14">
+                                    Совпадает с фактическим адресом
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <label class="form-label fs-14">Телефон *</label>
+                            <input type="text" class="form-control fs-14" required>
+                        </div>
+                        <div class="col-lg-6">
+                            <label class="form-label fs-14">E-mail *</label>
+                            <input type="text" class="form-control fs-14" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div>
+                        <button type="button" class="btn border-0 text-primary btn-sm px-2 px-lg-3">Удалить водителя</button>
+                        <button type="button" class="btn btn-primary btn-sm px-2 px-lg-3 ms-3">Сохранить</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Чат Темы -->
+    <div class="offcanvas offcanvas-end bg-F3F4F6" tabindex="-1" id="offcanvasChat"
+        aria-labelledby="offcanvasChatLabel">
+        <div class="offcanvas-header">
+            <p class="h5 offcanvas-title fw-600" id="offcanvasChatLabel">Чат</p>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="card-active p-2 mb-2">
+                <div class="row">
+                    <div class="col-10">
+                        <div class="d-flex flex-column">
+                            <p class="one-line fs-16 mb-2" title="Не загружается документ" data-bs-toggle="offcanvas"
+                                data-bs-target="#offcanvasMessages" aria-controls="offcanvasMessages">Не загружается
+                                документ</p>
+                            <span class="text-muted fs-12">от 26.12.23 10:34</span>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="d-flex flex-column align-items-center justify-content-end h-100">
+                            <div class="px-2">
+                                <span class="badge rounded-circle bg-danger">5</span>
+                            </div>
+                            <div>
+                                <button class="btn btn-icon btn-sm" type="button" data-bs-toggle="dropdown"><i
+                                        class="bi bi-three-dots"></i></button>
+                                <ul class="dropdown-menu fs-12">
+                                    <li><a class="dropdown-item" href="#">Действие №1</a></li>
+                                    <li><a class="dropdown-item" href="#">Действие номер №2</a></li>
+                                    <li><a class="dropdown-item" href="#">Ещё одно действие</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-active p-2 mb-2">
+                <div class="row">
+                    <div class="col-10">
+                        <div class="d-flex flex-column">
+                            <p class="one-line fs-16 mb-2" title="Не загружается документ, а ещё текст"
+                                data-bs-toggle="offcanvas" data-bs-target="#offcanvasMessages"
+                                aria-controls="offcanvasMessages">Не загружается
+                                документ, а ещё текст</p>
+                            <span class="text-muted fs-12">от 26.12.23 10:34</span>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="d-flex flex-column align-items-center justify-content-end h-100">
+                            <div>
+                                <button class="btn btn-icon btn-sm" type="button" data-bs-toggle="dropdown"><i
+                                        class="bi bi-three-dots"></i></button>
+                                <ul class="dropdown-menu fs-12">
+                                    <li><a class="dropdown-item" href="#">Действие №1</a></li>
+                                    <li><a class="dropdown-item" href="#">Действие номер №2</a></li>
+                                    <li><a class="dropdown-item" href="#">Ещё одно действие</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-active p-2 mb-2">
+                <div class="row">
+                    <div class="col-10">
+                        <div class="d-flex flex-column">
+                            <p class="one-line fs-16 mb-2" title="Не загружается документ" data-bs-toggle="offcanvas"
+                                data-bs-target="#offcanvasMessages" aria-controls="offcanvasMessages">Не загружается
+                                документ</p>
+                            <span class="text-muted fs-12">от 26.12.23 10:34</span>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="d-flex flex-column align-items-center justify-content-end h-100">
+                            <div class="px-2">
+                                <span class="badge rounded-circle bg-danger">5</span>
+                            </div>
+                            <div>
+                                <button class="btn btn-icon btn-sm" type="button" data-bs-toggle="dropdown"><i
+                                        class="bi bi-three-dots"></i></button>
+                                <ul class="dropdown-menu fs-12">
+                                    <li><a class="dropdown-item" href="#">Действие №1</a></li>
+                                    <li><a class="dropdown-item" href="#">Действие номер №2</a></li>
+                                    <li><a class="dropdown-item" href="#">Ещё одно действие</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Чат Сообщения -->
+    <div class="offcanvas offcanvas-end bg-F3F4F6" tabindex="-1" id="offcanvasMessages"
+        aria-labelledby="offcanvasMessagesLabel">
+        <div class="offcanvas-header">
+            <p class="h5 offcanvas-title fw-600" id="offcanvasMessagesLabel">Чат</p>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+
+            <div class="card card-chat">
+                <div class="card-header">
+                    <a href="#offcanvasChat" data-bs-toggle="offcanvas" aria-controls="offcanvasChat">
+                        <div class="d-flex align-items-center">
+                            <i class="bi bi-arrow-left text-primary me-2"></i> <span class="fs-14">Не загружается
+                                документ</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="card-body">
+                    <div class="d-flex flex-column fs-14 mb-2">
+                        <p class="text-muted fw-700 mb-2">Специалист</p>
+                        <p class="mb-2"><span class="me-2">10.05.2022</span><span>14:00</span></p>
+                        <p class="mb-2">Течение среды облучает термодинамический пульсар. Исследователями из разных
+                            лабораторий неоднократно наблюдалось, как осциллятор пространственно ускоряет векторный
+                            солитон.</p>
+                        <div>
+                            <button class="btn btn-icon btn-sm" type="button" data-bs-toggle="dropdown"><i
+                                    class="bi bi-three-dots"></i></button>
+                            <ul class="dropdown-menu fs-12">
+                                <li><a class="dropdown-item" href="#">Действие №1</a></li>
+                                <li><a class="dropdown-item" href="#">Действие номер №2</a></li>
+                                <li><a class="dropdown-item" href="#">Ещё одно действие</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column fs-14 mb-2">
+                        <p class="text-muted fw-700 mb-2">Специалист</p>
+                        <p class="mb-2"><span class="me-2">10.05.2022</span><span>14:00</span></p>
+                        <p class="mb-2">Течение среды облучает термодинамический пульсар. Исследователями из разных
+                            лабораторий неоднократно наблюдалось, как осциллятор пространственно ускоряет векторный
+                            солитон.</p>
+                        <div>
+                            <button class="btn btn-icon btn-sm" type="button" data-bs-toggle="dropdown"><i
+                                    class="bi bi-three-dots"></i></button>
+                            <ul class="dropdown-menu fs-12">
+                                <li><a class="dropdown-item" href="#">Действие №1</a></li>
+                                <li><a class="dropdown-item" href="#">Действие номер №2</a></li>
+                                <li><a class="dropdown-item" href="#">Ещё одно действие</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column fs-14 mb-2 bg-F0EEFF p-2 rounded-3">
+                        <p class="mb-2"><span class="me-2">10.05.2022</span><span>14:00</span></p>
+                        <p class="mb-2">Течение среды облучает термодинамический пульсар. Исследователями из разных
+                            лабораторий неоднократно наблюдалось, как осциллятор пространственно ускоряет векторный
+                            солитон.</p>
+                        <div>
+                            <button class="btn btn-icon btn-sm" type="button" data-bs-toggle="dropdown"><i
+                                    class="bi bi-three-dots"></i></button>
+                            <ul class="dropdown-menu fs-12">
+                                <li><a class="dropdown-item" href="#">Действие №1</a></li>
+                                <li><a class="dropdown-item" href="#">Действие номер №2</a></li>
+                                <li><a class="dropdown-item" href="#">Ещё одно действие</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="offcanvas-header">
+            <div class="d-flex align-items-center w-100">
+                <textarea class="form-control fs-14" rows="3" data-kt-element="input"
+                    placeholder="Написать сообщение"></textarea>
+                <div class="d-flex flex-column ms-1">
+                    <button class="btn btn-sm btn-icon" type="button">
+                        <i class="bi bi-paperclip"></i>
+                    </button>
+                    <button class="btn btn-sm btn-icon text-primary" type="button">
+                        <i class="bi bi-send-fill"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Оформить полис Модалка -->
+    <div class="modal fade modal-drawUpPolis" id="drawUpPolis-modal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="nav flex-column drawUpPolis-nav">
+                        <a class="nav-link" href="#">КАСКО</a>
+                        <a class="nav-link" href="#">ОСАГО</a>
+                        <a class="nav-link" href="#">Гражданская отвественность</a>
+                        <a class="nav-link" href="#">Страхование дома</a>
+                        <a class="nav-link" href="#">Страхование квартиры</a>
+                        <a class="nav-link" href="#">Страхование ипотеки</a>
+                        <a class="nav-link" href="#">Страхование от несчастного случая</a>
+                        <a class="nav-link" href="#">Страхование выезжающих за рубеж</a>
+                        <a class="nav-link" href="#">Страхование от критических и онкологических заболеваний</a>
+                        <a class="nav-link" href="#">Добровольное медицинское трахование</a>
+                        <a class="nav-link" href="#">Иное</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Оформить полис Оффканвас -->
+    <div class="offcanvas offcanvas-end offcanvas-drawUpPolis" id="drawUpPolis-offcanvas" tabindex="-1">
+        <div class="offcanvas-header justify-content-end">
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="nav flex-column drawUpPolis-nav">
+                <a class="nav-link" href="#">КАСКО</a>
+                <a class="nav-link" href="#">ОСАГО</a>
+                <a class="nav-link" href="#">Гражданская отвественность</a>
+                <a class="nav-link" href="#">Страхование дома</a>
+                <a class="nav-link" href="#">Страхование квартиры</a>
+                <a class="nav-link" href="#">Страхование ипотеки</a>
+                <a class="nav-link" href="#">Страхование от несчастного случая</a>
+                <a class="nav-link" href="#">Страхование выезжающих за рубеж</a>
+                <a class="nav-link" href="#">Страхование от критических и онкологических заболеваний</a>
+                <a class="nav-link" href="#">Добровольное медицинское трахование</a>
+                <a class="nav-link" href="#">Иное</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/fancybox.umd.js"></script>
+    <script src="js/imask.js"></script>
+    <script src="js/choices.min.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
