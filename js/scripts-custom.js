@@ -23,10 +23,12 @@ if( document.querySelector('.pin-code-wrap') ) {
 	});
 };
 
-const stringCoundown = 'Повторно запросить код через <span data-countdown-submit="true"></span>';
-let remainingTime = 60;
+const stringCoundown = 'Повторно запросить код через <span data-countdown-submit="true">01:00</span>';
+const remainingTimeOut = 60;
 
 function countDownSubmit() {
+
+	let remainingTime = remainingTimeOut;
 
 	const $countDownPlace = document.querySelector('[data-place-countdown]');
 
