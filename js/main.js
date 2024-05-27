@@ -156,7 +156,7 @@ document.querySelectorAll('.card-hidden-text').forEach(element => {
     });
 });
 
-const rewardItems = document.querySelectorAll('.reward-item');
+let rewardItems = document.querySelectorAll('.reward-item');
 
 if (rewardItems.length) {
     rewardItems.forEach(item => {

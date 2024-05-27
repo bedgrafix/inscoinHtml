@@ -425,6 +425,91 @@
                                     <div class="d-flex chat-message message-incoming">Для оформления полиса требуется осмотр ТС. Для оформления полиса требуется осмотр ТС. Окончательный расчет. Стоимость полиса рассчитана Для оформления полиса требуется осмотр ТС. Для оформления полиса требуется осмотр ТС. Окончательный расчет. Стоимость полиса рассчитана</div>
                                     <div class="text-center text-muted fs-12 mt-4 mb-3">Сегодня</div>
                                     <div class="d-flex chat-message message-outgoing">Расчет произведён с франшизой: 15000 Рублей</div>
+
+                                    <div class="d-flex flex-column chat-message message-outgoing">
+                                        <div class="chat-message--top d-flex flex-nowrap gap-10 justify-content-between align-items-center"><span class="chat-message--top-user fs-12">Вы</span><span class="chat-message--top-time fs-10">12:00</span></div>
+                                        <div class="row g-0 align-items-center">
+                                            <div class="col">
+                                                <div class="rounded-3">
+                                                    <div class="grid-msg-btn">
+                                                        <div class="grid-msg-btn--col">
+                                                            <div class="row-previews">
+                                                                <div class="row-previews--col">
+                                                                    <div class="row-previews--img-wrap">
+                                                                        <img class="w-100" src="https://placehold.co/100x100" alt="">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row-previews--col">
+                                                                    <div class="row-previews--img-wrap">
+                                                                        <img class="w-100" src="https://placehold.co/100x100" alt="">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row-previews--col">
+                                                                    <div class="row-previews--img-wrap">
+                                                                        <img class="w-100" src="https://placehold.co/100x100" alt="">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row-previews--col">
+                                                                    <div class="row-previews--img-wrap row-previews--img-wrap-more">
+                                                                        <span class="fs-18 fw-600 row-previews--text-more">+ 3</span>
+                                                                        <img class="w-100" src="https://placehold.co/100x100" alt="">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="grid-msg-btn--col">
+                                                            <div class="d-flex">
+                                                                <div class="p-0">
+                                                                    <button type="button" class="btn btn-icon btn-sm" style="color: #fff" data-bs-toggle="dropdown"><i class="bi bi-three-dots-vertical"></i></button>
+                                                                    <ul class="dropdown-menu fs-12">
+                                                                        <li><a class="dropdown-item" href="/download/6647018c70d34">Скачать</a></li>
+                                                                        <li>
+                                                                            <a href="javascript:void(0)" class="dropdown-item text-danger fs-12" onclick="deleteChatMsgDigitization('387')">Удалить</a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex flex-column chat-message message-incoming">
+                                        <div class="chat-message--top d-flex flex-nowrap gap-10 justify-content-between align-items-center"><span class="chat-message--top-user fs-12">Username</span><span class="chat-message--top-time fs-10">12:00</span></div>
+                                        <div class="row g-0 align-items-center">
+                                            <div class="col">
+                                                <div class="rounded-3">
+                                                    <div class="grid-msg-btn">
+                                                        <div class="grid-msg-btn--col">
+                                                            <div class="row-previews">
+                                                                <div class="row-previews--col">
+                                                                    <div class="row-previews--img-wrap">
+                                                                        <img class="w-100" src="https://placehold.co/100x100" alt="">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="grid-msg-btn--col">
+                                                            <div class="d-flex">
+                                                                <div class="p-0">
+                                                                    <button type="button" class="btn btn-icon btn-sm" style="color: #fff" data-bs-toggle="dropdown"><i class="bi bi-three-dots-vertical"></i></button>
+                                                                    <ul class="dropdown-menu fs-12">
+                                                                        <li><a class="dropdown-item" href="/download/6647018c70d34">Скачать</a></li>
+                                                                        <li>
+                                                                            <a href="javascript:void(0)" class="dropdown-item text-danger fs-12" onclick="deleteChatMsgDigitization('387')">Удалить</a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
                                 </div>
                             </div>
                             <div class="offcanvas-footer section-chat__footer">
@@ -662,7 +747,10 @@
                 <div class="col">
                     <div class="card card-bonus">
                         <div class="p-3 pb-0">
-                            <img class="card-img" src="img/card-bonus-cover-01.jpg" alt="">
+                            <div class="card-img-wrap">
+                                <span class="card-label-img">8%</span>
+                                <img class="card-img" src="img/card-bonus-cover-01.jpg" alt="">
+                            </div>
                         </div>
                         <div class="card-body">
                             <p class="card-title">Страхование выезжающих за рубеж</p>
@@ -675,7 +763,10 @@
                 <div class="col">
                     <div class="card card-bonus">
                         <div class="p-3 pb-0">
-                            <img class="card-img" src="img/card-bonus-cover-02.jpg" alt="">
+                            <div class="card-img-wrap">
+                                <span class="card-label-img">8%</span>
+                                <img class="card-img" src="img/card-bonus-cover-02.jpg" alt="">
+                            </div>
                         </div>
                         <div class="card-body">
                             <p class="card-title">Страхование от критических заболеваний</p>
@@ -688,7 +779,10 @@
                 <div class="col">
                     <div class="card card-bonus">
                         <div class="p-3 pb-0">
-                            <img class="card-img" src="img/card-bonus-cover-03.jpg" alt="">
+                            <div class="card-img-wrap">
+                                <span class="card-label-img">8%</span>
+                                <img class="card-img" src="img/card-bonus-cover-03.jpg" alt="">
+                            </div>
                         </div>
                         <div class="card-body">
                             <p class="card-title">Страхование квартиры</p>
@@ -701,7 +795,10 @@
                 <div class="col">
                     <div class="card card-bonus">
                         <div class="p-3 pb-0">
-                            <img class="card-img" src="img/card-bonus-cover-04.jpg" alt="">
+                            <div class="card-img-wrap">
+                                <span class="card-label-img">8%</span>
+                                <img class="card-img" src="img/card-bonus-cover-04.jpg" alt="">
+                            </div>
                         </div>
                         <div class="card-body">
                             <p class="card-title">Добровольное медицинское страхование</p>
@@ -714,7 +811,10 @@
                 <div class="col">
                     <div class="card card-bonus">
                         <div class="p-3 pb-0">
-                            <img class="card-img" src="img/card-bonus-cover-01.jpg" alt="">
+                            <div class="card-img-wrap">
+                                <span class="card-label-img">8%</span>
+                                <img class="card-img" src="img/card-bonus-cover-01.jpg" alt="">
+                            </div>
                         </div>
                         <div class="card-body">
                             <p class="card-title">Страхование выезжающих за рубеж</p>
@@ -727,7 +827,10 @@
                 <div class="col">
                     <div class="card card-bonus">
                         <div class="p-3 pb-0">
-                            <img class="card-img" src="img/card-bonus-cover-02.jpg" alt="">
+                            <div class="card-img-wrap">
+                                <span class="card-label-img">8%</span>
+                                <img class="card-img" src="img/card-bonus-cover-02.jpg" alt="">
+                            </div>
                         </div>
                         <div class="card-body">
                             <p class="card-title">Страхование от критических заболеваний</p>
@@ -740,7 +843,10 @@
                 <div class="col">
                     <div class="card card-bonus">
                         <div class="p-3 pb-0">
-                            <img class="card-img" src="img/card-bonus-cover-03.jpg" alt="">
+                            <div class="card-img-wrap">
+                                <span class="card-label-img">8%</span>
+                                <img class="card-img" src="img/card-bonus-cover-03.jpg" alt="">
+                            </div>
                         </div>
                         <div class="card-body">
                             <p class="card-title">Страхование квартиры</p>
@@ -753,7 +859,10 @@
                 <div class="col">
                     <div class="card card-bonus">
                         <div class="p-3 pb-0">
-                            <img class="card-img" src="img/card-bonus-cover-04.jpg" alt="">
+                            <div class="card-img-wrap">
+                                <span class="card-label-img">8%</span>
+                                <img class="card-img" src="img/card-bonus-cover-04.jpg" alt="">
+                            </div>
                         </div>
                         <div class="card-body">
                             <p class="card-title">Добровольное медицинское страхование</p>
