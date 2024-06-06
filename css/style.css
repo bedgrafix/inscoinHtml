@@ -2339,10 +2339,7 @@ img {
 .card-doc {
     min-height: 90px;
 }
-/*.card-doc .text-muted {
-    padding-right: 86px;
-}*/
-/*news styles not commited*/
+/*load files*/
 .row-previews {
     display: flex;
     justify-content: flex-end;
@@ -2399,4 +2396,10 @@ img {
         max-width: 50%;
     }
 }
-/*end new styles not commited*/
+.hidden-col {
+    display: none;
+}
+.offcanvas-chat .row-previews--text-more {
+    color: #fff;
+}
+/*end load files*/
