@@ -2345,6 +2345,10 @@ img {
 }
 .card-doc {
     min-height: 90px;
+    height: 100%;
+}
+.card-doc .card-body {
+    padding-right: 90px;
 }
 /*load files*/
 .row-previews {
