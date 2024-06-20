@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create notification</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/fancybox.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body class="bg-F3F4F6">
+
+    <header class="sticky-heading header sticky-top">
+        <nav class="navbar navbar-expand-xxl bg-white shadow">
+            <div class="container">
+                <a class="navbar-brand d-none d-xxl-flex hover-opacity" href="#">
+                    <img src="img/logo.svg" alt="Logo">
+                </a>
+                <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="bi bi-grid"></i>
+                </button>
+                <div class="offcanvas offcanvas-end offcanvas-navbar" tabindex="-1" id="navbarNav">
+                    <div class="offcanvas-header">
+                        <button type="button" class="btn btn-icon btn-sm border-0" data-bs-dismiss="offcanvas" aria-label="Close">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="9" height="15" viewBox="0 0 9 15" fill="none">
+                                <path d="M7.78265 0.75C7.96865 0.75 8.14431 0.822332 8.27864 0.966998C8.52664 1.246 8.50598 1.66966 8.23731 1.91766L1.65592 7.84926L8.27867 13.5842C8.55767 13.8322 8.568 14.2559 8.32 14.5349C8.07201 14.8036 7.64834 14.8242 7.36934 14.5762L0.24026 8.38659C-0.0800708 8.09726 -0.0800708 7.60126 0.24026 7.31193L7.32798 0.925664C7.46232 0.801664 7.61732 0.75 7.78265 0.75Z" fill="#747782"/>
+                            </svg>
+                        </button>
+                        <a class="navbar-brand" href="#">
+                            <img src="img/logo.svg" alt="Logo">
+                        </a>
+                        <div style="width: 2rem;"></div>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav ms-xxl-4 me-xxl-auto">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span>Договоры</span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#"><span>Договоры</span></a></li>
+                                    <li><a class="dropdown-item" href="#"><span>Генеральные договора</span></a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="#"><span>Цифра</span></a></li>
+                            <li class="nav-item"><a class="nav-link" href="#"><span>Пользователи</span></a></li>
+                            <li class="nav-item"><a class="nav-link" href="#"><span>Настройки</span></a></li>
+                            <li class="nav-item"><a class="nav-link" href="#"><span>Финансы</span></a></li>
+                            <li class="nav-item"><a class="nav-link" href="#"><span>Аналитика</span></a></li>
+                        </ul>
+
+                    </div>
+                </div>
+
+                <div class="d-flex gap-2 gap-xxl-4 align-items-center">
+                    <div class="d-flex gap-2 align-items-center">
+                        <button type="button" class="btn btn-primary btn-sm px-2 px-lg-3" data-bs-toggle="offcanvas"
+                            data-bs-target="#drawUpPolis-offcanvas"><i class="bi bi-plus-circle-fill"></i><span
+                                class="d-none d-md-inline ms-2"> Оформить
+                                полис</span></button>
+                        <div class="d-flex gap-2 align-items-center">
+                            <button type="button" class="btn btn-icon btn-sm border-0 position-relative"
+                                data-bs-toggle="offcanvas" data-bs-target="#offcanvasChat"
+                                aria-controls="offcanvasChat">
+                                <i class="bi bi-chat-left-dots"></i>
+                                <span class="badge badge-chat rounded-circle bg-red">4</span>
+                            </button>
+                            <button type="button" class="btn btn-icon btn-sm border-0 position-relative">
+                                <i class="bi bi-bell"></i>
+                            </button>
+                        </div>
+                        <div class="bg-F0EEFF rounded-3 fs-12 p-2">
+                            <span class="text-black">3 578, 00</span>
+                            <span class="text-primary">INS</span>
+                        </div>
+                    </div>
+
+                    <div class="d-flex gap-2 gap-xxl-4 align-items-center">
+                        <a href="#">
+                            <div class="avatar-container">
+                                <img src="img/avatar.jpg" class="avatar img-fluid" alt="avatar">
+                            </div>
+                        </a>
+                        <button type="button" class="btn btn-icon border-0 d-none d-xxl-inline-block" style="--btn-icon-size: 1.5rem;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="25" viewBox="0 0 22 25" fill="none">
+                                <path d="M9.44902 12.25H16.621M16.621 12.25L14.3798 10.0278M16.621 12.25L14.3798 14.4722M16.621 7.36111V5.25C16.621 4.69772 16.2196 4.25 15.7245 4.25H6.75953C6.26442 4.25 5.86304 4.69772 5.86304 5.25V19.25C5.86304 19.8023 6.26442 20.25 6.75953 20.25H15.7245C16.2196 20.25 16.621 19.8023 16.621 19.25V17.1389" stroke="#747782" stroke-width="1.21105" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+
+        <section class="section">
+            <div class="container">
+                <div class="row pt-3">
+                    <div class="col-lg-3 d-none d-lg-block y-lg-scroll">
+                        <div class="d-flex flex-column py-4 px-3 px-xlg-4">
+                            <nav class="d-flex flex-column">
+                                <a href="#" class="fs-14 d-flex align-items-center gap-2 mb-3">
+                                    <i class="bi bi-plus-circle-fill color-primary-1 fs-16"></i>
+                                    <span>Создать уведомление</span>
+                                </a>
+                                <a href="#" class="fs-14 d-flex align-items-center gap-2 mb-3">
+                                    <i class="bi bi-people fs-16"></i>
+                                    <span>Создать уведомление</span>
+                                </a>
+                                <a href="#" class="fs-14 d-flex align-items-center gap-2 mb-3">
+                                    <i class="bi bi-clock-history fs-16"></i>
+                                    <span>История</span>
+                                </a>
+                                <a href="#" class="fs-14 d-flex align-items-center gap-2 mb-3">
+                                    <i class="bi bi-list-check fs-16"></i>
+                                    <span>Шаблоны</span>
+                                </a>
+                                <a href="#" class="fs-14 d-flex align-items-center gap-2 mb-3">
+                                    <i class="bi bi-journals fs-16"></i>
+                                    <span>Черновики</span>
+                                </a>
+                                <a href="#" class="fs-14 d-flex align-items-center gap-2 mb-3">
+                                    <i class="bi bi-box-seam fs-16"></i>
+                                    <span>Архив</span>
+                                </a>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="col-lg-9 px-lg-0">
+                        <div class="p-4">
+                            <h2 class="fs-16 mb-3">Создание уведомлений</h2>
+                            <div class="rounded-3 bg-white p-3 p-lg-4">
+                                <form>
+                                    <div class="row g-3 mb-4">
+                                        <div class="col-12">
+                                            <label class="form-label fs-14">Тема</label>
+                                            <input type="text" class="form-control fs-14">
+                                        </div>
+                                        <div class="col-12">
+                                            <label class="form-label fs-14">Текст</label>
+                                            <textarea class="form-control fs-14" rows="9" data-kt-element="input" placeholder="Написать сообщение"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="row gx-2 gy-3 mb-5">
+                                        <div class="col-12 col-xl-4">
+                                            <input type="file" style="display: none;" id="attach-file">
+                                            <label for="attach-file" class="fs-14 fw-600 bg-white color-74777F cursor-pointer w-100 border border-1 rounded-3 text-center py-1 px-3">
+                                                <img class="d-inline" src="./img/clip.svg">
+                                                <span>Прикрепить файл</span>
+                                            </label>
+                                        </div>
+                                        <div class="col-12 col-xl-4">
+                                            <div class="select-filter fs-14 fw-600 bg-white color-74777F cursor-pointer w-100 border border-1 rounded-3 text-start py-1 px-3" data-bs-toggle="dropdown" data-bs-auto-close="outside">
+                                                <span>Девайс</span>
+                                            </div>
+                                            <div class="dropdown-menu shadow fs-14 ms-3 ms-lg-0 mt-2">
+                                                <div class="dropdown-item">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value="" id="alert-desktop">
+                                                        <label class="form-check-label" for="alert-desktop">Desktop</label>
+                                                    </div>
+                                                </div>
+                                                <div class="dropdown-item">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value="" id="alert-mobile">
+                                                        <label class="form-check-label" for="alert-mobile">Mobile</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="d-none d-xl-block col-6 col-lg-4">
+                                            <div class="fs-14 fw-600 bg-white color-74777F cursor-pointer w-100 border border-1 rounded-3 text-center py-1 px-3">
+                                                <i class="bi bi-eye"></i>
+                                                <span>Посмотреть тест</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-xl-4">
+                                            <input type="text" placeholder="Имя отправителя" class="fs-14 fw-600 bg-white color-74777F cursor-pointer w-100 border border-1 rounded-3 text-left py-1 px-3">
+                                        </div>
+                                        <div class="col-12 col-xl-4">
+                                            <div class="select-filter fs-14 fw-600 bg-white color-74777F cursor-pointer w-100 border border-1 rounded-3 text-start py-1 px-3" data-bs-toggle="dropdown" data-bs-auto-close="outside">
+                                                <span>Доступно пользователям</span>
+                                            </div>
+                                            <div class="dropdown-menu shadow fs-14 ms-3 ms-lg-0 mt-2">
+                                                <div class="dropdown-item">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value="" id="alert-desktop">
+                                                        <label class="form-check-label" for="alert-desktop">Все</label>
+                                                    </div>
+                                                </div>
+                                                <div class="dropdown-item">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value="" id="alert-mobile">
+                                                        <label class="form-check-label" for="alert-mobile">Агенты</label>
+                                                    </div>
+                                                </div>
+                                                <div class="dropdown-item">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value="" id="alert-mobile">
+                                                        <label class="form-check-label" for="alert-mobile">Клиенты</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-xl-4">
+                                            <div class="fs-14 fw-600 bg-white color-74777F cursor-pointer w-100 border border-1 rounded-3 text-center py-1 px-3">
+                                                <i class="bi bi-save"></i>
+                                                <span>Сохранить</span>
+                                            </div>
+                                        </div>
+                                        <div class="d-xl-none col-6 col-xl-4">
+                                            <div class="fs-14 fw-600 bg-white color-74777F cursor-pointer w-100 border border-1 rounded-3 text-center py-1 px-3">
+                                                <i class="bi bi-eye"></i>
+                                                <span>Посмотреть тест</span>
+                                            </div>
+                                        </div>
+                                        <div class="cols-12 col-xl-4 ms-xlg-auto">
+                                            <button type="button" class="btn btn-primary btn-sm fw-600 w-100 py-1 px-3">Отправить уведомление</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer bg-F3F4F6">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/fancybox.umd.js"></script>
+    <script src="js/imask.js"></script>
+    <script src="js/choices.min.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
