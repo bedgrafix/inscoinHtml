@@ -2434,3 +2434,45 @@ img {
     padding: 0;
     text-align: left;
 }
+
+/* page alerts */
+
+.float-right {
+    float: right;
+}
+.clear-fix:after {
+    content: '';
+    clear: both;
+    display: table;
+}
+.line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.preview-card {
+    height: 110px;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.preview-card-btn {
+    position: absolute;
+    top: 3px;
+    right: 4px;
+}
+.preview-grid-columns {
+    grid-template-columns: 1fr 1fr;
+}
+@media (min-width: 992px) {
+    .preview-grid-columns {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+.btn.color-primary-1.show,
+.btn.color-primary-1:hover {
+    color: var(--color-primary-1);
+}
+/* end page alerts */
