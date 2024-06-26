@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ru">
 
@@ -149,10 +150,14 @@
                                             <textarea class="form-control fs-14" rows="9" data-kt-element="input" placeholder="Написать сообщение"></textarea>
                                         </div>
                                     </div>
+                                    <div class="row mb-3 mb-lg-4">
+                                        <div class="cols-12 d-flex gap-2" data-files-preview="true">
+                                    </div>
+                                    </div>
                                     <div class="row gx-2 gy-3 mb-5">
-                                        <div class="col-12 col-xl-4">
-                                            <input type="file" style="display: none;" id="attach-file">
-                                            <label for="attach-file" class="fs-14 fw-600 bg-white color-74777F cursor-pointer w-100 border border-1 rounded-3 text-center py-1 px-3">
+                                        <div class="col-12 col-xl-4" >
+                                            <input type="file" style="display: none;" id="attach-file" data-load-files="true">
+                                            <label data-load-files-btn="true" for="attach-file" class="fs-14 fw-600 bg-white color-74777F cursor-pointer w-100 border border-1 rounded-3 text-center py-1 px-3">
                                                 <img class="d-inline" src="./img/clip.svg">
                                                 <span>Прикрепить файл</span>
                                             </label>
@@ -365,6 +370,115 @@
             <div class="text-muted fs-10 fs-lg-12 text-end mt-4">22.05.2024 14:42</div>
         </div>
     </div>
+
+    <script>
+        function upload(selector, options) {
+        let files = [];
+        const input = document.querySelector(selector);
+        let preview = document.createElement('div');
+
+        if( options.previewSelector ) preview = document.querySelector(options.previewSelector);
+
+        // options
+
+        const showPreview = options.showPreview ? options.showPreview : false;
+        const showName = options.showName ? options.showName : true;
+
+        // end options
+
+        preview.classList.add('b-load-files__list');
+
+        let open = null;
+        if( !options.btnSelector ) {
+            open = document.createElement('button');    
+            open.classList.add('b-btn');
+            open.textContent = 'Загрузить файлы';
+        } else {
+            open = document.querySelector(options.btnSelector);
+        }
+
+
+        if( options.multi ){
+            input.setAttribute('multiple', true);
+        }
+
+        if( options.accept && Array.isArray(options.accept) ) {
+            input.setAttribute('accept', options.accept.join(','));
+        }
+
+        if( !options.previewSelector ) input.insertAdjacentElement('afterend', preview);
+        input.insertAdjacentElement('afterend', open);
+
+
+        const triggerInput = () => input.click();
+
+        const changeHandler = event => {
+            if (!event.target.files.length) return;
+
+
+            preview.innerHTML = '';
+            files = Array.from(event.target.files)
+
+            files.forEach( file => {
+
+                let isImage = false;
+                if( file.type.match('image') ) isImage = true;
+
+                const reader = new FileReader();
+
+                reader.onload = e => {
+
+                    const src = e.target.result;
+
+                    preview.insertAdjacentHTML('afterbegin', `
+                        <div class="b-load-files__list-item filter-badge fs-12 bg-F3F4F6 rounded-pill">
+                            ${(showPreview && isImage) ? `<img src="${src}" alt="${file.name}" />` : ``}
+                            ${showName ? `<span >${file.name}</span>` : ``}
+                            <button type="button" class="btn-close b-load-files__remove" data-name="${file.name}"></button>
+                        </div>
+                    `);
+
+                }
+
+                reader.readAsDataURL(file);
+
+
+            });
+        }
+
+
+        const removeHandler = (e) => {
+
+            if (!e.target.dataset.name) return;
+
+            const {name} = e.target.dataset;
+
+            files = files.filter(file => file.name !== name);
+
+            const block = preview
+                .querySelector(`[data-name="${name}"]`)
+                .closest('.b-load-files__list-item');
+
+            block.remove();
+
+        }
+
+        open.addEventListener('click', triggerInput);
+        input.addEventListener('change', changeHandler);
+        preview.addEventListener('click', removeHandler);
+
+    }
+
+    const options = {
+        multi: true,
+        // accept: ['.png', '.jpg', '.svg', '.pdf', '.xlx'],
+        btnSelector: '[data-load-files-btn]',
+        showPreview: false, // default is false
+        showName: true, // default is true
+        previewSelector: '[data-files-preview]'
+    }
+    upload('[data-load-files]', options);
+    </script>
 
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/fancybox.umd.js"></script>
