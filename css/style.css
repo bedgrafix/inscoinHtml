@@ -373,6 +373,14 @@ img {
     font-size: 10px;
 }
 
+.bg-light-purple {
+    background-color: #F0EEFF;
+}
+
+.w-18 {
+    width: 18px;
+}
+
 @media (min-width: 992px) {
 
     .fs-lg-28 {
@@ -1823,11 +1831,13 @@ img {
     font-size: 22px;
     font-weight: 700;
 }
-.offcanvas-doc {
+.offcanvas-doc,
+.offcanvas-custom-size {
     --bs-offcanvas-width: 514px;
 }
 
-.offcanvas-doc .btn-icon.btn-sm {
+.offcanvas-doc .btn-icon.btn-sm,
+.offcanvas-custom-size .btn-icon.btn-sm {
     --btn-icon-size: 22px;
 }
 
@@ -2285,7 +2295,8 @@ img {
     }
 
     .offcanvas-bonuses,
-    .offcanvas-doc {
+    .offcanvas-doc,
+    .offcanvas-custom-size {
         border-radius: 10px 0 0 10px;
     }
 
