@@ -1017,6 +1017,13 @@ img {
     color: #74777F;
 }
 
+.gray-link {
+    color: #74777F;
+}
+.gray-link:hover {
+    color: var(--bs-link-hover-color-rgb);
+}
+
 .filter-badge {
     position: relative;
     display: flex;
