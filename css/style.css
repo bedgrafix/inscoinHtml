@@ -256,6 +256,9 @@ textarea {
 .btn-icon.btn-sm {
     --btn-icon-size: 2rem;
 }
+.btn-icon.btn-xsm {
+    --btn-icon-size: 1.5rem;
+}
 
 /*//////////////////////////////////////////////////////////////////
 [ + ANIMATIONS ]*/
@@ -681,7 +684,13 @@ img {
 .offcanvas-navbar {
     --bs-offcanvas-width: 100%;
 }
-
+.offcanvas.transparent-header {
+    padding-top: 74px;
+    z-index: 1019;
+}
+.offcanvas.gray-body .offcanvas-body {
+    background-color: #F3F4F6;
+}
 .breadcrumb {
     --bs-breadcrumb-font-size: 12px;
     --bs-breadcrumb-margin-bottom: 0;
@@ -2492,5 +2501,8 @@ img {
 .btn.color-primary-1.show,
 .btn.color-primary-1:hover {
     color: var(--color-primary-1);
+}
+.resize-none {
+    resize: none;
 }
 /* end page alerts */
