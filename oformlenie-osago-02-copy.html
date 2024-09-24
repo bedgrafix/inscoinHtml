@@ -347,6 +347,41 @@
                                         </div>
                                     </div>
                                 </div>
+
+                                <!-- item -->
+                                <div class="card-hidden-text bg-white rounded-4 p-3 p-lg-4">
+                                    <div class="d-flex gap-3 flex-column flex-lg-row">
+                                        <div class="d-flex gap-3 w-100">
+                                            <div class="flex-shrink-0">
+                                                <svg class="icon-arrow" xmlns="http://www.w3.org/2000/svg" width="32" height="33" viewBox="0 0 32 33" fill="none">
+                                                    <rect width="32" height="32" rx="8" transform="matrix(1 0 0 -1 0 32.0796)" fill="black" fill-opacity="0.05"/>
+                                                    <path d="M10.2664 13.2462C10.2664 13.0962 10.3248 12.9546 10.4414 12.8462C10.6664 12.6462 11.0081 12.6629 11.2081 12.8796L15.9917 18.1872L20.6167 12.8462C20.8167 12.6212 21.1584 12.6129 21.3834 12.8129C21.6 13.0129 21.6167 13.3545 21.4167 13.5795L16.425 19.3288C16.1917 19.5872 15.7917 19.5872 15.5584 19.3288L10.4081 13.6129C10.3081 13.5046 10.2664 13.3796 10.2664 13.2462Z" fill="#747782"/>
+                                                </svg>
+                                            </div>
+                                            <div class="d-flex gap-2 flex-wrap flex-lg-nowrap justify-content-between w-100">
+    
+                                                <div class="d-flex gap-2 flex-grow-1 flex-shrink-0 order-lg-1">
+                                                    <div class="flex-shrink-0">
+                                                        <img src="img/square-logo-vorota.png" alt="" width="48" height="48">
+                                                    </div>
+                                                    <div class="fs-14 fw-600" style="width: 130px;">Тинькофф Страхование</div>
+                                                </div>
+    
+                                                <div class="order-lg-3">
+                                                    <span class="text-nowrap fs-14 fw-600">15 788 ₽</span>
+                                                </div>
+    
+                                                <div class="text-container fs-14 hidden-text flex-grow-1 w-100 order-lg-2">
+                                                    <p>Для оформления полиса требуется осмотр ТС. Окончательный расчет. Стоимость полиса</p>
+                                                </div>
+    
+                                            </div>
+                                        </div>
+                                        <div class="flex-grow-1 flex-lg-grow-0">
+                                            <button type="button" class="btn btn-outline-black btn-sm px-0 px-lg-0 w-100 w-lg-100px" data-bs-toggle="modal" data-bs-target="#documentOffline-modal">Оформление offline</button>
+                                        </div>
+                                    </div>
+                                </div>
     
                                 <!-- item -->
                                 <div class="card-hidden-text bg-white rounded-4 p-3 p-lg-4">
@@ -1111,6 +1146,25 @@
                             
                         <p>(Основное ВУ. Дата выдачи) Строка не соотвествует маске регистрационного номера указанного государства, предусмотренной для транспортного средства данного типа (Основной документ. ГРН)</p>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модалка оформление offline -->
+    <div class="modal modal-sm fade" id="documentOffline-modal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <p class="modal-title">Оформление offline</p>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body pt-0">
+                    <div class="fs-14">
+                        <p class="mb-2">Менеджер приступит к оформлению в ближайшее время.<br/></p>
+                        <p class="color-74777F">Сроки выполнения 30-60 минут. </p>
+                    </div>
+                    <button class="btn btn-primary btn-mds px-2 px-lg-3 w-100" type="button">Создать заявку</button>
                 </div>
             </div>
         </div>
