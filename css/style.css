@@ -655,6 +655,9 @@ img {
     --bs-dropdown-header-padding-x: 1rem;
     --bs-dropdown-header-padding-y: 0.5rem;
 }
+.dropdown-menu.dropdown-normal-wrap .dropdown-item {
+    white-space: normal;
+}
 
 .dropdown-item {
     border-radius: var(--bs-dropdown-border-radius);

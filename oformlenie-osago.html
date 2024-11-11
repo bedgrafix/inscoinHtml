@@ -117,6 +117,140 @@
                                 <div class="text-center fs-14 alert-title">Данные успешно сохранены</div>
                             </div>
 
+                            <!-- item new previous data -->
+
+                            <div class="bg-white rounded-4 p-4 mb-3">
+                                <button type="button" class="btn-oformlenie collapsed" data-bs-toggle="collapse" data-bs-target="#oformlenie-uslovia" aria-expanded="false" aria-controls="oformlenie-uslovia">
+                                    <span class="fs-14 fw-600">Данные предыдущего полиса</span>
+                                </button>
+                                <div class="collapse" id="oformlenie-uslovia">
+                                    <div class="pt-4">
+                                        <div class="fs-14 mb-3">
+                                            <p>Заполните данные, пожалуйста, для проверки спецпредложения. Если данные подойдут (КБМ нового полиса ниже или равен прошлому, а также будут безразрывные сроки страхования)  на следующем этапе мы покажем расчет.</p>
+                                        </div>
+                                        <div class="row g-3 mb-2">
+                                            <div class="col-lg-4">
+                                                <div class="position-relative">
+                                                    <label class="form-label fs-14">Предыдущая СК</label>
+                                                    <input type="text" class="form-control fs-14" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <ul class="dropdown-menu dropdown-normal-wrap w-100">
+                                                        <li>
+                                                            <a class="dropdown-item" href="#">
+                                                                <div class="d-flex flex-column">
+                                                                    <span>ООО "Абсолют Страхование"</span>
+                                                                </div>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="dropdown-item" href="#">
+                                                                <div class="d-flex flex-column">
+                                                                    <span>ООО "СФ "Адонис"</span>
+                                                                </div>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="dropdown-item" href="#">
+                                                                <div class="d-flex flex-column">
+                                                                    <span>АО "АльфаСтрахование"</span>
+                                                                </div>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="dropdown-item" href="#">
+                                                                <div class="d-flex flex-column">
+                                                                    <span>АО СК "Армеец"</span>
+                                                                </div>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <label class="form-label fs-14">Серия номер договора</label>
+                                                <input type="text" class="form-control fs-14">
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <div class="position-relative">
+                                                    <label class="form-label fs-14">КБМ по полису</label>
+                                                    <input type="text" class="form-control fs-14" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <ul class="dropdown-menu w-100">
+                                                        <li>
+                                                            <a class="dropdown-item" href="#">
+                                                                <div class="d-flex flex-column">
+                                                                    <span>3,92</span>
+                                                                </div>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="dropdown-item" href="#">
+                                                                <div class="d-flex flex-column">
+                                                                    <span>2,94</span>
+                                                                </div>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="dropdown-item" href="#">
+                                                                <div class="d-flex flex-column">
+                                                                    <span>2,25</span>
+                                                                </div>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="dropdown-item" href="#">
+                                                                <div class="d-flex flex-column">
+                                                                    <span>1,76</span>
+                                                                </div>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <label class="form-label fs-14 mb-0">Сроки страхования</label>
+                                        <div class="row g-3 align-items-end mb-3">
+                                            <div class="col-lg-3">
+                                                <label class="form-label fs-14">Дата начала</label>
+                                                <input type="text" class="maskDate form-control fs-14">
+                                            </div>
+                                            <div class="col-lg-3">
+                                                <label class="form-label fs-14">Дата окончания</label>
+                                                <input type="text" class="maskDate form-control fs-14">
+                                            </div>
+                                            <div class="col-lg-3">
+                                                <select class="form-select fs-14">
+                                                    <option selected="">12 мес</option>
+                                                    <option value="1">10 мес</option>
+                                                    <option value="2">6 мес</option>
+                                                    <option value="3">3 мес</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="row g-2 mb-3">
+                                            <div class="col-lg-12">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" checked="">
+                                                    <label class="form-check-label fs-14">
+                                                        Период равен сроку страхования
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-12">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" checked="">
+                                                    <label class="form-check-label fs-14">
+                                                        Убытки по полису отсутствуют
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <span class="btn btn-secondary btn-sm px-2 px-lg-3"><i class="bi bi-search"></i> Найти договор</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
                             <!-- item Условия -->
                             <div class="bg-white rounded-4 p-4 mb-3">
                                 <button type="button" class="btn-oformlenie collapsed" data-bs-toggle="collapse" data-bs-target="#oformlenie-uslovia" aria-expanded="false" aria-controls="oformlenie-uslovia">
@@ -124,7 +258,7 @@
                                 </button>
                                 <div class="collapse" id="oformlenie-uslovia">
                                     <div class="pt-4">
-                                        <p class="fs-14 fw-600 mb-4">Данные из предыдего полиса</p>
+                                        <p class="fs-14 fw-600 mb-4">Данные из предыдущего полиса</p>
                                         <div class="row g-3">
                                             <div class="col-lg-6">
                                                 <!-- Комментарий дизайнера: -->
