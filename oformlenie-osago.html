@@ -1172,8 +1172,9 @@
                                             </div>
                                             <div class="col-lg-4">
                                                 <label class="form-label fs-14">Категория *</label>
-                                                <select class="form-select fs-14">
+                                                <select class="form-select fs-14" data-change-category="max_weight" data-show-with-val="4">
                                                     <option selected="">Легковой автомобиль</option>
+                                                    <option value="4">Грузовые автомобили</option>
                                                     <option value="1">Легковой автомобиль 1</option>
                                                     <option value="2">Легковой автомобиль 2</option>
                                                     <option value="3">Легковой автомобиль 3</option>
@@ -1218,7 +1219,11 @@
                                                 <label class="form-label fs-14">Мощность (л.с.) *</label>
                                                 <input type="text" class="form-control fs-14" required>
                                             </div>
-                                            <div class="col-lg-5">
+                                            <div class="col-lg-4 d-none" data-id="max_weight" data-show-val="4">
+                                                <label class="form-label fs-14">Максимальная масса</label>
+                                                <input type="text" class="form-control fs-14" required>
+                                            </div>
+                                            <div class="col-lg-4">
                                                 <label class="form-label fs-14">Цель использования *</label>
                                                 <select class="form-select fs-14">
                                                     <option selected="">Личная</option>

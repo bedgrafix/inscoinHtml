@@ -153,6 +153,10 @@ textarea {
     display: block;
 }
 
+.text-green {
+    color: #16D090;
+}
+
 /*//////////////////////////////////////////////////////////////////
 [ + BUTTONS ]*/
 
@@ -1364,6 +1368,14 @@ img {
 .card-hidden-text {
     cursor: pointer;
 }
+
+@media (min-width: 992px) {
+    .card-hidden-text__btn-wrap {
+        flex-basis: 200px;
+        flex-shrink: 0;
+    }
+}
+
 
 .card-hidden-text .icon-arrow {
     transform: rotate(0deg);

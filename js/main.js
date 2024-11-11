@@ -4,6 +4,27 @@ Author: Andrey Galkin
 Version: 1.0
 */
 
+document.addEventListener('change', e => {
+
+    const $target = e.target.closest('[data-change-category]');
+
+    if( $target ) {
+
+        const id = $target.getAttribute('data-change-category');
+        const showVal = $target.getAttribute('data-show-with-val');
+        const $syncBlock = document.querySelector(`[data-id="${id}"]`);
+
+
+        if( showVal == $target.value ) {
+            $syncBlock.classList.remove('d-none');
+        } else {
+            $syncBlock.classList.add('d-none');
+        }
+
+    }
+
+});
+
 //////////////////////////////////////////////////////////////////
 // [ Enable popovers ]
 
@@ -229,3 +250,4 @@ pinContainer.addEventListener('keydown', function (event) {
     var target = event.srcElement;
     target.value = "";
 }, false);
+
