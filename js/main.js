@@ -6,24 +6,113 @@ Version: 1.0
 
 document.addEventListener('change', e => {
 
-    const $target = e.target.closest('[data-change-category]');
+    const $target = e.target.closest('[data-change-trigger]');
 
     if( $target ) {
 
-        const id = $target.getAttribute('data-change-category');
+        const id = $target.getAttribute('data-change-trigger');
         const showVal = $target.getAttribute('data-show-with-val');
         const $syncBlock = document.querySelector(`[data-id="${id}"]`);
 
 
-        if( showVal == $target.value ) {
+        if( showVal == $target.value || showVal == $target.checked.toString() ) {
             $syncBlock.classList.remove('d-none');
         } else {
             $syncBlock.classList.add('d-none');
         }
 
     }
+});
+
+
+const inputs = document.querySelectorAll('[data-sync-id]');
+
+function updateDateMask(el) {
+    IMask(el, {
+        mask: Date,
+        min: new Date(1900, 0, 1),
+        lazy: false
+    });
+}
+
+inputs.forEach(input => {
+    input.addEventListener('input', () => {
+        const syncGroup = input.getAttribute('data-sync-id');
+        const value = input.value;
+        const $syncInputs = document.querySelectorAll(`[data-sync-id='${syncGroup}']`);
+
+        // Синхронизируем все инпуты с тем же атрибутом data-sync
+
+        $syncInputs.forEach(otherInput => {
+            if (otherInput !== input) {
+                otherInput.value = value;
+
+                updateDateMask(otherInput);
+                calcPoliseEnd(otherInput);
+
+            }
+        });
+    });
+});
+
+
+
+function getFormattedDate(date) {
+    let day = String(date.getDate()).padStart(2, '0'); // ДД
+    let month = String(date.getMonth() + 1).padStart(2, '0'); // ММ (месяцы начинаются с 0)
+    let year = date.getFullYear(); // ГГГГ
+
+    return `${day}${month}${year}`;
+}
+
+function addMonths(date, months) {
+    const newDate = new Date(date);
+    newDate.setMonth(newDate.getMonth() + months);
+    return newDate;
+}
+
+
+document.addEventListener('input', e => {
+    const $target = e.target.closest('[data-polise-start]');
+
+
+    if( $target ) {
+
+
+        if($target.value.replace(/[._]/g, '').length == 8) {
+
+            console.log('calc polise')
+            calcPoliseEnd($target);
+
+        }
+
+    }
 
 });
+
+function calcPoliseEnd($target) {
+    const selectedMonth = +$target.closest('[data-polise-parent]').querySelector('[data-polise-month]').value;
+    const $poliseEnd = $target.closest('[data-polise-parent]').querySelector('[data-polise-end]');
+
+    let date = new Date(Date.parse($target.value));
+
+    let newDate = addMonths(date, selectedMonth)
+
+    newDate = getFormattedDate(newDate)
+
+    $poliseEnd.value = newDate;
+
+    updateDateMask($poliseEnd);
+}
+
+
+document.addEventListener('change', e => {
+    if( e.target.closest('[data-polise-month]') ) {
+        calcPoliseEnd(e.target.closest('[data-polise-parent]').querySelector('[data-polise-start]'));
+    }
+});
+
+
 
 //////////////////////////////////////////////////////////////////
 // [ Enable popovers ]

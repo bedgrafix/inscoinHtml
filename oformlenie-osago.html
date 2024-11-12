@@ -56,7 +56,6 @@
                             <li class="nav-item"><a class="nav-link" href="#"><span>Финансы</span></a></li>
                             <li class="nav-item"><a class="nav-link" href="#"><span>Аналитика</span></a></li>
                         </ul>
-
                     </div>
                 </div>
 
@@ -120,10 +119,10 @@
                             <!-- item new previous data -->
 
                             <div class="bg-white rounded-4 p-4 mb-3">
-                                <button type="button" class="btn-oformlenie collapsed" data-bs-toggle="collapse" data-bs-target="#oformlenie-uslovia" aria-expanded="false" aria-controls="oformlenie-uslovia">
+                                <button type="button" class="btn-oformlenie collapsed" data-bs-toggle="collapse" data-bs-target="#previous_police" aria-expanded="false" aria-controls="oformlenie-uslovia">
                                     <span class="fs-14 fw-600">Данные предыдущего полиса</span>
                                 </button>
-                                <div class="collapse" id="oformlenie-uslovia">
+                                <div class="collapse" id="previous_police">
                                     <div class="pt-4">
                                         <div class="fs-14 mb-3">
                                             <p>Заполните данные, пожалуйста, для проверки спецпредложения. Если данные подойдут (КБМ нового полиса ниже или равен прошлому, а также будут безразрывные сроки страхования)  на следующем этапе мы покажем расчет.</p>
@@ -250,6 +249,76 @@
                                 </div>
                             </div>
 
+                            <div class="bg-white rounded-4 p-4 mb-3">
+                                <button type="button" class="btn-oformlenie collapsed" data-bs-toggle="collapse" data-bs-target="#insurance_terms" aria-expanded="false" aria-controls="oformlenie-uslovia">
+                                    Сроки страхования нового полиса
+                                </button>
+                                <div class="collapse" id="insurance_terms">
+                                        <div class="row g-3 align-items-end" data-polise-parent="true">
+                                            <div class="col-lg-3">
+                                                <label class="form-label fs-14">Дата начала</label>
+                                                <input type="text" class="maskDate form-control fs-14" data-sync-id="polise_start" data-polise-start="true">
+                                            </div>
+                                            <div class="col-lg-3">
+                                                <label class="form-label fs-14">Дата окончания</label>
+                                                <input type="text" class="maskDate form-control fs-14 disabled-control" data-polise-end="true">
+                                            </div>
+                                            <div class="col-lg-3">
+                                                <select class="form-select fs-14 disabled-control" data-polise-month="true">
+                                                    <option selected="" value="12">12 мес</option>
+                                                    <option value="10">10 мес</option>
+                                                    <option value="6">6 мес</option>
+                                                    <option value="3">3 мес</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-lg-12">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" id="insurance_period" type="checkbox" checked="" data-change-trigger="period" data-show-with-val="false" >
+                                                    <label class="form-check-label fs-14">
+                                                        Период равен сроку страхования
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row g-3 align-items-end d-none" data-id="period" data-polise-parent="true">
+                                            <div class="col-lg-12" >
+                                                <div class="p-2 mb-2">
+                                                    <div class="row g-3 align-items-center">
+                                                        <div class="col-6 col-lg-3 order-lg-1">
+                                                            <span class="fs-14 fw-600">Период страхования</span>
+                                                        </div>
+                                                        <div class="col-6 col-lg-1 text-end order-lg-3">
+                                                            <label><button type="button" class="btn btn-icon btn-sm"><i class="bi bi-trash3"></i></button></label>
+                                                        </div>
+                                                        <div class="col-12 col-lg-8 order-lg-2">
+                                                            <div class="row g-3">
+                                                                <div class="col-lg-4">
+                                                                    <input type="text" class="maskDate form-control fs-14" data-sync-id="polise_start" data-polise-start="true">
+                                                                </div>
+                                                                <div class="col-lg-4">
+                                                                    <input type="text" class="maskDate form-control fs-14 disabled-control" data-polise-end="true">
+                                                                </div>
+                                                                <div class="col-lg-4">
+                                                                    <select class="form-select fs-14" data-polise-month="true">
+                                                                        <option selected="" value="12">12 мес</option>
+                                                                        <option value="10">10 мес</option>
+                                                                        <option value="6">6 мес</option>
+                                                                        <option value="3">3 мес</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+<!--                                             <div class="col-lg-12">
+                                                <button type="button" class="btn btn-secondary btn-sm px-2 px-lg-3"><i class="bi bi-plus"></i> Добавить период</button>
+                                            </div> -->
+                                        </div>
+                                </div>
+                            </div>
+
+
 
                             <!-- item Условия -->
                             <div class="bg-white rounded-4 p-4 mb-3">
@@ -317,7 +386,7 @@
                                                 </div>
                                             </div>
                                             <div class="col-lg-12">
-                                                <div class="bg-F3F4F6 rounded-2 p-2 mb-2">
+                                                <div class=" rounded-2 p-2 mb-2">
                                                     <div class="row g-3 align-items-center">
                                                         <div class="col-6 col-lg-3 order-lg-1">
                                                             <span class="fs-14 fw-600">Период страхования</span>
@@ -1172,7 +1241,7 @@
                                             </div>
                                             <div class="col-lg-4">
                                                 <label class="form-label fs-14">Категория *</label>
-                                                <select class="form-select fs-14" data-change-category="max_weight" data-show-with-val="4">
+                                                <select class="form-select fs-14" data-change-trigger="max_weight" data-show-with-val="4">
                                                     <option selected="">Легковой автомобиль</option>
                                                     <option value="4">Грузовые автомобили</option>
                                                     <option value="1">Легковой автомобиль 1</option>

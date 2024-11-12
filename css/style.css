@@ -157,6 +157,12 @@ textarea {
     color: #16D090;
 }
 
+.disabled-control {
+    background-color: #F3F4F6;
+    color: #74777F;
+    pointer-events: none;
+}
+
 /*//////////////////////////////////////////////////////////////////
 [ + BUTTONS ]*/
 
