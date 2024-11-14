@@ -4,6 +4,15 @@ Author: Andrey Galkin
 Version: 1.0
 */
 
+document.addEventListener('click', e => {
+    const $target = e.target.closest('.dropdown-item');
+    if( $target && $target.closest('[data-dropdown-set-val]') ) {
+        e.preventDefault();
+        const $input = $target.closest('[data-dropdown-set-parent]').querySelector('[data-bs-toggle="dropdown"]');
+        if( $input ) $input.value = $target.querySelector('span').innerText;
+    }
+});
+
 document.addEventListener('change', e => {
 
     const $target = e.target.closest('[data-change-trigger]');
