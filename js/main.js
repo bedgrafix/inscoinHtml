@@ -65,9 +65,11 @@ function getFormattedDate(date) {
     return `${day}${month}${year}`;
 }
 
-function addMonths(date, months) {
+function addMonths(date, months, dayOut = 0) {
     const newDate = new Date(date);
+    // console.log(newDate)
     newDate.setMonth(newDate.getMonth() + months);
+    newDate.setDate(newDate.getDate() - dayOut);
     return newDate;
 }
 
@@ -75,28 +77,33 @@ function addMonths(date, months) {
 document.addEventListener('input', e => {
     const $target = e.target.closest('[data-polise-start]');
 
-
     if( $target ) {
 
-
         if($target.value.replace(/[._]/g, '').length == 8) {
-
-            console.log('calc polise')
             calcPoliseEnd($target);
-
         }
-
     }
 
 });
+
+function removeFirstLeadingZero(str) {
+    return str.replace(/^0/, '');
+}
 
 function calcPoliseEnd($target) {
     const selectedMonth = +$target.closest('[data-polise-parent]').querySelector('[data-polise-month]').value;
     const $poliseEnd = $target.closest('[data-polise-parent]').querySelector('[data-polise-end]');
 
-    let date = new Date(Date.parse($target.value));
+    // console.log(Date.parse($target.value))
 
-    let newDate = addMonths(date, selectedMonth)
+    const year = $target.value.split('.')[2];
+    const month = removeFirstLeadingZero($target.value.split('.')[1]) - 1;
+    const day = removeFirstLeadingZero($target.value.split('.')[0]);
+
+    let date = new Date(year, month, day);
+
+
+    let newDate = addMonths(date, selectedMonth, 1);
 
     newDate = getFormattedDate(newDate)
 

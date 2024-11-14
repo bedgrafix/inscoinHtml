@@ -123,6 +123,15 @@ textarea {
     overflow: auto;
 }
 
+.col-custom-data {
+    max-width: 116px;
+}
+@media (min-width: 1024px) {
+    .col-custom-data {
+        max-width: 138px;
+    }
+}
+
 .form-control:focus,
 .form-select:focus {
     border-color: var(--color-primary-1);
