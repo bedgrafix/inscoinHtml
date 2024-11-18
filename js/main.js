@@ -24,7 +24,7 @@ document.addEventListener('change', e => {
         const $syncBlock = document.querySelector(`[data-id="${id}"]`);
 
 
-        if( showVal == $target.value || showVal == $target.checked.toString() ) {
+        if( showVal == $target.value || ( typeof $target.checked != 'undefined' && showVal == $target.checked.toString()) ) {
             $syncBlock.classList.remove('d-none');
         } else {
             $syncBlock.classList.add('d-none');
