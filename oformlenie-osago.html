@@ -12,6 +12,9 @@
     <link rel="stylesheet" href="css/choices.min.css">
     <link rel="stylesheet" href="css/style.css">
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
+
 </head>
 
 <body class="bg-F3F4F6">
@@ -429,7 +432,7 @@
                                                                     <input type="text" class="maskDate form-control fs-14 disabled-control" data-polise-end="true">
                                                                 </div>
                                                                 <div class="col-lg-4">
-                                                                    <select class="form-select fs-14" data-polise-month="true">
+                                                                    <select class="form-select fs-14" data-select-to="true" data-polise-month="true">
                                                                         <option selected="" value="12">12 мес</option>
                                                                         <option value="10">10 мес</option>
                                                                         <option value="6">6 мес</option>
@@ -533,6 +536,8 @@
                                                                     <input type="text" class="maskDate form-control fs-14">
                                                                 </div>
                                                                 <div class="col-4 col-lg-4">
+
+
                                                                     <select class="form-select fs-14">
                                                                         <option selected="">12 мес</option>
                                                                         <option value="1">10 мес</option>
@@ -1715,6 +1720,22 @@
     <script src="js/imask.js"></script>
     <script src="js/choices.min.js"></script>
     <script src="js/main.js"></script>
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+
+    <script>
+        
+    $(document).ready(function() {
+        $('[data-select-to]').select2({
+            minimumResultsForSearch: Infinity
+        });
+        $('[data-select-to]').on('change', function(e) {
+            calcPoliseEnd(e.target.closest('[data-polise-parent]').querySelector('[data-polise-start]'));
+        });
+    });
+
+    </script>
 
 </body>
 
