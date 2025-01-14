@@ -19,3 +19,11 @@
 .grecaptcha-badge{
 	display: none!important;
 }
+
+.bg-green{
+	background-color: green;
+}
+
+.ta-center{
+	text-align: center;
+}
