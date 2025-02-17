@@ -304,3 +304,60 @@ if (rewardItems.length) {
 }
 
 ////////////////////////////////////////////////////////////////////
+
+// custom dropdown selection
+
+document.addEventListener('click', e => {
+
+    const $target = e.target.closest('.dropdown-item');
+
+    if( $target && $target.closest('.js-dropdown-selection') ) {
+
+        const $parent = $target.closest('.js-dropdown-selection');
+        const $titleContainer = $parent.querySelector('[data-dropdown-title]');
+        const title = $target.innerText;
+
+        $parent.classList.add('js-active');
+        $titleContainer.innerText = title;
+        $titleContainer.closest('.dropdown-toggle').classList.add('js-dropdown-clear');
+
+    }
+
+    if( e.target.closest('.js-dropdown-clear') ) {
+        const $target = e.target.closest('.js-dropdown-clear');
+        e.preventDefault();
+        e.stopPropagation();
+
+        const $titleContainer = $target.querySelector('[data-dropdown-title]');
+        $titleContainer.innerText = $titleContainer.getAttribute('data-dropdown-title');
+        $target.closest('.js-dropdown-selection').classList.remove('js-active');
+
+    }
+
+});
+
+document.addEventListener('keyup', e => {
+   const $target = e.target.closest('[data-search-input]');
+
+   if( $target ) {
+       const $parent = $target.closest('.search-data');
+       if( $target.value ) {
+           $parent.classList.add('js-filled');
+       } else {
+           $parent.classList.remove('js-filled');
+       }
+   }
+
+});
+
+document.addEventListener('click', e => {
+    const $target = e.target.closest('[data-clear-search]');
+
+    if( $target ) {
+        $target.closest('.search-data').classList.remove('js-filled');
+        $target.closest('.search-data').querySelector('.search-data__input').value = '';
+    }
+
+});
+
+// end custom dropdown selection
