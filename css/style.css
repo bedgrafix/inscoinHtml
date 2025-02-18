@@ -2476,6 +2476,11 @@ img {
         grid-row-start: 1;
     }
 }
+
+.mob-grid__img {
+    display: none;
+}
+
 @media (max-width: 576px) {
     .card-grid {
         grid-template-columns: auto 100px;
@@ -2495,6 +2500,17 @@ img {
     }
     .card-grid .col:nth-child(6) {
         grid-column-start: span 2;
+    }
+    .card-grid .col:nth-child(5) {
+        display: none;
+    }
+    .mob-grid {
+        display: grid;
+        grid-template-columns: 42px auto;
+        grid-gap: 15px;
+    }
+    .mob-grid__img {
+        display: block;
     }
 }
 
