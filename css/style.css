@@ -166,6 +166,10 @@ textarea {
     color: #16D090;
 }
 
+.text-green-dark {
+    color: #00A437;
+}
+
 .disabled-control {
     background-color: #F3F4F6;
     color: #74777F;
