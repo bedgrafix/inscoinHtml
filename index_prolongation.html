@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index new</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/fancybox.css">
+    <link rel="stylesheet" href="css/choices.min.css">
+
+    <link rel="stylesheet" href="css/datepicker.min.css">
+    <link rel="stylesheet" href="css/datepicker-bs5.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body class="bg-F3F4F6">
+
+    <header class="sticky-heading header sticky-top">
+        <nav class="navbar navbar-expand-xxl bg-white shadow">
+            <div class="container">
+                <a class="navbar-brand d-none d-xxl-flex hover-opacity" href="#">
+                    <img src="img/logo.svg" alt="Logo">
+                </a>
+                <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="bi bi-grid"></i>
+                </button>
+                <div class="offcanvas offcanvas-end offcanvas-navbar" tabindex="-1" id="navbarNav">
+                    <div class="offcanvas-header">
+                        <button type="button" class="btn btn-icon btn-sm border-0" data-bs-dismiss="offcanvas" aria-label="Close">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="9" height="15" viewBox="0 0 9 15" fill="none">
+                                <path d="M7.78265 0.75C7.96865 0.75 8.14431 0.822332 8.27864 0.966998C8.52664 1.246 8.50598 1.66966 8.23731 1.91766L1.65592 7.84926L8.27867 13.5842C8.55767 13.8322 8.568 14.2559 8.32 14.5349C8.07201 14.8036 7.64834 14.8242 7.36934 14.5762L0.24026 8.38659C-0.0800708 8.09726 -0.0800708 7.60126 0.24026 7.31193L7.32798 0.925664C7.46232 0.801664 7.61732 0.75 7.78265 0.75Z" fill="#747782"/>
+                            </svg>
+                        </button>
+                        <a class="navbar-brand" href="#">
+                            <img src="img/logo.svg" alt="Logo">
+                        </a>
+                        <div style="width: 2rem;"></div>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav ms-xxl-4 me-xxl-auto">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle active" href="#" role="button"
+                                   data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span>Договоры</span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#"><span>Договоры</span></a></li>
+                                    <li><a class="dropdown-item" href="#"><span>Генеральные договора</span></a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="#"><span>Цифра</span></a></li>
+                            <li class="nav-item"><a class="nav-link" href="#"><span>Пользователи</span></a></li>
+                            <li class="nav-item"><a class="nav-link" href="#"><span>Настройки</span></a></li>
+                            <li class="nav-item"><a class="nav-link" href="#"><span>Финансы</span></a></li>
+                            <li class="nav-item"><a class="nav-link" href="#"><span>Аналитика</span></a></li>
+                        </ul>
+
+                    </div>
+                </div>
+
+                <div class="d-flex gap-2 gap-xxl-4 align-items-center">
+                    <div class="d-flex gap-2 align-items-center">
+                        <button type="button" class="btn btn-primary btn-sm px-2 px-lg-3" data-bs-toggle="offcanvas"
+                                data-bs-target="#drawUpPolis-offcanvas"><i class="bi bi-plus-circle-fill"></i><span
+                                class="d-none d-md-inline ms-2"> Оформить
+                                        полис</span></button>
+                        <div class="d-flex gap-2 align-items-center">
+                            <button type="button" class="btn btn-icon btn-sm border-0 position-relative"
+                                    data-bs-toggle="offcanvas" data-bs-target="#offcanvasChat"
+                                    aria-controls="offcanvasChat">
+                                <i class="bi bi-chat-left-text-fill color-primary-1"></i>
+                                <span class="badge badge-chat rounded-circle bg-red">4</span>
+                            </button>
+                            <button type="button" class="btn btn-icon btn-sm border-0 position-relative">
+                                <i class="bi bi-bell-fill color-primary-1"></i>
+                            </button>
+                        </div>
+                        <div class="bg-F0EEFF rounded-3 fs-12 p-2 fw-600">
+                            <span class="text-black">3 578, 00</span>
+                            <span class="text-primary">INS</span>
+                        </div>
+                    </div>
+
+                    <div class="d-flex gap-2 gap-xxl-4 align-items-center">
+                        <a href="#">
+                            <div class="avatar-container">
+                                <img src="img/avatar.jpg" class="avatar img-fluid" alt="avatar">
+                            </div>
+                        </a>
+                        <button type="button" class="btn btn-icon border-0 d-none d-xxl-inline-block" style="--btn-icon-size: 1.5rem;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="25" viewBox="0 0 22 25" fill="none">
+                                <path d="M9.44902 12.25H16.621M16.621 12.25L14.3798 10.0278M16.621 12.25L14.3798 14.4722M16.621 7.36111V5.25C16.621 4.69772 16.2196 4.25 15.7245 4.25H6.75953C6.26442 4.25 5.86304 4.69772 5.86304 5.25V19.25C5.86304 19.8023 6.26442 20.25 6.75953 20.25H15.7245C16.2196 20.25 16.621 19.8023 16.621 19.25V17.1389" stroke="#747782" stroke-width="1.21105" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <!-- breadcrums -->
+        <section class="section py-3">
+            <div class="">
+                <div class="container">
+                    <nav class="d-flex justify-content-start" aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#">Страхование</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Мои полисы и расчеты</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </section>
+
+        <section class="section pb-2 d-none d-lg-block">
+            <div class="container">
+                <div class="d-flex flex-wrap gap-3">
+                    <div class="px-2 py-1 bg-white d-flex rounded-5 align-items-center gap-2">
+                        <img src="./img/osago.png">
+                        <div class="fs-14">
+                            <span class="d-block color-74777F fw-400">Оформить</span>
+                            <span class="d-block fw-600 text-black">ОСАГО</span>
+                        </div>
+                    </div>
+                    <div class="px-2 py-1 bg-white d-flex rounded-5 align-items-center gap-2">
+                        <img src="./img/kasko.png">
+                        <div class="fs-14">
+                            <span class="d-block color-74777F fw-400">Оформить</span>
+                            <span class="d-block fw-600 text-black">КАСКО</span>
+                        </div>
+                    </div>
+                    <div class="px-2 py-1 bg-white d-flex rounded-5 align-items-center gap-2">
+                        <img class="logo-rounded" src="./img/square-logo-ingosstrah.png">
+                        <div class="fs-14">
+                            <span class="d-block color-74777F fw-400">Продлить</span>
+                            <span class="d-block fw-600 text-black">ОСАГО Ингосстрах</span>
+                        </div>
+                    </div>
+                    <div class="px-2 py-1 bg-white d-flex rounded-5 align-items-center gap-2">
+                        <img class="logo-rounded" src="./img/square-alfa-logo.png">
+                        <div class="fs-14">
+                            <span class="d-block color-74777F fw-400">Продлить</span>
+                            <span class="d-block fw-600 text-black">ОСАГО Альфа</span>
+                        </div>
+                    </div>
+                    <div class="px-2 py-1 bg-white d-flex rounded-5 align-items-center gap-2">
+                        <img class="logo-rounded" src="./img/polise.png">
+                        <div class="fs-14">
+                            <span class="d-block fw-600 text-black">Добавить полис,</span>
+                            <span class="d-block color-74777F fw-400 fs-10">которого нет в списке</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section py-2">
+            <div class="container">
+                <div class="search-data-wrap d-flex flex-column flex-md-row gap-2">
+                    <div class="search-data">
+                        <input data-search-input="true" type="text" placeholder="Введите данные для поиска" class="search-data__input form-control rounded-4">
+                        <div class="search-data__group">
+                            <button type="button" class="search-data__clear" data-clear-search="true"><i class="bi bi-x-lg"></i></button>
+                            <div class="dropdown color-74777F js-dropdown-selection">
+                                <button class="dropdown-toggle search-data__dropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span data-dropdown-title="Статус">Статус</span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item active" href="#"><span>Действует</span></a></li>
+                                    <li><a class="dropdown-item" href="#"><span>На оплате</span></a></li>
+                                    <li><a class="dropdown-item" href="#"><span>Срок истек</span></a></li>
+                                </ul>
+                            </div>
+                            <button class="search-data__btn color-74777F"><i class="bi bi-search"></i></button>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary btn-sm rounded-4 align-items-center">Открыть пролонгацию<i class="bi bi-x-lg btn__remove"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <section class="section py-3">
+            <div class="container">
+                <div class="card border-0 card-insurance p-3 mb-1">
+                    <div class="card-grid">
+                        <div class="d-none d-sm-block col">
+                            <div class="d-flex flex-column align-items-start gap-1">
+                                <span class="fs-14 color-22242A fw-600">10.01.2025</span>
+                                <span class="fs-14 color-777A82">Дата создания</span>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="mob-grid">
+                                <img class="flex-shrink-0 mob-grid__img" src="img/square-logo-sber.png" alt="Райффайзен Лайф Страхование">
+                                <div class="d-flex flex-column align-items-start gap-1">
+                                    <span class="fs-14 fw-600">Нефедов Алексей Богданович</span>
+                                    <div class="d-flex gap-1 flex-wrap text-muted fs-12 fw-600">
+                                        <div class="bg-F3F4F6 rounded-3 py-1 px-2">Mitsubishi Outlander III 2.0</div>
+                                        <div class="bg-F3F4F6 rounded-3 py-1 px-2">P906MC799</div>
+                                        <div class="bg-F3F4F6 rounded-3 py-1 px-2">2018</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="py-1 bg-white d-flex rounded-5 align-items-center gap-2">
+                                <img src="./img/osago.png">
+                                <div class="fs-14 d-flex flex-column gap-1">
+                                    <span class="fw-600 text-black one-line">ОСАГО</span>
+                                    <span class="color-74777F fw-400">XXX0123456000</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="d-flex flex-column align-items-start gap-1">
+                                <span class="color-22242A fw-600 fs-14">9 044,00 ₽</span>
+                                <span class="fs-12 fw-600 border text-success border-success rounded-2 p-1 px-2 w-100 text-center">Действует</span>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="d-flex align-items-center" style="max-width: 200px; gap: 12px;">
+                                <img class="flex-shrink-0" src="img/square-logo-sber.png" alt="Райффайзен Лайф Страхование">
+                                <div class="fs-14 fw-600">Райффайзен Лайф Страхование</div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="d-flex justify-content-between">
+                                <div class="d-flex flex-column align-items-start">
+                                    <span class="fs-12 fs-lg-14 fw-600 one-line">Климентовский А. А.</span>
+                                    <span class="fs-lg-10 fs-lg-14 text-muted">Создатель</span>
+                                </div>
+                                <div class="d-flex flex-column align-items-end">
+                                    <span class="fw-600 fs-12 fs-lg-14 w-100">по&nbsp;&nbsp;10.01.2026</span>
+                                    <a href="#" class="btn btn-primary px-2 py-1 py-lg-0 fs-12 fs-lg-14 fw-600">Продлить</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/fancybox.umd.js"></script>
+    <script src="js/imask.js"></script>
+    <script src="js/choices.min.js"></script>
+
+    <script src="js/echarts.min.js"></script>
+    <script src="js/datepicker-full.min.js"></script>
+    <script src="js/datepicker-ru.js"></script>
+
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
