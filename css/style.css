@@ -1110,6 +1110,11 @@ img {
     border-radius: 16px;
     background-color: transparent;
 }
+@media (max-width: 576px) {
+    .tab-link {
+        font-size: 12px;
+    }
+}
 
 .tab-link.active {
     background-color: #fff;
