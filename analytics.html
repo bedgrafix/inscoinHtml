@@ -122,11 +122,11 @@
 
                 <!-- Фильтры ПК -->
                 <div class="d-none d-lg-block mb-4">
-                    <div class="row gx-2">
+                    <div class="row gx-2 flex-nowrap">
                         <!-- Все операции -->
                         <div class="col">
                             <div class="select-filter fs-14 fw-600 bg-white color-74777F cursor-pointer w-100 border border-1 rounded-3 text-start py-2 px-3" data-bs-toggle="dropdown">
-                                <span>Все операции</span>
+                                <span class="single-line">Все операции</span>
                             </div>
                             <ul class="dropdown-menu shadow fs-14 ms-3 ms-lg-0 mt-2">
                                 <li><a class="dropdown-item" href="#">Текущая неделя</a></li>
@@ -140,7 +140,7 @@
                         <!-- По пользователю -->
                         <div class="col">
                             <div class="select-filter fs-14 fw-600 bg-white color-74777F cursor-pointer w-100 border border-1 rounded-3 text-start py-2 px-3" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
-                                <span>По пользователю</span>
+                                <span class="single-line">По пользователю</span>
                             </div>
                             <div class="dropdown-menu shadow fs-14 ms-3 ms-lg-0 mt-2">
                                 <div class="dropdown-item">
@@ -178,7 +178,7 @@
                         <!-- По компании -->
                         <div class="col">
                             <div class="select-filter fs-14 fw-600 bg-white color-74777F cursor-pointer w-100 border border-1 rounded-3 text-start py-2 px-3" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
-                                <span>По компании</span>
+                                <span class="single-line">По компании</span>
                             </div>
                             <div class="dropdown-menu shadow fs-14 ms-3 ms-lg-0 mt-2">
                                 <div class="dropdown-item">
@@ -288,7 +288,7 @@
                         <!-- По продукту -->
                         <div class="col">
                             <div class="select-filter fs-14 fw-600 bg-white color-74777F cursor-pointer w-100 border border-1 rounded-3 text-start py-2 px-3" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
-                                <span>По продукту</span>
+                                <span class="single-line">По продукту</span>
                             </div>
                             <div class="dropdown-menu shadow fs-14 ms-3 ms-lg-0 mt-2">
                                 <div class="dropdown-item">
@@ -356,7 +356,7 @@
                         <!-- По подразделению -->
                         <div class="col">
                             <div class="select-filter fs-14 fw-600 bg-white color-74777F cursor-pointer w-100 border border-1 rounded-3 text-start py-2 px-3" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
-                                <span>По подразделению</span>
+                                <span class="single-line">По подразделению</span>
                             </div>
                             <div class="dropdown-menu shadow fs-14 ms-3 ms-lg-0 mt-2">
                                 <div class="dropdown-item">
@@ -393,11 +393,11 @@
                         </div>
                         <!-- Применить фильтр -->
                         <div class="col">
-                            <button type="button" class="btn btn-primary btn-sm fw-600 w-100 py-2 px-3">Применить фильтр</button>
+                            <button type="button" class="btn btn-primary btn-sm fw-600 w-100 px-2 py-0 line-btn">Применить фильтр</button>
                         </div>
                         <!-- Очистить фильтр -->
                         <div class="col">
-                            <button type="button" class="btn btn-sm text-primary fw-600 w-100 py-2 px-3">Очистить фильтр</button>
+                            <button type="button" class="btn btn-sm text-primary fw-600 w-100 px-2 py-0 line-btn">Очистить фильтр</button>
                         </div>
                     </div>
                 </div>
@@ -406,7 +406,7 @@
                 <div class="px-lg-3">
                     <div class="row gy-3 align-items-center">
 
-                        <div class="col-lg-5">
+                        <div class="col-lg-6 col-xl-5">
                             <div class="info-header-item">
 
                                 <div class="text-white fs-14 fs-lg-16 fw-600">Общая премия</div>
@@ -421,7 +421,7 @@
                                         </svg>
                                     </div>
                                     <div>
-                                        <div class="big-total text-white fs-20 fs-lg-28 fw-700">20 201 458 ₽</div>
+                                        <div class="big-total text-white fs-20 fs-lg-28 fw-700">1 065 458,81 ₽</div>
                                         <div class="text-white fs-12 fs-lg-14">100%</div>
                                     </div>
                                 </div>
@@ -433,7 +433,7 @@
                             </div>
                         </div>
 
-                        <div class="col-lg-5">
+                        <div class="col-lg-6 col-xl-5">
                             <div class="info-header-item">
                                 <div class="text-white fs-14 fs-lg-16 fw-600">Маржа</div>
                                 <div></div>
@@ -462,7 +462,7 @@
                             </div>
                         </div>
 
-                        <div class="col-lg-2 text-lg-end">
+                        <div class="col-lg-12 col-xl-2 text-lg-end">
                             <button type="button" class="btn btn-detailing btn-sm fw-600 px-2 px-lg-4"><i class="bi bi-download"></i><span class="ms-2"> Детализация</span></button>
                         </div>
 
@@ -489,24 +489,24 @@
                 </div>
 
                 <div class="row gy-3 tab-content">
-                    
+
                     <!-- Вкладка "Продукты" -->
-                    <div class="d-lg-block opacity-lg-1 col-lg-4 tab-pane fade show active" id="tab-analytics" role="tabpanel" tabindex="0">
+                    <div class="d-lg-block opacity-lg-1 col-lg-3 col-xl-4 tab-pane fade show active" id="tab-analytics" role="tabpanel" tabindex="0">
                         <div class="position-relative">
                             <!-- col-lg-4 -->
                             <div>
-            
+
                                 <!-- ПК заголовок -->
                                 <div class="section-column-title text-white fs-18 fw-600 ps-3">Продукты</div>
-            
+
                                 <!-- Контейнер для карточек -->
                                 <div class="card-analytics-column d-flex gap-3 flex-column">
-            
+
                                     <!-- Карточка 1 -->
                                     <div class="card card-analytics">
                                         <div class="card-body p-3">
                                             <div class="d-flex gap-3 align-items-center justify-content-between mb-2">
-                                                <div class="fs-14 fw-600">Страхование от несчастного случая</div>
+                                                <div class="fs-adaptive fw-600">Страхование от несчастного случая</div>
                                                 <div class="flex-shrink-0 text-muted fs-12 fw-600">751 шт.</div>
                                             </div>
                                             <div class="d-flex gap-3">
@@ -563,12 +563,12 @@
                                             </div>
                                         </div>
                                     </div>
-            
+
                                     <!-- Карточка 2 -->
                                     <div class="card card-analytics">
                                         <div class="card-body p-3">
                                             <div class="d-flex gap-3 align-items-center justify-content-between mb-2">
-                                                <div class="fs-14 fw-600">Добровольное медицинское страхование</div>
+                                                <div class="fs-adaptive fw-600">Добровольное медицинское страхование</div>
                                                 <div class="flex-shrink-0 text-muted fs-12 fw-600">51 шт.</div>
                                             </div>
                                             <div class="d-flex gap-3">
@@ -625,12 +625,12 @@
                                             </div>
                                         </div>
                                     </div>
-            
+
                                     <!-- Карточка 3 -->
                                     <div class="card card-analytics">
                                         <div class="card-body p-3">
                                             <div class="d-flex gap-3 align-items-center justify-content-between mb-2">
-                                                <div class="fs-14 fw-600">ВЗР</div>
+                                                <div class="fs-adaptive fw-600">ВЗР</div>
                                                 <div class="flex-shrink-0 text-muted fs-12 fw-600">51 шт.</div>
                                             </div>
                                             <div class="d-flex gap-3">
@@ -689,12 +689,12 @@
                                             </div>
                                         </div>
                                     </div>
-            
+
                                     <!-- Карточка 4 -->
                                     <div class="card card-analytics">
                                         <div class="card-body p-3">
                                             <div class="d-flex gap-3 align-items-center justify-content-between mb-2">
-                                                <div class="fs-14 fw-600">ОСАГО</div>
+                                                <div class="fs-adaptive fw-600">ОСАГО</div>
                                                 <div class="flex-shrink-0 text-muted fs-12 fw-600">51 шт.</div>
                                             </div>
                                             <div class="d-flex gap-3">
@@ -754,12 +754,12 @@
                                             </div>
                                         </div>
                                     </div>
-            
+
                                     <!-- Карточка 5 -->
                                     <div class="card card-analytics">
                                         <div class="card-body p-3">
                                             <div class="d-flex gap-3 align-items-center justify-content-between mb-2">
-                                                <div class="fs-14 fw-600">Гражданская ответственность</div>
+                                                <div class="fs-adaptive fw-600">Гражданская ответственность</div>
                                                 <div class="flex-shrink-0 text-muted fs-12 fw-600">51 шт.</div>
                                             </div>
                                             <div class="d-flex gap-3">
@@ -820,12 +820,12 @@
                                             </div>
                                         </div>
                                     </div>
-            
+
                                     <!-- Карточка 1 -->
                                     <div class="card card-analytics">
                                         <div class="card-body p-3">
                                             <div class="d-flex gap-3 align-items-center justify-content-between mb-2">
-                                                <div class="fs-14 fw-600">Страхование от несчастного случая</div>
+                                                <div class="fs-adaptive fw-600">Страхование от несчастного случая</div>
                                                 <div class="flex-shrink-0 text-muted fs-12 fw-600">751 шт.</div>
                                             </div>
                                             <div class="d-flex gap-3">
@@ -882,12 +882,12 @@
                                             </div>
                                         </div>
                                     </div>
-            
+
                                     <!-- Карточка 2 -->
                                     <div class="card card-analytics">
                                         <div class="card-body p-3">
                                             <div class="d-flex gap-3 align-items-center justify-content-between mb-2">
-                                                <div class="fs-14 fw-600">Добровольное медицинское страхование</div>
+                                                <div class="fs-adaptive fw-600">Добровольное медицинское страхование</div>
                                                 <div class="flex-shrink-0 text-muted fs-12 fw-600">51 шт.</div>
                                             </div>
                                             <div class="d-flex gap-3">
@@ -944,12 +944,12 @@
                                             </div>
                                         </div>
                                     </div>
-            
+
                                     <!-- Карточка 3 -->
                                     <div class="card card-analytics">
                                         <div class="card-body p-3">
                                             <div class="d-flex gap-3 align-items-center justify-content-between mb-2">
-                                                <div class="fs-14 fw-600">ВЗР</div>
+                                                <div class="fs-adaptive fw-600">ВЗР</div>
                                                 <div class="flex-shrink-0 text-muted fs-12 fw-600">51 шт.</div>
                                             </div>
                                             <div class="d-flex gap-3">
@@ -1008,12 +1008,12 @@
                                             </div>
                                         </div>
                                     </div>
-            
+
                                     <!-- Карточка 4 -->
                                     <div class="card card-analytics">
                                         <div class="card-body p-3">
                                             <div class="d-flex gap-3 align-items-center justify-content-between mb-2">
-                                                <div class="fs-14 fw-600">ОСАГО</div>
+                                                <div class="fs-adaptive fw-600">ОСАГО</div>
                                                 <div class="flex-shrink-0 text-muted fs-12 fw-600">51 шт.</div>
                                             </div>
                                             <div class="d-flex gap-3">
@@ -1073,12 +1073,12 @@
                                             </div>
                                         </div>
                                     </div>
-            
+
                                     <!-- Карточка 5 -->
                                     <div class="card card-analytics">
                                         <div class="card-body p-3">
                                             <div class="d-flex gap-3 align-items-center justify-content-between mb-2">
-                                                <div class="fs-14 fw-600">Гражданская ответственность</div>
+                                                <div class="fs-adaptive fw-600">Гражданская ответственность</div>
                                                 <div class="flex-shrink-0 text-muted fs-12 fw-600">51 шт.</div>
                                             </div>
                                             <div class="d-flex gap-3">
@@ -1139,24 +1139,24 @@
                                             </div>
                                         </div>
                                     </div>
-            
+
                                 </div>
                             </div>
                         </div>
                     </div>
 
                     <!-- Вкладка "Страховые компании" -->
-                    <div class="d-lg-block opacity-lg-1 col-lg-8 tab-pane fade" id="tab-insurance-companies" role="tabpanel" tabindex="0">
+                    <div class="d-lg-block opacity-lg-1 col-lg-9 col-xl-8 tab-pane fade" id="tab-insurance-companies" role="tabpanel" tabindex="0">
                         <div class="position-relative">
                             <!-- col-lg-8 -->
                             <div>
-                                
+
                                 <!-- ПК заголовок -->
                                 <div class="section-column-title text-white fs-18 fw-600 ps-3">Страховые компании</div>
-            
+
                                 <!-- Контейнер для карточек -->
                                 <div class="card-insurance-companies-column d-flex gap-3 flex-column">
-            
+
                                     <!-- Карточка 1 -->
                                     <div class="card card-insurance-companies">
                                         <div class="card-body p-3">
@@ -1321,7 +1321,7 @@
                                             </div>
                                         </div>
                                     </div>
-            
+
                                     <!-- Карточка 2 -->
                                     <div class="card card-insurance-companies">
                                         <div class="card-body p-3">
@@ -1486,7 +1486,7 @@
                                             </div>
                                         </div>
                                     </div>
-            
+
                                     <!-- Карточка 3 -->
                                     <div class="card card-insurance-companies">
                                         <div class="card-body p-3">
@@ -1651,7 +1651,7 @@
                                             </div>
                                         </div>
                                     </div>
-            
+
                                     <!-- Карточка 4 -->
                                     <div class="card card-insurance-companies">
                                         <div class="card-body p-3">
@@ -1816,7 +1816,7 @@
                                             </div>
                                         </div>
                                     </div>
-            
+
                                     <!-- Карточка 5 -->
                                     <div class="card card-insurance-companies">
                                         <div class="card-body p-3">
@@ -1981,9 +1981,9 @@
                                             </div>
                                         </div>
                                     </div>
-            
+
                                 </div>
-            
+
                             </div>
                         </div>
                     </div>

@@ -189,7 +189,7 @@
                                     <div class="mb-4">
                                         <div class="row gy-2 gx-2">
                                             <!-- За период -->
-                                            <div class="col-lg">
+                                            <div class="col-lg-4 col-xl">
                                                 <div class="select-filter fs-14 fw-600 bg-white color-74777F cursor-pointer w-100 border border-1 rounded-3 text-start py-2 px-3" data-bs-toggle="dropdown">
                                                     <span>За период</span>
                                                 </div>
@@ -202,16 +202,25 @@
                                                     <li><a class="dropdown-item" href="#">Выбрать период</a></li>
                                                 </ul>
                                             </div>
-                                            <!-- Все операции -->
-                                            <div class="col-lg">
-                                                <div class="select-filter fs-14 fw-600 bg-white color-74777F cursor-pointer w-100 border border-1 rounded-3 text-start py-2 px-3" data-bs-toggle="dropdown">
-                                                    <span>Все операции</span>
-                                                </div>
-                                                <ul class="dropdown-menu shadow fs-14 ms-3 ms-lg-0 mt-2">
-                                                    <li><a class="dropdown-item" href="#">Начисления</a></li>
-                                                    <li><a class="dropdown-item" href="#">Списания</a></li>
-                                                </ul>
+                                            <!-- ФИО -->
+                                            <div class="col-lg-4 col-xl">
+                                                <input class="form-control border fs-14 fw-placeholder-600 py-2 px-3 filters user-autocomplete suggestions-input" data-id="agent_id" placeholder="ФИО Страхователя" id="agent_title" name="agent_title" type="text" value="" autocomplete="new-password" autocorrect="off" autocapitalize="off" spellcheck="false" style="box-sizing: border-box;"><div class="suggestions-wrapper"><div class="suggestions-suggestions" style="display: none;"></div></div>
+                                                <input type="hidden" name="agent_id" value="0" class="filters">
                                             </div>
+                                            <!-- № полиса -->
+                                            <div class="col-lg-4 col-xl">
+                                                <input type="text" name="bso_title" class="form-control filters border fs-14 fw-placeholder-600 py-2 px-3 " placeholder="№ полиса">
+                                            </div>
+                                            <!-- Все операции -->
+<!--                                            <div class="col-lg">-->
+<!--                                                <div class="select-filter fs-14 fw-600 bg-white color-74777F cursor-pointer w-100 border border-1 rounded-3 text-start py-2 px-3" data-bs-toggle="dropdown">-->
+<!--                                                    <span>Все операции</span>-->
+<!--                                                </div>-->
+<!--                                                <ul class="dropdown-menu shadow fs-14 ms-3 ms-lg-0 mt-2">-->
+<!--                                                    <li><a class="dropdown-item" href="#">Начисления</a></li>-->
+<!--                                                    <li><a class="dropdown-item" href="#">Списания</a></li>-->
+<!--                                                </ul>-->
+<!--                                            </div>-->
                                             <!-- Применить фильтр -->
                                             <!-- Очистить фильтр -->
                                             <div class="col-lg-auto">
@@ -233,7 +242,7 @@
                                         <div class="card-body">
                                             <div class="row gy-3 align-items-center">
                                                 <div class="col-12 col-lg-4">
-                                                    <div class="d-flex gap-4 align-items-center justify-content-between justify-content-lg-start">
+                                                    <div class="d-flex flex-wrap gap-2 gap-xl-4 align-items-center justify-content-between justify-content-lg-start">
                                                         <div class="d-flex gap-2 gap-lg-3 align-items-center">
                                                             <div class="flex-shrink-0">
                                                                 <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
@@ -249,13 +258,13 @@
                                                         <div class="text-muted fs-12 fs-lg-14">XXX0355081464</div>
                                                     </div>
                                                 </div>
-                                                <div class="col-12 col-lg-5">
+                                                <div class="col-12 col-lg-4">
                                                     <div class="fs-14 fw-600">Безбородов Антон Дмитриевич</div>
                                                 </div>
-                                                <div class="col-12 col-lg-3">
+                                                <div class="col-12 col-lg-4">
                                                     <div class="d-flex gap-4 align-items-center justify-content-between">
                                                         <div class="text-muted fs-14">16 января 2024</div>
-                                                        <div class="badge border border-success text-success fs-12">+5000,00 ₽</div>
+                                                        <div class="badge border w-95px border-success text-success fs-12">+5000,00 ₽</div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -285,13 +294,13 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="col-12 col-lg-5">
+                                                <div class="col-12 col-lg-4">
                                                     <div class="fs-14 fw-600">Романовский Михаил Александрович</div>
                                                 </div>
-                                                <div class="col-12 col-lg-3">
+                                                <div class="col-12 col-lg-4">
                                                     <div class="d-flex gap-4 align-items-center justify-content-between">
                                                         <div class="text-muted fs-14">15 января 2024</div>
-                                                        <div class="badge border border-danger text-danger fs-12">-11 585,37 ₽</div>
+                                                        <div class="badge border w-95px border-danger text-danger fs-12">-11 585,37 ₽</div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -314,13 +323,13 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="col-12 col-lg-5">
+                                                <div class="col-12 col-lg-4">
                                                     <div class="fs-14 fw-600">Муравьев Никита Сергеевич</div>
                                                 </div>
-                                                <div class="col-12 col-lg-3">
+                                                <div class="col-12 col-lg-4">
                                                     <div class="d-flex gap-4 align-items-center justify-content-between">
                                                         <div class="text-muted fs-14">16 января 2024</div>
-                                                        <div class="badge border border-danger text-danger fs-12">-1 784,30 ₽</div>
+                                                        <div class="badge border w-95px border-danger text-danger fs-12">-1 784,30 ₽</div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -352,13 +361,13 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="col-12 col-lg-5">
+                                                <div class="col-12 col-lg-4">
                                                     <div class="fs-14 fw-600">Климентовский Алексей Андреевич</div>
                                                 </div>
-                                                <div class="col-12 col-lg-3">
+                                                <div class="col-12 col-lg-4">
                                                     <div class="d-flex gap-4 align-items-center justify-content-between">
                                                         <div class="text-muted fs-14">16 января 2024</div>
-                                                        <div class="badge border border-success text-success fs-12">+192 723,00 ₽</div>
+                                                        <div class="badge border w-95px border-success text-success fs-12">+192 723,00 ₽</div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -382,17 +391,17 @@
                                                             </div>
                                                             <div class="fs-14 fw-600">Договор</div>
                                                         </div>
-                                                        
+
                                                         <div class="text-muted fs-12 fs-lg-14">XXX0355081464</div>
                                                     </div>
                                                 </div>
-                                                <div class="col-12 col-lg-5">
+                                                <div class="col-12 col-lg-4">
                                                     <div class="fs-14 fw-600">Безбородов Антон Дмитриевич</div>
                                                 </div>
-                                                <div class="col-12 col-lg-3">
+                                                <div class="col-12 col-lg-4">
                                                     <div class="d-flex gap-4 align-items-center justify-content-between">
                                                         <div class="text-muted fs-14">16 января 2024</div>
-                                                        <div class="badge border border-success text-success fs-12">+5000,00 ₽</div>
+                                                        <div class="badge border w-95px border-success text-success fs-12">+5000,00 ₽</div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -422,13 +431,13 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="col-12 col-lg-5">
+                                                <div class="col-12 col-lg-4">
                                                     <div class="fs-14 fw-600">Романовский Михаил Александрович</div>
                                                 </div>
-                                                <div class="col-12 col-lg-3">
+                                                <div class="col-12 col-lg-4">
                                                     <div class="d-flex gap-4 align-items-center justify-content-between">
                                                         <div class="text-muted fs-14">15 января 2024</div>
-                                                        <div class="badge border border-danger text-danger fs-12">-11 585,37 ₽</div>
+                                                        <div class="badge border w-95px border-danger text-danger fs-12">-11 585,37 ₽</div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -451,13 +460,13 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="col-12 col-lg-5">
+                                                <div class="col-12 col-lg-4">
                                                     <div class="fs-14 fw-600">Муравьев Никита Сергеевич</div>
                                                 </div>
-                                                <div class="col-12 col-lg-3">
+                                                <div class="col-12 col-lg-4">
                                                     <div class="d-flex gap-4 align-items-center justify-content-between">
                                                         <div class="text-muted fs-14">16 января 2024</div>
-                                                        <div class="badge border border-danger text-danger fs-12">-1 784,30 ₽</div>
+                                                        <div class="badge border w-95px border-danger text-danger fs-12">-1 784,30 ₽</div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -489,21 +498,21 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="col-12 col-lg-5">
+                                                <div class="col-12 col-lg-4">
                                                     <div class="fs-14 fw-600">Климентовский Алексей Андреевич</div>
                                                 </div>
-                                                <div class="col-12 col-lg-3">
+                                                <div class="col-12 col-lg-4">
                                                     <div class="d-flex gap-4 align-items-center justify-content-between">
                                                         <div class="text-muted fs-14">16 января 2024</div>
-                                                        <div class="badge border border-success text-success fs-12">+192 723,00 ₽</div>
+                                                        <div class="badge border w-95px border-success text-success fs-12">+192 723,00 ₽</div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-            
+
                                 </div>
-            
+
                             </div>
 
                             <!-- Вкладка "Статистика" -->
@@ -598,7 +607,7 @@
                                     <div class="card card-statistics-main">
                                         <div class="card-body">
                                             <div class="row gy-3 align-items-center">
-                                                <div class="col-12 col-lg-3">
+                                                <div class="col-12 col-lg-4 col-xl-3">
                                                     <div class="d-flex gap-2 align-items-center" style="max-width: 200px;">
                                                         <div class="flex-shrink-0">
                                                             <img class="img-fluid" src="img/tinkoff.png" alt="" style="max-width: 48px;">
@@ -610,7 +619,7 @@
                                                     <div class="fs-14 fw-600">Страхование от несчастного случая</div>
                                                     <div class="d-inline-block bg-F3F4F6 rounded-3 fs-12 py-1 px-2">XXX027444577</div>
                                                 </div>
-                                                <div class="col-12 col-lg-3">
+                                                <div class="col-12 col-lg-4 col-xl-3">
                                                     <div class="fs-14 fw-600">Безбородов Антон Дмитриевич</div>
                                                     <div class="text-muted fs-14">14 января 2024</div>
                                                 </div>
@@ -636,7 +645,7 @@
                                     <div class="card card-statistics-main">
                                         <div class="card-body">
                                             <div class="row gy-3 align-items-center">
-                                                <div class="col-12 col-lg-3">
+                                                <div class="col-12 col-lg-4 col-xl-3">
                                                     <div class="d-flex gap-2 align-items-center" style="max-width: 200px;">
                                                         <div class="flex-shrink-0">
                                                             <img class="img-fluid" src="img/tinkoff.png" alt="" style="max-width: 48px;">
@@ -648,7 +657,7 @@
                                                     <div class="fs-14 fw-600">Страхование от несчастного случая</div>
                                                     <div class="d-inline-block bg-F3F4F6 rounded-3 fs-12 py-1 px-2">XXX027444577</div>
                                                 </div>
-                                                <div class="col-12 col-lg-3">
+                                                <div class="col-12 col-lg-4 col-xl-3">
                                                     <div class="fs-14 fw-600">Безбородов Антон Дмитриевич</div>
                                                     <div class="text-muted fs-14">14 января 2024</div>
                                                 </div>
@@ -674,7 +683,7 @@
                                     <div class="card card-statistics-main">
                                         <div class="card-body">
                                             <div class="row gy-3 align-items-center">
-                                                <div class="col-12 col-lg-3">
+                                                <div class="col-12 col-lg-4 col-xl-3">
                                                     <div class="d-flex gap-2 align-items-center" style="max-width: 200px;">
                                                         <div class="flex-shrink-0">
                                                             <img class="img-fluid" src="img/tinkoff.png" alt="" style="max-width: 48px;">
@@ -686,7 +695,7 @@
                                                     <div class="fs-14 fw-600">Страхование от несчастного случая</div>
                                                     <div class="d-inline-block bg-F3F4F6 rounded-3 fs-12 py-1 px-2">XXX027444577</div>
                                                 </div>
-                                                <div class="col-12 col-lg-3">
+                                                <div class="col-12 col-lg-4 col-xl-3">
                                                     <div class="fs-14 fw-600">Безбородов Антон Дмитриевич</div>
                                                     <div class="text-muted fs-14">14 января 2024</div>
                                                 </div>
@@ -712,7 +721,7 @@
                                     <div class="card card-statistics-main">
                                         <div class="card-body">
                                             <div class="row gy-3 align-items-center">
-                                                <div class="col-12 col-lg-3">
+                                                <div class="col-12 col-lg-4 col-xl-3">
                                                     <div class="d-flex gap-2 align-items-center" style="max-width: 200px;">
                                                         <div class="flex-shrink-0">
                                                             <img class="img-fluid" src="img/tinkoff.png" alt="" style="max-width: 48px;">
@@ -724,7 +733,7 @@
                                                     <div class="fs-14 fw-600">Страхование от несчастного случая</div>
                                                     <div class="d-inline-block bg-F3F4F6 rounded-3 fs-12 py-1 px-2">XXX027444577</div>
                                                 </div>
-                                                <div class="col-12 col-lg-3">
+                                                <div class="col-12 col-lg-4 col-xl-3">
                                                     <div class="fs-14 fw-600">Безбородов Антон Дмитриевич</div>
                                                     <div class="text-muted fs-14">14 января 2024</div>
                                                 </div>
@@ -750,7 +759,7 @@
                                     <div class="card card-statistics-main">
                                         <div class="card-body">
                                             <div class="row gy-3 align-items-center">
-                                                <div class="col-12 col-lg-3">
+                                                <div class="col-12 col-lg-4 col-xl-3">
                                                     <div class="d-flex gap-2 align-items-center" style="max-width: 200px;">
                                                         <div class="flex-shrink-0">
                                                             <img class="img-fluid" src="img/tinkoff.png" alt="" style="max-width: 48px;">
@@ -762,7 +771,7 @@
                                                     <div class="fs-14 fw-600">Страхование от несчастного случая</div>
                                                     <div class="d-inline-block bg-F3F4F6 rounded-3 fs-12 py-1 px-2">XXX027444577</div>
                                                 </div>
-                                                <div class="col-12 col-lg-3">
+                                                <div class="col-12 col-lg-4 col-xl-3">
                                                     <div class="fs-14 fw-600">Безбородов Антон Дмитриевич</div>
                                                     <div class="text-muted fs-14">14 января 2024</div>
                                                 </div>
