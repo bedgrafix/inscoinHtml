@@ -321,6 +321,12 @@ document.addEventListener('click', e => {
         $titleContainer.innerText = title;
         $titleContainer.closest('.dropdown-toggle').classList.add('js-dropdown-clear');
 
+        if( $target.getAttribute('data-dropdown-link') ) {
+            const $input = $parent.querySelector('[data-dropdown-input]');
+            $input.value = $target.getAttribute('data-value');
+            $input.dispatchEvent(new Event('change'));
+        }
+
     }
 
     if( e.target.closest('.js-dropdown-clear') ) {
@@ -330,7 +336,14 @@ document.addEventListener('click', e => {
 
         const $titleContainer = $target.querySelector('[data-dropdown-title]');
         $titleContainer.innerText = $titleContainer.getAttribute('data-dropdown-title');
-        $target.closest('.js-dropdown-selection').classList.remove('js-active');
+        const $parent = $target.closest('.js-dropdown-selection');
+        $parent.classList.remove('js-active');
+        const $input = $parent.querySelector('[data-dropdown-input]');
+
+        if( $input ) {
+            $input.value = '';
+            $input.dispatchEvent(new Event('change'));
+        }
 
     }
 

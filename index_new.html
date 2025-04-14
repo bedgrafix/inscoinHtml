@@ -182,19 +182,26 @@
                         <div class="search-data__group">
                             <button type="button" class="search-data__clear" data-clear-search="true"><i class="bi bi-x-lg"></i></button>
                             <div class="dropdown color-74777F js-dropdown-selection">
+                                <input type="hidden" data-dropdown-input="true">
                                 <button class="dropdown-toggle search-data__dropdown" data-bs-toggle="dropdown" aria-expanded="false">
                                     <span data-dropdown-title="Статус">Статус</span>
                                 </button>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item active" href="#"><span>Действует</span></a></li>
-                                    <li><a class="dropdown-item" href="#"><span>На оплате</span></a></li>
-                                    <li><a class="dropdown-item" href="#"><span>Срок истек</span></a></li>
+                                    <li><a class="dropdown-item active" data-dropdown-link="true" data-value="active"><span>Действует</span></a></li>
+                                    <li><a class="dropdown-item" data-dropdown-link="true" data-value="pay"><span>На оплате</span></a></li>
+                                    <li><a class="dropdown-item" data-dropdown-link="true" data-value="outdated"><span>Срок истек</span></a></li>
                                 </ul>
                             </div>
                             <button class="search-data__btn color-74777F"><i class="bi bi-search"></i></button>
                         </div>
                     </div>
-                    <button class="btn btn-outline btn-sm rounded-4">Открыть пролонгацию</button>
+                    <label class="pseudo-checkbox" for="prolongation">
+                        <input class="pseudo-checkbox__input" type="checkbox" id="prolongation">
+                        <button class="btn btn-outline btn-sm rounded-4">
+                            <span>Открыть пролонгацию</span>
+                            <span class="btn-close btn-close-white"></span>
+                        </button>
+                    </label>
                 </div>
             </div>
         </section>
