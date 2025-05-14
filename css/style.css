@@ -2454,7 +2454,8 @@ img {
 
 .card-grid {
     display: grid;
-    grid-template-columns: 1fr 2.5fr 2fr 1fr 2fr 2.5fr;
+    /*grid-template-columns: 1fr 2.5fr 2fr 1fr 2fr 2.5fr;*/
+    grid-template-columns: 1fr minmax(0, 2.5fr) 2fr 1fr 2fr minmax(0, 2.5fr);
     grid-gap: 16px;
 }
 .card.expired *:not(.text-danger) {
@@ -2496,7 +2497,8 @@ img {
         display: block;
     }
     .card-grid {
-        grid-template-columns: 1fr 2fr 3fr;
+        /*grid-template-columns: 1fr 2fr 3fr;*/
+        grid-template-columns: 1fr 2fr minmax(0, 3fr);
     }
     .card-grid .col:nth-child(3) {
         grid-column-start: 2;
@@ -2508,9 +2510,18 @@ img {
     display: none;
 }
 
+.mob-grid {
+    max-width: 100%;
+}
+
+.mob-grid > .d-flex > .d-flex {
+    max-width: 100%;
+    overflow: hidden;
+}
+
 @media (max-width: 576px) {
     .card-grid {
-        grid-template-columns: auto 100px;
+        grid-template-columns: 1fr 100px;
     }
     .card-grid .col:nth-child(2) {
         grid-column-start: 1;
@@ -2533,8 +2544,11 @@ img {
     }
     .mob-grid {
         display: grid;
-        grid-template-columns: 42px auto;
+        grid-template-columns: 42px calc(100% - 58px);
         grid-gap: 15px;
+    }
+    .mob-grid > .d-flex {
+        width: 100%;
     }
     .mob-grid__img {
         display: block;
