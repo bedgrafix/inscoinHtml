@@ -2461,6 +2461,9 @@ img {
 .card.expired *:not(.text-danger) {
     color: #74777F !important;
 }
+.card.expired .btn.btn-primary{
+    color: #fff !important;
+}
 .card.expired img {
     filter: grayscale(100);
 }
