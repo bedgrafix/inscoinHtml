@@ -3064,5 +3064,9 @@ img {
         width: 100%;
     }
 }
+.py-xsm {
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
 
 
