@@ -3068,5 +3068,8 @@ img {
     padding-top: 1px;
     padding-bottom: 1px;
 }
+.px-14 {
+    padding: 0 14px;
+}
 
 
