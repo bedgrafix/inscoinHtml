@@ -177,14 +177,14 @@
 						</div>					
 					</div>
 					
-					<div class="travel-insurance-filter__col">
+					<div class="travel-insurance-filter__col md-col-span-2">
 						<div class="datepicker-js">
-							<div class="row gy-3">
-								<div class="col-md-6">
+							<div class="row travel-insurance-filter__datepicker-row">
+								<div class="col-md-6 travel-insurance-filter__datepicker-col">
 									<label class="form-label fs-14 fw-600 text-black">Когда</label>					
 									<input type="text" class="form-control border-gray h-32 fs-14 bg-calendar" name="datepicker-start" placeholder="" readonly>
 								</div>
-								<div class="col-md-6">
+								<div class="col-md-6 travel-insurance-filter__datepicker-col">
 									<label class="form-label fs-14 fw-600 text-black">Обратно</label>
 									<input type="text" class="form-control border-gray h-32 fs-14 bg-calendar" name="datepicker-end" placeholder="" readonly>
 								</div>
@@ -198,9 +198,14 @@
 						<div class="select-filter h-32 fs-14 fw-600 bg-white color-74777F cursor-pointer w-100 border-gray rounded-3 text-start py-2 px-3" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
 							<span class="single-line"></span>
 						</div>
-						<div class="dropdown-menu shadow fs-14 ms-3 ms-lg-0 mt-2">
-							<input type="text" class="form-control border-gray h-32 fs-14" name="" placeholder="Введите возраст">
- 							<button type="button" class="btn btn-detailing btn-sm fw-600 px-2 px-lg-4"><i class="bi bi-plus-circle-fill"></i><span class="ms-2"> Добавить туриста</span></button>
+						<div class="dropdown-menu w-100 shadow fs-14  ms-lg-0 mt-2 padd-11">
+							<div class="clearable-input mb-9">
+								<button type="button" class="btn-close clearable-input__btn" data-clear-input="true"></button>
+								<input data-clearable-input="true" type="text" class="form-control clearable-input__input border-gray h-32 fs-14" name="age" placeholder="Введите возраст">
+							</div>
+ 							<button type="button" class="btn btn-secondary btn-sm w-100 fw-600 px-1 px-lg-4" data-add-age="true">
+								<i class="bi bi-plus-circle-fill"></i><span class="ms-2"> Добавить туриста</span>
+							</button>
 						</div>	
 					</div>
 
@@ -222,6 +227,21 @@
 						</div>					
 					</div>
 
+					<div class="travel-insurance-filter__col d-md-block d-none">
+						<div class="select-filter fs-14 text-black text-regular cursor-pointer w-100 text-start h-32 d-flex align-items-center" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+							<span class="single-line">Покрытие на каждого</span>
+						</div>
+						<div class="dropdown-menu w-100 shadow fs-14 ms-3 ms-lg-0 mt-2 padd-11">
+							
+						</div>	
+					</div>	
+
+					<div class="travel-insurance-filter__col">
+						<button type="button" class="btn btn-secondary btn-sm w-100 fw-600 px-1">
+							<i class="bi bi-plus-circle-fill"></i><span class="ms-2">Добавить опции</span>
+						</button>
+					</div>					
+
 					<div class="travel-insurance-filter__submit-wrap">
 						<button type="submit" class="btn btn-primary btn-sm px-2 px-lg-3 w-100">Рассчитать</button>				
 					</div>
@@ -230,6 +250,99 @@
 		</section>
 		<section class="section py-3">
 			<div class="container">
+				<div class="card border-0 card-travel-insurance p-3 mb-13">
+					<div class="card-travel-insurance__col d-flex align-items-center">
+						<img src="./img/tinkoff-bank.png" alt="" class="card-travel-insurance__img">
+						<p class="fs-14 fw-600 mb-0">Т-Банк <br> Страхование</p>
+					</div>
+
+					<div class="card-travel-insurance__col d-flex flex-column justify-content-center ml-auto-max-xs">
+						<p class="fs-14 fw-600  color-22242A mb-0">30 000,00 €</p>
+						<p class="fs-14 fw-600 mb-0">Страховая сумма</p>
+					</div>
+
+					<div class="card-travel-insurance__col">
+						<p class="fs-14 fw-600  color-22242A mb-0">16 010,00 ₽</p>
+						<div class="d-inline-flex align-items-center gap-1 fs-10 p-y-3 pl-4 pr-12 radius-6 border-purple">
+							<span class="px-1 rounded-1 bg-gradient-purple color-white">Вернем 17%</span>
+							<span class="text-primary fw-600">2721,70 INS</span>
+						</div>
+					</div>
+
+					<div class="card-travel-insurance__col d-flex align-items-end ml-auto-max-xs">
+						<a href="#" class="btn btn-primary btn-sm py-2 px-19 fs-14 fw-600">Выбрать</a>
+					</div>
+				</div>		
+				<div class="card border-0 card-travel-insurance p-3 mb-13">
+					<div class="card-travel-insurance__col d-flex align-items-center">
+						<img src="./img/capital-life.png" alt="" class="card-travel-insurance__img">
+						<p class="fs-14 fw-600 mb-0">Т-Банк <br> Страхование</p>
+					</div>
+
+					<div class="card-travel-insurance__col d-flex flex-column justify-content-center ml-auto-max-xs">
+						<p class="fs-14 fw-600  color-22242A mb-0">30 000,00 €</p>
+						<p class="fs-14 fw-600 mb-0">Страховая сумма</p>
+					</div>
+
+					<div class="card-travel-insurance__col">
+						<p class="fs-14 fw-600  color-22242A mb-0">16 010,00 ₽</p>
+						<div class="d-inline-flex align-items-center gap-1 fs-10 p-y-3 pl-4 pr-12 radius-6 border-purple">
+							<span class="px-1 rounded-1 bg-gradient-purple color-white">Вернем 17%</span>
+							<span class="text-primary fw-600">2721,70 INS</span>
+						</div>
+					</div>
+
+					<div class="card-travel-insurance__col d-flex align-items-end ml-auto-max-xs">
+						<a href="#" class="btn btn-primary btn-sm py-2 px-19 fs-14 fw-600">Выбрать</a>
+					</div>
+				</div>		
+				<div class="card border-0 card-travel-insurance p-3 mb-13">
+					<div class="card-travel-insurance__col d-flex align-items-center">
+						<img src="./img/ingosstrakh.png" alt="" class="card-travel-insurance__img">
+						<p class="fs-14 fw-600 mb-0">Т-Банк <br> Страхование</p>
+					</div>
+
+					<div class="card-travel-insurance__col d-flex flex-column justify-content-center ml-auto-max-xs">
+						<p class="fs-14 fw-600  color-22242A mb-0">30 000,00 €</p>
+						<p class="fs-14 fw-600 mb-0">Страховая сумма</p>
+					</div>
+
+					<div class="card-travel-insurance__col">
+						<p class="fs-14 fw-600  color-22242A mb-0">16 010,00 ₽</p>
+						<div class="d-inline-flex align-items-center gap-1 fs-10 p-y-3 pl-4 pr-12 radius-6 border-purple">
+							<span class="px-1 rounded-1 bg-gradient-purple color-white">Вернем 17%</span>
+							<span class="text-primary fw-600">2721,70 INS</span>
+						</div>
+					</div>
+
+					<div class="card-travel-insurance__col d-flex align-items-end ml-auto-max-xs">
+						<a href="#" class="btn btn-primary btn-sm py-2 px-19 fs-14 fw-600">Выбрать</a>
+					</div>
+				</div>		
+				<div class="card border-0 card-travel-insurance p-3 mb-13">
+					<div class="card-travel-insurance__col d-flex align-items-center">
+						<img src="./img/square-alfa-logo.png" alt="" class="card-travel-insurance__img">
+						<p class="fs-14 fw-600 mb-0">Т-Банк <br> Страхование</p>
+					</div>
+
+					<div class="card-travel-insurance__col d-flex flex-column justify-content-center ml-auto-max-xs">
+						<p class="fs-14 fw-600  color-22242A mb-0">30 000,00 €</p>
+						<p class="fs-14 fw-600 mb-0">Страховая сумма</p>
+					</div>
+
+					<div class="card-travel-insurance__col">
+						<p class="fs-14 fw-600  color-22242A mb-0">16 010,00 ₽</p>
+						<div class="d-inline-flex align-items-center gap-1 fs-10 p-y-3 pl-4 pr-12 radius-6 border-purple">
+							<span class="px-1 rounded-1 bg-gradient-purple color-white">Вернем 17%</span>
+							<span class="text-primary fw-600">2721,70 INS</span>
+						</div>
+					</div>
+
+					<div class="card-travel-insurance__col d-flex align-items-end ml-auto-max-xs">
+						<a href="#" class="btn btn-primary btn-sm py-2 px-19 fs-14 fw-600">Выбрать</a>
+					</div>
+				</div>		
+
 				<div class="bg-white rounded-4 d-flex flex-column align-items-center px-3 travel-insurance-empty">
 					<img src="./img/suitcases.png" alt="" class="mb-md-17 mb-27">
 					<p class="fs-lg-20 fs-18 fw-600 text-black">Здесь будут отображаться расчеты!</p>

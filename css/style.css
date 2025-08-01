@@ -3076,6 +3076,10 @@ img {
     border: 1px solid #74777f;
 }
 
+.border-purple {
+    border: 1px solid #5C43FC;
+}
+
 .h-32 {
     height: 32px;
 }
@@ -3087,6 +3091,57 @@ img {
 .mb-27 {
     margin-bottom: 27px !important;
 }
+
+.mb-27:last-child {
+    margin-bottom: 0;
+}
+
+.mb-9 {
+    margin-bottom: 9px !important;
+}
+
+.mb-9:last-child {
+    margin-bottom: 0;
+}
+
+.mb-13 {
+    margin-bottom: 13px !important;
+}
+
+.mb-13:last-child {
+    margin-bottom: 0;
+}
+
+.padd-11 {
+    padding: 11px;
+}
+
+.radius-6 {
+    border-radius: 6px;
+}
+
+.pl-4 {
+    padding-left: 4px;
+}
+
+.pr-12 {
+    padding-right: 12px;
+}
+
+.px-19 {
+    padding-left: 19px;
+    padding-right: 19px;
+}
+
+.p-y-3 {
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+.bg-gradient-purple {
+    background-image: linear-gradient(77deg, #5c43fc 2%, #258dff 102%);
+}
+
 .travel-insurance-head {
     padding: 34px 0 59px;
     background-image: url(../img/bg-travel-insurance.jpg);
@@ -3101,6 +3156,18 @@ img {
     grid-template-columns: 1fr;
     grid-auto-flow: dense;
     padding: 23px 16px;
+}
+
+.travel-insurance-filter__datepicker-row {
+    margin: -4px 0;
+}
+
+.travel-insurance-filter__datepicker-col {
+    padding: 4px 0;
+}
+
+.travel-insurance-filter__col {
+    position: relative;
 }
 
 .travel-insurance-filter__submit-wrap {
@@ -3130,6 +3197,48 @@ img {
     height: 16px;
 }
 
+.clearable-input, .deletable-input {
+    position: relative;
+}
+
+.clearable-input__btn:not(.js-act) {
+    display: none;
+}
+
+.clearable-input__btn, 
+.deletable-input__btn {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 10px;
+    margin: auto;
+
+}
+
+.clearable-input__input, 
+.deletable-input__input {
+    padding-right: 30px;
+}
+
+.card-travel-insurance {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: auto auto;
+}
+
+.card-travel-insurance__img {
+    margin-right: 12px;
+}
+.card-travel-insurance__img:last-child {
+    margin-right: 0;
+}
+
+@media (max-width: 768px) {
+    .ml-auto-max-xs {
+        margin-left: auto;
+    }
+}
+
 @media (min-width: 768px) {
     .travel-insurance-head {
         padding: 60px 0 180px;
@@ -3142,10 +3251,26 @@ img {
     .travel-insurance-filter {
         grid-gap: 12px;
         padding: 16px 16px 55px; 
-        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-columns: repeat(4, 1fr);
     }  
+    .travel-insurance-filter__submit-wrap {
+        grid-column-start: 4;
+    }
+    .travel-insurance-filter__datepicker-row {
+        margin: 0 -6px;
+    } 
+    .travel-insurance-filter__datepicker-col {
+        padding: 0 6px !important;
+    }  
+    .card-travel-insurance {
+        justify-content: space-between;
+        grid-template-columns: repeat(4,auto);
+    } 
     .mb-md-17 {
         margin-bottom: 17px !important;
+    }
+    .md-col-span-2 {
+        grid-column: span 2;
     }
 }
 
@@ -3153,19 +3278,31 @@ img {
     .travel-insurance-head {
         padding: 60px 0 78px;
     }
-    .travel-insurance-filter {
-        grid-gap: 6px 15px;
-        padding: 20px 34px 27px 27px; 
-        grid-template-columns: 1fr 2fr 1fr 1fr;
-    }
-    .travel-insurance-filter__submit-wrap {
-        grid-row-start: 1;
-        grid-column-start: 4;
-        margin-left: 0;
-    }
     .travel-insurance-empty {
         padding-top: 66px;
         padding-bottom: 66px;
         min-height: 401px;
+    }
+    .travel-insurance-filter__datepicker-row {
+        margin: 0 -7px;
+    }
+    .travel-insurance-filter__datepicker-col {
+        padding: 0 7px !important;
+    }
+    .card-travel-insurance {
+        grid-template-columns: 2fr 3fr 1.6fr auto;
+    }
+}
+
+@media (min-width: 1200px) {
+    .travel-insurance-filter {
+        grid-gap: 6px 14px;
+        padding: 20px 34px 27px 27px; 
+        grid-template-columns: repeat(5, 1fr);
+    }
+    .travel-insurance-filter__submit-wrap {
+        grid-row-start: 1;
+        grid-column-start: 5;
+        margin-left: 0;
     }
 }

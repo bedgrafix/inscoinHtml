@@ -4,12 +4,59 @@ Author: Andrey Galkin
 Version: 1.0
 */
 
+function debounce(func, delay) {
+	let timeout;
+	return function (...args) {
+		clearTimeout(timeout);
+		timeout = setTimeout(() => func.apply(this, args), delay);
+	};
+}
+
+document.addEventListener('input', debounce((ev) => {
+    const $input = ev.target.closest('[data-clearable-input]')
+
+    if($input) {
+        const $parent = $input.parentNode 
+        if($input.value) {
+            $parent.querySelector('[data-clear-input]')?.classList.add('js-act')
+        } else {
+            $parent.querySelector('[data-clear-input]')?.classList.remove('js-act')
+        }
+    }
+}, 400))
+
 document.addEventListener('click', e => {
     const $target = e.target.closest('.dropdown-item');
     if( $target && $target.closest('[data-dropdown-set-val]') ) {
         e.preventDefault();
         const $input = $target.closest('[data-dropdown-set-parent]').querySelector('[data-bs-toggle="dropdown"]');
         if( $input ) $input.value = $target.querySelector('span').innerText;
+    }
+
+    if(e.target.closest('[data-clear-input]')) {
+        e.preventDefault()
+        const $parent = e.target.closest('[data-clear-input]').parentNode 
+        const $input = $parent.querySelector('[data-clearable-input]')
+
+        $input ? ($input.value = '') : null
+        e.target.closest('[data-clear-input]').classList.remove('js-act')
+    }
+
+    if(e.target.closest('[data-add-age]')) {
+        e.preventDefault()
+        e.target.closest('[data-add-age]').insertAdjacentHTML(
+            'beforebegin',
+            `<div class="deletable-input mb-9" data-deletable-input="true" >
+                <button type="button" class="btn-close deletable-input__btn" data-delete-deletable-input="true"></button>
+                <input type="text" class="deletable-input__input form-control border-gray h-32 fs-14" name="age_${Date.now()}" placeholder="Введите возраст">
+            </div>`
+        ) 
+    }
+    
+    if(e.target.closest('[data-delete-deletable-input]')) {
+        e.preventDefault()
+        
+        e.target.closest(`[data-deletable-input]`)?.remove()
     }
 });
 
