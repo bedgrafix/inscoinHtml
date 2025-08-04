@@ -3068,6 +3068,9 @@ img {
     padding-top: 1px;
     padding-bottom: 1px;
 }
+.px-12 {
+    padding: 0 12px;
+}
 .px-14 {
     padding: 0 14px;
 }
@@ -3078,6 +3081,10 @@ img {
 
 .border-purple {
     border: 1px solid #5C43FC;
+}
+
+.text-purple {
+    color: #5c43fc;
 }
 
 .h-32 {
@@ -3233,6 +3240,21 @@ img {
     margin-right: 0;
 }
 
+.offcanvas-insurance {
+    --bs-offcanvas-width: 514px;
+   border-radius: 10px 0 0 10px;
+}
+
+.offcanvas-insurance__img {
+    width: 49px;
+    height: 49px;
+    margin-right: 13px;
+}
+
+.gap-22 {
+    gap: 22px;
+}
+
 @media (max-width: 768px) {
     .ml-auto-max-xs {
         margin-left: auto;
@@ -3272,6 +3294,14 @@ img {
     .md-col-span-2 {
         grid-column: span 2;
     }
+    .min-md-fs-18 {
+        font-size: 18px;
+    }
+    .offcanvas-insurance__img {
+        width: 52px;
+        height: 52px;
+        margin-right: 21px;
+    }    
 }
 
 @media (min-width: 992px) {
