@@ -110,7 +110,7 @@
 				<form class="card-body travel-insurance-filter bg-white rounded-4">
 					<div class="travel-insurance-filter__col">
 						<label class="form-label fs-14 fw-600 text-black">Куда</label>
-						<div class="select-filter h-32 fs-14 fw-600 bg-white color-74777F cursor-pointer w-100 border-gray rounded-3 text-start py-2 px-3" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+						<div class="select-filter select-filter-activity h-32 fs-14 fw-600 bg-white color-74777F cursor-pointer w-100 border-gray rounded-3 text-start py-2 px-3" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
 							<span class="single-line"></span>
 						</div>
 						<div class="dropdown-menu shadow fs-14 ms-3 ms-lg-0 mt-2">
@@ -195,7 +195,7 @@
 
 					<div class="travel-insurance-filter__col">
 						<label class="form-label fs-14 fw-600 text-black">Туристы</label>
-						<div class="select-filter h-32 fs-14 fw-600 bg-white color-74777F cursor-pointer w-100 border-gray rounded-3 text-start py-2 px-3" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+						<div class="select-filter select-filter-activity h-32 fs-14 fw-600 bg-white color-74777F cursor-pointer w-100 border-gray rounded-3 text-start py-2 px-3" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
 							<span class="single-line"></span>
 						</div>
 						<div class="dropdown-menu w-100 shadow fs-14  ms-lg-0 mt-2 padd-11">
@@ -210,8 +210,8 @@
 					</div>
 
 					<div class="travel-insurance-filter__col">
-						<div class="form-check">
-							<input class="form-check-input border-gray" id="traveling" type="checkbox">
+						<div class="form-check pl-3 min-h-20 mb-0">
+							<input class="form-check-input form-check-input_md border-gray mt-6" id="traveling" type="checkbox">
 							<label class="form-check-label fs-14 text-black" for="traveling">
 								Уже путешествую
 							</label>
@@ -219,8 +219,8 @@
 					</div>
 
 					<div class="travel-insurance-filter__col">
-						<div class="form-check">
-							<input class="form-check-input border-gray" id="annual_policy" type="checkbox">
+						<div class="form-check pl-3 min-h-20 mb-0">
+							<input class="form-check-input form-check-input_md border-gray mt-6" id="annual_policy" type="checkbox">
 							<label class="form-check-label fs-14 text-black" for="annual_policy">
 								Годовой полис
 							</label>
@@ -228,16 +228,67 @@
 					</div>
 
 					<div class="travel-insurance-filter__col d-md-block d-none">
-						<div class="select-filter fs-14 text-black text-regular cursor-pointer w-100 text-start h-32 d-flex align-items-center" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+						<div class="select-filter select-filter-activity fs-14 text-black text-regular cursor-pointer w-100 text-start h-32 d-flex align-items-center" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
 							<span class="single-line">Покрытие на каждого</span>
 						</div>
 						<div class="dropdown-menu w-100 shadow fs-14 ms-3 ms-lg-0 mt-2 padd-11">
-							
+							<div class="mb-1 d-flex gap-2" role="tablist">
+								<div class="col">
+									<button type="button" class="tab-link border-gray color-74777F fw-600 w-100 rounded-4 text-center px-1 active" data-bs-toggle="pill" data-bs-target="#usd" role="tab" aria-selected="true">Доллар</button>
+								</div>
+								<div class="col">
+									<button type="button" class="tab-link border-gray color-74777F fw-600 w-100 rounded-4 text-center px-1" data-bs-toggle="pill" data-bs-target="#eur" role="tab" aria-selected="false" tabindex="-1">Евро</button>
+								</div>
+							</div>
+
+							 <div class="tab-content">
+								<div class="tab-pane fade show active" id="usd" role="tabpanel" tabindex="0">
+									<div class="dropdown-item px-0 py-6">
+										<div class="form-check mb-0 min-h-20">
+											<input class="form-check-input form-check-input_md  border-gray" type="checkbox" value="" id="where-01">
+											<label class="form-check-label" for="where-01">30 000 $</label>
+										</div>
+									</div>
+									<div class="dropdown-item px-0 py-6">
+										<div class="form-check mb-0 min-h-20">
+											<input class="form-check-input form-check-input_md  border-gray" type="checkbox" value="" id="where-02">
+											<label class="form-check-label" for="where-02">30 000 $</label>
+										</div>
+									</div>
+									<div class="dropdown-item px-0 py-6">
+										<div class="form-check mb-0 min-h-20">
+											<input class="form-check-input form-check-input_md  border-gray" type="checkbox" value="" id="where-03">
+											<label class="form-check-label" for="where-03">30 000 $</label>
+										</div>
+									</div>									
+								</div>
+
+								<div class="tab-pane fade" id="eur" role="tabpanel" tabindex="0">
+									<div class="dropdown-item px-0 py-6">
+										<div class="form-check mb-0 min-h-20">
+											<input class="form-check-input form-check-input_md  border-gray" type="checkbox" value="" id="where-01">
+											<label class="form-check-label" for="where-01">30 000 $</label>
+										</div>
+									</div>
+									<div class="dropdown-item px-0 py-6">
+										<div class="form-check mb-0 min-h-20">
+											<input class="form-check-input form-check-input_md  border-gray" type="checkbox" value="" id="where-02">
+											<label class="form-check-label" for="where-02">30 000 $</label>
+										</div>
+									</div>
+									<div class="dropdown-item px-0 py-6">
+										<div class="form-check mb-0 min-h-20">
+											<input class="form-check-input form-check-input_md  border-gray" type="checkbox" value="" id="where-03">
+											<label class="form-check-label" for="where-03">30 000 $</label>
+										</div>
+									</div>									
+								</div>
+							 </div>
 						</div>	
 					</div>	
 
 					<div class="travel-insurance-filter__col">
-						<button type="button" class="btn btn-secondary btn-sm w-100 fw-600 px-1">
+						<button type="button" class="btn btn-secondary btn-sm w-100 fw-600 px-1" data-bs-toggle="offcanvas" data-bs-target="#add-options" aria-controls="add-options">
 							<i class="bi bi-plus-circle-fill"></i><span class="ms-2">Добавить опции</span>
 						</button>
 					</div>					
@@ -309,7 +360,7 @@
 					</div>
 
 					<div class="card-travel-insurance__col d-flex align-items-end ml-auto-max-xs">
-						<button type="button" class="btn btn-primary btn-sm py-2 px-19 fs-14 fw-600" data-bs-toggle="offcanvas" data-bs-target="#t-bank" aria-controls="t-bank">Выбрать</button>
+						<button type="button" class="btn btn-primary btn-sm py-2 px-19 fs-14 fw-600" data-bs-toggle="offcanvas" data-bs-target="#insurance" aria-controls="insurance">Выбрать</button>
 					</div>
 				</div>		
 				<div class="card border-0 card-travel-insurance p-3 mb-13">
@@ -332,7 +383,7 @@
 					</div>
 
 					<div class="card-travel-insurance__col d-flex align-items-end ml-auto-max-xs">
-						<button type="button" class="btn btn-primary btn-sm py-2 px-19 fs-14 fw-600" data-bs-toggle="offcanvas" data-bs-target="#t-bank" aria-controls="t-bank">Выбрать</button>
+						<button type="button" class="btn btn-primary btn-sm py-2 px-19 fs-14 fw-600" data-bs-toggle="offcanvas" data-bs-target="#insurance" aria-controls="insurance">Выбрать</button>
 					</div>
 				</div>		
 				<div class="card border-0 card-travel-insurance p-3 mb-13">
@@ -355,7 +406,7 @@
 					</div>
 
 					<div class="card-travel-insurance__col d-flex align-items-end ml-auto-max-xs">
-						<button type="button" class="btn btn-primary btn-sm py-2 px-19 fs-14 fw-600" data-bs-toggle="offcanvas" data-bs-target="#t-bank" aria-controls="t-bank">Выбрать</button>
+						<button type="button" class="btn btn-primary btn-sm py-2 px-19 fs-14 fw-600" data-bs-toggle="offcanvas" data-bs-target="#insurance" aria-controls="insurance">Выбрать</button>
 					</div>
 				</div>		
 				<div class="card border-0 card-travel-insurance p-3 mb-13">
@@ -378,7 +429,7 @@
 					</div>
 
 					<div class="card-travel-insurance__col d-flex align-items-end ml-auto-max-xs">
-						<button type="button" class="btn btn-primary btn-sm py-2 px-19 fs-14 fw-600" data-bs-toggle="offcanvas" data-bs-target="#t-bank" aria-controls="t-bank">Выбрать</button>
+						<button type="button" class="btn btn-primary btn-sm py-2 px-19 fs-14 fw-600" data-bs-toggle="offcanvas" data-bs-target="#insurance" aria-controls="insurance">Выбрать</button>
 					</div>
 				</div>		
 
@@ -391,7 +442,7 @@
 	</main>
 
     <!-- Страхование -->
-    <div class="offcanvas offcanvas-insurance offcanvas-end" tabindex="-1" id="t-bank">
+    <div class="offcanvas offcanvas-insurance offcanvas-end" tabindex="-1" id="insurance">
         <div class="offcanvas-header justify-content-between align-items-start">
 			<div class="d-flex align-items-center">
 				<img src="./img/tinkoff-bank.png" alt="" class="offcanvas-insurance__img">
@@ -458,6 +509,261 @@
 
 			<div class="mt-3">
 				<a href="#" class="btn btn-primary btn-sm py-2 px-19 fs-14 w-100 fw-600">Оформить</a>
+			</div>
+        </div>
+    </div>
+	<!-- Добавить опций -->
+    <div class="offcanvas offcanvas-insurance offcanvas-end" tabindex="-1" id="add-options">
+        <div class="offcanvas-header justify-content-between align-items-start">
+			<div>
+				<p class="text-black fw-600 fs-16 min-md-fs-18 mb-md-2 mb-3">Добавить опции</p>
+				<p class="fs-12 color-74777F mb-0">Переименовать !!!! Чтобы быть уверенным, что ваша страховка покрывает дополнительные опции, выберите их ниже</p>
+			</div>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+
+        <div class="offcanvas-body">
+			<div class="d-flex align-items-start fs-14 gap-22 mb-3">
+				<img src="./img/accident.png" alt="" width="46" height="46">
+				<div>
+					<p class="fw-600 text-black mb-2">Несчастный случай</p>
+					<p class="fs-12 color-74777F mb-2">Если в поездке вы травмируетесь, страховая выплатит компенсацию в зависимости от степени тяжести травмы и в рамках выбранной суммы</p>
+					<div class="d-flex gap-2 flex-wrap">
+						<div class="radiobox">
+							<input type="radio" name="accident" id="accident_1" class="radiobox__input">
+							<label for="accident_1" class="border-purple fs-14 fw-600 px-12 rounded-4 text-purple radiobox__label-purple">1000$</label>
+						</div>
+						<div class="radiobox">
+							<input type="radio" name="accident" id="accident_2" class="radiobox__input">
+							<label for="accident_2" class="border-purple fs-14 fw-600 px-12 rounded-4 text-purple radiobox__label-purple">3000$</label>
+						</div>
+						<div class="radiobox">
+							<input type="radio" name="accident" id="accident_3" class="radiobox__input">
+							<label for="accident_3" class="border-purple fs-14 fw-600 px-12 rounded-4 text-purple radiobox__label-purple">10 000$</label>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="d-flex align-items-start fs-14 gap-22 mb-3">
+				<img src="./img/baggage-protection.png" alt="" width="46" height="46">
+				<div>
+					<p class="fw-600 text-black mb-2">Защита багажа</p>
+					<p class="fs-12 color-74777F mb-2">Если авиакомпания потеряет ваш багаж страховая компания выплатит компенсацию</p>
+					<div class="d-flex gap-2 flex-wrap">
+						<div class="radiobox">
+							<input type="radio" name="accident" id="accident_1" class="radiobox__input">
+							<label for="accident_1" class="border-purple fs-14 fw-600 px-12 rounded-4 text-purple radiobox__label-purple">1000$</label>
+						</div>
+						<div class="radiobox">
+							<input type="radio" name="accident" id="accident_2" class="radiobox__input">
+							<label for="accident_2" class="border-purple fs-14 fw-600 px-12 rounded-4 text-purple radiobox__label-purple">3000$</label>
+						</div>
+						<div class="radiobox">
+							<input type="radio" name="accident" id="accident_3" class="radiobox__input">
+							<label for="accident_3" class="border-purple fs-14 fw-600 px-12 rounded-4 text-purple radiobox__label-purple">10 000$</label>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="d-flex align-items-start fs-14 gap-22 mb-3">
+				<img src="./img/civil-liability.png" alt="" width="46" height="46">
+				<div>
+					<p class="fw-600 text-black mb-2">Гражданская ответственность</p>
+					<p class="fs-12 color-74777F mb-2">Если по вашей неосторожности будет причинен вред 3-м лицам страховая компенсирует убытки, например поломка мебели, предметов спорт инвентаря (горные лыжи и т.д.)</p>
+					<div class="d-flex gap-2 flex-wrap">
+						<div class="radiobox">
+							<input type="radio" name="accident" id="accident_1" class="radiobox__input">
+							<label for="accident_1" class="border-purple fs-14 fw-600 px-12 rounded-4 text-purple radiobox__label-purple">1000$</label>
+						</div>
+						<div class="radiobox">
+							<input type="radio" name="accident" id="accident_2" class="radiobox__input">
+							<label for="accident_2" class="border-purple fs-14 fw-600 px-12 rounded-4 text-purple radiobox__label-purple">3000$</label>
+						</div>
+						<div class="radiobox">
+							<input type="radio" name="accident" id="accident_3" class="radiobox__input">
+							<label for="accident_3" class="border-purple fs-14 fw-600 px-12 rounded-4 text-purple radiobox__label-purple">10 000$</label>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="d-flex align-items-start fs-14 gap-22 mb-3">
+				<img src="./img/canceling-trip.png" alt="" width="46" height="46">
+				<div>
+					<p class="fw-600 text-black mb-2">Отменя поездки</p>
+					<p class="fs-12 color-74777F mb-2">Если поездка отменилась по причине травмы, болезни или вынужденного карантина, страховая возместит стоимость отеля и билетов</p>
+					<div class="d-flex gap-2 flex-wrap">
+						<div class="radiobox">
+							<input type="radio" name="accident" id="accident_1" class="radiobox__input">
+							<label for="accident_1" class="border-purple fs-14 fw-600 px-12 rounded-4 text-purple radiobox__label-purple">1000$</label>
+						</div>
+						<div class="radiobox">
+							<input type="radio" name="accident" id="accident_2" class="radiobox__input">
+							<label for="accident_2" class="border-purple fs-14 fw-600 px-12 rounded-4 text-purple radiobox__label-purple">3000$</label>
+						</div>
+						<div class="radiobox">
+							<input type="radio" name="accident" id="accident_3" class="radiobox__input">
+							<label for="accident_3" class="border-purple fs-14 fw-600 px-12 rounded-4 text-purple radiobox__label-purple">10 000$</label>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="d-flex align-items-start fs-14 gap-22 mb-3">
+				<img src="./img/other-options.png" alt="" width="46" height="46">
+				<div>
+					<p class="fw-600 text-black mb-2">Другие опции</p>
+					<p class="fs-12 color-74777F mb-2">Страховая выплатит компенсацию, если наступит нестандартный страховой случай</p>
+					<div class="select-filter-wrap">
+						<div class="select-filter h-32 fs-14 bg-white color-74777F cursor-pointer w-100 border-gray rounded-3 text-start py-2 px-3" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+							<span class="single-line">Выберите опции</span>
+						</div>
+						<div class="dropdown-menu shadow fs-14 ms-3 ms-lg-0 mt-2 w-100">
+							<div class="dropdown-item">
+								<div class="form-check mb-0 min-h-20">
+									<input class="form-check-input form-check-input_md  border-gray" type="checkbox" value="" id="where-01">
+									<label class="form-check-label" for="where-01">Антильские острова (Нидерланды)</label>
+								</div>
+							</div>
+							<div class="dropdown-item">
+								<div class="form-check mb-0 min-h-20">
+									<input class="form-check-input form-check-input_md  border-gray" type="checkbox" value="" id="where-02">
+									<label class="form-check-label" for="where-02">Босния и Герцеговина</label>
+								</div>
+							</div>
+							<div class="dropdown-item">
+								<div class="form-check mb-0 min-h-20">
+									<input class="form-check-input form-check-input_md  border-gray" type="checkbox" value="" id="where-03">
+									<label class="form-check-label" for="where-03">Великобритания</label>
+								</div>
+							</div>
+							<div class="dropdown-item">
+								<div class="form-check mb-0 min-h-20">
+									<input class="form-check-input form-check-input_md  border-gray" type="checkbox" value="" id="where-04">
+									<label class="form-check-label" for="where-04">Доминиканская республика</label>
+								</div>
+							</div>
+							<div class="dropdown-item">
+								<div class="form-check mb-0 min-h-20">
+									<input class="form-check-input form-check-input_md  border-gray" type="checkbox" value="" id="where-05">
+									<label class="form-check-label" for="where-05">Все страны Шенгена</label>
+								</div>
+							</div>
+							<div class="dropdown-item">
+								<div class="form-check mb-0 min-h-20">
+									<input class="form-check-input form-check-input_md  border-gray" type="checkbox" value="" id="where-06">
+									<label class="form-check-label" for="where-06">Египет</label>
+								</div>
+							</div>
+							<div class="dropdown-item">
+								<div class="form-check mb-0 min-h-20">
+									<input class="form-check-input form-check-input_md  border-gray" type="checkbox" value="" id="where-07">
+									<label class="form-check-label" for="where-07">Замбия</label>
+								</div>
+							</div>
+							<div class="dropdown-item">
+								<div class="form-check mb-0 min-h-20">
+									<input class="form-check-input form-check-input_md  border-gray" type="checkbox" value="" id="where-08">
+									<label class="form-check-label" for="where-08">Западная Сахара</label>
+								</div>
+							</div>
+							<div class="dropdown-item">
+								<div class="form-check mb-0 min-h-20">
+									<input class="form-check-input form-check-input_md  border-gray" type="checkbox" value="" id="where-09">
+									<label class="form-check-label" for="where-09">США</label>
+								</div>
+							</div>
+							<div class="dropdown-item">
+								<div class="form-check mb-0 min-h-20">
+									<input class="form-check-input form-check-input_md  border-gray" type="checkbox" value="" id="where-10">
+									<label class="form-check-label" for="where-10">Швейцария</label>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="d-flex align-items-start fs-14 gap-22 mb-3">
+				<img src="./img/sports-and-activities.png" alt="" width="46" height="46">
+				<div>
+					<p class="fw-600 text-black mb-2">Спорт и активности</p>
+					<p class="fs-12 color-74777F mb-2">Если планируете травмоопасные активности вроде горных лыж или аквапарка, включите их в полис, чтобы страховая не отказала в выплате</p>
+					<div class="select-filter-wrap">
+						<div class="select-filter h-32 fs-14 bg-white color-74777F cursor-pointer w-100 border-gray rounded-3 text-start py-2 px-3" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+							<span class="single-line">Выберите опции</span>
+						</div>
+						<div class="dropdown-menu shadow fs-14 ms-3 ms-lg-0 mt-2 w-100">
+							<div class="dropdown-item">
+								<div class="form-check mb-0 min-h-20">
+									<input class="form-check-input form-check-input_md  border-gray" type="checkbox" value="" id="where-01">
+									<label class="form-check-label" for="where-01">Антильские острова (Нидерланды)</label>
+								</div>
+							</div>
+							<div class="dropdown-item">
+								<div class="form-check mb-0 min-h-20">
+									<input class="form-check-input form-check-input_md  border-gray" type="checkbox" value="" id="where-02">
+									<label class="form-check-label" for="where-02">Босния и Герцеговина</label>
+								</div>
+							</div>
+							<div class="dropdown-item">
+								<div class="form-check mb-0 min-h-20">
+									<input class="form-check-input form-check-input_md  border-gray" type="checkbox" value="" id="where-03">
+									<label class="form-check-label" for="where-03">Великобритания</label>
+								</div>
+							</div>
+							<div class="dropdown-item">
+								<div class="form-check mb-0 min-h-20">
+									<input class="form-check-input form-check-input_md  border-gray" type="checkbox" value="" id="where-04">
+									<label class="form-check-label" for="where-04">Доминиканская республика</label>
+								</div>
+							</div>
+							<div class="dropdown-item">
+								<div class="form-check mb-0 min-h-20">
+									<input class="form-check-input form-check-input_md  border-gray" type="checkbox" value="" id="where-05">
+									<label class="form-check-label" for="where-05">Все страны Шенгена</label>
+								</div>
+							</div>
+							<div class="dropdown-item">
+								<div class="form-check mb-0 min-h-20">
+									<input class="form-check-input form-check-input_md  border-gray" type="checkbox" value="" id="where-06">
+									<label class="form-check-label" for="where-06">Египет</label>
+								</div>
+							</div>
+							<div class="dropdown-item">
+								<div class="form-check mb-0 min-h-20">
+									<input class="form-check-input form-check-input_md  border-gray" type="checkbox" value="" id="where-07">
+									<label class="form-check-label" for="where-07">Замбия</label>
+								</div>
+							</div>
+							<div class="dropdown-item">
+								<div class="form-check mb-0 min-h-20">
+									<input class="form-check-input form-check-input_md  border-gray" type="checkbox" value="" id="where-08">
+									<label class="form-check-label" for="where-08">Западная Сахара</label>
+								</div>
+							</div>
+							<div class="dropdown-item">
+								<div class="form-check mb-0 min-h-20">
+									<input class="form-check-input form-check-input_md  border-gray" type="checkbox" value="" id="where-09">
+									<label class="form-check-label" for="where-09">США</label>
+								</div>
+							</div>
+							<div class="dropdown-item">
+								<div class="form-check mb-0 min-h-20">
+									<input class="form-check-input form-check-input_md  border-gray" type="checkbox" value="" id="where-10">
+									<label class="form-check-label" for="where-10">Швейцария</label>
+								</div>
+							</div>
+						</div>	
+					</div>
+				</div>
+			</div>
+
+
+			<div class="mt-3 pl-md-68">
+				<a href="#" class="btn btn-primary btn-sm py-2 px-19 fs-14 w-100 fw-600">Показать</a>
 			</div>
         </div>
     </div>

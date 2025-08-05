@@ -3079,6 +3079,14 @@ img {
     border: 1px solid #74777f;
 }
 
+.border-gray.active {
+    border-color: #5c43fc;
+}
+
+.color-74777F.active {
+    color: #5c43fc;
+}
+
 .border-purple {
     border: 1px solid #5C43FC;
 }
@@ -3091,8 +3099,16 @@ img {
     height: 32px;
 }
 
+.h-24 {
+    height: 24px;
+}
+
 .min-h-20 {
     min-height: 20px;
+}
+
+.mt-6 {
+    margin-top: 6px;
 }
 
 .mb-27 {
@@ -3133,6 +3149,11 @@ img {
 
 .pr-12 {
     padding-right: 12px;
+}
+
+.py-6 {
+    padding-top: 6px;
+    padding-bottom: 6px;
 }
 
 .px-19 {
@@ -3242,7 +3263,6 @@ img {
 
 .offcanvas-insurance {
     --bs-offcanvas-width: 514px;
-   border-radius: 10px 0 0 10px;
 }
 
 .offcanvas-insurance__img {
@@ -3253,6 +3273,58 @@ img {
 
 .gap-22 {
     gap: 22px;
+}
+
+.radiobox {
+    position: relative;
+}
+
+.radiobox__label-purple {
+    transition: all .25s;
+}
+
+.radiobox__input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0); 
+}
+
+.radiobox__input:checked + .radiobox__label-purple {
+    background-color:#5c43fc;
+    color: #fff;
+}
+
+.select-filter-wrap {
+    position: relative;
+}
+
+.select-filter .single-line {
+    line-height: 1;
+}
+
+.white-space-wrap {
+    white-space: wrap;
+}
+.select-filter-activity {
+    background-image: url(../img/chevron-down.svg);
+}
+
+.select-filter-activity.show {
+    border-color: #5c43fc;
+    background-image: url(../img/chevron-up.svg);
+}
+
+.select-filter-activity.show .single-line{
+    color: #5c43fc;
+}
+
+@media (min-width: 514px) {
+    .offcanvas-insurance {
+        border-radius: 10px 0 0 10px;
+        padding: 20px 30px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -3301,7 +3373,10 @@ img {
         width: 52px;
         height: 52px;
         margin-right: 21px;
-    }    
+    } 
+    .pl-md-68 {
+        padding-left: 68px;
+    }   
 }
 
 @media (min-width: 992px) {
