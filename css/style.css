@@ -170,6 +170,29 @@ textarea {
     color: #00A437;
 }
 
+.border-green-dark {
+	--bs-border-opacity: 1;
+	border-color: #00A437 !important;
+}
+
+.text-brand {
+	color: #5C43FC;
+}
+
+.border-brand {
+	--bs-border-opacity: 1;
+	border-color: #5C43FC !important;
+}
+
+.text-red-dark {
+	color: #D92020;
+}
+
+.border-red-dark {
+	--bs-border-opacity: 1;
+	border-color: #D92020 !important;
+}
+
 .disabled-control {
     background-color: #F3F4F6;
     color: #74777F;
@@ -2458,7 +2481,7 @@ img {
     grid-template-columns: 1fr minmax(0, 2.5fr) 2fr 1fr 2fr minmax(0, 2.5fr);
     grid-gap: 16px;
 }
-.card.expired *:not(.text-danger) {
+.card.expired *:not(.text-danger):not(.text-red-dark) {
     color: #74777F !important;
 }
 .card.expired .btn.btn-primary{
